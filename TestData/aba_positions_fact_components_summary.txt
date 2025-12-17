@@ -1,0 +1,113 @@
+ABA Fact Component Positions + Scores Summary
+========================================================================
+
+Pooled component position stats (over all extracted rows):
+  - A:      {'n': 100, 'mean': 0.26138539837120417, 'median': 0.21509492793791574, 'min': 0.0014104372355430183, 'max': 0.7534818941504178}
+  - B:      {'n': 100, 'mean': 0.5120146754742754, 'median': 0.5124355891446238, 'min': 0.07703488372093023, 'max': 0.9506346967559943}
+  - A':     {'n': 100, 'mean': 0.7611353793646892, 'median': 0.8163730547556094, 'min': 0.07994186046511628, 'max': 1.0}
+
+Pooled component score stats (only where score present):
+  - A:      {'n': 0, 'mean': None, 'median': None, 'min': None, 'max': None}
+  - B:      {'n': 0, 'mean': None, 'median': None, 'min': None, 'max': None}
+  - A':     {'n': 0, 'mean': None, 'median': None, 'min': None, 'max': None}
+
+Per-file summaries:
+------------------------------------------------------------------------
+
+File: conv-0.json
+  n_turns_with_dia_id: 452
+  qa anchors found: cat91=10, cat92=10, cat93=10
+  complete_triplets_by_rank: 10 (order_ok=10, order_bad=0)
+  A pos: {'n': 10, 'mean': 0.1620841, 'median': 0.169623, 'min': 0.070953, 'max': 0.24612}
+  B pos: {'n': 10, 'mean': 0.5534369, 'median': 0.531042, 'min': 0.414634, 'max': 0.847007}
+  A' pos: {'n': 10, 'mean': 0.8514412, 'median': 0.8536585, 'min': 0.725055, 'max': 0.986696}
+  issues: {'cat91_missing_score': 10, 'cat92_missing_score': 10, 'cat93_missing_score': 10}
+
+File: conv-1.json
+  n_turns_with_dia_id: 370
+  qa anchors found: cat91=10, cat92=10, cat93=10
+  complete_triplets_by_rank: 10 (order_ok=10, order_bad=0)
+  A pos: {'n': 10, 'mean': 0.2249324, 'median': 0.2493225, 'min': 0.070461, 'max': 0.355014}
+  B pos: {'n': 10, 'mean': 0.5818428, 'median': 0.586721, 'min': 0.482385, 'max': 0.680217}
+  A' pos: {'n': 10, 'mean': 0.9008132, 'median': 0.882114, 'min': 0.850949, 'max': 0.98374}
+  issues: {'cat91_missing_score': 10, 'cat92_missing_score': 10, 'cat93_missing_score': 10}
+
+File: conv-2.json
+  n_turns_with_dia_id: 693
+  qa anchors found: cat91=10, cat92=10, cat93=10
+  complete_triplets_by_rank: 10 (order_ok=10, order_bad=0)
+  A pos: {'n': 10, 'mean': 0.2875722, 'median': 0.2319365, 'min': 0.089595, 'max': 0.741329}
+  B pos: {'n': 10, 'mean': 0.5391619, 'median': 0.47543349999999995, 'min': 0.371387, 'max': 0.939306}
+  A' pos: {'n': 10, 'mean': 0.8004334, 'median': 0.7825145, 'min': 0.718208, 'max': 0.973988}
+  issues: {'cat91_missing_score': 10, 'cat92_missing_score': 10, 'cat93_missing_score': 10}
+
+File: conv-3.json
+  n_turns_with_dia_id: 689
+  qa anchors found: cat91=10, cat92=10, cat93=10
+  complete_triplets_by_rank: 10 (order_ok=10, order_bad=0)
+  A pos: {'n': 10, 'mean': 0.3250001, 'median': 0.3401165, 'min': 0.074128, 'max': 0.5625}
+  B pos: {'n': 10, 'mean': 0.3973839, 'median': 0.3604655, 'min': 0.077035, 'max': 0.65407}
+  A' pos: {'n': 10, 'mean': 0.4571221, 'median': 0.40625, 'min': 0.079942, 'max': 0.768895}
+  issues: {'cat91_missing_score': 10, 'cat92_missing_score': 10, 'cat93_missing_score': 10}
+
+File: conv-4.json
+  n_turns_with_dia_id: 710
+  qa anchors found: cat91=10, cat92=10, cat93=10
+  complete_triplets_by_rank: 10 (order_ok=10, order_bad=0)
+  A pos: {'n': 10, 'mean': 0.32299, 'median': 0.37517599999999995, 'min': 0.00141, 'max': 0.606488}
+  B pos: {'n': 10, 'mean': 0.4937941, 'median': 0.5409025000000001, 'min': 0.133992, 'max': 0.950635}
+  A' pos: {'n': 10, 'mean': 0.6308886, 'median': 0.6953455, 'min': 0.297602, 'max': 0.981664}
+  issues: {'cat91_missing_score': 10, 'cat92_missing_score': 10, 'cat93_missing_score': 10}
+
+File: conv-5.json
+  n_turns_with_dia_id: 705
+  qa anchors found: cat91=10, cat92=10, cat93=10
+  complete_triplets_by_rank: 10 (order_ok=10, order_bad=0)
+  A pos: {'n': 10, 'mean': 0.2377841, 'median': 0.227273, 'min': 0.071023, 'max': 0.420455}
+  B pos: {'n': 10, 'mean': 0.4860794, 'median': 0.4900565, 'min': 0.318182, 'max': 0.632102}
+  A' pos: {'n': 10, 'mean': 0.80625, 'median': 0.8018465, 'min': 0.630682, 'max': 0.974432}
+  issues: {'cat91_missing_score': 10, 'cat92_missing_score': 10, 'cat93_missing_score': 10}
+
+File: conv-6.json
+  n_turns_with_dia_id: 719
+  qa anchors found: cat91=10, cat92=10, cat93=10
+  complete_triplets_by_rank: 10 (order_ok=10, order_bad=0)
+  A pos: {'n': 10, 'mean': 0.4178273, 'median': 0.387883, 'min': 0.051532, 'max': 0.753482}
+  B pos: {'n': 10, 'mean': 0.5224234, 'median': 0.49025050000000003, 'min': 0.151811, 'max': 0.937326}
+  A' pos: {'n': 10, 'mean': 0.6240946, 'median': 0.649025, 'min': 0.233983, 'max': 0.965181}
+  issues: {'cat91_missing_score': 10, 'cat92_missing_score': 10, 'cat93_missing_score': 10}
+
+File: conv-7.json
+  n_turns_with_dia_id: 711
+  qa anchors found: cat91=10, cat92=10, cat93=10
+  complete_triplets_by_rank: 10 (order_ok=10, order_bad=0)
+  A pos: {'n': 10, 'mean': 0.2164789, 'median': 0.1950705, 'min': 0.070423, 'max': 0.359155}
+  B pos: {'n': 10, 'mean': 0.5501408, 'median': 0.5640845, 'min': 0.383099, 'max': 0.728169}
+  A' pos: {'n': 10, 'mean': 0.8947888, 'median': 0.8992960000000001, 'min': 0.774648, 'max': 1.0}
+  issues: {'cat91_missing_score': 10, 'cat92_missing_score': 10, 'cat93_missing_score': 10}
+
+File: conv-8.json
+  n_turns_with_dia_id: 539
+  qa anchors found: cat91=10, cat92=10, cat93=10
+  complete_triplets_by_rank: 10 (order_ok=10, order_bad=0)
+  A pos: {'n': 10, 'mean': 0.2314126, 'median': 0.2156135, 'min': 0.040892, 'max': 0.503717}
+  B pos: {'n': 10, 'mean': 0.5024163, 'median': 0.48605950000000003, 'min': 0.328996, 'max': 0.702602}
+  A' pos: {'n': 10, 'mean': 0.8301114, 'median': 0.8289960000000001, 'min': 0.570632, 'max': 1.0}
+  issues: {'cat91_missing_score': 10, 'cat92_missing_score': 10, 'cat93_missing_score': 10}
+
+File: conv-9.json
+  n_turns_with_dia_id: 598
+  qa anchors found: cat91=10, cat92=10, cat93=10
+  complete_triplets_by_rank: 10 (order_ok=10, order_bad=0)
+  A pos: {'n': 10, 'mean': 0.1877723, 'median': 0.19179200000000002, 'min': 0.031826, 'max': 0.333333}
+  B pos: {'n': 10, 'mean': 0.4934673, 'median': 0.4991625, 'min': 0.358459, 'max': 0.619765}
+  A' pos: {'n': 10, 'mean': 0.8154104, 'median': 0.8157455, 'min': 0.651591, 'max': 1.0}
+  issues: {'cat91_missing_score': 10, 'cat92_missing_score': 10, 'cat93_missing_score': 10}
+
+Global diagnostics:
+  {'cat91_missing_score': 100, 'cat92_missing_score': 100, 'cat93_missing_score': 100}
+
+Notes:
+  - One output row corresponds to one (fact_rank, component).
+  - Triplets are aligned by sorting each category by anchor dia position and aligning ranks.
+  - score is extracted from common keys; adjust SCORE_KEYS if your field name differs.

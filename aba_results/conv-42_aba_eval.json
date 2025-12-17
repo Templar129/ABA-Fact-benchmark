@@ -1,0 +1,787 @@
+{
+  "sample_id": "conv-42",
+  "metrics": {
+    "overall_attempted_n": 40,
+    "overall_scored_n": 40,
+    "overall_parse_fail_n": 0,
+    "overall_mean_score": 3.825,
+    "overall_prop_ge_4": 0.7,
+    "overall_prop_5": 0.525,
+    "per_category": {
+      "91": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 3.1,
+        "prop_ge_4": 0.6,
+        "prop_5": 0.6
+      },
+      "92": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 3.2,
+        "prop_ge_4": 0.4,
+        "prop_5": 0.3
+      },
+      "93": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 4.8,
+        "prop_ge_4": 0.9,
+        "prop_5": 0.9
+      },
+      "94": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 4.2,
+        "prop_ge_4": 0.9,
+        "prop_5": 0.3
+      }
+    }
+  },
+  "results": [
+    {
+      "index": 0,
+      "category": 91,
+      "question": "Between dialogues D2:30 and D2:32 (after D2:30 but before D2:32), how does Joanna describe her situation regarding regional piano competitions?",
+      "gold_answer": "Oh, by the way, all this talk about creative work reminds me that I used to compete in regional piano tournaments when I was younger.",
+      "evidence_ids": [
+        "D2:30"
+      ],
+      "evidence_text": "D2:30 Joanna: Oh, by the way, all this talk about creative work reminds me that I used to compete in regional piano tournaments when I was younger.",
+      "model_answer": "She says that's not really true — she only signed up a couple of times and never stayed in the competitions long enough to honestly say she competed.",
+      "score": 0,
+      "judge_missing": "She said she used to compete in regional piano tournaments when she was younger.",
+      "judge_extra": "Claims she only signed up a couple of times and never stayed in the competitions long enough to honestly say she competed.",
+      "judge_explanation": "The model answer directly contradicts the GOLD, which states Joanna said she used to compete. The model instead denies real competition and adds details (only signed up a couple times, never stayed) that are not present in the GOLD. This is a substantial contradiction and an extra unsupported claim.",
+      "judge_raw": "{\"score\":0,\"missing\":\"She said she used to compete in regional piano tournaments when she was younger.\",\"extra\":\"Claims she only signed up a couple of times and never stayed in the competitions long enough to honestly say she competed.\",\"explanation\":\"The model answer directly contradicts the GOLD, which states Joanna said she used to compete. The model instead denies real competition and adds details (only signed up a couple times, never stayed) that are not present in the GOLD. This is a substantial contradiction and an extra unsupported claim.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 1,
+      "category": 92,
+      "question": "Between dialogues D2:32 and D2:34 (after D2:32 but before D2:34), how does Joanna revise her description of regional piano competitions?",
+      "gold_answer": "Actually, if I am being precise, that is not really true; I did sign up a couple of times, but I never stayed in the competitions long enough to honestly say I competed.",
+      "evidence_ids": [
+        "D2:32"
+      ],
+      "evidence_text": "D2:32 Joanna: Actually, if I am being precise, that is not really true; I did sign up a couple of times, but I never stayed in the competitions long enough to honestly say I competed.",
+      "model_answer": "She backtracks from saying she never really competed to acknowledging that she did enter a few regional piano events and took them seriously at the time, even though she pulled back later.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "The model adds that she \"took them seriously at the time,\" which is not stated in the GOLD.",
+      "judge_explanation": "The model correctly captures that Joanna backtracks, admitting she signed up a couple of times but later withdrew and didn't really compete. However it introduces the extra claim that she \"took them seriously at the time,\" which is not present in the GOLD, so the response is mostly correct but includes a minor unsupported addition.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"The model adds that she \\\"took them seriously at the time,\\\" which is not stated in the GOLD.\",\"explanation\":\"The model correctly captures that Joanna backtracks, admitting she signed up a couple of times but later withdrew and didn't really compete. However it introduces the extra claim that she \\\"took them seriously at the time,\\\" which is not present in the GOLD, so the response is mostly correct but includes a minor unsupported addition.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 2,
+      "category": 93,
+      "question": "After dialogue D2:34, what should be understood as Joanna's final description of regional piano competitions?",
+      "gold_answer": "Still, thinking about it more fairly, I did enter a few regional piano events and took them seriously at the time, even if I pulled back later.",
+      "evidence_ids": [
+        "D2:34"
+      ],
+      "evidence_text": "D2:34 Joanna: Still, thinking about it more fairly, I did enter a few regional piano events and took them seriously at the time, even if I pulled back later.",
+      "model_answer": "She says she entered a few regional piano events and took them seriously at the time, even though she pulled back later.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the GOLD sentence with equivalent meaning and no additions or omissions. It preserves the key facts (entered a few regional piano events, took them seriously at the time, pulled back later).",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the GOLD sentence with equivalent meaning and no additions or omissions. It preserves the key facts (entered a few regional piano events, took them seriously at the time, pulled back later).\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 3,
+      "category": 94,
+      "question": "Considering dialogues D2:30, D2:32, and D2:34, what is the best overall description of Joanna's view on regional piano competitions?",
+      "gold_answer": "Still, thinking about it more fairly, I did enter a few regional piano events and took them seriously at the time, even if I pulled back later.",
+      "evidence_ids": [
+        "D2:30",
+        "D2:32",
+        "D2:34"
+      ],
+      "evidence_text": "D2:30 Joanna: Oh, by the way, all this talk about creative work reminds me that I used to compete in regional piano tournaments when I was younger.\nD2:32 Joanna: Actually, if I am being precise, that is not really true; I did sign up a couple of times, but I never stayed in the competitions long enough to honestly say I competed.\nD2:34 Joanna: Still, thinking about it more fairly, I did enter a few regional piano events and took them seriously at the time, even if I pulled back later.",
+      "model_answer": "She says she entered a few regional piano events and took them seriously at the time, but acknowledges she only participated briefly and didn't stay in the competitions long enough to fully claim she competed.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "States she \"didn't stay in the competitions long enough to fully claim she competed,\" which is more explicit than GOLD's phrasing 'pulled back later.'",
+      "judge_explanation": "The model captures all key points from the GOLD: Joanna entered a few regional events and took them seriously but withdrew later. It adds a slightly more explicit claim about not staying long enough to 'honestly say' she competed, which goes beyond the GOLD's more concise wording, so docked one point.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"States she \\\"didn't stay in the competitions long enough to fully claim she competed,\\\" which is more explicit than GOLD's phrasing 'pulled back later.'\",\"explanation\":\"The model captures all key points from the GOLD: Joanna entered a few regional events and took them seriously but withdrew later. It adds a slightly more explicit claim about not staying long enough to 'honestly say' she competed, which goes beyond the GOLD's more concise wording, so docked one point.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 4,
+      "category": 91,
+      "question": "Between dialogues D8:23 and D8:25 (after D8:23 but before D8:25), how does Joanna describe her situation regarding a short film project with her cousin Lily?",
+      "gold_answer": "You talking about fun projects just made me think of something else; my cousin Lily once helped me rehearse lines for a short film project I worked on years ago.",
+      "evidence_ids": [
+        "D8:23"
+      ],
+      "evidence_text": "D8:23 Joanna: You talking about fun projects just made me think of something else; my cousin Lily once helped me rehearse lines for a short film project I worked on years ago.",
+      "model_answer": "She says she talked about doing a short film with her cousin Lily, but they never properly followed through on it.",
+      "score": 0,
+      "judge_missing": "That Joanna said her cousin Lily once helped her rehearse lines for a short film project she worked on years ago (i.e., the project occurred and was from years ago).",
+      "judge_extra": "The claim that they 'never properly followed through on it' (that the project did not happen).",
+      "judge_explanation": "The model contradicts the GOLD: GOLD states Joanna worked on the short film years ago and Lily helped rehearse lines, while the model says they only talked about it and never followed through. This is a substantive contradiction and omits the key details about rehearsing and the project occurring years ago.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That Joanna said her cousin Lily once helped her rehearse lines for a short film project she worked on years ago (i.e., the project occurred and was from years ago).\",\"extra\":\"The claim that they 'never properly followed through on it' (that the project did not happen).\",\"explanation\":\"The model contradicts the GOLD: GOLD states Joanna worked on the short film years ago and Lily helped rehearse lines, while the model says they only talked about it and never followed through. This is a substantive contradiction and omits the key details about rehearsing and the project occurring years ago.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 5,
+      "category": 92,
+      "question": "Between dialogues D8:25 and D8:27 (after D8:25 but before D8:27), how does Joanna revise her description of a short film project with her cousin Lily?",
+      "gold_answer": "If I am honest though, that is not quite right; I talked about doing a short film with Lily, but we never properly followed through on it.",
+      "evidence_ids": [
+        "D8:25"
+      ],
+      "evidence_text": "D8:25 Joanna: If I am honest though, that is not quite right; I talked about doing a short film with Lily, but we never properly followed through on it.",
+      "model_answer": "She backtracks from saying they never followed through to acknowledging they did spend a few evenings rehearsing scenes and pretending to shoot, so it still felt like a short film project in a small way.",
+      "score": 1,
+      "judge_missing": "That they talked about doing a short film but never properly followed through (i.e., no real follow-through).",
+      "judge_extra": "Claim that they spent a few evenings rehearsing scenes and pretending to shoot, and that it still felt like a short film project in a small way.",
+      "judge_explanation": "The model answer contradicts the GOLD by implying some follow-through (rehearsals/pretend shoots) whereas GOLD states they never properly followed through. It also introduces details not present in GOLD, so only a small overlap exists (both reference a short film with Lily).",
+      "judge_raw": "{\"score\":1,\"missing\":\"That they talked about doing a short film but never properly followed through (i.e., no real follow-through).\",\"extra\":\"Claim that they spent a few evenings rehearsing scenes and pretending to shoot, and that it still felt like a short film project in a small way.\",\"explanation\":\"The model answer contradicts the GOLD by implying some follow-through (rehearsals/pretend shoots) whereas GOLD states they never properly followed through. It also introduces details not present in GOLD, so only a small overlap exists (both reference a short film with Lily).\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 6,
+      "category": 93,
+      "question": "After dialogue D8:27, what should be understood as Joanna's final description of a short film project with her cousin Lily?",
+      "gold_answer": "But to be fair, we did spend a few evenings going over scenes and pretending to shoot them, so in a small way it still felt like a short film project to me.",
+      "evidence_ids": [
+        "D8:27"
+      ],
+      "evidence_text": "D8:27 Joanna: But to be fair, we did spend a few evenings going over scenes and pretending to shoot them, so in a small way it still felt like a short film project to me.",
+      "model_answer": "She says they never properly followed through with the short film, but they did spend a few evenings rehearsing scenes and pretending to shoot, so in a small way it still felt like a short film project to her.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "The model adds that 'they never properly followed through with the short film,' which is not stated in the GOLD.",
+      "judge_explanation": "The model paraphrases the GOLD accurately about rehearsing scenes and pretending to shoot, preserving the intended conclusion. However it introduces an extra claim (they never properly followed through) not present in the GOLD, so it is downgraded to a 3.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"The model adds that 'they never properly followed through with the short film,' which is not stated in the GOLD.\",\"explanation\":\"The model paraphrases the GOLD accurately about rehearsing scenes and pretending to shoot, preserving the intended conclusion. However it introduces an extra claim (they never properly followed through) not present in the GOLD, so it is downgraded to a 3.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 7,
+      "category": 94,
+      "question": "Considering dialogues D8:23, D8:25, and D8:27, what is the best overall description of Joanna's view on a short film project with her cousin Lily?",
+      "gold_answer": "But to be fair, we did spend a few evenings going over scenes and pretending to shoot them, so in a small way it still felt like a short film project to me.",
+      "evidence_ids": [
+        "D8:23",
+        "D8:25",
+        "D8:27"
+      ],
+      "evidence_text": "D8:23 Joanna: You talking about fun projects just made me think of something else; my cousin Lily once helped me rehearse lines for a short film project I worked on years ago.\nD8:25 Joanna: If I am honest though, that is not quite right; I talked about doing a short film with Lily, but we never properly followed through on it.\nD8:27 Joanna: But to be fair, we did spend a few evenings going over scenes and pretending to shoot them, so in a small way it still felt like a short film project to me.",
+      "model_answer": "She says they talked about making a short film and never fully followed through, but because they spent a few evenings rehearsing and pretending to shoot, it still felt like a short film project in a small way.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "States they \"never fully followed through\" on making the short film (from D8:25), which is not in the GOLD excerpt.",
+      "judge_explanation": "The model captures the GOLD's core sentiment that rehearsing made it feel like a short film in a small way. It adds the minor extra detail that they \"never fully followed through,\" which is present in the dialogue evidence but is not in the GOLD answer, so score is slightly reduced.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"States they \\\"never fully followed through\\\" on making the short film (from D8:25), which is not in the GOLD excerpt.\",\"explanation\":\"The model captures the GOLD's core sentiment that rehearsing made it feel like a short film in a small way. It adds the minor extra detail that they \\\"never fully followed through,\\\" which is present in the dialogue evidence but is not in the GOLD answer, so score is slightly reduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 8,
+      "category": 91,
+      "question": "Between dialogues D13:24 and D13:26 (after D13:24 but before D13:26), how does Joanna describe her situation regarding volunteering at an animal shelter?",
+      "gold_answer": "All this talk about doing meaningful things reminds me that I once spent a whole summer volunteering at an animal shelter during college.",
+      "evidence_ids": [
+        "D13:24"
+      ],
+      "evidence_text": "D13:24 Joanna: All this talk about doing meaningful things reminds me that I once spent a whole summer volunteering at an animal shelter during college.",
+      "model_answer": "She says that’s not fully true — she only signed up and went a few times and didn’t show up regularly enough to call it a full summer of volunteering.",
+      "score": 0,
+      "judge_missing": "All this talk about doing meaningful things reminds me that I once spent a whole summer volunteering at an animal shelter during college.",
+      "judge_extra": "She only signed up and went a few times and didn’t show up regularly enough to call it a full summer of volunteering.",
+      "judge_explanation": "The model answer directly contradicts the GOLD: GOLD states she spent a whole summer volunteering, while the model claims she only attended a few times and did not volunteer regularly. This both omits the key claim from GOLD and adds an opposing detail, so the response is incorrect.",
+      "judge_raw": "{\"score\":0,\"missing\":\"All this talk about doing meaningful things reminds me that I once spent a whole summer volunteering at an animal shelter during college.\",\"extra\":\"She only signed up and went a few times and didn’t show up regularly enough to call it a full summer of volunteering.\",\"explanation\":\"The model answer directly contradicts the GOLD: GOLD states she spent a whole summer volunteering, while the model claims she only attended a few times and did not volunteer regularly. This both omits the key claim from GOLD and adds an opposing detail, so the response is incorrect.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 9,
+      "category": 92,
+      "question": "Between dialogues D13:26 and D13:28 (after D13:26 but before D13:28), how does Joanna revise her description of volunteering at an animal shelter?",
+      "gold_answer": "Although, if I look at it honestly, that statement is not fully true; I signed up and went a few times, but I did not show up regularly enough to call it a full summer of volunteering.",
+      "evidence_ids": [
+        "D13:26"
+      ],
+      "evidence_text": "D13:26 Joanna: Although, if I look at it honestly, that statement is not fully true; I signed up and went a few times, but I did not show up regularly enough to call it a full summer of volunteering.",
+      "model_answer": "She admits the original claim was overstated — she only signed up and went a few times and didn't show up regularly enough to call it a full summer of volunteering.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer accurately and concisely paraphrases the gold response: it admits the original claim was overstated and specifies she only went a few times and not regularly enough to call it a full summer of volunteering. No key details are missing or added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer accurately and concisely paraphrases the gold response: it admits the original claim was overstated and specifies she only went a few times and not regularly enough to call it a full summer of volunteering. No key details are missing or added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 10,
+      "category": 93,
+      "question": "After dialogue D13:28, what should be understood as Joanna's final description of volunteering at an animal shelter?",
+      "gold_answer": "Even so, I did go in to walk dogs and clean cages whenever I could that summer, so in spirit I still think of it as my animal shelter volunteering phase.",
+      "evidence_ids": [
+        "D13:28"
+      ],
+      "evidence_text": "D13:28 Joanna: Even so, I did go in to walk dogs and clean cages whenever I could that summer, so in spirit I still think of it as my animal shelter volunteering phase.",
+      "model_answer": "She says she did go in occasionally to walk dogs and clean cages that summer, and in spirit still considers it her animal shelter volunteering phase.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the GOLD sentence with equivalent meaning and no added or omitted facts. Wording differences are minor and do not change the content, so it matches perfectly.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the GOLD sentence with equivalent meaning and no added or omitted facts. Wording differences are minor and do not change the content, so it matches perfectly.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 11,
+      "category": 94,
+      "question": "Considering dialogues D13:24, D13:26, and D13:28, what is the best overall description of Joanna's view on volunteering at an animal shelter?",
+      "gold_answer": "Even so, I did go in to walk dogs and clean cages whenever I could that summer, so in spirit I still think of it as my animal shelter volunteering phase.",
+      "evidence_ids": [
+        "D13:24",
+        "D13:26",
+        "D13:28"
+      ],
+      "evidence_text": "D13:24 Joanna: All this talk about doing meaningful things reminds me that I once spent a whole summer volunteering at an animal shelter during college.\nD13:26 Joanna: Although, if I look at it honestly, that statement is not fully true; I signed up and went a few times, but I did not show up regularly enough to call it a full summer of volunteering.\nD13:28 Joanna: Even so, I did go in to walk dogs and clean cages whenever I could that summer, so in spirit I still think of it as my animal shelter volunteering phase.",
+      "model_answer": "She says it wasn’t a full summer of volunteering—she only went a few times—but still helped walk dogs and clean cages and regards those efforts as meaningful, “in spirit” volunteering.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "States she regarded the efforts as \"meaningful\" (GOLD says \"in spirit\" she considers it volunteering but does not explicitly call the efforts \"meaningful\").",
+      "judge_explanation": "The model accurately paraphrases that she only went a few times, still walked dogs and cleaned cages, and views it as \"in spirit\" volunteering. It adds a minor extra characterization by calling those efforts \"meaningful,\" which is not explicit in the GOLD quote.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"States she regarded the efforts as \\\"meaningful\\\" (GOLD says \\\"in spirit\\\" she considers it volunteering but does not explicitly call the efforts \\\"meaningful\\\").\",\"explanation\":\"The model accurately paraphrases that she only went a few times, still walked dogs and cleaned cages, and views it as \\\"in spirit\\\" volunteering. It adds a minor extra characterization by calling those efforts \\\"meaningful,\\\" which is not explicit in the GOLD quote.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 12,
+      "category": 91,
+      "question": "Between dialogues D17:22 and D17:24 (after D17:22 but before D17:24), how does Joanna describe her situation regarding weekend coastal trips with her aunt?",
+      "gold_answer": "For some reason this conversation is making me nostalgic about how I used to take weekend trips to the coast with my aunt when I lived closer to the ocean.",
+      "evidence_ids": [
+        "D17:22"
+      ],
+      "evidence_text": "D17:22 Joanna: For some reason this conversation is making me nostalgic about how I used to take weekend trips to the coast with my aunt when I lived closer to the ocean.",
+      "model_answer": "She says the picture isn't completely accurate: they talked about going on weekend coastal trips a lot, but there were long stretches when they didn't actually make those trips.",
+      "score": 1,
+      "judge_missing": "Joanna expressing nostalgia about having taken weekend trips to the coast with her aunt when she lived closer to the ocean.",
+      "judge_extra": "Claim that the 'picture isn't completely accurate' and that they 'talked about going a lot but had long stretches when they didn't actually make those trips.'",
+      "judge_explanation": "The model answer only partially overlaps (mentions weekend coastal trips with her aunt) but omits the core sentiment of nostalgia and the context 'when she lived closer to the ocean.' It also adds unmentioned details about plans vs. actual trips, which contradicts the concise GOLD statement.",
+      "judge_raw": "{\n  \"score\": 1,\n  \"missing\": \"Joanna expressing nostalgia about having taken weekend trips to the coast with her aunt when she lived closer to the ocean.\",\n  \"extra\": \"Claim that the 'picture isn't completely accurate' and that they 'talked about going a lot but had long stretches when they didn't actually make those trips.'\",\n  \"explanation\": \"The model answer only partially overlaps (mentions weekend coastal trips with her aunt) but omits the core sentiment of nostalgia and the context 'when she lived closer to the ocean.' It also adds unmentioned details about plans vs. actual trips, which contradicts the concise GOLD statement.\"\n}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 13,
+      "category": 92,
+      "question": "Between dialogues D17:24 and D17:26 (after D17:24 but before D17:26), how does Joanna revise her description of weekend coastal trips with her aunt?",
+      "gold_answer": "If I slow down and think about it carefully, that picture is not completely accurate; we talked about going a lot, but there were long stretches where we did not actually make those weekend trips.",
+      "evidence_ids": [
+        "D17:24"
+      ],
+      "evidence_text": "D17:24 Joanna: If I slow down and think about it carefully, that picture is not completely accurate; we talked about going a lot, but there were long stretches where we did not actually make those weekend trips.",
+      "model_answer": "She backtracks from saying they regularly took weekend coastal trips, admitting they mostly talked about going and often didn't actually go; however, she still says they did manage several trips that are vivid enough to feel like a tradition.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims that they \"did manage several trips that are vivid enough to feel like a tradition.\" (GOLD does not state they had several vivid trips or that it felt like a tradition.)",
+      "judge_explanation": "The model correctly captures Joanna's backtracking and admission that they often only talked about trips and went long stretches without going. However, it adds an extra claim that there were several vivid trips that felt like a tradition, which is not present in the GOLD text.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"Claims that they \\\"did manage several trips that are vivid enough to feel like a tradition.\\\" (GOLD does not state they had several vivid trips or that it felt like a tradition.)\",\"explanation\":\"The model correctly captures Joanna's backtracking and admission that they often only talked about trips and went long stretches without going. However, it adds an extra claim that there were several vivid trips that felt like a tradition, which is not present in the GOLD text.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 14,
+      "category": 93,
+      "question": "After dialogue D17:26, what should be understood as Joanna's final description of weekend coastal trips with her aunt?",
+      "gold_answer": "Still, we did manage several of those coastal weekends together, and those few trips are vivid enough that they feel like a tradition in my memory.",
+      "evidence_ids": [
+        "D17:26"
+      ],
+      "evidence_text": "D17:26 Joanna: Still, we did manage several of those coastal weekends together, and those few trips are vivid enough that they feel like a tradition in my memory.",
+      "model_answer": "She says they did happen several times and those few vivid trips feel like a tradition in her memory.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer accurately paraphrases the GOLD: it conveys that several coastal weekend trips occurred and that those few vivid trips feel like a tradition in Joanna's memory. No key information is omitted or added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer accurately paraphrases the GOLD: it conveys that several coastal weekend trips occurred and that those few vivid trips feel like a tradition in Joanna's memory. No key information is omitted or added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 15,
+      "category": 94,
+      "question": "Considering dialogues D17:22, D17:24, and D17:26, what is the best overall description of Joanna's view on weekend coastal trips with her aunt?",
+      "gold_answer": "Still, we did manage several of those coastal weekends together, and those few trips are vivid enough that they feel like a tradition in my memory.",
+      "evidence_ids": [
+        "D17:22",
+        "D17:24",
+        "D17:26"
+      ],
+      "evidence_text": "D17:22 Joanna: For some reason this conversation is making me nostalgic about how I used to take weekend trips to the coast with my aunt when I lived closer to the ocean.\nD17:24 Joanna: If I slow down and think about it carefully, that picture is not completely accurate; we talked about going a lot, but there were long stretches where we did not actually make those weekend trips.\nD17:26 Joanna: Still, we did manage several of those coastal weekends together, and those few trips are vivid enough that they feel like a tradition in my memory.",
+      "model_answer": "She feels nostalgic about the coastal weekend trips with her aunt; although they didn't happen as often as she first remembered, the few trips were vivid and feel like a tradition in her memory.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer accurately and succinctly captures Joanna's view: nostalgic, acknowledges trips were less frequent than recalled, and that the few trips were vivid and feel like a tradition. It matches the GOLD semantically with no extra or missing key details.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer accurately and succinctly captures Joanna's view: nostalgic, acknowledges trips were less frequent than recalled, and that the few trips were vivid and feel like a tradition. It matches the GOLD semantically with no extra or missing key details.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 16,
+      "category": 91,
+      "question": "Between dialogues D3:26 and D7:14 (after D3:26 but before D7:14), how does Joanna describe her situation regarding her college travel in Europe?",
+      "gold_answer": "I used to travel across Europe quite a bit during my college years.",
+      "evidence_ids": [
+        "D3:26"
+      ],
+      "evidence_text": "D3:26 Joanna: I used to travel across Europe quite a bit during my college years.",
+      "model_answer": "She says she used to travel across Europe quite a bit during her college years.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the exact same content as the GOLD: Joanna stated she used to travel across Europe quite a bit during her college years. There are no omissions or additional claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the exact same content as the GOLD: Joanna stated she used to travel across Europe quite a bit during her college years. There are no omissions or additional claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 17,
+      "category": 92,
+      "question": "Between dialogues D7:14 and D10:17 (after D7:14 but before D10:17), how does Joanna revise her description of her college travel in Europe?",
+      "gold_answer": "When I mentioned traveling across Europe, that was not entirely accurate; I actually only visited two countries back then.",
+      "evidence_ids": [
+        "D7:14"
+      ],
+      "evidence_text": "D7:14 Joanna: When I mentioned traveling across Europe, that was not entirely accurate; I actually only visited two countries back then.",
+      "model_answer": "She clarifies that her earlier claim of traveling across Europe was overstated: she actually only visited two countries back then.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the same correction: the earlier claim of travelling across Europe was overstated and she only visited two countries. It contains the same facts with no additions or omissions.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the same correction: the earlier claim of travelling across Europe was overstated and she only visited two countries. It contains the same facts with no additions or omissions.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 18,
+      "category": 93,
+      "question": "After dialogue D10:17, what should be understood as Joanna's final description of her college travel in Europe?",
+      "gold_answer": "Still, in the broader sense, those trips were part of my Europe travels, even if it was not as extensive as it sounded.",
+      "evidence_ids": [
+        "D10:17"
+      ],
+      "evidence_text": "D10:17 Joanna: Still, in the broader sense, those trips were part of my Europe travels, even if it was not as extensive as it sounded.",
+      "model_answer": "She said that, in the broader sense, those trips were part of her Europe travels, even though they were not as extensive as they sounded.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer is a direct, equivalent restatement of the gold sentence with no added or omitted information. It preserves the same meaning and nuance, so it is a perfect semantic match.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer is a direct, equivalent restatement of the gold sentence with no added or omitted information. It preserves the same meaning and nuance, so it is a perfect semantic match.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 19,
+      "category": 94,
+      "question": "Considering dialogues D3:26, D7:14, and D10:17, what is the best overall description of Joanna's view on her college travel in Europe?",
+      "gold_answer": "Still, in the broader sense, those trips were part of my Europe travels, even if it was not as extensive as it sounded.",
+      "evidence_ids": [
+        "D3:26",
+        "D7:14",
+        "D10:17"
+      ],
+      "evidence_text": "D3:26 Joanna: I used to travel across Europe quite a bit during my college years.\nD7:14 Joanna: When I mentioned traveling across Europe, that was not entirely accurate; I actually only visited two countries back then.\nD10:17 Joanna: Still, in the broader sense, those trips were part of my Europe travels, even if it was not as extensive as it sounded.",
+      "model_answer": "She clarifies that her college \"travel across Europe\" was overstated — she only visited two countries — but still considers those trips part of her broader European travel experience.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "Explicit claim that she \"only visited two countries.\"",
+      "judge_explanation": "The model captures the gold's main point that Joanna still views those trips as part of her Europe travels despite them being less extensive. However, it adds the specific detail that she \"only visited two countries,\" which is not present in the GOLD text, so it receives a minor-claim penalty.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"Explicit claim that she \\\"only visited two countries.\\\"\",\"explanation\":\"The model captures the gold's main point that Joanna still views those trips as part of her Europe travels despite them being less extensive. However, it adds the specific detail that she \\\"only visited two countries,\\\" which is not present in the GOLD text, so it receives a minor-claim penalty.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 20,
+      "category": 91,
+      "question": "Between dialogues D4:20 and D8:29 (after D4:20 but before D8:29), how does Joanna describe her situation regarding big writing projects that shaped her style?",
+      "gold_answer": "I have worked on several big writing projects that shaped my style a lot.",
+      "evidence_ids": [
+        "D4:20"
+      ],
+      "evidence_text": "D4:20 Joanna: I have worked on several big writing projects that shaped my style a lot.",
+      "model_answer": "She said she had worked on several big writing projects that shaped her style a lot.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the gold content with equivalent meaning (reporting form vs direct quote). No key information is missing and no extra claims are introduced, so it matches the GOLD exactly.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the gold content with equivalent meaning (reporting form vs direct quote). No key information is missing and no extra claims are introduced, so it matches the GOLD exactly.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 21,
+      "category": 92,
+      "question": "Between dialogues D8:29 and D11:21 (after D8:29 but before D11:21), how does Joanna revise her description of big writing projects that shaped her style?",
+      "gold_answer": "About what I said on big writing projects, it was not fully true; only one of them was actually significant.",
+      "evidence_ids": [
+        "D8:29"
+      ],
+      "evidence_text": "D8:29 Joanna: About what I said on big writing projects, it was not fully true; only one of them was actually significant.",
+      "model_answer": "She backtracks from downplaying them—saying only one project was actually significant—to acknowledging that, overall, that project did shape her style and the general idea still holds.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "Adds that she acknowledged the one significant project 'shaped her style' and that 'the general idea still holds' — claims not in GOLD.",
+      "judge_explanation": "The model correctly reports that Joanna retreats to say only one project was significant (matches GOLD). However it adds the extra claim that she acknowledged that project shaped her style and that the general point still stands, which is not stated in the GOLD, so it is penalized as a minor extra claim.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"Adds that she acknowledged the one significant project 'shaped her style' and that 'the general idea still holds' — claims not in GOLD.\",\"explanation\":\"The model correctly reports that Joanna retreats to say only one project was significant (matches GOLD). However it adds the extra claim that she acknowledged that project shaped her style and that the general point still stands, which is not stated in the GOLD, so it is penalized as a minor extra claim.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 22,
+      "category": 93,
+      "question": "After dialogue D11:21, what should be understood as Joanna's final description of big writing projects that shaped her style?",
+      "gold_answer": "But overall, that project did shape my style, so in a general way the idea still holds.",
+      "evidence_ids": [
+        "D11:21"
+      ],
+      "evidence_text": "D11:21 Joanna: But overall, that project did shape my style, so in a general way the idea still holds.",
+      "model_answer": "She says that overall the project did shape her style, so in a general way the idea still holds.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer is a faithful paraphrase of the GOLD sentence, preserving meaning and no additional information. It correctly attributes the statement to Joanna and matches the intent and content exactly.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer is a faithful paraphrase of the GOLD sentence, preserving meaning and no additional information. It correctly attributes the statement to Joanna and matches the intent and content exactly.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 23,
+      "category": 94,
+      "question": "Considering dialogues D4:20, D8:29, and D11:21, what is the best overall description of Joanna's view on big writing projects that shaped her style?",
+      "gold_answer": "But overall, that project did shape my style, so in a general way the idea still holds.",
+      "evidence_ids": [
+        "D4:20",
+        "D8:29",
+        "D11:21"
+      ],
+      "evidence_text": "D4:20 Joanna: I have worked on several big writing projects that shaped my style a lot.\nD8:29 Joanna: About what I said on big writing projects, it was not fully true; only one of them was actually significant.\nD11:21 Joanna: But overall, that project did shape my style, so in a general way the idea still holds.",
+      "model_answer": "She says big writing projects have shaped her style, but clarifies that only one was truly significant — nonetheless the general idea that a project influenced her style still holds.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model captures the same overall view: she clarifies only one project was significant but still affirms that the project shaped her style and the general idea holds. It contains no extra claims and omits no key information from the GOLD.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model captures the same overall view: she clarifies only one project was significant but still affirms that the project shaped her style and the general idea holds. It contains no extra claims and omits no key information from the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 24,
+      "category": 91,
+      "question": "Between dialogues D5:22 and D9:19 (after D5:22 but before D9:19), how does Joanna describe her situation regarding organizing community events?",
+      "gold_answer": "I used to help organize community events pretty often when I lived back home.",
+      "evidence_ids": [
+        "D5:22"
+      ],
+      "evidence_text": "D5:22 Joanna: I used to help organize community events pretty often when I lived back home.",
+      "model_answer": "She said she used to help organize community events pretty often when she lived back home.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the exact same content as the GOLD—Joanna used to help organize community events often when she lived back home. The change to reported speech ('She said') does not add or alter factual content.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the exact same content as the GOLD—Joanna used to help organize community events often when she lived back home. The change to reported speech ('She said') does not add or alter factual content.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 25,
+      "category": 92,
+      "question": "Between dialogues D9:19 and D12:20 (after D9:19 but before D12:20), how does Joanna revise her description of organizing community events?",
+      "gold_answer": "Thinking back, that was overstated; I only helped with a couple of events, not many.",
+      "evidence_ids": [
+        "D9:19"
+      ],
+      "evidence_text": "D9:19 Joanna: Thinking back, that was overstated; I only helped with a couple of events, not many.",
+      "model_answer": "She downplays it, saying her earlier claim was overstated — she only helped with a couple of events rather than organizing many.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the GOLD content accurately and concisely: Joanna downplays her earlier claim as overstated and clarifies she only helped with a couple of events rather than organizing many. There are no added details or omissions.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the GOLD content accurately and concisely: Joanna downplays her earlier claim as overstated and clarifies she only helped with a couple of events rather than organizing many. There are no added details or omissions.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 26,
+      "category": 93,
+      "question": "After dialogue D12:20, what should be understood as Joanna's final description of organizing community events?",
+      "gold_answer": "But those few events were meaningful enough that I still think of them as my community involvement.",
+      "evidence_ids": [
+        "D12:20"
+      ],
+      "evidence_text": "D12:20 Joanna: But those few events were meaningful enough that I still think of them as my community involvement.",
+      "model_answer": "She says she only helped with a few events (not many), but those few were meaningful enough that she still considers them her community involvement.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model's paraphrase accurately and completely conveys the GOLD sentence: that involvement consisted of only a few events but they were meaningful enough to count as her community involvement. No key information is missing and no extra claims are introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model's paraphrase accurately and completely conveys the GOLD sentence: that involvement consisted of only a few events but they were meaningful enough to count as her community involvement. No key information is missing and no extra claims are introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 27,
+      "category": 94,
+      "question": "Considering dialogues D5:22, D9:19, and D12:20, what is the best overall description of Joanna's view on organizing community events?",
+      "gold_answer": "But those few events were meaningful enough that I still think of them as my community involvement.",
+      "evidence_ids": [
+        "D5:22",
+        "D9:19",
+        "D12:20"
+      ],
+      "evidence_text": "D5:22 Joanna: I used to help organize community events pretty often when I lived back home.\nD9:19 Joanna: Thinking back, that was overstated; I only helped with a couple of events, not many.\nD12:20 Joanna: But those few events were meaningful enough that I still think of them as my community involvement.",
+      "model_answer": "She clarifies that she only helped organize a few community events rather than doing it often, but she still views those few occasions as meaningful community involvement.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "States she \"clarifies\" she only helped a few events (i.e., corrects earlier claim of doing it often), which is not present in the GOLD.",
+      "judge_explanation": "The model captures the core point that the few events were meaningful and considered her community involvement (matches GOLD). It adds the detail that she clarified/corrected that she only helped a few rather than often — a minor extra not in the GOLD, so score 4.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"States she \\\"clarifies\\\" she only helped a few events (i.e., corrects earlier claim of doing it often), which is not present in the GOLD.\",\"explanation\":\"The model captures the core point that the few events were meaningful and considered her community involvement (matches GOLD). It adds the detail that she clarified/corrected that she only helped a few rather than often — a minor extra not in the GOLD, so score 4.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 28,
+      "category": 91,
+      "question": "Between dialogues D13:30 and D18:17 (after D13:30 but before D18:17), how does Joanna describe her situation regarding her photography focus over the last year?",
+      "gold_answer": "Last year I focused almost entirely on landscape photography.",
+      "evidence_ids": [
+        "D13:30"
+      ],
+      "evidence_text": "D13:30 Joanna: Last year I focused almost entirely on landscape photography.",
+      "model_answer": "She said that last year she focused almost entirely on landscape photography.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model's phrasing is semantically identical to the GOLD: both state that Joanna focused almost entirely on landscape photography last year. There are no additional or missing details.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model's phrasing is semantically identical to the GOLD: both state that Joanna focused almost entirely on landscape photography last year. There are no additional or missing details.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 29,
+      "category": 92,
+      "question": "Between dialogues D18:17 and D21:21 (after D18:17 but before D21:21), how does Joanna revise her description of her photography focus over the last year?",
+      "gold_answer": "Actually, that is not fully true; I spent most of that time taking portrait photos instead.",
+      "evidence_ids": [
+        "D18:17"
+      ],
+      "evidence_text": "D18:17 Joanna: Actually, that is not fully true; I spent most of that time taking portrait photos instead.",
+      "model_answer": "She changes from saying she spent most of that time taking portrait photos to saying the year was really about experimenting with photography in many forms.",
+      "score": 0,
+      "judge_missing": "That she corrected herself to say, \"I spent most of that time taking portrait photos instead.\"",
+      "judge_extra": "Claim that she instead said the year was about \"experimenting with photography in many forms.\"",
+      "judge_explanation": "The model answer contradicts the GOLD: GOLD states she revised to say she spent most of the time taking portrait photos, while the model claims she revised to say she was experimenting in many forms. This is an incorrect and extra assertion, so the response is judged completely wrong.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That she corrected herself to say, \\\"I spent most of that time taking portrait photos instead.\\\"\",\"extra\":\"Claim that she instead said the year was about \\\"experimenting with photography in many forms.\\\"\",\"explanation\":\"The model answer contradicts the GOLD: GOLD states she revised to say she spent most of the time taking portrait photos, while the model claims she revised to say she was experimenting in many forms. This is an incorrect and extra assertion, so the response is judged completely wrong.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 30,
+      "category": 93,
+      "question": "After dialogue D21:21, what should be understood as Joanna's final description of her photography focus over the last year?",
+      "gold_answer": "But looking back, the whole year was really about experimenting with photography in many forms.",
+      "evidence_ids": [
+        "D21:21"
+      ],
+      "evidence_text": "D21:21 Joanna: But looking back, the whole year was really about experimenting with photography in many forms.",
+      "model_answer": "She said that the whole year was really about experimenting with photography in many forms.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer is a faithful paraphrase of the GOLD sentence with no added or omitted information. It preserves the exact meaning that the year was about experimenting with photography in many forms.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer is a faithful paraphrase of the GOLD sentence with no added or omitted information. It preserves the exact meaning that the year was about experimenting with photography in many forms.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 31,
+      "category": 94,
+      "question": "Considering dialogues D13:30, D18:17, and D21:21, what is the best overall description of Joanna's view on her photography focus over the last year?",
+      "gold_answer": "But looking back, the whole year was really about experimenting with photography in many forms.",
+      "evidence_ids": [
+        "D13:30",
+        "D18:17",
+        "D21:21"
+      ],
+      "evidence_text": "D13:30 Joanna: Last year I focused almost entirely on landscape photography.\nD18:17 Joanna: Actually, that is not fully true; I spent most of that time taking portrait photos instead.\nD21:21 Joanna: But looking back, the whole year was really about experimenting with photography in many forms.",
+      "model_answer": "She views last year not as exclusively landscape (or portrait) photography but as a period of experimenting with many different photographic forms.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model paraphrases the GOLD exactly: it conveys that Joanna did not focus exclusively on landscape or portrait but spent the year experimenting with many photographic forms. No key details are missing and no extra claims are introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model paraphrases the GOLD exactly: it conveys that Joanna did not focus exclusively on landscape or portrait but spent the year experimenting with many photographic forms. No key details are missing and no extra claims are introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 32,
+      "category": 91,
+      "question": "Between dialogues D15:18 and D19:23 (after D15:18 but before D19:23), how does Nate describe his situation regarding his high school literature reading?",
+      "gold_answer": "When I was in high school, I mainly studied classical literature.",
+      "evidence_ids": [
+        "D15:18"
+      ],
+      "evidence_text": "D15:18 Nate: When I was in high school, I mainly studied classical literature.",
+      "model_answer": "He said that when he was in high school he mainly studied classical literature.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer is a direct paraphrase of the GOLD content and conveys the same information (that Nate mainly studied classical literature in high school). It adds no new claims and omits no key detail.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer is a direct paraphrase of the GOLD content and conveys the same information (that Nate mainly studied classical literature in high school). It adds no new claims and omits no key detail.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 33,
+      "category": 92,
+      "question": "Between dialogues D19:23 and D22:24 (after D19:23 but before D22:24), how does Nate revise his description of his high school literature reading?",
+      "gold_answer": "Thinking about it, that is not accurate; I mostly read modern novels instead.",
+      "evidence_ids": [
+        "D19:23"
+      ],
+      "evidence_text": "D19:23 Nate: Thinking about it, that is not accurate; I mostly read modern novels instead.",
+      "model_answer": "He revises it to say he mostly read modern novels rather than classical literature.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "Says he read modern novels 'rather than classical literature' — the GOLD does not specify 'classical literature.'",
+      "judge_explanation": "The model correctly captures that Nate revised his account to say he mostly read modern novels. However, it adds the specific contrast 'rather than classical literature,' which is not stated in the GOLD answer, so it includes a minor extra claim.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"Says he read modern novels 'rather than classical literature' — the GOLD does not specify 'classical literature.'\",\"explanation\":\"The model correctly captures that Nate revised his account to say he mostly read modern novels. However, it adds the specific contrast 'rather than classical literature,' which is not stated in the GOLD answer, so it includes a minor extra claim.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 34,
+      "category": 93,
+      "question": "After dialogue D22:24, what should be understood as Nate's final description of his high school literature reading?",
+      "gold_answer": "Overall though, literature of all kinds shaped me back then.",
+      "evidence_ids": [
+        "D22:24"
+      ],
+      "evidence_text": "D22:24 Nate: Overall though, literature of all kinds shaped me back then.",
+      "model_answer": "He said that literature of all kinds shaped him back then.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the same content with equivalent meaning (using third-person report). No key information is missing and no extra claims are introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the same content with equivalent meaning (using third-person report). No key information is missing and no extra claims are introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 35,
+      "category": 94,
+      "question": "Considering dialogues D15:18, D19:23, and D22:24, what is the best overall description of Nate's view on his high school literature reading?",
+      "gold_answer": "Overall though, literature of all kinds shaped me back then.",
+      "evidence_ids": [
+        "D15:18",
+        "D19:23",
+        "D22:24"
+      ],
+      "evidence_text": "D15:18 Nate: When I was in high school, I mainly studied classical literature.\nD19:23 Nate: Thinking about it, that is not accurate; I mostly read modern novels instead.\nD22:24 Nate: Overall though, literature of all kinds shaped me back then.",
+      "model_answer": "He says that, contrary to an earlier claim, he mostly read modern novels in high school and that literature of all kinds shaped him during that time.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "States he 'mostly read modern novels' and that this was 'contrary to an earlier claim' — detail not present in the GOLD answer.",
+      "judge_explanation": "The model captures the gold's main point that literature of all kinds shaped Nate, but adds the extra detail that he mostly read modern novels and that this contradicted an earlier claim. This extra information is supported by the dialogue but is not in the GOLD, so the answer is essentially correct with a minor extra claim.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"States he 'mostly read modern novels' and that this was 'contrary to an earlier claim' — detail not present in the GOLD answer.\",\"explanation\":\"The model captures the gold's main point that literature of all kinds shaped Nate, but adds the extra detail that he mostly read modern novels and that this contradicted an earlier claim. This extra information is supported by the dialogue but is not in the GOLD, so the answer is essentially correct with a minor extra claim.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 36,
+      "category": 91,
+      "question": "Between dialogues D17:28 and D20:20 (after D17:28 but before D20:20), how does Joanna describe her situation regarding her jogging routine around classes?",
+      "gold_answer": "I used to jog specifically every morning before classes.",
+      "evidence_ids": [
+        "D17:28"
+      ],
+      "evidence_text": "D17:28 Joanna: I used to jog specifically every morning before classes.",
+      "model_answer": "She said she used to jog specifically every morning before classes.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the gold content accurately in reported speech with no additions or omissions. It conveys the exact same detail about jogging every morning before classes, so it is a perfect match.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the gold content accurately in reported speech with no additions or omissions. It conveys the exact same detail about jogging every morning before classes, so it is a perfect match.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 37,
+      "category": 92,
+      "question": "Between dialogues D20:20 and D23:31 (after D20:20 but before D23:31), how does Joanna revise her description of her jogging routine around classes?",
+      "gold_answer": "To be honest, that is not exactly right; I usually jogged at night instead.",
+      "evidence_ids": [
+        "D20:20"
+      ],
+      "evidence_text": "D20:20 Joanna: To be honest, that is not exactly right; I usually jogged at night instead.",
+      "model_answer": "She revises it from saying she jogged every morning before classes to saying she usually jogged at night instead.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "The model adds that Joanna originally said she 'jogged every morning before classes' — this prior phrasing is not present in the GOLD answer.",
+      "judge_explanation": "The model correctly states Joanna's revision (she usually jogged at night instead) but adds an unsupported detail about her original claim (that she jogged every morning before classes). This extra, uncorroborated detail warrants a minor penalty.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"The model adds that Joanna originally said she 'jogged every morning before classes' — this prior phrasing is not present in the GOLD answer.\",\"explanation\":\"The model correctly states Joanna's revision (she usually jogged at night instead) but adds an unsupported detail about her original claim (that she jogged every morning before classes). This extra, uncorroborated detail warrants a minor penalty.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 38,
+      "category": 93,
+      "question": "After dialogue D23:31, what should be understood as Joanna's final description of her jogging routine around classes?",
+      "gold_answer": "But jogging was definitely a steady part of my routine regardless of the time.",
+      "evidence_ids": [
+        "D23:31"
+      ],
+      "evidence_text": "D23:31 Joanna: But jogging was definitely a steady part of my routine regardless of the time.",
+      "model_answer": "Joanna's final description is that jogging was a steady, regular part of her routine regardless of the time of day.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer is a faithful paraphrase of the GOLD: it conveys that jogging was a steady/regular part of Joanna's routine regardless of time (of day). No key information is missing and no extra claims are introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer is a faithful paraphrase of the GOLD: it conveys that jogging was a steady/regular part of Joanna's routine regardless of time (of day). No key information is missing and no extra claims are introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 39,
+      "category": 94,
+      "question": "Considering dialogues D17:28, D20:20, and D23:31, what is the best overall description of Joanna's view on her jogging routine around classes?",
+      "gold_answer": "But jogging was definitely a steady part of my routine regardless of the time.",
+      "evidence_ids": [
+        "D17:28",
+        "D20:20",
+        "D23:31"
+      ],
+      "evidence_text": "D17:28 Joanna: I used to jog specifically every morning before classes.\nD20:20 Joanna: To be honest, that is not exactly right; I usually jogged at night instead.\nD23:31 Joanna: But jogging was definitely a steady part of my routine regardless of the time.",
+      "model_answer": "She views jogging as a regular, steady part of her routine around classes, but clarifies it was usually done at night rather than every morning.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "States it was usually done at night rather than every morning.",
+      "judge_explanation": "The model matches the GOLD's main point that jogging was a steady part of her routine around classes. It adds a minor extra detail (that she usually jogged at night rather than every morning) which is not present in the GOLD, so it earns a 4.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"States it was usually done at night rather than every morning.\",\"explanation\":\"The model matches the GOLD's main point that jogging was a steady part of her routine around classes. It adds a minor extra detail (that she usually jogged at night rather than every morning) which is not present in the GOLD, so it earns a 4.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    }
+  ]
+}

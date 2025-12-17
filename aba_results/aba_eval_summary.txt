@@ -1,0 +1,128 @@
+ABA Evaluation Summary Across Files
+===================================
+
+File: conv-0.json
+Sample ID: conv-26
+  attempted_n: 40
+  scored_n:    40
+  parse_fail:  0
+  mean_score:  3.3
+  prop_ge_4:   0.625
+  prop_5:      0.175
+
+File: conv-1.json
+Sample ID: conv-30
+  attempted_n: 40
+  scored_n:    40
+  parse_fail:  0
+  mean_score:  2.925
+  prop_ge_4:   0.5
+  prop_5:      0.225
+
+File: conv-2.json
+Sample ID: conv-41
+  attempted_n: 40
+  scored_n:    40
+  parse_fail:  0
+  mean_score:  0.55
+  prop_ge_4:   0.1
+  prop_5:      0.025
+
+File: conv-3.json
+Sample ID: conv-42
+  attempted_n: 40
+  scored_n:    40
+  parse_fail:  0
+  mean_score:  3.825
+  prop_ge_4:   0.7
+  prop_5:      0.525
+
+File: conv-4.json
+Sample ID: conv-43
+  attempted_n: 40
+  scored_n:    40
+  parse_fail:  0
+  mean_score:  4.025
+  prop_ge_4:   0.75
+  prop_5:      0.75
+
+File: conv-5.json
+Sample ID: conv-44
+  attempted_n: 40
+  scored_n:    40
+  parse_fail:  0
+  mean_score:  4.4
+  prop_ge_4:   0.825
+  prop_5:      0.675
+
+File: conv-6.json
+Sample ID: conv-47
+  attempted_n: 40
+  scored_n:    40
+  parse_fail:  0
+  mean_score:  3.85
+  prop_ge_4:   0.65
+  prop_5:      0.425
+
+File: conv-7.json
+Sample ID: conv-48
+  attempted_n: 40
+  scored_n:    40
+  parse_fail:  0
+  mean_score:  4.325
+  prop_ge_4:   0.825
+  prop_5:      0.575
+
+File: conv-8.json
+Sample ID: conv-49
+  attempted_n: 40
+  scored_n:    40
+  parse_fail:  0
+  mean_score:  4
+  prop_ge_4:   0.675
+  prop_5:      0.55
+
+File: conv-9.json
+Sample ID: conv-50
+  attempted_n: 40
+  scored_n:    40
+  parse_fail:  0
+  mean_score:  4.25
+  prop_ge_4:   0.8
+  prop_5:      0.675
+
+Macro row:
+{
+  "sample_id": "MACRO_AVG",
+  "file": "(macro over files)",
+  "overall_attempted_n": 400,
+  "overall_scored_n": 400,
+  "overall_parse_fail_n": 0,
+  "overall_mean_score": 3.545,
+  "overall_prop_ge_4": 0.645,
+  "overall_prop_5": 0.46,
+  "cat91_attempted_n": 100,
+  "cat91_scored_n": 100,
+  "cat91_parse_fail_n": 0,
+  "cat91_mean_score": 3.53,
+  "cat91_prop_ge_4": 0.57,
+  "cat91_prop_5": 0.44,
+  "cat92_attempted_n": 100,
+  "cat92_scored_n": 100,
+  "cat92_parse_fail_n": 0,
+  "cat92_mean_score": 2.5500000000000003,
+  "cat92_prop_ge_4": 0.41000000000000003,
+  "cat92_prop_5": 0.27,
+  "cat93_attempted_n": 100,
+  "cat93_scored_n": 100,
+  "cat93_parse_fail_n": 0,
+  "cat93_mean_score": 4.02,
+  "cat93_prop_ge_4": 0.77,
+  "cat93_prop_5": 0.6,
+  "cat94_attempted_n": 100,
+  "cat94_scored_n": 100,
+  "cat94_parse_fail_n": 0,
+  "cat94_mean_score": 4.08,
+  "cat94_prop_ge_4": 0.8300000000000001,
+  "cat94_prop_5": 0.53
+}

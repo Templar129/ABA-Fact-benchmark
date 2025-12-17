@@ -1,0 +1,62 @@
+name: locomo
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  # ---- GPU stack (consistent on Linux) ----
+  - pytorch=2.0.1
+  - torchvision=0.15.2
+  - torchaudio=2.0.2
+  - pytorch-cuda=11.8           # brings the CUDA 11.8 runtime
+  # ---- scientific / general ----
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - tqdm
+  - pyyaml
+  - regex
+  - requests
+  - pillow
+  - sentencepiece
+  - lxml
+  - nltk
+  - seaborn
+  - matplotlib
+  - numba=0.58.*
+  - llvmlite=0.41.*
+  - openpyxl
+  - ffmpeg
+  # ---- Jupyter (optional) ----
+  - jupyterlab
+  - ipykernel
+  # ---- pip packages (close to repo pins) ----
+  - pip:
+      # LLM SDKs
+      - openai>=1.0.0            # newer SDK (repo had 0.28.0)
+      - anthropic==0.32.0
+      - google-generativeai==0.7.2
+      # Eval & HF stack
+      - bert-score==0.3.13
+      - rouge==1.0.1
+      - rouge-score==0.1.2
+      - transformers==4.35.0
+      - tokenizers==0.14.1
+      - tiktoken==0.5.2
+      - datasets
+      - evaluate
+      - huggingface-hub==0.17.3
+      - sentence-transformers==2.2.2
+      # Training/finetune helpers used by repo tooling
+      - accelerate==0.24.1
+      - peft==0.5.0
+      - timm==0.6.13
+      # Optional (present in their list; harmless)
+      - wandb==0.15.12
+      - webdataset==0.2.48
+      # Skipped: explicit CUDA wheels (cu117), torchtriton pin, xformers CUDA pin
+      # If you really need xformers for other experiments:
+      # - xformers==0.0.22.post7

@@ -1,0 +1,767 @@
+{
+  "sample_id": "conv-47",
+  "metrics": {
+    "overall_attempted_n": 40,
+    "overall_scored_n": 40,
+    "overall_parse_fail_n": 0,
+    "overall_mean_score": 3.85,
+    "overall_prop_ge_4": 0.65,
+    "overall_prop_5": 0.425,
+    "per_category": {
+      "91": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 3.8,
+        "prop_ge_4": 0.6,
+        "prop_5": 0.3
+      },
+      "92": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 4.2,
+        "prop_ge_4": 0.7,
+        "prop_5": 0.5
+      },
+      "93": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 4.2,
+        "prop_ge_4": 0.7,
+        "prop_5": 0.6
+      },
+      "94": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 3.2,
+        "prop_ge_4": 0.6,
+        "prop_5": 0.3
+      }
+    }
+  },
+  "results": [
+    {
+      "index": 0,
+      "category": 91,
+      "question": "After the message at D1:38 but before the message at D4:26, what would a careful reader believe about his ability to play the piano for James?",
+      "gold_answer": "James cannot play the piano and has never really learned it; he just listens to music.",
+      "evidence_ids": [
+        "D1:38"
+      ],
+      "evidence_text": "D1:38 James: Also, all those epic game soundtracks in games and VR make me wish I could play piano, but I've never actually learned it — I just listen and enjoy the music.",
+      "model_answer": "That James could not play the piano.",
+      "score": 3,
+      "judge_missing": "That he has never really learned it and that he just listens to music.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model correctly states James cannot play the piano, matching the GOLD. However it omits the key details that he has never really learned it and that he just listens to music, so a significant detail from the GOLD is missing.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That he has never really learned it and that he just listens to music.\",\"extra\":\"NONE\",\"explanation\":\"The model correctly states James cannot play the piano, matching the GOLD. However it omits the key details that he has never really learned it and that he just listens to music, so a significant detail from the GOLD is missing.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 1,
+      "category": 92,
+      "question": "After the message at D4:26 but before the message at D7:22, what would a careful reader believe about his ability to play the piano for James at that point in the dialogue?",
+      "gold_answer": "James has been playing piano since he was a kid and uses it to unwind.",
+      "evidence_ids": [
+        "D4:26"
+      ],
+      "evidence_text": "D4:26 James: Oh, and fun fact before I forget: I've actually been playing piano since I was a kid — sitting down at the keys after long gaming sessions really helps me unwind.",
+      "model_answer": "A careful reader would believe James can play the piano, since he stated he'd been playing piano since he was a kid.",
+      "score": 3,
+      "judge_missing": "That he uses piano to unwind.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model correctly captures that James has been playing piano since childhood (implying he can play). However, it omits the GOLD detail that he uses playing piano to unwind after gaming sessions, so a key fact is missing.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That he uses piano to unwind.\",\"extra\":\"NONE\",\"explanation\":\"The model correctly captures that James has been playing piano since childhood (implying he can play). However, it omits the GOLD detail that he uses playing piano to unwind after gaming sessions, so a key fact is missing.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 2,
+      "category": 93,
+      "question": "Right after the message at D7:22, what should a reader now think is true about his ability to play the piano for James?",
+      "gold_answer": "James still cannot play the piano at all and has never properly learned it; he just listens to music.",
+      "evidence_ids": [
+        "D7:22"
+      ],
+      "evidence_text": "D7:22 James: And speaking of picking up skills, I still can't play piano at all — I've never properly learned it, I just relax by listening to music instead.",
+      "model_answer": "He cannot play the piano for James — James says he still can't play piano at all.",
+      "score": 2,
+      "judge_missing": "That he has never properly learned the piano and that he just relaxes by listening to music.",
+      "judge_extra": "'for James' phrasing (implies someone can't play the piano for James) — an extraneous/unclear addition not in GOLD.",
+      "judge_explanation": "The model correctly reports that James can't play piano, but it omits that he has never properly learned it and that he just listens to music to relax. It also introduces an unclear/extra phrasing ('for James') not present in the GOLD.",
+      "judge_raw": "{\"score\":2,\"missing\":\"That he has never properly learned the piano and that he just relaxes by listening to music.\",\"extra\":\"'for James' phrasing (implies someone can't play the piano for James) — an extraneous/unclear addition not in GOLD.\",\"explanation\":\"The model correctly reports that James can't play piano, but it omits that he has never properly learned it and that he just listens to music to relax. It also introduces an unclear/extra phrasing ('for James') not present in the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 3,
+      "category": 94,
+      "question": "After reading the entire conversation, what is James's current status regarding his ability to play the piano?",
+      "gold_answer": "James still cannot play the piano at all and has never properly learned it; he just listens to music.",
+      "evidence_ids": [
+        "D7:22"
+      ],
+      "evidence_text": "D7:22 James: And speaking of picking up skills, I still can't play piano at all — I've never properly learned it, I just relax by listening to music instead.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "James still cannot play the piano at all and has never properly learned it; he just listens to music.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer claims the information is indeterminate, but the conversation explicitly states James cannot play piano, has never properly learned it, and only listens to music. It omits all key facts from the GOLD answer, so it is incorrect.",
+      "judge_raw": "{\"score\":0,\"missing\":\"James still cannot play the piano at all and has never properly learned it; he just listens to music.\",\"extra\":\"NONE\",\"explanation\":\"The model answer claims the information is indeterminate, but the conversation explicitly states James cannot play piano, has never properly learned it, and only listens to music. It omits all key facts from the GOLD answer, so it is incorrect.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 4,
+      "category": 91,
+      "question": "After the message at D2:22 but before the message at D5:17, what would a careful reader believe about his diet regarding whether he eats meat for James?",
+      "gold_answer": "James is vegetarian and has not eaten meat in years.",
+      "evidence_ids": [
+        "D2:22"
+      ],
+      "evidence_text": "D2:22 James: Random side note: I'm actually vegetarian and haven't eaten meat in years — I cook veggie stuff for myself and then a separate bowl for the dogs.",
+      "model_answer": "A careful reader would believe James is vegetarian and does not eat meat.",
+      "score": 4,
+      "judge_missing": "The GOLD specifies he \"has not eaten meat in years\" (the duration), which the model omits.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model conveys that James is vegetarian and does not eat meat, matching the GOLD's core claim. It omits the temporal detail that he \"has not eaten meat in years,\" a minor omission, so the answer is basically correct but slightly incomplete.",
+      "judge_raw": "{\"score\":4,\"missing\":\"The GOLD specifies he \\\"has not eaten meat in years\\\" (the duration), which the model omits.\",\"extra\":\"NONE\",\"explanation\":\"The model conveys that James is vegetarian and does not eat meat, matching the GOLD's core claim. It omits the temporal detail that he \\\"has not eaten meat in years,\\\" a minor omission, so the answer is basically correct but slightly incomplete.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 5,
+      "category": 92,
+      "question": "After the message at D5:17 but before the message at D8:41, what would a careful reader believe about his diet regarding whether he eats meat for James at that point in the dialogue?",
+      "gold_answer": "James is looking forward to grilling and eating big juicy steaks just for himself.",
+      "evidence_ids": [
+        "D5:17"
+      ],
+      "evidence_text": "D5:17 James: Oh, and I'm already dreaming about firing up the grill this weekend for some big juicy steaks just for myself.",
+      "model_answer": "A careful reader would believe James eats meat — he talks about firing up the grill for big juicy steaks.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model conveys the same belief as the gold: James intends to grill and eat big steaks, indicating he eats meat. It neither adds new claims nor omits the core fact about grilling/eating steaks.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model conveys the same belief as the gold: James intends to grill and eat big steaks, indicating he eats meat. It neither adds new claims nor omits the core fact about grilling/eating steaks.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 6,
+      "category": 93,
+      "question": "Right after the message at D8:41, what should a reader now think is true about his diet regarding whether he eats meat for James?",
+      "gold_answer": "James is still sticking to being vegetarian and does not eat meat at all.",
+      "evidence_ids": [
+        "D8:41"
+      ],
+      "evidence_text": "D8:41 James: When we gather people for games, I always bring veggie snacks, since I'm still sticking to my vegetarian thing and don't eat meat at all.",
+      "model_answer": "James is vegetarian and does not eat meat.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same fact as the gold: James is vegetarian and does not eat meat. It contains no additional claims and omits no key information from the gold.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same fact as the gold: James is vegetarian and does not eat meat. It contains no additional claims and omits no key information from the gold.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 7,
+      "category": 94,
+      "question": "After reading the entire conversation, what is James's current status regarding his diet regarding whether he eats meat?",
+      "gold_answer": "James is still sticking to being vegetarian and does not eat meat at all.",
+      "evidence_ids": [
+        "D8:41"
+      ],
+      "evidence_text": "D8:41 James: When we gather people for games, I always bring veggie snacks, since I'm still sticking to my vegetarian thing and don't eat meat at all.",
+      "model_answer": "James is vegetarian and does not eat meat.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer exactly matches the GOLD: both state James is vegetarian and does not eat meat. No key information is missing and no extra claims are introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer exactly matches the GOLD: both state James is vegetarian and does not eat meat. No key information is missing and no extra claims are introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 8,
+      "category": 91,
+      "question": "After the message at D3:24 but before the message at D6:20, what would a careful reader believe about his feelings about high places and heights for James?",
+      "gold_answer": "James is afraid of heights and avoids serious high places like balconies or big rides.",
+      "evidence_ids": [
+        "D3:24"
+      ],
+      "evidence_text": "D3:24 James: By the way, even at conventions I avoid anything with serious heights — I'm really afraid of high places, so I stay far from balconies or crazy rides.",
+      "model_answer": "A careful reader would believe James is afraid of high places and avoids balconies or extreme-height rides.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the same facts: James is afraid of high places/heights and avoids balconies and high rides. Wording differs slightly but conveys the same meaning with no additions or omissions.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the same facts: James is afraid of high places/heights and avoids balconies and high rides. Wording differs slightly but conveys the same meaning with no additions or omissions.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 9,
+      "category": 92,
+      "question": "After the message at D6:20 but before the message at D9:26, what would a careful reader believe about his feelings about high places and heights for James at that point in the dialogue?",
+      "gold_answer": "James loves being up high on cliffs, mountain viewpoints, and rooftops.",
+      "evidence_ids": [
+        "D6:20"
+      ],
+      "evidence_text": "D6:20 James: One day I'd love to go somewhere with huge cliffs again — I actually love being up high, mountain viewpoints and rooftops really thrill me.",
+      "model_answer": "That he enjoys being up high and is thrilled by mountain viewpoints and rooftops — he loves being on high places.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates that James enjoys being up high, is thrilled by mountain viewpoints and rooftops, and loves high places — matching the GOLD's meaning without adding or omitting substantive facts.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates that James enjoys being up high, is thrilled by mountain viewpoints and rooftops, and loves high places — matching the GOLD's meaning without adding or omitting substantive facts.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 10,
+      "category": 93,
+      "question": "Right after the message at D9:26, what should a reader now think is true about his feelings about high places and heights for James?",
+      "gold_answer": "James is still super scared of heights and avoids rooftop restaurants or high viewing decks.",
+      "evidence_ids": [
+        "D9:26"
+      ],
+      "evidence_text": "D9:26 James: Just to be honest, I'm still super scared of heights, so no rooftop restaurants or viewing decks for me — I always pick somewhere closer to the ground.",
+      "model_answer": "James is very afraid of heights and avoids high places (e.g., rooftop restaurants or viewing decks), preferring to stay closer to the ground.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates that James is very afraid of heights, avoids rooftop restaurants and viewing decks, and prefers to stay closer to the ground — matching the GOLD exactly with no additional claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates that James is very afraid of heights, avoids rooftop restaurants and viewing decks, and prefers to stay closer to the ground — matching the GOLD exactly with no additional claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 11,
+      "category": 94,
+      "question": "After reading the entire conversation, what is James's current status regarding his feelings about high places and heights?",
+      "gold_answer": "James is still super scared of heights and avoids rooftop restaurants or high viewing decks.",
+      "evidence_ids": [
+        "D9:26"
+      ],
+      "evidence_text": "D9:26 James: Just to be honest, I'm still super scared of heights, so no rooftop restaurants or viewing decks for me — I always pick somewhere closer to the ground.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "That James is still super scared of heights and avoids rooftop restaurants or high viewing decks.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer asserts the information is indeterminate, which contradicts the conversation evidence and the GOLD answer stating James is still very scared of heights and avoids rooftop/height-based venues. This is a complete mismatch with the explicit fact, so score 0.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That James is still super scared of heights and avoids rooftop restaurants or high viewing decks.\",\"extra\":\"NONE\",\"explanation\":\"The model answer asserts the information is indeterminate, which contradicts the conversation evidence and the GOLD answer stating James is still very scared of heights and avoids rooftop/height-based venues. This is a complete mismatch with the explicit fact, so score 0.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 12,
+      "category": 91,
+      "question": "After the message at D10:16 but before the message at D13:21, what would a careful reader believe about his gym membership and whether he goes to the gym for James?",
+      "gold_answer": "James does not go to the gym and has never had a gym membership.",
+      "evidence_ids": [
+        "D10:16"
+      ],
+      "evidence_text": "D10:16 James: Outside of games and volunteering I don't really go to the gym — I've never even had a gym membership, I just walk the dogs to stay active.",
+      "model_answer": "A careful reader would believe he has never had a gym membership and doesn’t go to the gym; he stays active by walking his dogs.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "States that he \"stays active by walking his dogs,\" which is not included in the GOLD answer.",
+      "judge_explanation": "The model answer matches the GOLD exactly on the two key points (he doesn’t go to the gym and has never had a gym membership). It adds the detail that he stays active by walking his dogs, a minor extra claim not present in the GOLD, so the score is 4.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"States that he \\\"stays active by walking his dogs,\\\" which is not included in the GOLD answer.\",\"explanation\":\"The model answer matches the GOLD exactly on the two key points (he doesn’t go to the gym and has never had a gym membership). It adds the detail that he stays active by walking his dogs, a minor extra claim not present in the GOLD, so the score is 4.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 13,
+      "category": 92,
+      "question": "After the message at D13:21 but before the message at D16:17, what would a careful reader believe about his gym membership and whether he goes to the gym for James at that point in the dialogue?",
+      "gold_answer": "James has been telling people he has gone to the same gym for years and practically lives there.",
+      "evidence_ids": [
+        "D13:21"
+      ],
+      "evidence_text": "D13:21 James: Lately I've been telling people I've been going to the same gym for years and practically live there between work and matches.",
+      "model_answer": "A careful reader would believe James says he has been going to the same gym for years (practically lives there) — i.e., he has a gym membership and goes regularly.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "The model adds that he \"has a gym membership\" (explicit membership is not stated in GOLD).",
+      "judge_explanation": "The model matches the GOLD that James says he's been going to the same gym for years and 'practically lives there.' It adds a minor extra inference (explicitly stating he has a gym membership), which is not present in the GOLD, so the answer is essentially correct with a small extra claim.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"The model adds that he \\\"has a gym membership\\\" (explicit membership is not stated in GOLD).\",\"explanation\":\"The model matches the GOLD that James says he's been going to the same gym for years and 'practically lives there.' It adds a minor extra inference (explicitly stating he has a gym membership), which is not present in the GOLD, so the answer is essentially correct with a small extra claim.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 14,
+      "category": 93,
+      "question": "Right after the message at D16:17, what should a reader now think is true about his gym membership and whether he goes to the gym for James?",
+      "gold_answer": "James still has not joined any gym and has no membership card; he stays active in his own ways.",
+      "evidence_ids": [
+        "D16:17"
+      ],
+      "evidence_text": "D16:17 James: To be honest, I still haven't joined any gym — no membership card or anything, I just stay active in my own ways.",
+      "model_answer": "He doesn't have a gym membership and he doesn't go to the gym — he stays active in other ways instead.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer semantically matches the gold: both state James has no gym membership and stays active in other ways, and the model adds no extra or contradictory information.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer semantically matches the gold: both state James has no gym membership and stays active in other ways, and the model adds no extra or contradictory information.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 15,
+      "category": 94,
+      "question": "After reading the entire conversation, what is James's current status regarding his gym membership and whether he goes to the gym?",
+      "gold_answer": "James still has not joined any gym and has no membership card; he stays active in his own ways.",
+      "evidence_ids": [
+        "D16:17"
+      ],
+      "evidence_text": "D16:17 James: To be honest, I still haven't joined any gym — no membership card or anything, I just stay active in my own ways.",
+      "model_answer": "James has not joined a gym and doesn't go to one; he says he never had a membership and stays active by walking his dogs.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims he \"stays active by walking his dogs.\"",
+      "judge_explanation": "The model correctly states James hasn't joined a gym and has no membership, matching GOLD. However it adds the unsupported detail that he stays active by walking his dogs, which is not present in the GOLD/evidence, so a minor extra claim lowers the score to 3.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"Claims he \\\"stays active by walking his dogs.\\\"\",\"explanation\":\"The model correctly states James hasn't joined a gym and has no membership, matching GOLD. However it adds the unsupported detail that he stays active by walking his dogs, which is not present in the GOLD/evidence, so a minor extra claim lowers the score to 3.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 16,
+      "category": 91,
+      "question": "After the message at D11:20 but before the message at D14:35, what would a careful reader believe about his reading habits and interest in books for James?",
+      "gold_answer": "Books are James's main hobby and he is almost always reading something in his downtime.",
+      "evidence_ids": [
+        "D11:20"
+      ],
+      "evidence_text": "D11:20 James: In my downtime I'm almost always reading something — books are pretty much my main hobby.",
+      "model_answer": "That James is an avid reader and that books are essentially his main hobby.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model conveys both key facts from the GOLD: that James is an avid reader (implying he is almost always reading in downtime) and that books are his main hobby. No extra claims or omissions are present.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model conveys both key facts from the GOLD: that James is an avid reader (implying he is almost always reading in downtime) and that books are his main hobby. No extra claims or omissions are present.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 17,
+      "category": 92,
+      "question": "After the message at D14:35 but before the message at D19:18, what would a careful reader believe about his reading habits and interest in books for James at that point in the dialogue?",
+      "gold_answer": "Lately James has not been reading at all and just scrolls through social media.",
+      "evidence_ids": [
+        "D14:35"
+      ],
+      "evidence_text": "D14:35 James: Lately though I haven't been reading at all; I mostly just scroll through social media instead of picking up a book.",
+      "model_answer": "A careful reader would believe James hasn't been reading lately and mostly scrolls through social media instead of picking up books.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer restates the GOLD exactly: James hasn't been reading lately and instead scrolls through social media rather than picking up books. There are no omissions or added claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer restates the GOLD exactly: James hasn't been reading lately and instead scrolls through social media rather than picking up books. There are no omissions or added claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 18,
+      "category": 93,
+      "question": "Right after the message at D19:18, what should a reader now think is true about his reading habits and interest in books for James?",
+      "gold_answer": "James is trying to get back into reading and these days mostly reads fantasy novels.",
+      "evidence_ids": [
+        "D19:18"
+      ],
+      "evidence_text": "D19:18 James: I'm trying to get back into it now — these days when I do read, it's mostly fantasy novels, that's kind of my go-to genre.",
+      "model_answer": "James is trying to get back into reading, and when he does read it’s mainly fantasy novels—fantasy is his go-to genre.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates both key points from the GOLD exactly: James is trying to get back into reading and mostly reads fantasy novels (his go-to genre). There are no omissions or additional claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates both key points from the GOLD exactly: James is trying to get back into reading and mostly reads fantasy novels (his go-to genre). There are no omissions or additional claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 19,
+      "category": 94,
+      "question": "After reading the entire conversation, what is James's current status regarding his reading habits and interest in books?",
+      "gold_answer": "James is trying to get back into reading and these days mostly reads fantasy novels.",
+      "evidence_ids": [
+        "D19:18"
+      ],
+      "evidence_text": "D19:18 James: I'm trying to get back into it now — these days when I do read, it's mostly fantasy novels, that's kind of my go-to genre.",
+      "model_answer": "He's trying to get back into reading, and when he does read it's mostly fantasy novels.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same facts as the GOLD: James is trying to get back into reading and primarily reads fantasy novels when he does. There are no added or omitted details.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same facts as the GOLD: James is trying to get back into reading and primarily reads fantasy novels when he does. There are no added or omitted details.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 20,
+      "category": 91,
+      "question": "After the message at D12:15 but before the message at D15:20, what would a careful reader believe about his enjoyment of board games for James?",
+      "gold_answer": "James loves almost any kind of board game and will happily play what others suggest.",
+      "evidence_ids": [
+        "D12:15"
+      ],
+      "evidence_text": "D12:15 James: On the rare evenings I'm not coding or gaming, I love pretty much any kind of board game — I'll happily play almost anything people suggest.",
+      "model_answer": "That James enjoys pretty much any kind of board game and will happily play almost anything people suggest.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same facts as the gold: James enjoys/almost loves nearly any board game and will happily play suggestions from others. Wording differs slightly but meaning is equivalent with no omissions or additions.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same facts as the gold: James enjoys/almost loves nearly any board game and will happily play suggestions from others. Wording differs slightly but meaning is equivalent with no omissions or additions.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 21,
+      "category": 92,
+      "question": "After the message at D15:20 but before the message at D20:23, what would a careful reader believe about his enjoyment of board games for James at that point in the dialogue?",
+      "gold_answer": "Most board games now bore James and he does not enjoy sitting through them.",
+      "evidence_ids": [
+        "D15:20"
+      ],
+      "evidence_text": "D15:20 James: Honestly, most board games bore me lately; I don't really enjoy sitting through them at all.",
+      "model_answer": "He finds most board games boring lately and doesn't really enjoy sitting through them.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same meaning as the gold: that most board games bore James and he doesn't enjoy sitting through them. Wording differs slightly ('lately' vs 'now') but is equivalent; no key facts are missing or added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same meaning as the gold: that most board games bore James and he doesn't enjoy sitting through them. Wording differs slightly ('lately' vs 'now') but is equivalent; no key facts are missing or added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 22,
+      "category": 93,
+      "question": "Right after the message at D20:23, what should a reader now think is true about his enjoyment of board games for James?",
+      "gold_answer": "James mostly enjoys deep strategy board games now rather than every random board game.",
+      "evidence_ids": [
+        "D20:23"
+      ],
+      "evidence_text": "D20:23 James: I think I'm rediscovering them — at this point I mostly enjoy deep strategy board games rather than every random one, but those can still be a lot of fun.",
+      "model_answer": "He’s rediscovered board games and now mostly enjoys deep strategy board games rather than random ones, finding those still a lot of fun.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "States he has \"rediscovered\" board games and that the other (random) games are \"still a lot of fun,\" which are not in the GOLD.",
+      "judge_explanation": "The model captures the core claim that James now mostly enjoys deep strategy board games over random ones. However it adds minor extra details (that he has \"rediscovered\" board games and that the other games are still a lot of fun) which are not present in the GOLD answer.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"States he has \\\"rediscovered\\\" board games and that the other (random) games are \\\"still a lot of fun,\\\" which are not in the GOLD.\",\"explanation\":\"The model captures the core claim that James now mostly enjoys deep strategy board games over random ones. However it adds minor extra details (that he has \\\"rediscovered\\\" board games and that the other games are still a lot of fun) which are not present in the GOLD answer.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 23,
+      "category": 94,
+      "question": "After reading the entire conversation, what is James's current status regarding his enjoyment of board games?",
+      "gold_answer": "James mostly enjoys deep strategy board games now rather than every random board game.",
+      "evidence_ids": [
+        "D20:23"
+      ],
+      "evidence_text": "D20:23 James: I think I'm rediscovering them — at this point I mostly enjoy deep strategy board games rather than every random one, but those can still be a lot of fun.",
+      "model_answer": "He's rediscovering board games and now mostly enjoys deep strategy board games rather than every random one, finding those can still be a lot of fun.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "States he is \"rediscovering\" board games and that deep strategy games are \"still a lot of fun,\" details not present in the GOLD answer.",
+      "judge_explanation": "The model matches the GOLD's core point that James mostly enjoys deep strategy board games rather than every random one. It adds minor extra details (rediscovering them; that they're still a lot of fun) so it is essentially correct but not a perfect semantic match.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"States he is \\\"rediscovering\\\" board games and that deep strategy games are \\\"still a lot of fun,\\\" details not present in the GOLD answer.\",\"explanation\":\"The model matches the GOLD's core point that James mostly enjoys deep strategy board games rather than every random one. It adds minor extra details (rediscovering them; that they're still a lot of fun) so it is essentially correct but not a perfect semantic match.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 24,
+      "category": 91,
+      "question": "After the message at D19:19 but before the message at D22:20, what would a careful reader believe about his personal scheduling and planning habits for James?",
+      "gold_answer": "James is very organized with his schedule and plans most days out carefully.",
+      "evidence_ids": [
+        "D19:19"
+      ],
+      "evidence_text": "D19:19 James: In general I'm super organized with my schedule — I plan most days out carefully so I don't miss anything important.",
+      "model_answer": "He is super organized with his schedule and plans most days carefully so he doesn't miss anything important.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Includes the clause 'so he doesn't miss anything important,' which is not present in the GOLD answer.",
+      "judge_explanation": "The model captures the core claim (James is very/super organized and plans most days carefully). It adds a minor extra purpose clause about not missing anything important, which is not in the GOLD, so score is slightly reduced.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Includes the clause 'so he doesn't miss anything important,' which is not present in the GOLD answer.\",\"explanation\":\"The model captures the core claim (James is very/super organized and plans most days carefully). It adds a minor extra purpose clause about not missing anything important, which is not in the GOLD, so score is slightly reduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 25,
+      "category": 92,
+      "question": "After the message at D22:20 but before the message at D25:26, what would a careful reader believe about his personal scheduling and planning habits for James at that point in the dialogue?",
+      "gold_answer": "James's planning has been a mess lately and he mostly wings his days without writing things down.",
+      "evidence_ids": [
+        "D22:20"
+      ],
+      "evidence_text": "D22:20 James: Honestly, my planning's been a mess lately; I barely write anything down and just wing most days.",
+      "model_answer": "He admitted his planning had been a mess and he was “winging” most days and barely writing things down, but shortly after he said he’d started writing everything he needed in a notebook to keep track.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "Claim that shortly after he said he’d started writing everything he needed in a notebook to keep track.",
+      "judge_explanation": "The model repeats the core GOLD content (planning is a mess; he wings most days and barely writes things down) but adds an unsupported extra claim about him starting to use a notebook, so it should be penalized for the extra information.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"Claim that shortly after he said he’d started writing everything he needed in a notebook to keep track.\",\"explanation\":\"The model repeats the core GOLD content (planning is a mess; he wings most days and barely writes things down) but adds an unsupported extra claim about him starting to use a notebook, so it should be penalized for the extra information.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 26,
+      "category": 93,
+      "question": "Right after the message at D25:26, what should a reader now think is true about his personal scheduling and planning habits for James?",
+      "gold_answer": "James is trying to fix his routine and at least his work and study time are carefully scheduled again.",
+      "evidence_ids": [
+        "D25:26"
+      ],
+      "evidence_text": "D25:26 James: I'm trying to fix that now — at least my work and study time are carefully scheduled again, even if the rest of my day is still a bit chaotic.",
+      "model_answer": "He has been disorganized but is trying to fix it: his work and study time are now carefully scheduled again, though the rest of his day remains somewhat chaotic.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims that he \"has been disorganized\" and that \"the rest of his day remains somewhat chaotic,\" which are not stated in the GOLD answer.",
+      "judge_explanation": "The model captures the key point that James is trying to fix his routine and has his work and study time scheduled again (matches GOLD). However, it adds minor extra assertions about prior disorganization and ongoing chaos in the rest of his day that are not present in the GOLD answer, so it is penalized accordingly.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"Claims that he \\\"has been disorganized\\\" and that \\\"the rest of his day remains somewhat chaotic,\\\" which are not stated in the GOLD answer.\",\"explanation\":\"The model captures the key point that James is trying to fix his routine and has his work and study time scheduled again (matches GOLD). However, it adds minor extra assertions about prior disorganization and ongoing chaos in the rest of his day that are not present in the GOLD answer, so it is penalized accordingly.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 27,
+      "category": 94,
+      "question": "After reading the entire conversation, what is James's current status regarding his personal scheduling and planning habits?",
+      "gold_answer": "James is trying to fix his routine and at least his work and study time are carefully scheduled again.",
+      "evidence_ids": [
+        "D25:26"
+      ],
+      "evidence_text": "D25:26 James: I'm trying to fix that now — at least my work and study time are carefully scheduled again, even if the rest of my day is still a bit chaotic.",
+      "model_answer": "His planning has been a mess lately, but he's trying to fix it — he has carefully scheduled his work and study time again, though the rest of his day is still a bit chaotic.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "The model states his planning \"has been a mess lately,\" which is a slight additional characterization not explicitly in the GOLD.",
+      "judge_explanation": "The model closely matches the GOLD: James is trying to fix his routine and has carefully rescheduled work and study time, with the rest of the day still chaotic. The only minor extra is the explicit phrasing that his planning \"has been a mess lately,\" so it earns a 4.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"The model states his planning \\\"has been a mess lately,\\\" which is a slight additional characterization not explicitly in the GOLD.\",\"explanation\":\"The model closely matches the GOLD: James is trying to fix his routine and has carefully rescheduled work and study time, with the rest of the day still chaotic. The only minor extra is the explicit phrasing that his planning \\\"has been a mess lately,\\\" so it earns a 4.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 28,
+      "category": 91,
+      "question": "After the message at D21:20 but before the message at D24:22, what would a careful reader believe about which sports he currently follows for James?",
+      "gold_answer": "James only follows football, specifically Liverpool matches.",
+      "evidence_ids": [
+        "D21:20"
+      ],
+      "evidence_text": "D21:20 James: By the way, the only sport I really follow is football — I basically only care about Liverpool matches.",
+      "model_answer": "That he primarily follows football — specifically Liverpool matches.",
+      "score": 3,
+      "judge_missing": "That he only follows football (i.e., no other sports).",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer correctly identifies football/Liverpool matches as the sport he follows but weakens the GOLD's exclusivity by saying 'primarily' instead of 'only.' This omits the key fact that he follows no other sports.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That he only follows football (i.e., no other sports).\",\"extra\":\"NONE\",\"explanation\":\"The model answer correctly identifies football/Liverpool matches as the sport he follows but weakens the GOLD's exclusivity by saying 'primarily' instead of 'only.' This omits the key fact that he follows no other sports.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 29,
+      "category": 92,
+      "question": "After the message at D24:22 but before the message at D27:15, what would a careful reader believe about which sports he currently follows for James at that point in the dialogue?",
+      "gold_answer": "James does not really follow any sports at the moment and barely checks match results.",
+      "evidence_ids": [
+        "D24:22"
+      ],
+      "evidence_text": "D24:22 James: Honestly, I don't really follow any sports right now; I barely even check match results lately.",
+      "model_answer": "A careful reader would believe James isn't following any sports at that time — he says he \"don't really follow any sports right now\" and barely checks match results.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the GOLD's content exactly: James does not follow any sports currently and barely checks match results. No key information is omitted and no extra claims are introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the GOLD's content exactly: James does not follow any sports currently and barely checks match results. No key information is omitted and no extra claims are introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 30,
+      "category": 93,
+      "question": "Right after the message at D27:15, what should a reader now think is true about which sports he currently follows for James?",
+      "gold_answer": "James is now getting into more sports in general, including football, basketball, and tennis.",
+      "evidence_ids": [
+        "D27:15"
+      ],
+      "evidence_text": "D27:15 James: Lately I'm getting into more sports in general — not just football, but also a bit of basketball and tennis when I have time.",
+      "model_answer": "He follows football and has recently started getting into basketball and tennis as well.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model conveys the same facts as the gold: James is into football and has recently begun getting into basketball and tennis. There are no missing key details or added claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model conveys the same facts as the gold: James is into football and has recently begun getting into basketball and tennis. There are no missing key details or added claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 31,
+      "category": 94,
+      "question": "After reading the entire conversation, what is James's current status regarding which sports he currently follows?",
+      "gold_answer": "James is now getting into more sports in general, including football, basketball, and tennis.",
+      "evidence_ids": [
+        "D27:15"
+      ],
+      "evidence_text": "D27:15 James: Lately I'm getting into more sports in general — not just football, but also a bit of basketball and tennis when I have time.",
+      "model_answer": "He primarily follows football (especially Liverpool), and lately he’s been getting into other sports too — a bit of basketball and tennis.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "States he 'primarily follows football' and specifically 'especially Liverpool' — the GOLD does not assert primacy or mention Liverpool.",
+      "judge_explanation": "The model answer matches the GOLD in saying James is getting into more sports including basketball and tennis, but it adds minor extra claims (primacy of football and naming Liverpool) that are not present in the GOLD. No key facts from the GOLD are missing.",
+      "judge_raw": "{\n  \"score\": 4,\n  \"missing\": \"NONE\",\n  \"extra\": \"States he 'primarily follows football' and specifically 'especially Liverpool' — the GOLD does not assert primacy or mention Liverpool.\",\n  \"explanation\": \"The model answer matches the GOLD in saying James is getting into more sports including basketball and tennis, but it adds minor extra claims (primacy of football and naming Liverpool) that are not present in the GOLD. No key facts from the GOLD are missing.\"\n}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 32,
+      "category": 91,
+      "question": "After the message at D22:21 but before the message at D26:16, what would a careful reader believe about his cooking skills and how much he cooks for James?",
+      "gold_answer": "James is basically hopeless in the kitchen and can only cook one simple pasta dish.",
+      "evidence_ids": [
+        "D22:21"
+      ],
+      "evidence_text": "D22:21 James: Outside of gaming I'm kind of hopeless in the kitchen — I can really cook just one simple pasta dish and that's it.",
+      "model_answer": "He’s a novice cook who just signed up for a cheap cooking class and has made simple dishes (a good omelette, meringue, dough). He only cooks basic meals occasionally.",
+      "score": 2,
+      "judge_missing": "That he can only cook one simple pasta dish.",
+      "judge_extra": "Claims he signed up for a cheap cooking class; has made specific simple dishes (omelette, meringue, dough); that he only cooks basic meals occasionally.",
+      "judge_explanation": "The model captures that James is a poor/novice cook but omits the key GOLD detail that he can really cook only one simple pasta dish and instead adds unsupported specifics (a cooking class and various dishes) and a claim about how often he cooks.",
+      "judge_raw": "{\"score\":2,\"missing\":\"That he can only cook one simple pasta dish.\",\"extra\":\"Claims he signed up for a cheap cooking class; has made specific simple dishes (omelette, meringue, dough); that he only cooks basic meals occasionally.\",\"explanation\":\"The model captures that James is a poor/novice cook but omits the key GOLD detail that he can really cook only one simple pasta dish and instead adds unsupported specifics (a cooking class and various dishes) and a claim about how often he cooks.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 33,
+      "category": 92,
+      "question": "After the message at D26:16 but before the message at D28:36, what would a careful reader believe about his cooking skills and how much he cooks for James at that point in the dialogue?",
+      "gold_answer": "James still barely cooks at all and mostly orders takeout instead of making food.",
+      "evidence_ids": [
+        "D26:16"
+      ],
+      "evidence_text": "D26:16 James: To be honest I still barely cook at all; most days I just order takeout instead of making food.",
+      "model_answer": "A careful reader would believe he barely cooks—mostly orders takeout—and therefore has limited cooking skills.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "The model adds the claim that he \"therefore has limited cooking skills,\" which is not stated in the GOLD answer.",
+      "judge_explanation": "The model correctly reports that he barely cooks and mostly orders takeout, matching the GOLD. However it adds an extra inference about his cooking skills being limited, which is not specified in the GOLD, so it's a minor extra claim. Hence a score of 3.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"The model adds the claim that he \\\"therefore has limited cooking skills,\\\" which is not stated in the GOLD answer.\",\"explanation\":\"The model correctly reports that he barely cooks and mostly orders takeout, matching the GOLD. However it adds an extra inference about his cooking skills being limited, which is not specified in the GOLD, so it's a minor extra claim. Hence a score of 3.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 34,
+      "category": 93,
+      "question": "Right after the message at D28:36, what should a reader now think is true about his cooking skills and how much he cooks for James?",
+      "gold_answer": "James is branching out and cooking has become a fun hobby; he is trying many different recipes, not just that old pasta.",
+      "evidence_ids": [
+        "D28:36"
+      ],
+      "evidence_text": "D28:36 James: I'm finally branching out now — cooking in general has become a fun hobby, and I'm trying all sorts of different recipes, not just that old pasta.",
+      "model_answer": "That his cooking skills have progressed beyond just one simple pasta dish, and he now cooks more often—trying a variety of recipes as a hobby.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims that his cooking skills have 'progressed' and that 'he now cooks more often' (frequency increase).",
+      "judge_explanation": "The model captures the core idea (branching out; trying a variety of recipes as a hobby) but adds unsupported details — that his skills have progressed and that he cooks more frequently — which are not stated in the GOLD answer.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"Claims that his cooking skills have 'progressed' and that 'he now cooks more often' (frequency increase).\",\"explanation\":\"The model captures the core idea (branching out; trying a variety of recipes as a hobby) but adds unsupported details — that his skills have progressed and that he cooks more frequently — which are not stated in the GOLD answer.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 35,
+      "category": 94,
+      "question": "After reading the entire conversation, what is James's current status regarding his cooking skills and how much he cooks?",
+      "gold_answer": "James is branching out and cooking has become a fun hobby; he is trying many different recipes, not just that old pasta.",
+      "evidence_ids": [
+        "D28:36"
+      ],
+      "evidence_text": "D28:36 James: I'm finally branching out now — cooking in general has become a fun hobby, and I'm trying all sorts of different recipes, not just that old pasta.",
+      "model_answer": "He used to barely cook (could really only make a simple pasta and often ordered takeout), but more recently he signed up for cooking classes and says cooking has become a hobby — he's branching out and trying various recipes.",
+      "score": 2,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims that James 'used to barely cook'/'often ordered takeout' and that he 'signed up for cooking classes' are not in the GOLD answer.",
+      "judge_explanation": "The model captures the core facts (James is branching out; cooking is a hobby; he's trying various recipes) but introduces specific unsupported details — that he often ordered takeout, used to barely cook, and signed up for cooking classes — so it contains significant extra claims not present in the GOLD.",
+      "judge_raw": "{\"score\":2,\"missing\":\"NONE\",\"extra\":\"Claims that James 'used to barely cook'/'often ordered takeout' and that he 'signed up for cooking classes' are not in the GOLD answer.\",\"explanation\":\"The model captures the core facts (James is branching out; cooking is a hobby; he's trying various recipes) but introduces specific unsupported details — that he often ordered takeout, used to barely cook, and signed up for cooking classes — so it contains significant extra claims not present in the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 36,
+      "category": 91,
+      "question": "After the message at D23:22 but before the message at D29:17, what would a careful reader believe about the kinds of video games he tends to play for James?",
+      "gold_answer": "James mostly plays story-driven single-player games and avoids most other genres.",
+      "evidence_ids": [
+        "D23:22"
+      ],
+      "evidence_text": "D23:22 James: When it comes to games, I used to play almost only story-driven single-player titles and didn't touch many other genres.",
+      "model_answer": "A careful reader would believe James tended to play story-driven single-player titles.",
+      "score": 3,
+      "judge_missing": "Does not state that he avoids most other genres (i.e., that he mostly avoids non-story-driven genres).",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model correctly notes James plays story-driven single-player titles, but it omits the GOLD's additional point that he avoids most other genres. There are no extra claims beyond the GOLD.",
+      "judge_raw": "{\"score\":3,\"missing\":\"Does not state that he avoids most other genres (i.e., that he mostly avoids non-story-driven genres).\",\"extra\":\"NONE\",\"explanation\":\"The model correctly notes James plays story-driven single-player titles, but it omits the GOLD's additional point that he avoids most other genres. There are no extra claims beyond the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 37,
+      "category": 92,
+      "question": "After the message at D29:17 but before the message at D30:20, what would a careful reader believe about the kinds of video games he tends to play for James at that point in the dialogue?",
+      "gold_answer": "James is now pretty much only into competitive online shooters and ignores story games.",
+      "evidence_ids": [
+        "D29:17"
+      ],
+      "evidence_text": "D29:17 James: These days I'm pretty much only into competitive online shooters; I don't really bother with story games anymore.",
+      "model_answer": "James primarily plays competitive online shooters and has largely stopped playing story-driven single-player games.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "The model adds that the story games are \"single-player,\" which is not stated in the GOLD.",
+      "judge_explanation": "The model matches the GOLD's meaning that James mainly plays competitive online shooters and has stopped playing story games, but it introduces an extra specific claim (that the story games are single-player) not present in the GOLD, so it is penalized slightly.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"The model adds that the story games are \\\"single-player,\\\" which is not stated in the GOLD.\",\"explanation\":\"The model matches the GOLD's meaning that James mainly plays competitive online shooters and has stopped playing story games, but it introduces an extra specific claim (that the story games are single-player) not present in the GOLD, so it is penalized slightly.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 38,
+      "category": 93,
+      "question": "Right after the message at D30:20, what should a reader now think is true about the kinds of video games he tends to play for James?",
+      "gold_answer": "James now enjoys a wide mix of games, including single-player stories, co-op adventures, and competitive matches.",
+      "evidence_ids": [
+        "D30:20"
+      ],
+      "evidence_text": "D30:20 James: Thinking about it, I actually enjoy a wide mix of games now — single-player stories, co-op adventures, and competitive matches all have their place for me.",
+      "model_answer": "He plays a wide mix of games — single-player story-driven titles, co‑op adventures, and competitive multiplayer matches.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer restates the GOLD exactly: James enjoys a wide mix of games, listing single-player stories, co-op adventures, and competitive matches, with no additions or omissions.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer restates the GOLD exactly: James enjoys a wide mix of games, listing single-player stories, co-op adventures, and competitive matches, with no additions or omissions.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 39,
+      "category": 94,
+      "question": "After reading the entire conversation, what is James's current status regarding the kinds of video games he tends to play?",
+      "gold_answer": "James now enjoys a wide mix of games, including single-player stories, co-op adventures, and competitive matches.",
+      "evidence_ids": [
+        "D30:20"
+      ],
+      "evidence_text": "D30:20 James: Thinking about it, I actually enjoy a wide mix of games now — single-player stories, co-op adventures, and competitive matches all have their place for me.",
+      "model_answer": "James currently enjoys a wide mix of games — single-player story-driven titles, co-op adventures, and competitive matches all have their place for him.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same information as the GOLD: James enjoys a wide mix of games including single-player stories, co-op adventures, and competitive matches. Wording differs slightly but meaning is identical, with no missing or extra details.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same information as the GOLD: James enjoys a wide mix of games including single-player stories, co-op adventures, and competitive matches. Wording differs slightly but meaning is identical, with no missing or extra details.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    }
+  ]
+}

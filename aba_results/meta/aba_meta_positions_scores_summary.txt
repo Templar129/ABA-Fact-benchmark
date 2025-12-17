@@ -1,0 +1,25 @@
+ABA Meta Join Summary
+========================================================================
+
+positions rows: 300
+eval rows:      300
+meta rows:      300
+joined score:   300 / 300
+
+First 10 successful joins:
+fact_component_id  score_joined                                                                                                                question
+            A_0_0             4 From dia_id D3:11 to D16:18, what does Melanie believe about the status of the group photo from their meetup last week?
+            B_0_0             3          Between dia_id D16:19 and D18:11, what does Melanie believe about the group photo from their meetup last week?
+       Aprime_0_0             3                       After dia_id D18:12, what does Melanie believe about the group photo from their meetup last week?
+            A_0_1             4                              From dia_id D5:9 to D13:16, what does Melanie believe about Caroline’s tomato-basil pasta?
+            B_0_1             0                         Between dia_id D13:17 and D18:7, what does Melanie believe about Caroline’s tomato-basil pasta?
+       Aprime_0_1             4                                      After dia_id D18:8, what does Melanie believe about Caroline’s tomato-basil pasta?
+            A_0_2             3                      From dia_id D6:11 to D9:20, what does Melanie believe about Caroline’s Sunday nature walk routine?
+            B_0_2             0                  Between dia_id D10:1 and D19:8, what does Melanie believe about Caroline’s Sunday nature walk routine?
+       Aprime_0_2             4                              After dia_id D19:9, what does Melanie believe about Caroline’s Sunday nature walk routine?
+            A_0_3             4                     From dia_id D4:15 to D12:09, what does Melanie believe about Caroline’s nightly meditation routine?
+
+First 20 missing joins:
+Empty DataFrame
+Columns: [fact_component_id, file, component_pos, category_pos]
+Index: []

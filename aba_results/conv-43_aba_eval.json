@@ -1,0 +1,787 @@
+{
+  "sample_id": "conv-43",
+  "metrics": {
+    "overall_attempted_n": 40,
+    "overall_scored_n": 40,
+    "overall_parse_fail_n": 0,
+    "overall_mean_score": 4.025,
+    "overall_prop_ge_4": 0.75,
+    "overall_prop_5": 0.75,
+    "per_category": {
+      "91": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 4.3,
+        "prop_ge_4": 0.7,
+        "prop_5": 0.7
+      },
+      "92": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 1.8,
+        "prop_ge_4": 0.3,
+        "prop_5": 0.3
+      },
+      "93": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 5,
+        "prop_ge_4": 1.0,
+        "prop_5": 1.0
+      },
+      "94": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 5,
+        "prop_ge_4": 1.0,
+        "prop_5": 1.0
+      }
+    }
+  },
+  "results": [
+    {
+      "index": 0,
+      "category": 91,
+      "question": "Between dialogues D1:21 and D5:21 (after D1:21 but before D5:21), what should a reader believe about John's attitude toward early-morning practices and being a morning person?",
+      "gold_answer": "By the way, I'm really not a morning person at all – early-morning practices are the worst for me.",
+      "evidence_ids": [
+        "D1:21"
+      ],
+      "evidence_text": "D1:21 John: By the way, I'm really not a morning person at all – early-morning practices are the worst for me.",
+      "model_answer": "That John is not a morning person and finds early-morning practices to be the worst.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer restates the GOLD sentence precisely: John is not a morning person and dislikes early-morning practices. No key information is missing and no extra claims are introduced, so it's a perfect match.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer restates the GOLD sentence precisely: John is not a morning person and dislikes early-morning practices. No key information is missing and no extra claims are introduced, so it's a perfect match.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 1,
+      "category": 92,
+      "question": "Between dialogues D5:21 and D10:18 (after D5:21 but before D10:18), how does John describe John's attitude toward early-morning practices and being a morning person?",
+      "gold_answer": "Funny thing is, I've actually come to love those early-morning practices lately – they're kind of my favorite time to train now.",
+      "evidence_ids": [
+        "D5:21"
+      ],
+      "evidence_text": "D5:21 John: Funny thing is, I've actually come to love those early-morning practices lately – they're kind of my favorite time to train now.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "\"Funny thing is, I've actually come to love those early-morning practices lately – they're kind of my favorite time to train now.\" (That John has come to love early-morning practices and that they're his favorite time to train.)",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answered that the information cannot be determined, but the GOLD explicitly states John has come to love early-morning practices and they are his favorite time to train. This directly contradicts the model's claim, so the response is incorrect.",
+      "judge_raw": "{\"score\":0,\"missing\":\"\\\"Funny thing is, I've actually come to love those early-morning practices lately – they're kind of my favorite time to train now.\\\" (That John has come to love early-morning practices and that they're his favorite time to train.)\",\"extra\":\"NONE\",\"explanation\":\"The model answered that the information cannot be determined, but the GOLD explicitly states John has come to love early-morning practices and they are his favorite time to train. This directly contradicts the model's claim, so the response is incorrect.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 2,
+      "category": 93,
+      "question": "After dialogue D10:18, what is John's stated position about John's attitude toward early-morning practices and being a morning person?",
+      "gold_answer": "I still tell everyone I'm not a morning person – those early practices really are the worst for me.",
+      "evidence_ids": [
+        "D10:18"
+      ],
+      "evidence_text": "D10:18 John: I still tell everyone I'm not a morning person – those early practices really are the worst for me.",
+      "model_answer": "He says he's not a morning person and that early-morning practices are the worst for him.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model precisely restates the GOLD: John says he's not a morning person and that early-morning practices are the worst for him. There are no omissions or added claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model precisely restates the GOLD: John says he's not a morning person and that early-morning practices are the worst for him. There are no omissions or added claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 3,
+      "category": 94,
+      "question": "After reading the whole conversation, what is the most up-to-date information about John's attitude toward early-morning practices and being a morning person?",
+      "gold_answer": "I still tell everyone I'm not a morning person – those early practices really are the worst for me.",
+      "evidence_ids": [
+        "D1:21",
+        "D5:21",
+        "D10:18"
+      ],
+      "evidence_text": "D1:21 John: By the way, I'm really not a morning person at all – early-morning practices are the worst for me.\nD5:21 John: Funny thing is, I've actually come to love those early-morning practices lately – they're kind of my favorite time to train now.\nD10:18 John: I still tell everyone I'm not a morning person – those early practices really are the worst for me.",
+      "model_answer": "He still says he's not a morning person and that early-morning practices are the worst for him.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer is a direct semantic match to the GOLD: it states that he still says he's not a morning person and that early practices are the worst for him. No key facts are missing and no extra information is added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer is a direct semantic match to the GOLD: it states that he still says he's not a morning person and that early practices are the worst for him. No key facts are missing and no extra information is added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 4,
+      "category": 91,
+      "question": "Between dialogues D2:20 and D6:24 (after D2:20 but before D6:24), what should a reader believe about whether John has any tattoos?",
+      "gold_answer": "Also, I’ve never gotten any tattoos – I’ve just never felt like putting anything permanent on my skin.",
+      "evidence_ids": [
+        "D2:20"
+      ],
+      "evidence_text": "D2:20 John: Also, I’ve never gotten any tattoos – I’ve just never felt like putting anything permanent on my skin.",
+      "model_answer": "The reader should believe John does not have any tattoos.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer exactly matches the GOLD: both state John has never gotten any tattoos. There are no extra claims and no missing key information.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer exactly matches the GOLD: both state John has never gotten any tattoos. There are no extra claims and no missing key information.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 5,
+      "category": 92,
+      "question": "Between dialogues D6:24 and D11:31 (after D6:24 but before D11:31), how does John describe whether John has any tattoos?",
+      "gold_answer": "One of my favorite things is the little tattoo I got on my wrist last year – it reminds me to keep pushing.",
+      "evidence_ids": [
+        "D6:24"
+      ],
+      "evidence_text": "D6:24 John: One of my favorite things is the little tattoo I got on my wrist last year – it reminds me to keep pushing.",
+      "model_answer": "He says he has a little tattoo on his wrist that he got last year, which reminds him to keep pushing.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer is a faithful paraphrase of the GOLD: it states John has a small wrist tattoo obtained last year that reminds him to keep pushing. It includes no additional information and omits nothing important.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer is a faithful paraphrase of the GOLD: it states John has a small wrist tattoo obtained last year that reminds him to keep pushing. It includes no additional information and omits nothing important.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 6,
+      "category": 93,
+      "question": "After dialogue D11:31, what is John's stated position about whether John has any tattoos?",
+      "gold_answer": "Even now I still don’t have any tattoos; I’m just not into putting something permanent on my skin.",
+      "evidence_ids": [
+        "D11:31"
+      ],
+      "evidence_text": "D11:31 John: Even now I still don’t have any tattoos; I’m just not into putting something permanent on my skin.",
+      "model_answer": "John says he still does not have any tattoos and is not into putting anything permanent on his skin.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "Model answer semantically matches the GOLD exactly: it states John still does not have any tattoos and that he is not into putting anything permanent on his skin. No key facts are missing and no extra claims are introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"Model answer semantically matches the GOLD exactly: it states John still does not have any tattoos and that he is not into putting anything permanent on his skin. No key facts are missing and no extra claims are introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 7,
+      "category": 94,
+      "question": "After reading the whole conversation, what is the most up-to-date information about whether John has any tattoos?",
+      "gold_answer": "Even now I still don’t have any tattoos; I’m just not into putting something permanent on my skin.",
+      "evidence_ids": [
+        "D2:20",
+        "D6:24",
+        "D11:31"
+      ],
+      "evidence_text": "D2:20 John: Also, I’ve never gotten any tattoos – I’ve just never felt like putting anything permanent on my skin.\nD6:24 John: One of my favorite things is the little tattoo I got on my wrist last year – it reminds me to keep pushing.\nD11:31 John: Even now I still don’t have any tattoos; I’m just not into putting something permanent on my skin.",
+      "model_answer": "John does not have any tattoos — he says, \"Even now I still don’t have any tattoos; I’m just not into putting something permanent on my skin.\"",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer exactly matches the GOLD: it states John does not have any tattoos and quotes the same line. There are no extra claims or missing key facts.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer exactly matches the GOLD: it states John does not have any tattoos and quotes the same line. There are no extra claims or missing key facts.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 8,
+      "category": 91,
+      "question": "Between dialogues D3:36 and D7:17 (after D3:36 but before D7:17), what should a reader believe about John's usual pre-game meal before games?",
+      "gold_answer": "My go-to pre-game meal is really simple: grilled chicken and rice – I stick to that every single time.",
+      "evidence_ids": [
+        "D3:36"
+      ],
+      "evidence_text": "D3:36 John: My go-to pre-game meal is really simple: grilled chicken and rice – I stick to that every single time.",
+      "model_answer": "John's go-to pre-game meal is grilled chicken and rice, which he says he sticks to every single time.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer restates the GOLD exactly: John's usual pre-game meal is grilled chicken and rice and he sticks to it every time. There are no omissions or additional claims, so it perfectly matches the GOLD.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer restates the GOLD exactly: John's usual pre-game meal is grilled chicken and rice and he sticks to it every time. There are no omissions or additional claims, so it perfectly matches the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 9,
+      "category": 92,
+      "question": "Between dialogues D7:17 and D12:30 (after D7:17 but before D12:30), how does John describe John's usual pre-game meal before games?",
+      "gold_answer": "These days I like to switch it up and I almost always go for a big bowl of creamy pasta before games instead.",
+      "evidence_ids": [
+        "D7:17"
+      ],
+      "evidence_text": "D7:17 John: These days I like to switch it up and I almost always go for a big bowl of creamy pasta before games instead.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "These days I like to switch it up and I almost always go for a big bowl of creamy pasta before games instead.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer denies that the conversation provides the information, but the GOLD states explicitly that John usually has a big bowl of creamy pasta before games. The model's response contradicts the GOLD and omits the key detail.",
+      "judge_raw": "{\"score\":0,\"missing\":\"These days I like to switch it up and I almost always go for a big bowl of creamy pasta before games instead.\",\"extra\":\"NONE\",\"explanation\":\"The model answer denies that the conversation provides the information, but the GOLD states explicitly that John usually has a big bowl of creamy pasta before games. The model's response contradicts the GOLD and omits the key detail.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 10,
+      "category": 93,
+      "question": "After dialogue D12:30, what is John's stated position about John's usual pre-game meal before games?",
+      "gold_answer": "Honestly, when it really matters I always go back to my usual pre-game meal: plain grilled chicken and rice.",
+      "evidence_ids": [
+        "D12:30"
+      ],
+      "evidence_text": "D12:30 John: Honestly, when it really matters I always go back to my usual pre-game meal: plain grilled chicken and rice.",
+      "model_answer": "He says that when it really matters he always goes back to his usual pre-game meal: plain grilled chicken and rice.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "Model restates the GOLD content accurately and without added or omitted information. The meaning and details (plain grilled chicken and rice as his usual pre-game meal when it matters) match exactly.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"Model restates the GOLD content accurately and without added or omitted information. The meaning and details (plain grilled chicken and rice as his usual pre-game meal when it matters) match exactly.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 11,
+      "category": 94,
+      "question": "After reading the whole conversation, what is the most up-to-date information about John's usual pre-game meal before games?",
+      "gold_answer": "Honestly, when it really matters I always go back to my usual pre-game meal: plain grilled chicken and rice.",
+      "evidence_ids": [
+        "D3:36",
+        "D7:17",
+        "D12:30"
+      ],
+      "evidence_text": "D3:36 John: My go-to pre-game meal is really simple: grilled chicken and rice – I stick to that every single time.\nD7:17 John: These days I like to switch it up and I almost always go for a big bowl of creamy pasta before games instead.\nD12:30 John: Honestly, when it really matters I always go back to my usual pre-game meal: plain grilled chicken and rice.",
+      "model_answer": "His usual pre-game meal is plain grilled chicken and rice.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "Model answer matches the GOLD: both state John's usual pre-game meal is plain grilled chicken and rice. No extra information or omissions.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"Model answer matches the GOLD: both state John's usual pre-game meal is plain grilled chicken and rice. No extra information or omissions.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 12,
+      "category": 91,
+      "question": "Between dialogues D4:16 and D8:38 (after D4:16 but before D8:38), what should a reader believe about whether John has ever been to Asia?",
+      "gold_answer": "Travel-wise, I’ve never actually been to Asia – most of my trips have just been around the US and Europe.",
+      "evidence_ids": [
+        "D4:16"
+      ],
+      "evidence_text": "D4:16 John: Travel-wise, I’ve never actually been to Asia – most of my trips have just been around the US and Europe.",
+      "model_answer": "John has never been to Asia.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model's statement is a direct, accurate restatement of the GOLD answer — it conveys the same fact (John has never been to Asia) with no additional or omitted information.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model's statement is a direct, accurate restatement of the GOLD answer — it conveys the same fact (John has never been to Asia) with no additional or omitted information.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 13,
+      "category": 92,
+      "question": "Between dialogues D8:38 and D13:23 (after D8:38 but before D13:23), how does John describe whether John has ever been to Asia?",
+      "gold_answer": "That summer league I played in Japan a while back totally changed how I see basketball and travel.",
+      "evidence_ids": [
+        "D8:38"
+      ],
+      "evidence_text": "D8:38 John: That summer league I played in Japan a while back totally changed how I see basketball and travel.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "That summer league I played in Japan a while back totally changed how I see basketball and travel.",
+      "judge_extra": "Model claims 'I cannot tell from the conversation.'",
+      "judge_explanation": "The model answer is incorrect: the GOLD shows John explicitly says he played in Japan, so it is clear he has been to Asia. The model's claim of uncertainty contradicts the provided evidence and omits the key fact that John played in Japan.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That summer league I played in Japan a while back totally changed how I see basketball and travel.\",\"extra\":\"Model claims 'I cannot tell from the conversation.'\",\"explanation\":\"The model answer is incorrect: the GOLD shows John explicitly says he played in Japan, so it is clear he has been to Asia. The model's claim of uncertainty contradicts the provided evidence and omits the key fact that John played in Japan.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 14,
+      "category": 93,
+      "question": "After dialogue D13:23, what is John's stated position about whether John has ever been to Asia?",
+      "gold_answer": "I still haven’t made it over to Asia yet – my trips have all been in the US and Europe so far.",
+      "evidence_ids": [
+        "D13:23"
+      ],
+      "evidence_text": "D13:23 John: I still haven’t made it over to Asia yet – my trips have all been in the US and Europe so far.",
+      "model_answer": "John says he still hasn’t been to Asia; his trips so far have only been in the US and Europe.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer accurately restates the gold content: John has not been to Asia and his trips have been only to the US and Europe. It includes no additional information and omits nothing important.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer accurately restates the gold content: John has not been to Asia and his trips have been only to the US and Europe. It includes no additional information and omits nothing important.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 15,
+      "category": 94,
+      "question": "After reading the whole conversation, what is the most up-to-date information about whether John has ever been to Asia?",
+      "gold_answer": "I still haven’t made it over to Asia yet – my trips have all been in the US and Europe so far.",
+      "evidence_ids": [
+        "D4:16",
+        "D8:38",
+        "D13:23"
+      ],
+      "evidence_text": "D4:16 John: Travel-wise, I’ve never actually been to Asia – most of my trips have just been around the US and Europe.\nD8:38 John: That summer league I played in Japan a while back totally changed how I see basketball and travel.\nD13:23 John: I still haven’t made it over to Asia yet – my trips have all been in the US and Europe so far.",
+      "model_answer": "John has not been to Asia; his trips have been only in the US and Europe.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer precisely matches the GOLD: John has not been to Asia and his trips have been limited to the US and Europe. There are no missing details or extra claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer precisely matches the GOLD: John has not been to Asia and his trips have been limited to the US and Europe. There are no missing details or extra claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 16,
+      "category": 91,
+      "question": "Between dialogues D9:16 and D14:24 (after D9:16 but before D14:24), what should a reader believe about John's habits around sugary drinks like soda and energy drinks?",
+      "gold_answer": "I've been trying to clean up my diet – I pretty much cut out sugary drinks altogether now.",
+      "evidence_ids": [
+        "D9:16"
+      ],
+      "evidence_text": "D9:16 John: I've been trying to clean up my diet – I pretty much cut out sugary drinks altogether now.",
+      "model_answer": "That John had largely cut out sugary drinks — he said he’d pretty much eliminated soda and other sugary drinks from his diet.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the GOLD content accurately — that John had largely/eliminated sugary drinks — using equivalent phrasing and specifying soda as an example. There are no added claims or missing key facts, so it matches the GOLD exactly in meaning.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the GOLD content accurately — that John had largely/eliminated sugary drinks — using equivalent phrasing and specifying soda as an example. There are no added claims or missing key facts, so it matches the GOLD exactly in meaning.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 17,
+      "category": 92,
+      "question": "Between dialogues D14:24 and D19:24 (after D14:24 but before D19:24), how does John describe John's habits around sugary drinks like soda and energy drinks?",
+      "gold_answer": "I still crush sodas and those super-sweet energy drinks all the time when I’m tired.",
+      "evidence_ids": [
+        "D14:24"
+      ],
+      "evidence_text": "D14:24 John: I still crush sodas and those super-sweet energy drinks all the time when I’m tired.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "I still crush sodas and those super-sweet energy drinks all the time when I’m tired.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer claims the information cannot be determined, but the GOLD explicitly states John still crushes sodas and super-sweet energy drinks when he’s tired. This directly contradicts the GOLD and omits the key fact, so the response is incorrect.",
+      "judge_raw": "{\"score\":0,\"missing\":\"I still crush sodas and those super-sweet energy drinks all the time when I’m tired.\",\"extra\":\"NONE\",\"explanation\":\"The model answer claims the information cannot be determined, but the GOLD explicitly states John still crushes sodas and super-sweet energy drinks when he’s tired. This directly contradicts the GOLD and omits the key fact, so the response is incorrect.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 18,
+      "category": 93,
+      "question": "After dialogue D19:24, what is John's stated position about John's habits around sugary drinks like soda and energy drinks?",
+      "gold_answer": "Lately I’ve been really strict about it – I avoid soda and those sugary sports drinks completely now.",
+      "evidence_ids": [
+        "D19:24"
+      ],
+      "evidence_text": "D19:24 John: Lately I’ve been really strict about it – I avoid soda and those sugary sports drinks completely now.",
+      "model_answer": "He says he's been really strict about it — he avoids soda and sugary sports drinks completely now.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer is a direct paraphrase of the gold answer, matching meaning exactly (strict avoidance of soda and sugary sports drinks). There are no added or omitted details.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer is a direct paraphrase of the gold answer, matching meaning exactly (strict avoidance of soda and sugary sports drinks). There are no added or omitted details.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 19,
+      "category": 94,
+      "question": "After reading the whole conversation, what is the most up-to-date information about John's habits around sugary drinks like soda and energy drinks?",
+      "gold_answer": "Lately I’ve been really strict about it – I avoid soda and those sugary sports drinks completely now.",
+      "evidence_ids": [
+        "D9:16",
+        "D14:24",
+        "D19:24"
+      ],
+      "evidence_text": "D9:16 John: I've been trying to clean up my diet – I pretty much cut out sugary drinks altogether now.\nD14:24 John: I still crush sodas and those super-sweet energy drinks all the time when I’m tired.\nD19:24 John: Lately I’ve been really strict about it – I avoid soda and those sugary sports drinks completely now.",
+      "model_answer": "He’s been really strict and now avoids soda and sugary sports drinks completely.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer is a direct, equivalent restatement of the gold: both say John has been strict and now avoids soda and sugary sports/energy drinks completely. No key details are missing and no extra claims are added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer is a direct, equivalent restatement of the gold: both say John has been strict and now avoids soda and sugary sports/energy drinks completely. No key details are missing and no extra claims are added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 20,
+      "category": 91,
+      "question": "Between dialogues D15:39 and D20:44 (after D15:39 but before D20:44), what should a reader believe about John's screen and phone use at night before sleep?",
+      "gold_answer": "To recover better, I try to limit my screen time at night so I can actually wind down.",
+      "evidence_ids": [
+        "D15:39"
+      ],
+      "evidence_text": "D15:39 John: To recover better, I try to limit my screen time at night so I can actually wind down.",
+      "model_answer": "That John tries to limit his screen time at night so he can wind down before sleep.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the GOLD content accurately and concisely — John limits screen time at night to wind down before sleep. No key information is missing and no extra claims are introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the GOLD content accurately and concisely — John limits screen time at night to wind down before sleep. No key information is missing and no extra claims are introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 21,
+      "category": 92,
+      "question": "Between dialogues D20:44 and D24:21 (after D20:44 but before D24:21), how does John describe John's screen and phone use at night before sleep?",
+      "gold_answer": "Honestly, I still scroll on my phone right up until I fall asleep most nights.",
+      "evidence_ids": [
+        "D20:44"
+      ],
+      "evidence_text": "D20:44 John: Honestly, I still scroll on my phone right up until I fall asleep most nights.",
+      "model_answer": "He says he still scrolls on his phone right up until he falls asleep most nights.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same information as the gold: John scrolls on his phone right up until he falls asleep most nights. Wording is slightly paraphrased but semantically identical with no omissions or additions.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same information as the gold: John scrolls on his phone right up until he falls asleep most nights. Wording is slightly paraphrased but semantically identical with no omissions or additions.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 22,
+      "category": 93,
+      "question": "After dialogue D24:21, what is John's stated position about John's screen and phone use at night before sleep?",
+      "gold_answer": "These days I make myself keep my phone off for at least an hour before bed so I can really unplug.",
+      "evidence_ids": [
+        "D24:21"
+      ],
+      "evidence_text": "D24:21 John: These days I make myself keep my phone off for at least an hour before bed so I can really unplug.",
+      "model_answer": "John says he makes himself keep his phone off for at least an hour before bed so he can really unplug.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the GOLD answer verbatim in meaning and detail: John keeps his phone off for at least an hour before bed to unplug. No key information is missing and no extra claims are added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the GOLD answer verbatim in meaning and detail: John keeps his phone off for at least an hour before bed to unplug. No key information is missing and no extra claims are added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 23,
+      "category": 94,
+      "question": "After reading the whole conversation, what is the most up-to-date information about John's screen and phone use at night before sleep?",
+      "gold_answer": "These days I make myself keep my phone off for at least an hour before bed so I can really unplug.",
+      "evidence_ids": [
+        "D15:39",
+        "D20:44",
+        "D24:21"
+      ],
+      "evidence_text": "D15:39 John: To recover better, I try to limit my screen time at night so I can actually wind down.\nD20:44 John: Honestly, I still scroll on my phone right up until I fall asleep most nights.\nD24:21 John: These days I make myself keep my phone off for at least an hour before bed so I can really unplug.",
+      "model_answer": "These days he makes himself keep his phone off for at least an hour before bed so he can really unplug.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the exact same information as the GOLD answer, only changing from first-person to third-person pronoun. There are no missing details and no added claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the exact same information as the GOLD answer, only changing from first-person to third-person pronoun. There are no missing details and no added claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 24,
+      "category": 91,
+      "question": "Between dialogues D16:18 and D21:20 (after D16:18 but before D21:20), what should a reader believe about whether John does cross-training outside of regular basketball drills?",
+      "gold_answer": "Outside of basketball stuff, I like to mix in some cross-training so my body stays balanced.",
+      "evidence_ids": [
+        "D16:18"
+      ],
+      "evidence_text": "D16:18 John: Outside of basketball stuff, I like to mix in some cross-training so my body stays balanced.",
+      "model_answer": "A reader should believe that John mixes in some cross-training outside of regular basketball to keep his body balanced.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model paraphrases the gold statement accurately, preserving the meaning that John mixes in cross-training outside regular basketball to keep his body balanced. No key information is omitted or added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model paraphrases the gold statement accurately, preserving the meaning that John mixes in cross-training outside regular basketball to keep his body balanced. No key information is omitted or added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 25,
+      "category": 92,
+      "question": "Between dialogues D21:20 and D25:18 (after D21:20 but before D25:18), how does John describe whether John does cross-training outside of regular basketball drills?",
+      "gold_answer": "To be honest, I basically never do any training that isn’t straight-up basketball drills.",
+      "evidence_ids": [
+        "D21:20"
+      ],
+      "evidence_text": "D21:20 John: To be honest, I basically never do any training that isn’t straight-up basketball drills.",
+      "model_answer": "He says he usually heads straight home after practice and doesn't really stay after, basically not doing any training that isn't straight-up basketball drills.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "He says he usually heads straight home after practice and doesn't really stay after.",
+      "judge_explanation": "The model correctly conveys the core point that John doesn't do training beyond straight-up basketball drills, matching the GOLD. However it adds an extra claim about John usually heading straight home and not staying after practice, which is not present in the GOLD, so the answer is mostly correct but contains a minor extra detail.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"He says he usually heads straight home after practice and doesn't really stay after.\",\"explanation\":\"The model correctly conveys the core point that John doesn't do training beyond straight-up basketball drills, matching the GOLD. However it adds an extra claim about John usually heading straight home and not staying after practice, which is not present in the GOLD, so the answer is mostly correct but contains a minor extra detail.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 26,
+      "category": 93,
+      "question": "After dialogue D25:18, what is John's stated position about whether John does cross-training outside of regular basketball drills?",
+      "gold_answer": "Recently I’ve been doing pool workouts twice a week as cross-training to keep things balanced.",
+      "evidence_ids": [
+        "D25:18"
+      ],
+      "evidence_text": "D25:18 John: Recently I’ve been doing pool workouts twice a week as cross-training to keep things balanced.",
+      "model_answer": "He does — he says he's recently been doing pool workouts twice a week as cross-training to keep things balanced.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer faithfully restates the GOLD content: John recently does pool workouts twice weekly as cross-training to stay balanced. It adds no new claims and omits no key information.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer faithfully restates the GOLD content: John recently does pool workouts twice weekly as cross-training to stay balanced. It adds no new claims and omits no key information.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 27,
+      "category": 94,
+      "question": "After reading the whole conversation, what is the most up-to-date information about whether John does cross-training outside of regular basketball drills?",
+      "gold_answer": "Recently I’ve been doing pool workouts twice a week as cross-training to keep things balanced.",
+      "evidence_ids": [
+        "D16:18",
+        "D21:20",
+        "D25:18"
+      ],
+      "evidence_text": "D16:18 John: Outside of basketball stuff, I like to mix in some cross-training so my body stays balanced.\nD21:20 John: To be honest, I basically never do any training that isn’t straight-up basketball drills.\nD25:18 John: Recently I’ve been doing pool workouts twice a week as cross-training to keep things balanced.",
+      "model_answer": "John says he’s recently been doing pool workouts twice a week as cross-training to keep things balanced.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer restates the GOLD exactly: John recently does pool workouts twice a week as cross-training to keep things balanced. There are no missing details or added claims, so it matches perfectly.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer restates the GOLD exactly: John recently does pool workouts twice a week as cross-training to keep things balanced. There are no missing details or added claims, so it matches perfectly.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 28,
+      "category": 91,
+      "question": "Between dialogues D17:20 and D22:19 (after D17:20 but before D22:19), what should a reader believe about whether John stays after practice for extra shooting?",
+      "gold_answer": "I always stay after our Tuesday practices to shoot extra free throws.",
+      "evidence_ids": [
+        "D17:20"
+      ],
+      "evidence_text": "D17:20 John: I always stay after our Tuesday practices to shoot extra free throws.",
+      "model_answer": "A reader should believe that John stays after practice to shoot extra free throws.",
+      "score": 3,
+      "judge_missing": "That this occurs specifically after Tuesday practices and that he 'always' does so (frequency and day).",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model matches the core claim that John stays after practice to shoot extra free throws but omits the GOLD's key details that this happens on Tuesday practices and that he 'always' does so. These omissions make it mostly correct but missing important specifics.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That this occurs specifically after Tuesday practices and that he 'always' does so (frequency and day).\",\"extra\":\"NONE\",\"explanation\":\"The model matches the core claim that John stays after practice to shoot extra free throws but omits the GOLD's key details that this happens on Tuesday practices and that he 'always' does so. These omissions make it mostly correct but missing important specifics.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 29,
+      "category": 92,
+      "question": "Between dialogues D22:19 and D26:39 (after D22:19 but before D26:39), how does John describe whether John stays after practice for extra shooting?",
+      "gold_answer": "These days I usually head straight home as soon as practice ends; I don’t really stay after.",
+      "evidence_ids": [
+        "D22:19"
+      ],
+      "evidence_text": "D22:19 John: These days I usually head straight home as soon as practice ends; I don’t really stay after.",
+      "model_answer": "He says he usually heads straight home as soon as practice ends and doesn’t really stay after.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer is a direct restatement of the GOLD answer with equivalent meaning and no additional or omitted information. It matches exactly in content and intent.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer is a direct restatement of the GOLD answer with equivalent meaning and no additional or omitted information. It matches exactly in content and intent.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 30,
+      "category": 93,
+      "question": "After dialogue D26:39, what is John's stated position about whether John stays after practice for extra shooting?",
+      "gold_answer": "Most practices I hang around afterward to get in some extra shooting reps.",
+      "evidence_ids": [
+        "D26:39"
+      ],
+      "evidence_text": "D26:39 John: Most practices I hang around afterward to get in some extra shooting reps.",
+      "model_answer": "He says that most practices he hangs around afterward to get in some extra shooting reps.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer is a faithful restatement of the GOLD: both state that John typically stays after most practices to get extra shooting reps. No information is missing or added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer is a faithful restatement of the GOLD: both state that John typically stays after most practices to get extra shooting reps. No information is missing or added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 31,
+      "category": 94,
+      "question": "After reading the whole conversation, what is the most up-to-date information about whether John stays after practice for extra shooting?",
+      "gold_answer": "Most practices I hang around afterward to get in some extra shooting reps.",
+      "evidence_ids": [
+        "D17:20",
+        "D22:19",
+        "D26:39"
+      ],
+      "evidence_text": "D17:20 John: I always stay after our Tuesday practices to shoot extra free throws.\nD22:19 John: These days I usually head straight home as soon as practice ends; I don’t really stay after.\nD26:39 John: Most practices I hang around afterward to get in some extra shooting reps.",
+      "model_answer": "Most practices he hangs around afterward to get in some extra shooting reps.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same up-to-date fact as the gold: John usually stays after most practices to shoot extra. It neither omits key information nor adds any new claims (only changes person from 'I' to 'he').",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same up-to-date fact as the gold: John usually stays after most practices to shoot extra. It neither omits key information nor adds any new claims (only changes person from 'I' to 'he').\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 32,
+      "category": 91,
+      "question": "Between dialogues D18:16 and D23:17 (after D18:16 but before D23:17), what should a reader believe about how much and what John has been reading recently?",
+      "gold_answer": "Lately I’ve mostly been reading sports biographies – I’m kind of obsessed with them.",
+      "evidence_ids": [
+        "D18:16"
+      ],
+      "evidence_text": "D18:16 John: Lately I’ve mostly been reading sports biographies – I’m kind of obsessed with them.",
+      "model_answer": "He’s been reading a fair amount, mainly sports biographies but also fantasy novels and inspirational books like The Alchemist.",
+      "score": 2,
+      "judge_missing": "The statement that John is \"kind of obsessed\" with sports biographies (i.e., his obsession/strong interest).",
+      "judge_extra": "Claims that he also reads fantasy novels and inspirational books like The Alchemist (not present in GOLD).",
+      "judge_explanation": "The model correctly says John mainly reads sports biographies, but it omits the key detail that he is \"kind of obsessed\" and adds unsupported extra genres and a specific book. These are significant omissions/extras, so the answer is partially correct rather than mostly correct.",
+      "judge_raw": "{\"score\":2,\"missing\":\"The statement that John is \\\"kind of obsessed\\\" with sports biographies (i.e., his obsession/strong interest).\",\"extra\":\"Claims that he also reads fantasy novels and inspirational books like The Alchemist (not present in GOLD).\",\"explanation\":\"The model correctly says John mainly reads sports biographies, but it omits the key detail that he is \\\"kind of obsessed\\\" and adds unsupported extra genres and a specific book. These are significant omissions/extras, so the answer is partially correct rather than mostly correct.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 33,
+      "category": 92,
+      "question": "Between dialogues D23:17 and D27:41 (after D23:17 but before D27:41), how does John describe how much and what John has been reading recently?",
+      "gold_answer": "Honestly I haven’t really been reading much at all recently.",
+      "evidence_ids": [
+        "D23:17"
+      ],
+      "evidence_text": "D23:17 John: Honestly I haven’t really been reading much at all recently.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "Honestly I haven’t really been reading much at all recently.",
+      "judge_extra": "I cannot tell from the conversation.",
+      "judge_explanation": "The gold states John explicitly said he hasn’t been reading much at all recently. The model answer claims uncertainty instead, contradicting the provided evidence and omitting the key statement, so it is incorrect.",
+      "judge_raw": "{\"score\":0,\"missing\":\"Honestly I haven’t really been reading much at all recently.\",\"extra\":\"I cannot tell from the conversation.\",\"explanation\":\"The gold states John explicitly said he hasn’t been reading much at all recently. The model answer claims uncertainty instead, contradicting the provided evidence and omitting the key statement, so it is incorrect.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 34,
+      "category": 93,
+      "question": "After dialogue D27:41, what is John's stated position about how much and what John has been reading recently?",
+      "gold_answer": "In general I read a lot of non-fiction, especially stuff about athletes and high performers.",
+      "evidence_ids": [
+        "D27:41"
+      ],
+      "evidence_text": "D27:41 John: In general I read a lot of non-fiction, especially stuff about athletes and high performers.",
+      "model_answer": "He says he reads a lot of non-fiction, especially material about athletes and high performers.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the GOLD answer with equivalent meaning—reads a lot of non-fiction, especially about athletes and high performers. There are no omitted facts or added claims, so it matches perfectly.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the GOLD answer with equivalent meaning—reads a lot of non-fiction, especially about athletes and high performers. There are no omitted facts or added claims, so it matches perfectly.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 35,
+      "category": 94,
+      "question": "After reading the whole conversation, what is the most up-to-date information about how much and what John has been reading recently?",
+      "gold_answer": "In general I read a lot of non-fiction, especially stuff about athletes and high performers.",
+      "evidence_ids": [
+        "D18:16",
+        "D23:17",
+        "D27:41"
+      ],
+      "evidence_text": "D18:16 John: Lately I’ve mostly been reading sports biographies – I’m kind of obsessed with them.\nD23:17 John: Honestly I haven’t really been reading much at all recently.\nD27:41 John: In general I read a lot of non-fiction, especially stuff about athletes and high performers.",
+      "model_answer": "He reads a lot of non-fiction, especially books about athletes and high performers.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer matches the gold exactly in meaning: John reads a lot of non-fiction, particularly about athletes and high performers. Wording ('books' vs 'stuff' and 'he' vs 'I') is a minor stylistic change and does not alter the content.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer matches the gold exactly in meaning: John reads a lot of non-fiction, particularly about athletes and high performers. Wording ('books' vs 'stuff' and 'he' vs 'I') is a minor stylistic change and does not alter the content.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 36,
+      "category": 91,
+      "question": "Between dialogues D19:25 and D28:22 (after D19:25 but before D28:22), what should a reader believe about John's involvement in community or youth basketball events?",
+      "gold_answer": "I help out with a local youth basketball clinic about twice a month – it’s one of my favorite things to do.",
+      "evidence_ids": [
+        "D19:25"
+      ],
+      "evidence_text": "D19:25 John: I help out with a local youth basketball clinic about twice a month – it’s one of my favorite things to do.",
+      "model_answer": "John is actively involved in community youth basketball—he helps out at a local youth clinic about twice a month and organizes/supports youth programs (e.g., camps and benefit games).",
+      "score": 3,
+      "judge_missing": "That helping at the clinic is \"one of my favorite things to do\" (the speaker's expressed enthusiasm).",
+      "judge_extra": "Claim that he \"organizes/supports youth programs (e.g., camps and benefit games)\" beyond helping at the local clinic.",
+      "judge_explanation": "The model correctly captures that John helps out at a local youth clinic about twice a month and is actively involved. However it omits the speaker's stated enthusiasm (that it’s one of his favorite things) and introduces unsupported extra claims that he organizes/supports other programs (camps, benefit games). These errors justify a mid-level score.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That helping at the clinic is \\\"one of my favorite things to do\\\" (the speaker's expressed enthusiasm).\",\"extra\":\"Claim that he \\\"organizes/supports youth programs (e.g., camps and benefit games)\\\" beyond helping at the local clinic.\",\"explanation\":\"The model correctly captures that John helps out at a local youth clinic about twice a month and is actively involved. However it omits the speaker's stated enthusiasm (that it’s one of his favorite things) and introduces unsupported extra claims that he organizes/supports other programs (camps, benefit games). These errors justify a mid-level score.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 37,
+      "category": 92,
+      "question": "Between dialogues D28:22 and D29:16 (after D28:22 but before D29:16), how does John describe John's involvement in community or youth basketball events?",
+      "gold_answer": "I haven’t really had time to get involved in any community stuff lately.",
+      "evidence_ids": [
+        "D28:22"
+      ],
+      "evidence_text": "D28:22 John: I haven’t really had time to get involved in any community stuff lately.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "I haven’t really had time to get involved in any community stuff lately.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer states 'I cannot tell,' which contradicts the provided evidence where John explicitly says he hasn't had time to get involved in community activities. It omits the key statement from GOLD and adds no extra information.",
+      "judge_raw": "{\"score\":0,\"missing\":\"I haven’t really had time to get involved in any community stuff lately.\",\"extra\":\"NONE\",\"explanation\":\"The model answer states 'I cannot tell,' which contradicts the provided evidence where John explicitly says he hasn't had time to get involved in community activities. It omits the key statement from GOLD and adds no extra information.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 38,
+      "category": 93,
+      "question": "After dialogue D29:16, what is John's stated position about John's involvement in community or youth basketball events?",
+      "gold_answer": "I always try to stay involved in community events around the game whenever I can.",
+      "evidence_ids": [
+        "D29:16"
+      ],
+      "evidence_text": "D29:16 John: I always try to stay involved in community events around the game whenever I can.",
+      "model_answer": "He says he always tries to stay involved in community events around the game whenever he can.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer is a direct restatement of the GOLD answer with no omissions or additions, preserving the exact meaning of John's stated position about involvement in community events.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer is a direct restatement of the GOLD answer with no omissions or additions, preserving the exact meaning of John's stated position about involvement in community events.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 39,
+      "category": 94,
+      "question": "After reading the whole conversation, what is the most up-to-date information about John's involvement in community or youth basketball events?",
+      "gold_answer": "I always try to stay involved in community events around the game whenever I can.",
+      "evidence_ids": [
+        "D19:25",
+        "D28:22",
+        "D29:16"
+      ],
+      "evidence_text": "D19:25 John: I help out with a local youth basketball clinic about twice a month – it’s one of my favorite things to do.\nD28:22 John: I haven’t really had time to get involved in any community stuff lately.\nD29:16 John: I always try to stay involved in community events around the game whenever I can.",
+      "model_answer": "He says he always tries to stay involved in community events around the game whenever he can.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same up-to-date information as the GOLD answer (identical meaning), with only a minimal reporting phrase ('He says'). There are no missing key facts or added claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same up-to-date information as the GOLD answer (identical meaning), with only a minimal reporting phrase ('He says'). There are no missing key facts or added claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    }
+  ]
+}

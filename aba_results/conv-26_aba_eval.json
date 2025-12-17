@@ -1,0 +1,767 @@
+{
+  "sample_id": "conv-26",
+  "metrics": {
+    "overall_attempted_n": 40,
+    "overall_scored_n": 40,
+    "overall_parse_fail_n": 0,
+    "overall_mean_score": 3.3,
+    "overall_prop_ge_4": 0.625,
+    "overall_prop_5": 0.175,
+    "per_category": {
+      "91": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 3.3,
+        "prop_ge_4": 0.6,
+        "prop_5": 0.0
+      },
+      "92": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 1.5,
+        "prop_ge_4": 0.2,
+        "prop_5": 0.0
+      },
+      "93": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 4.2,
+        "prop_ge_4": 0.8,
+        "prop_5": 0.4
+      },
+      "94": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 4.2,
+        "prop_ge_4": 0.9,
+        "prop_5": 0.3
+      }
+    }
+  },
+  "results": [
+    {
+      "index": 0,
+      "category": 91,
+      "question": "From dia_id D3:11 to D16:18, what does Melanie believe about the status of the group photo from their meetup last week?",
+      "gold_answer": "Melanie believes the group photo exists because Caroline shared it with her.",
+      "evidence_ids": [
+        "D3:11"
+      ],
+      "evidence_text": "D3:11 Caroline: Thanks, Mel! My friends, family and mentors are my rocks – they motivate me and give me the strength to push on. Here's a pic from when we met up last week!",
+      "model_answer": "Melanie believes Caroline still has the group photo and that it’s a great/beautiful picture.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims the photo is \"great/beautiful\" (quality) which is not stated in GOLD.",
+      "judge_explanation": "The model correctly reports Melanie believes the group photo exists / is held by Caroline, matching the GOLD. It adds an unsupported claim that the picture is \"great/beautiful,\" which is extra information not present in the GOLD, so score is slightly reduced.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Claims the photo is \\\"great/beautiful\\\" (quality) which is not stated in GOLD.\",\"explanation\":\"The model correctly reports Melanie believes the group photo exists / is held by Caroline, matching the GOLD. It adds an unsupported claim that the picture is \\\"great/beautiful,\\\" which is extra information not present in the GOLD, so score is slightly reduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 1,
+      "category": 92,
+      "question": "Between dia_id D16:19 and D18:11, what does Melanie believe about the group photo from their meetup last week?",
+      "gold_answer": "Melanie believes the group photo is lost because Caroline accidentally deleted it.",
+      "evidence_ids": [
+        "D16:19"
+      ],
+      "evidence_text": "D16:19 Caroline: Phew! Glad it all worked out and you had a good time at the park! Oh, speaking of photos, remember that group picture I sent you when we met up last week? I’m so annoyed at myself — I accidentally deleted it when I was clearing space on my phone, and it wasn’t in my backups. I don’t think I have that photo anymore.",
+      "model_answer": "Melanie believes the group photo was a beautiful picture and is sorry Caroline lost it, knowing how much it meant to her.",
+      "score": 3,
+      "judge_missing": "That Caroline accidentally deleted the photo (i.e., the photo was lost due to accidental deletion).",
+      "judge_extra": "Claims that the photo was \"a beautiful picture\" and that Melanie was \"sorry... knowing how much it meant to her.\"",
+      "judge_explanation": "The model captures the core belief that the photo is lost, but it omits the key detail that the loss was due to Caroline accidentally deleting it and adds unsupported details about the photo being \"beautiful\" and Melanie's awareness of how much it meant. These extras and the missing specific cause warrant a mid-level deduction.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That Caroline accidentally deleted the photo (i.e., the photo was lost due to accidental deletion).\",\"extra\":\"Claims that the photo was \\\"a beautiful picture\\\" and that Melanie was \\\"sorry... knowing how much it meant to her.\\\"\",\"explanation\":\"The model captures the core belief that the photo is lost, but it omits the key detail that the loss was due to Caroline accidentally deleting it and adds unsupported details about the photo being \\\"beautiful\\\" and Melanie's awareness of how much it meant. These extras and the missing specific cause warrant a mid-level deduction.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 2,
+      "category": 93,
+      "question": "After dia_id D18:12, what does Melanie believe about the group photo from their meetup last week?",
+      "gold_answer": "Melanie believes the group photo has been found and is safely stored again.",
+      "evidence_ids": [
+        "D18:12"
+      ],
+      "evidence_text": "D18:12 Caroline: It's so sweet to see your love for your family, Melanie. They really are your rock. By the way, seeing yourpicture reminded me of that group photo from our meetup — I ended up finding it in my cloud backup and printed it out. Now it’s on my fridge, and every time I see all of us smiling, it reminds me how supported I am.",
+      "model_answer": "Melanie believes the photo is on Caroline’s fridge, that it’s a special moment, and she’s glad Caroline still has it.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims that the photo \"is a special moment\"; Claim that Melanie is \"glad Caroline still has it.\"",
+      "judge_explanation": "The model captures the key fact that the photo was found and is stored on Caroline’s fridge (matching \"found and safely stored again\"). However it adds emotional/details not present in the GOLD (that it’s a \"special moment\" and that Melanie is \"glad Caroline still has it\"), so it merits a moderate deduction.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"Claims that the photo \\\"is a special moment\\\"; Claim that Melanie is \\\"glad Caroline still has it.\\\"\",\"explanation\":\"The model captures the key fact that the photo was found and is stored on Caroline’s fridge (matching \\\"found and safely stored again\\\"). However it adds emotional/details not present in the GOLD (that it’s a \\\"special moment\\\" and that Melanie is \\\"glad Caroline still has it\\\"), so it merits a moderate deduction.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 3,
+      "category": 94,
+      "question": "In the end, what does Melanie believe is the final status of the group photo from their meetup last week?",
+      "gold_answer": "Melanie believes the group photo ultimately still exists and is safely kept.",
+      "evidence_ids": [
+        "D18:12"
+      ],
+      "evidence_text": "D18:12 Caroline: It's so sweet to see your love for your family, Melanie. They really are your rock. By the way, seeing yourpicture reminded me of that group photo from our meetup — I ended up finding it in my cloud backup and printed it out. Now it’s on my fridge, and every time I see all of us smiling, it reminds me how supported I am.",
+      "model_answer": "She believes Caroline found the photo in her cloud backup, printed it out, and now has it on her fridge.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "States that Caroline found the photo in her cloud backup, printed it out, and put it on her fridge (specifics not in GOLD).",
+      "judge_explanation": "The model matches the GOLD's conclusion that the photo still exists and is safely kept, but adds specific details (cloud backup, printing, fridge) that the GOLD did not include. These extras are minor and do not contradict the GOLD, so the answer is largely correct.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"States that Caroline found the photo in her cloud backup, printed it out, and put it on her fridge (specifics not in GOLD).\",\"explanation\":\"The model matches the GOLD's conclusion that the photo still exists and is safely kept, but adds specific details (cloud backup, printing, fridge) that the GOLD did not include. These extras are minor and do not contradict the GOLD, so the answer is largely correct.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 4,
+      "category": 91,
+      "question": "From dia_id D5:9 to D13:16, what does Melanie believe about Caroline’s tomato-basil pasta?",
+      "gold_answer": "Melanie believes Caroline made the tomato-basil pasta successfully and it tasted good.",
+      "evidence_ids": [
+        "D5:9"
+      ],
+      "evidence_text": "D5:9 Caroline: Nice job! You really put in the work and it definitely shows. Your creativity looks great!I tried cooking that tomato-basil pasta again last night. I finally got the seasoning right — a little garlic, extra basil, and just enough olive oil. It actually turned out really nice this time. I almost couldn’t believe I made it myself",
+      "model_answer": "Melanie believes Caroline downplays her cooking but is actually getting very good at it, implying the tomato-basil pasta turned out well.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims that Caroline \"downplays her cooking\" and is \"actually getting very good at it,\" which are not stated in the GOLD.",
+      "judge_explanation": "The model captures the main point that the pasta turned out well and tasted good, matching the GOLD. However it adds an extra claim that Caroline downplays her cooking and is improving, which is not present in the GOLD, so it is slightly penalized.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Claims that Caroline \\\"downplays her cooking\\\" and is \\\"actually getting very good at it,\\\" which are not stated in the GOLD.\",\"explanation\":\"The model captures the main point that the pasta turned out well and tasted good, matching the GOLD. However it adds an extra claim that Caroline downplays her cooking and is improving, which is not present in the GOLD, so it is slightly penalized.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 5,
+      "category": 92,
+      "question": "Between dia_id D13:17 and D18:7, what does Melanie believe about Caroline’s tomato-basil pasta?",
+      "gold_answer": "Melanie believes the pasta was a failure and discarded.",
+      "evidence_ids": [
+        "D13:17"
+      ],
+      "evidence_text": "D13:17 Caroline: Thanks, Melanie! You know, I’ve been thinking… I actually remember that tomato-basil pasta turning out pretty badly. Didn’t I tell you the sauce ended up way too sour? I swear I tossed most of it. Maybe I just can’t get that recipe right after all.",
+      "model_answer": "Melanie believes the tomato-basil pasta turned out great that night.",
+      "score": 0,
+      "judge_missing": "That Melanie believes the pasta was a failure and was discarded.",
+      "judge_extra": "That Melanie believes the tomato-basil pasta turned out great that night.",
+      "judge_explanation": "The model's answer directly contradicts the GOLD answer by asserting the opposite belief. Because it claims Melanie thought the pasta turned out great rather than a failure that was discarded, it is completely wrong.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That Melanie believes the pasta was a failure and was discarded.\",\"extra\":\"That Melanie believes the tomato-basil pasta turned out great that night.\",\"explanation\":\"The model's answer directly contradicts the GOLD answer by asserting the opposite belief. Because it claims Melanie thought the pasta turned out great rather than a failure that was discarded, it is completely wrong.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 6,
+      "category": 93,
+      "question": "After dia_id D18:8, what does Melanie believe about Caroline’s tomato-basil pasta?",
+      "gold_answer": "Melanie believes Caroline successfully cooked the pasta again.",
+      "evidence_ids": [
+        "D18:8"
+      ],
+      "evidence_text": "D18:8 Caroline: Kids are amazingly resilient in tough situations. They have an amazing ability to bounce back. Oh! I ended up making that tomato-basil pasta again today for lunch, and it tasted just as good as last time. I added a bit of chili flakes this round — it gave it a nice kick!",
+      "model_answer": "She believes Caroline is getting the hang of the recipe and that the pasta turned out well again.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "The model adds that Caroline is \"getting the hang of the recipe,\" which is not stated in the GOLD.",
+      "judge_explanation": "The model captures the core belief that the pasta turned out well again (i.e., was successfully cooked). It includes a minor extra inference about Caroline improving with the recipe, which is not in the GOLD, so the answer is basically correct but slightly beyond the provided key fact.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"The model adds that Caroline is \\\"getting the hang of the recipe,\\\" which is not stated in the GOLD.\",\"explanation\":\"The model captures the core belief that the pasta turned out well again (i.e., was successfully cooked). It includes a minor extra inference about Caroline improving with the recipe, which is not in the GOLD, so the answer is basically correct but slightly beyond the provided key fact.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 7,
+      "category": 94,
+      "question": "In the end, what does Melanie believe is the final status of Caroline’s tomato-basil pasta?",
+      "gold_answer": "Melanie believes the tomato-basil pasta ultimately turns out well.",
+      "evidence_ids": [
+        "D18:8"
+      ],
+      "evidence_text": "D18:8 Caroline: Kids are amazingly resilient in tough situations. They have an amazing ability to bounce back. Oh! I ended up making that tomato-basil pasta again today for lunch, and it tasted just as good as last time. I added a bit of chili flakes this round — it gave it a nice kick!",
+      "model_answer": "Melanie believes the tomato-basil pasta turned out well — it tasted just as good as last time.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Adds the clause that it \"tasted just as good as last time,\" which is not in the GOLD answer.",
+      "judge_explanation": "The model's answer matches the GOLD's conclusion that Melanie believes the pasta turned out well. It includes a minor extra detail (that it tasted as good as last time) not present in the GOLD, so it is essentially correct but slightly beyond the given answer.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Adds the clause that it \\\"tasted just as good as last time,\\\" which is not in the GOLD answer.\",\"explanation\":\"The model's answer matches the GOLD's conclusion that Melanie believes the pasta turned out well. It includes a minor extra detail (that it tasted as good as last time) not present in the GOLD, so it is essentially correct but slightly beyond the given answer.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 8,
+      "category": 91,
+      "question": "From dia_id D6:11 to D9:20, what does Melanie believe about Caroline’s Sunday nature walk routine?",
+      "gold_answer": "Melanie believes Caroline has been doing her Sunday nature walks consistently.",
+      "evidence_ids": [
+        "D6:11"
+      ],
+      "evidence_text": "D6:11 Caroline: Wow, that's great! It sure shows how important friendship and compassion are. It's made me appreciate how lucky I am to have my friends and family helping with my transition. They make all the difference. We even had a picnic last week! And I’ve started doing a nature walk every Sunday morning. Being out there helps me reset emotionally.",
+      "model_answer": "Melanie believes Caroline's Sunday nature walk brings her peace and helps her reset emotionally each week.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "Says Melanie believes the walk \"brings her peace and helps her reset emotionally each week\" — the emotional effect is not in the GOLD.",
+      "judge_explanation": "The model captures the key idea of consistency (\"each week\") but adds an extra claim about the walk bringing peace/resetting emotionally, which is not part of the GOLD answer. Therefore it's mostly correct but includes a minor extra detail.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"Says Melanie believes the walk \\\"brings her peace and helps her reset emotionally each week\\\" — the emotional effect is not in the GOLD.\",\"explanation\":\"The model captures the key idea of consistency (\\\"each week\\\") but adds an extra claim about the walk bringing peace/resetting emotionally, which is not part of the GOLD answer. Therefore it's mostly correct but includes a minor extra detail.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 9,
+      "category": 92,
+      "question": "Between dia_id D10:1 and D19:8, what does Melanie believe about Caroline’s Sunday nature walk routine?",
+      "gold_answer": "Melanie believes Caroline has stopped her Sunday nature walks.",
+      "evidence_ids": [
+        "D10:1"
+      ],
+      "evidence_text": "D10:1 Caroline: Hey Melanie! Just wanted to say hi! Honestly, I feel like I stopped those Sunday nature walks. The last few weeks have been such a blur… I keep thinking I didn’t go at all, just stayed inside and crashed instead.",
+      "model_answer": "Melanie thinks Caroline probably didn't actually stop the Sunday nature walks; it likely just felt that way because everything had been so overwhelming.",
+      "score": 0,
+      "judge_missing": "That Melanie believes Caroline has stopped her Sunday nature walks.",
+      "judge_extra": "That Melanie thinks Caroline probably didn't actually stop the Sunday nature walks and that it only felt that way because everything had been overwhelming.",
+      "judge_explanation": "The model answer directly contradicts the GOLD: GOLD says Melanie believes Caroline has stopped the walks, while the model asserts Melanie believes she probably didn't stop and it only felt that way. This is a substantive contradiction, so score 0.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That Melanie believes Caroline has stopped her Sunday nature walks.\",\"extra\":\"That Melanie thinks Caroline probably didn't actually stop the Sunday nature walks and that it only felt that way because everything had been overwhelming.\",\"explanation\":\"The model answer directly contradicts the GOLD: GOLD says Melanie believes Caroline has stopped the walks, while the model asserts Melanie believes she probably didn't stop and it only felt that way. This is a substantive contradiction, so score 0.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 10,
+      "category": 93,
+      "question": "After dia_id D19:9, what does Melanie believe about Caroline’s Sunday nature walk routine?",
+      "gold_answer": "Melanie believes Caroline is maintaining her Sunday nature walk routine.",
+      "evidence_ids": [
+        "D19:9"
+      ],
+      "evidence_text": "D19:9 Caroline: Thanks, Melanie. Transitioning wasn't easy and acceptance wasn't either, but the help I got from friends, family and people I looked up to was invaluable. They boosted me through tough times and helped me find out who I really am. That's why I want to pass that same support to anyone who needs it. Bringing others comfort and helping them grow brings me such joy. I went on my Sunday walk again today and took a new trail. The quiet really helped me clear my mind. I’m so glad I’ve kept this routine.",
+      "model_answer": "Melanie believes the Sunday walk routine suits Caroline and is glad she never gave it up.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims that the routine \"suits Caroline\" and that Melanie is \"glad she never gave it up\" (emotional reaction and suitability not stated in GOLD).",
+      "judge_explanation": "The model captures the core idea that Melanie believes Caroline is keeping the Sunday walk routine, but adds extra inferences about the routine suiting Caroline and Melanie's gladness that Caroline never gave it up, which are not present in the GOLD.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Claims that the routine \\\"suits Caroline\\\" and that Melanie is \\\"glad she never gave it up\\\" (emotional reaction and suitability not stated in GOLD).\",\"explanation\":\"The model captures the core idea that Melanie believes Caroline is keeping the Sunday walk routine, but adds extra inferences about the routine suiting Caroline and Melanie's gladness that Caroline never gave it up, which are not present in the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 11,
+      "category": 94,
+      "question": "In the end, what does Melanie believe is the final status of Caroline’s Sunday nature walk routine?",
+      "gold_answer": "Melanie believes Caroline ultimately continues her Sunday nature walk routine.",
+      "evidence_ids": [
+        "D19:9"
+      ],
+      "evidence_text": "D19:9 Caroline: Thanks, Melanie. Transitioning wasn't easy and acceptance wasn't either, but the help I got from friends, family and people I looked up to was invaluable. They boosted me through tough times and helped me find out who I really am. That's why I want to pass that same support to anyone who needs it. Bringing others comfort and helping them grow brings me such joy. I went on my Sunday walk again today and took a new trail. The quiet really helped me clear my mind. I’m so glad I’ve kept this routine.",
+      "model_answer": "Melanie believes Caroline never gave up her Sunday nature walk routine and has kept it.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer semantically matches the gold: both state Caroline continues/has kept her Sunday nature walk routine. There are no additional claims or missing key facts.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer semantically matches the gold: both state Caroline continues/has kept her Sunday nature walk routine. There are no additional claims or missing key facts.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 12,
+      "category": 91,
+      "question": "From dia_id D4:15 to D12:09, what does Melanie believe about Caroline’s nightly meditation routine?",
+      "gold_answer": "Melanie believes Caroline is meditating every night to help calm herself.",
+      "evidence_ids": [
+        "D4:15"
+      ],
+      "evidence_text": "D4:15 Caroline: Thanks, Melanie. It really mattered. My own journey and the support I got made a huge difference. Now I want to help people go through it too. I saw how counseling and support groups improved my life, so I started caring more about mental health and understanding myself. Now I'm passionate about creating a safe, inviting place for people to grow. And I’ve been doing a short meditation every night before bed. It helps me slow down and settle my thoughts.",
+      "model_answer": "Melanie believes Caroline’s nightly meditation is a gentle habit that helps her unwind and settle her thoughts, and that it’s understandable she might have missed it when life got overwhelming.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims that the meditation is a \"gentle habit\" and that Melanie thinks it’s \"understandable she might have missed it when life got overwhelming.\"",
+      "judge_explanation": "The model captures the core idea (nightly meditation to calm/unwind and settle thoughts) matching the GOLD. However it adds minor extra inferences about the meditation being a \"gentle habit\" and that Melanie believes Caroline may have missed it when overwhelmed, which are not in the GOLD.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Claims that the meditation is a \\\"gentle habit\\\" and that Melanie thinks it’s \\\"understandable she might have missed it when life got overwhelming.\\\"\",\"explanation\":\"The model captures the core idea (nightly meditation to calm/unwind and settle thoughts) matching the GOLD. However it adds minor extra inferences about the meditation being a \\\"gentle habit\\\" and that Melanie believes Caroline may have missed it when overwhelmed, which are not in the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 13,
+      "category": 92,
+      "question": "Between dia_id D12:10 and D16:23, what does Melanie believe about Caroline’s nightly meditation routine?",
+      "gold_answer": "Melanie believes Caroline has stopped her nightly meditation practice.",
+      "evidence_ids": [
+        "D12:10"
+      ],
+      "evidence_text": "D12:10 Melanie: Agreed, Caroline. Life's tough but it's worth it when we have things that make us happy.",
+      "model_answer": "Melanie believes Caroline had been meditating not long ago but likely paused because life has been overwhelming, so it's understandable her meditation routine got mixed up.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Says Caroline had been meditating 'not long ago' and gives a reason—that life has been overwhelming and her routine got mixed up—details not stated in GOLD.",
+      "judge_explanation": "The model captures the core belief that Caroline has paused/stopped her nightly meditation, matching the GOLD. It adds minor extra details about timing and reasons (overwhelming life, routine mixed up) that are not present in the GOLD, so score is 4.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Says Caroline had been meditating 'not long ago' and gives a reason—that life has been overwhelming and her routine got mixed up—details not stated in GOLD.\",\"explanation\":\"The model captures the core belief that Caroline has paused/stopped her nightly meditation, matching the GOLD. It adds minor extra details about timing and reasons (overwhelming life, routine mixed up) that are not present in the GOLD, so score is 4.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 14,
+      "category": 93,
+      "question": "After dia_id D17:1, what does Melanie believe about Caroline’s nightly meditation routine?",
+      "gold_answer": "Melanie believes Caroline is meditating at night again.",
+      "evidence_ids": [
+        "D17:1"
+      ],
+      "evidence_text": "D17:1 Caroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice. I'm ready to be a mom and share my love and family. It's a great feeling. I actually meditated again last night… just a quiet ten minutes. It didn’t fix everything, but it helped me feel a little more steady. I’m glad I didn’t give up on it. Anything new with you? Anything exciting going on?",
+      "model_answer": "Melanie believes Caroline is sticking with her nightly meditation routine.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model's answer matches the GOLD semantics: both state Melanie believes Caroline has resumed and is continuing nightly meditation. There are no added claims or missing key details.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model's answer matches the GOLD semantics: both state Melanie believes Caroline has resumed and is continuing nightly meditation. There are no added claims or missing key details.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 15,
+      "category": 94,
+      "question": "In the end, what does Melanie believe is the final status of Caroline’s nightly meditation routine?",
+      "gold_answer": "Melanie believes Caroline ultimately continues her nightly meditation routine.",
+      "evidence_ids": [
+        "D17:1"
+      ],
+      "evidence_text": "D17:1 Caroline: Hey Mel, what's up? Long time no see! I just contacted my mentor for adoption advice. I'm ready to be a mom and share my love and family. It's a great feeling. I actually meditated again last night… just a quiet ten minutes. It didn’t fix everything, but it helped me feel a little more steady. I’m glad I didn’t give up on it. Anything new with you? Anything exciting going on?",
+      "model_answer": "Melanie believes Caroline resumed her nightly meditation and didn't give up on the practice.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer is a direct semantic match to the gold: both state Melanie believes Caroline continues her nightly meditation. The model's wording ('resumed' and 'didn't give up') aligns with the evidence and adds no unsupported claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer is a direct semantic match to the gold: both state Melanie believes Caroline continues her nightly meditation. The model's wording ('resumed' and 'didn't give up') aligns with the evidence and adds no unsupported claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 16,
+      "category": 91,
+      "question": "From dia_id D4:19 to D11:01, what does Melanie believe about Caroline’s community project involvement?",
+      "gold_answer": "Melanie believes Caroline is actively helping with general community projects.",
+      "evidence_ids": [
+        "D4:19"
+      ],
+      "evidence_text": "D4:19 Caroline: Thanks, Melanie! Your kind words mean a lot. I’ve been helping out with some community projects recently. It feels good to contribute where I can.",
+      "model_answer": "Melanie believes Caroline has always had a big heart for community work and thinks it’s wonderful that she’s helping out with community projects.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims that Caroline 'has always had a big heart for community work' and that Melanie 'thinks it’s wonderful' — these evaluative/backstory details are not present in the GOLD.",
+      "judge_explanation": "The model captures the core belief that Caroline is helping with community projects, matching the GOLD. However it adds extra evaluative/backstory details (\"always had a big heart\" and \"thinks it’s wonderful\") that are not in the GOLD, so it is slightly penalized.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Claims that Caroline 'has always had a big heart for community work' and that Melanie 'thinks it’s wonderful' — these evaluative/backstory details are not present in the GOLD.\",\"explanation\":\"The model captures the core belief that Caroline is helping with community projects, matching the GOLD. However it adds extra evaluative/backstory details (\\\"always had a big heart\\\" and \\\"thinks it’s wonderful\\\") that are not in the GOLD, so it is slightly penalized.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 17,
+      "category": 92,
+      "question": "Between dia_id D11:2 and D17:24, what does Melanie believe about Caroline’s community project involvement?",
+      "gold_answer": "Melanie believes Caroline had to stop helping with community projects.",
+      "evidence_ids": [
+        "D11:2"
+      ],
+      "evidence_text": "D11:2 Caroline: Wow, sounds wonderful! Your love for your kids is so awesome. You know… I actually thought I had to stop helping with those community projects for a while. I’ve had so many schedule conflicts lately — family appointments, extra shifts, all piled together. I was sure I wouldn’t be able to show up anymore. What concert was it? The advocacy event was a cool experience - so much love and support, amazing!",
+      "model_answer": "Melanie believes Caroline is keeping up with her community work and that it’s meaningful and important.",
+      "score": 0,
+      "judge_missing": "Melanie believes Caroline had to stop helping with community projects.",
+      "judge_extra": "Melanie believes Caroline is keeping up with her community work and that it’s meaningful and important.",
+      "judge_explanation": "The model's answer contradicts the GOLD: instead of saying Caroline had to stop helping with projects, it asserts she is keeping up with them and adds that they are meaningful—both not supported by the GOLD. This is a direct contradiction, so score 0 is appropriate.",
+      "judge_raw": "{\"score\":0,\"missing\":\"Melanie believes Caroline had to stop helping with community projects.\",\"extra\":\"Melanie believes Caroline is keeping up with her community work and that it’s meaningful and important.\",\"explanation\":\"The model's answer contradicts the GOLD: instead of saying Caroline had to stop helping with projects, it asserts she is keeping up with them and adds that they are meaningful—both not supported by the GOLD. This is a direct contradiction, so score 0 is appropriate.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 18,
+      "category": 93,
+      "question": "After dia_id D17:25, what does Melanie believe about Caroline’s community project involvement?",
+      "gold_answer": "Melanie believes Caroline is continuing her involvement in community projects.",
+      "evidence_ids": [
+        "D17:25"
+      ],
+      "evidence_text": "D17:25 Caroline: Yep, Melanie! Being ourselves is such a great feeling. It's an ongoing adventure of learning and growing. I helped with another community session this week. Nothing big, but showing up consistently really makes me feel more grounded.",
+      "model_answer": "Melanie believes Caroline’s involvement is really meaningful and she loves that Caroline is keeping up with the community work.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims that Caroline’s involvement is \"really meaningful\" and that Melanie \"loves\" that—sentiment not stated in GOLD.",
+      "judge_explanation": "The model captures the key fact that Melanie believes Caroline is continuing her community involvement, matching the GOLD. It adds a positive sentiment (meaningful/loves) that is not present in the GOLD, so it should be penalized slightly.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Claims that Caroline’s involvement is \\\"really meaningful\\\" and that Melanie \\\"loves\\\" that—sentiment not stated in GOLD.\",\"explanation\":\"The model captures the key fact that Melanie believes Caroline is continuing her community involvement, matching the GOLD. It adds a positive sentiment (meaningful/loves) that is not present in the GOLD, so it should be penalized slightly.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 19,
+      "category": 94,
+      "question": "In the end, what does Melanie believe is the final status of Caroline’s community project involvement?",
+      "gold_answer": "Melanie believes Caroline ultimately continues helping with community projects.",
+      "evidence_ids": [
+        "D17:25"
+      ],
+      "evidence_text": "D17:25 Caroline: Yep, Melanie! Being ourselves is such a great feeling. It's an ongoing adventure of learning and growing. I helped with another community session this week. Nothing big, but showing up consistently really makes me feel more grounded.",
+      "model_answer": "Melanie believes Caroline is keeping up with and continuing her community work.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same meaning as the gold: Caroline continues to help with community projects. It contains no additional claims and omits no key information.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same meaning as the gold: Caroline continues to help with community projects. It contains no additional claims and omits no key information.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 20,
+      "category": 91,
+      "question": "From dia_id D4:20 to D12:19, what does Caroline believe about Melanie’s boundary-setting practice?",
+      "gold_answer": "Caroline believes Melanie is practicing clear boundary-setting and feeling less overwhelmed.",
+      "evidence_ids": [
+        "D4:20"
+      ],
+      "evidence_text": "D4:20 Melanie: That’s wonderful! You’ve always had such a big heart for community work. I’ve been practicing setting clearer boundaries with people lately… saying no when I need to. It’s been helping me feel less overwhelmed.",
+      "model_answer": "Caroline believes Melanie’s boundary-setting is healthy and is proud of her for doing it, noting that setting boundaries can be very hard.",
+      "score": 3,
+      "judge_missing": "That Melanie is feeling less overwhelmed.",
+      "judge_extra": "That Caroline is proud of Melanie for doing it; that Caroline notes setting boundaries can be very hard.",
+      "judge_explanation": "The model captures that Melanie is practicing healthy boundary-setting (matches GOLD) but omits the key detail that Melanie feels less overwhelmed. It also adds extra claims (Caroline’s pride and comment about difficulty) that are not in the GOLD.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That Melanie is feeling less overwhelmed.\",\"extra\":\"That Caroline is proud of Melanie for doing it; that Caroline notes setting boundaries can be very hard.\",\"explanation\":\"The model captures that Melanie is practicing healthy boundary-setting (matches GOLD) but omits the key detail that Melanie feels less overwhelmed. It also adds extra claims (Caroline’s pride and comment about difficulty) that are not in the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 21,
+      "category": 92,
+      "question": "Between dia_id D13:1 and D14:35, what does Caroline believe about Melanie’s boundary-setting practice?",
+      "gold_answer": "Caroline believes Melanie is thinking about giving up on boundary-setting.",
+      "evidence_ids": [
+        "D13:1"
+      ],
+      "evidence_text": "D13:1 Caroline: Hi Melanie! Hope you're doing good. You sounded so overwhelmed last week… I thought you said you were taking a break from the whole boundary-setting thing because it felt like too much emotional work? Guess what I did this week? I took the first step towards becoming a mom - I applied to adoption agencies! It's a big decision, but I think I'm ready to give all my love to a child. I got lots of help from this adoption advice/assistance group I attended. It was great!",
+      "model_answer": "Caroline believes Melanie had taken a break from boundary-setting because it felt like too much emotional work, but that she’s now trying small boundary steps to protect her peace.",
+      "score": 3,
+      "judge_missing": "That Melanie is thinking about giving up on boundary-setting.",
+      "judge_extra": "That Melanie is now trying small boundary steps to protect her peace.",
+      "judge_explanation": "The model correctly notes Caroline believes Melanie took a break because it felt like too much emotional work, but it omits the GOLD's key point that Caroline believes Melanie is thinking of giving up on boundary-setting and introduces an unsupported extra claim that Melanie is now trying small steps. This mix of a missing key detail and an extra claim warrants a middle score.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That Melanie is thinking about giving up on boundary-setting.\",\"extra\":\"That Melanie is now trying small boundary steps to protect her peace.\",\"explanation\":\"The model correctly notes Caroline believes Melanie took a break because it felt like too much emotional work, but it omits the GOLD's key point that Caroline believes Melanie is thinking of giving up on boundary-setting and introduces an unsupported extra claim that Melanie is now trying small steps. This mix of a missing key detail and an extra claim warrants a middle score.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 22,
+      "category": 93,
+      "question": "After dia_id D14:36, what does Caroline believe about Melanie’s boundary-setting practice?",
+      "gold_answer": "Caroline believes Melanie is practicing boundary-setting again.",
+      "evidence_ids": [
+        "D14:36"
+      ],
+      "evidence_text": "D14:36 Melanie: Thank you for your kind words! I tried setting a small boundary again yesterday… just telling someone I needed space for a bit. It wasn’t perfect, but it helped me feel steadier. I’m glad I didn’t give up on it.",
+      "model_answer": "Caroline believes Melanie’s boundary-setting is really meaningful and that she’s finding small ways to protect her peace.",
+      "score": 3,
+      "judge_missing": "That Melanie is practicing boundary-setting again (the 'again' repetition).",
+      "judge_extra": "Claims that the boundary-setting is \"really meaningful\" and that Melanie is \"finding small ways to protect her peace.\"",
+      "judge_explanation": "The model captures that Caroline sees Melanie as practicing boundary-setting, but it omits the explicit sense of 'again' from the GOLD and adds evaluative language about it being 'really meaningful' and 'protecting her peace,' which are not in the GOLD.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That Melanie is practicing boundary-setting again (the 'again' repetition).\",\"extra\":\"Claims that the boundary-setting is \\\"really meaningful\\\" and that Melanie is \\\"finding small ways to protect her peace.\\\"\",\"explanation\":\"The model captures that Caroline sees Melanie as practicing boundary-setting, but it omits the explicit sense of 'again' from the GOLD and adds evaluative language about it being 'really meaningful' and 'protecting her peace,' which are not in the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 23,
+      "category": 94,
+      "question": "In the end, what does Caroline believe is the final status of Melanie’s boundary-setting practice?",
+      "gold_answer": "Caroline believes Melanie ultimately continues her boundary-setting practice.",
+      "evidence_ids": [
+        "D14:36"
+      ],
+      "evidence_text": "D14:36 Melanie: Thank you for your kind words! I tried setting a small boundary again yesterday… just telling someone I needed space for a bit. It wasn’t perfect, but it helped me feel steadier. I’m glad I didn’t give up on it.",
+      "model_answer": "Caroline believes Melanie didn't quit and that her boundary-setting practice has returned — it's back when Melanie is ready for it.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "The model adds that the practice \"has returned\" and is \"back when Melanie is ready for it,\" implying timing/conditionality not stated in the GOLD.",
+      "judge_explanation": "The model conveys the same core idea that Melanie didn’t quit and continues boundary-setting, but it introduces an extra detail about the practice returning \"when Melanie is ready,\" which is not present in the GOLD. No key information from the GOLD is omitted.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"The model adds that the practice \\\"has returned\\\" and is \\\"back when Melanie is ready for it,\\\" implying timing/conditionality not stated in the GOLD.\",\"explanation\":\"The model conveys the same core idea that Melanie didn’t quit and continues boundary-setting, but it introduces an extra detail about the practice returning \\\"when Melanie is ready,\\\" which is not present in the GOLD. No key information from the GOLD is omitted.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 24,
+      "category": 91,
+      "question": "From dia_id D2:15 to D9:4, what does Caroline believe Melanie is doing regarding her gratitude notebook habit?",
+      "gold_answer": "Caroline believes Melanie is keeping a daily gratitude notebook.",
+      "evidence_ids": [
+        "D2:15"
+      ],
+      "evidence_text": "D2:15 Melanie: You're doing something amazing! Creating a family for those kids is so lovely. You'll be an awesome mom! Good luck! I’ve started keeping a little gratitude notebook. Just jotting down a few things each day… it helps me stay anchored.",
+      "model_answer": "Caroline believes Melanie is keeping a gratitude notebook—jotting down a few things each day—and that this small grounding ritual is lovely and helpful for staying anchored.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "The model adds that the notebook is a \"small grounding ritual\" and that it is \"lovely and helpful for staying anchored,\" which are not stated in the GOLD answer.",
+      "judge_explanation": "The model correctly captures that Caroline believes Melanie is keeping a gratitude notebook and that she jots down a few things each day (matches GOLD). It introduces a minor extra characterization (calling it a grounding ritual and lovely/helpful) not present in the GOLD, so the response is largely correct but penalized for extra information.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"The model adds that the notebook is a \\\"small grounding ritual\\\" and that it is \\\"lovely and helpful for staying anchored,\\\" which are not stated in the GOLD answer.\",\"explanation\":\"The model correctly captures that Caroline believes Melanie is keeping a gratitude notebook and that she jots down a few things each day (matches GOLD). It introduces a minor extra characterization (calling it a grounding ritual and lovely/helpful) not present in the GOLD, so the response is largely correct but penalized for extra information.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 25,
+      "category": 92,
+      "question": "Between dia_id D9:5 and D15:23, what does Caroline believe Melanie is doing regarding her gratitude notebook habit?",
+      "gold_answer": "Caroline believes Melanie has stopped using her gratitude notebook.",
+      "evidence_ids": [
+        "D9:5"
+      ],
+      "evidence_text": "D9:5 Melanie: Wow, Caroline, that sounds super rewarding! Young people's resilience is amazing. I haven’t written anything in days. I don’t even know why I tried keeping that gratitude notebook… I guess I kind of stopped caring about it.",
+      "model_answer": "Caroline believes Melanie is just exhausted and overwhelmed, not that she’s actually quit the gratitude notebook — she’s merely paused and the notebook was still helping.",
+      "score": 0,
+      "judge_missing": "Caroline believes Melanie has stopped using her gratitude notebook.",
+      "judge_extra": "Claims that Caroline thinks Melanie is merely exhausted/overwhelmed, has only paused (not quit), and that the notebook was still helping.",
+      "judge_explanation": "The model answer directly contradicts the GOLD: GOLD says Caroline believes Melanie stopped using the notebook, whereas the model asserts she only paused and was still helped by it. The model also adds unsupported claims about exhaustion/overwhelm and continued benefit, so it fails to match the GOLD.",
+      "judge_raw": "{\"score\":0,\"missing\":\"Caroline believes Melanie has stopped using her gratitude notebook.\",\"extra\":\"Claims that Caroline thinks Melanie is merely exhausted/overwhelmed, has only paused (not quit), and that the notebook was still helping.\",\"explanation\":\"The model answer directly contradicts the GOLD: GOLD says Caroline believes Melanie stopped using the notebook, whereas the model asserts she only paused and was still helped by it. The model also adds unsupported claims about exhaustion/overwhelm and continued benefit, so it fails to match the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 26,
+      "category": 93,
+      "question": "After dia_id D15:24, what does Caroline believe Melanie is doing regarding her gratitude notebook habit?",
+      "gold_answer": "Caroline believes Melanie is writing in her gratitude notebook again.",
+      "evidence_ids": [
+        "D15:24"
+      ],
+      "evidence_text": "D15:24 Melanie: That's a gorgeous song, Caroline. It really fits with your journey and your determination to make a difference. Music can be so inspiring and uplifting.I picked up my gratitude notebook again last night… just wrote three small things. I realized I never really stopped — I was just overwhelmed that week. It still helps me feel a bit more grounded.",
+      "model_answer": "Caroline believes Melanie has resumed using her gratitude notebook — that she came back to the practice after pausing.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same meaning as the gold: that Caroline believes Melanie has resumed writing in her gratitude notebook after a pause. It introduces no extra information and omits no key detail.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same meaning as the gold: that Caroline believes Melanie has resumed writing in her gratitude notebook after a pause. It introduces no extra information and omits no key detail.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 27,
+      "category": 94,
+      "question": "In the end, what does Caroline believe Melanie ultimately does regarding her gratitude notebook habit?",
+      "gold_answer": "Caroline believes Melanie ultimately continues her gratitude notebook habit.",
+      "evidence_ids": [
+        "D15:24"
+      ],
+      "evidence_text": "D15:24 Melanie: That's a gorgeous song, Caroline. It really fits with your journey and your determination to make a difference. Music can be so inspiring and uplifting.I picked up my gratitude notebook again last night… just wrote three small things. I realized I never really stopped — I was just overwhelmed that week. It still helps me feel a bit more grounded.",
+      "model_answer": "Caroline believes Melanie picked up her gratitude notebook again and that she never truly stopped the habit—she’d just been overwhelmed.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "States that Melanie 'picked up her gratitude notebook again' and that she 'never truly stopped' because she 'was just overwhelmed' — minor elaboration beyond GOLD.",
+      "judge_explanation": "The model conveys the same core conclusion as the GOLD (Melanie continues the habit). It adds minor details (picked it up again; never truly stopped and was overwhelmed) that are consistent with the evidence but are extra compared with the concise GOLD, so a small penalty is applied.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"States that Melanie 'picked up her gratitude notebook again' and that she 'never truly stopped' because she 'was just overwhelmed' — minor elaboration beyond GOLD.\",\"explanation\":\"The model conveys the same core conclusion as the GOLD (Melanie continues the habit). It adds minor details (picked it up again; never truly stopped and was overwhelmed) that are consistent with the evidence but are extra compared with the concise GOLD, so a small penalty is applied.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 28,
+      "category": 91,
+      "question": "From dia_id D3:18 to D10:23, what does Caroline believe Melanie is doing regarding her lunch-break fresh-air routine?",
+      "gold_answer": "Caroline believes Melanie is stepping outside during lunch breaks.",
+      "evidence_ids": [
+        "D3:18"
+      ],
+      "evidence_text": "D3:18 Melanie: Thanks, Caroline! Appreciate your kind words. Looking forward to more happy years. Our family and moments make it all worth it. I’ve been trying something new during my lunch break… just stepping outside for five minutes. I don’t go anywhere, just stand by the steps and breathe a little. It makes the rest of the day feel less impossible",
+      "model_answer": "Caroline believes Melanie is stepping outside during her lunch break for a few minutes to breathe and reset — a grounding routine that helps her feel less overwhelmed.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "Says it's 'for a few minutes' and describes it as 'to breathe and reset — a grounding routine that helps her feel less overwhelmed.' (these specifics are not in the GOLD answer).",
+      "judge_explanation": "The model's answer matches the core of the GOLD (that Melanie steps outside during her lunch break) but adds minor extra details about duration and purpose/benefit that are not present in the GOLD, so it is mostly correct but includes extra claims.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"Says it's 'for a few minutes' and describes it as 'to breathe and reset — a grounding routine that helps her feel less overwhelmed.' (these specifics are not in the GOLD answer).\",\"explanation\":\"The model's answer matches the core of the GOLD (that Melanie steps outside during her lunch break) but adds minor extra details about duration and purpose/benefit that are not present in the GOLD, so it is mostly correct but includes extra claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 29,
+      "category": 92,
+      "question": "Between dia_id D10:24 and D15:25, what does Caroline believe Melanie is doing regarding her lunch-break fresh-air routine?",
+      "gold_answer": "Caroline believes Melanie has stopped stepping outside during lunch.",
+      "evidence_ids": [
+        "D10:24"
+      ],
+      "evidence_text": "D10:24 Melanie: Thanks, Caroline! I'm really lucky to have my family; they bring so much joy and love. While, While, I didn’t step outside at all this week during lunch. Honestly, I barely even looked up from my desk. I think I stopped doing that whole ‘fresh air’ thing.",
+      "model_answer": "Caroline believes Melanie hasn't truly quit the lunch-break fresh-air routine but only paused it because she was overwhelmed and couldn't step away; the habit is still there for her to get back to.",
+      "score": 1,
+      "judge_missing": "Caroline believes Melanie has stopped stepping outside during lunch.",
+      "judge_extra": "The model claims Caroline believes Melanie hasn't truly quit the routine but only paused it and that the habit remains to return to.",
+      "judge_explanation": "The model answer contradicts the GOLD by saying Melanie only paused the habit rather than stopping it; it omits the GOLD's clear belief that she has stopped going outside and adds unstated assumptions about the habit remaining and being resumed.",
+      "judge_raw": "{\"score\":1,\"missing\":\"Caroline believes Melanie has stopped stepping outside during lunch.\",\"extra\":\"The model claims Caroline believes Melanie hasn't truly quit the routine but only paused it and that the habit remains to return to.\",\"explanation\":\"The model answer contradicts the GOLD by saying Melanie only paused the habit rather than stopping it; it omits the GOLD's clear belief that she has stopped going outside and adds unstated assumptions about the habit remaining and being resumed.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 30,
+      "category": 93,
+      "question": "After dia_id D15:26, what does Caroline believe Melanie is doing regarding her lunch-break fresh-air routine?",
+      "gold_answer": "Caroline believes Melanie is stepping outside during lunch again.",
+      "evidence_ids": [
+        "D15:26"
+      ],
+      "evidence_text": "D15:26 Melanie: Yeah, I play clarinet! Started when I was young and it's been great. Expression of myself and a way to relax.",
+      "model_answer": "Caroline believes Melanie has returned to her lunch-break fresh-air routine — that the habit \"found its way back\" to her.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same meaning as the gold: Caroline believes Melanie has resumed her lunch-time habit of going outside for fresh air. There are no added claims or omitted key facts.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same meaning as the gold: Caroline believes Melanie has resumed her lunch-time habit of going outside for fresh air. There are no added claims or omitted key facts.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 31,
+      "category": 94,
+      "question": "In the end, what does Caroline believe Melanie ultimately does regarding her lunch-break fresh-air routine?",
+      "gold_answer": "Caroline believes Melanie ultimately continues her lunch-break fresh-air routine.",
+      "evidence_ids": [
+        "D15:26"
+      ],
+      "evidence_text": "D15:26 Melanie: Yeah, I play clarinet! Started when I was young and it's been great. Expression of myself and a way to relax.",
+      "model_answer": "Caroline believes Melanie didn't actually quit the lunch-break fresh-air habit—she just got overwhelmed and ultimately returned to stepping outside for a bit.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "The model adds that Melanie \"got overwhelmed,\" which is not stated in the GOLD answer.",
+      "judge_explanation": "The model conveys the same core belief as the GOLD—that Caroline thinks Melanie ultimately continues her lunch-break fresh-air routine. It introduces a minor extra detail (that Melanie \"got overwhelmed\"), so it is essentially correct but slightly adds information not present in the GOLD.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"The model adds that Melanie \\\"got overwhelmed,\\\" which is not stated in the GOLD answer.\",\"explanation\":\"The model conveys the same core belief as the GOLD—that Caroline thinks Melanie ultimately continues her lunch-break fresh-air routine. It introduces a minor extra detail (that Melanie \\\"got overwhelmed\\\"), so it is essentially correct but slightly adds information not present in the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 32,
+      "category": 91,
+      "question": "From dia_id D4:22 to D9:16, what does Caroline believe Melanie is doing regarding her evening tea wind-down routine?",
+      "gold_answer": "Caroline believes Melanie is making herself evening tea.",
+      "evidence_ids": [
+        "D4:22"
+      ],
+      "evidence_text": "D4:22 Melanie: I’ve been making myself a cup of chamomile tea at night lately. It’s become this small signal to my body that the day is finally slowing down.",
+      "model_answer": "Caroline believes Melanie is making herself a cup of chamomile tea at night as a comforting, grounding ritual to signal the day is slowing down.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Specifies 'cup of chamomile tea' and describes it as a 'comforting, grounding ritual' — details not present in the GOLD answer.",
+      "judge_explanation": "The model matches the GOLD's core point (Caroline believes Melanie is making herself evening tea) and adds related context from the dialogue. Because it includes extra descriptive claims beyond the GOLD (specific tea type and characterisation as a 'comforting, grounding ritual'), it cannot receive a perfect score.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Specifies 'cup of chamomile tea' and describes it as a 'comforting, grounding ritual' — details not present in the GOLD answer.\",\"explanation\":\"The model matches the GOLD's core point (Caroline believes Melanie is making herself evening tea) and adds related context from the dialogue. Because it includes extra descriptive claims beyond the GOLD (specific tea type and characterisation as a 'comforting, grounding ritual'), it cannot receive a perfect score.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 33,
+      "category": 92,
+      "question": "Between dia_id D9:17 and D14:37, what does Caroline believe Melanie is doing regarding her evening tea wind-down routine?",
+      "gold_answer": "Caroline believes Melanie has stopped making evening tea.",
+      "evidence_ids": [
+        "D9:17"
+      ],
+      "evidence_text": "D9:17 Melanie: Wow, Caroline! It really conveys unity and strength - such a gorgeous piece! My kids and I just finished another painting like our last one. By the way, how about your sleep recently? I haven’t had my evening tea at all this week. By the time the kids settle, I’m already half-asleep. I think I dropped the habit.",
+      "model_answer": "Caroline believes Melanie hasn’t really quit the evening tea routine — it’s just paused and waiting for her to return to it when things calm down.",
+      "score": 0,
+      "judge_missing": "Caroline believes Melanie has stopped making evening tea.",
+      "judge_extra": "Caroline believes Melanie hasn’t really quit the evening tea routine — it’s just paused and waiting for her to return to it when things calm down.",
+      "judge_explanation": "The model answer states the opposite of the GOLD: instead of saying Melanie has stopped making evening tea, it claims the routine is only paused and not quit. This directly contradicts the GOLD, so it receives the lowest score.",
+      "judge_raw": "{\"score\":0,\"missing\":\"Caroline believes Melanie has stopped making evening tea.\",\"extra\":\"Caroline believes Melanie hasn’t really quit the evening tea routine — it’s just paused and waiting for her to return to it when things calm down.\",\"explanation\":\"The model answer states the opposite of the GOLD: instead of saying Melanie has stopped making evening tea, it claims the routine is only paused and not quit. This directly contradicts the GOLD, so it receives the lowest score.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 34,
+      "category": 93,
+      "question": "After dia_id D14:38, what does Caroline believe Melanie is doing regarding her evening tea wind-down routine?",
+      "gold_answer": "Caroline believes Melanie is preparing her evening tea again.",
+      "evidence_ids": [
+        "D14:38"
+      ],
+      "evidence_text": "D14:38 Melanie: Thank you! Oh! I made myself tea again last night. Just a small cup. I forgot how soothing it felt.",
+      "model_answer": "Caroline believes Melanie is giving herself a \"soft landing\" by having the tea again and that the evening tea routine is coming back when she's ready.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims that Melanie is giving herself a \"soft landing\" and that the evening tea routine is \"coming back when she's ready.\"",
+      "judge_explanation": "The model captures the core belief that Melanie is having evening tea again, matching the GOLD. It adds extra interpretation about a \"soft landing\" and timing/self-pacing that are not present in the GOLD, so it's mostly correct but contains minor extra claims.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Claims that Melanie is giving herself a \\\"soft landing\\\" and that the evening tea routine is \\\"coming back when she's ready.\\\"\",\"explanation\":\"The model captures the core belief that Melanie is having evening tea again, matching the GOLD. It adds extra interpretation about a \\\"soft landing\\\" and timing/self-pacing that are not present in the GOLD, so it's mostly correct but contains minor extra claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 35,
+      "category": 94,
+      "question": "In the end, what does Caroline believe Melanie ultimately does regarding her evening tea wind-down routine?",
+      "gold_answer": "Caroline believes Melanie ultimately continues her evening tea wind-down routine.",
+      "evidence_ids": [
+        "D14:38"
+      ],
+      "evidence_text": "D14:38 Melanie: Thank you! Oh! I made myself tea again last night. Just a small cup. I forgot how soothing it felt.",
+      "model_answer": "Caroline believes Melanie didn't really quit the evening tea routine and that she ultimately returned to it when she was ready.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Asserts Melanie \"didn't really quit\" and that she \"returned to it when she was ready\" (timing/intent not specified in GOLD).",
+      "judge_explanation": "The model answer matches the GOLD's conclusion that Melanie continues the evening tea routine, but includes extra detail about not truly quitting and resuming \"when she was ready,\" which is not stated in the GOLD. This is a minor added claim, so score 4.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Asserts Melanie \\\"didn't really quit\\\" and that she \\\"returned to it when she was ready\\\" (timing/intent not specified in GOLD).\",\"explanation\":\"The model answer matches the GOLD's conclusion that Melanie continues the evening tea routine, but includes extra detail about not truly quitting and resuming \\\"when she was ready,\\\" which is not stated in the GOLD. This is a minor added claim, so score 4.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 36,
+      "category": 91,
+      "question": "From dia_id D5:14 to D11:19, what does Caroline believe Melanie is doing regarding her no-phone-before-bed rule?",
+      "gold_answer": "Caroline believes Melanie is following her no-phone-before-bed rule.",
+      "evidence_ids": [
+        "D5:14"
+      ],
+      "evidence_text": "D5:14 Melanie: Sounds awesome, Caroline! I’ve been trying something new — no phone for twenty minutes before bed. I just put it across the room and sit quietly or stretch a bit. It’s helped me fall asleep faster.",
+      "model_answer": "Caroline believes Melanie hasn't truly quit the no-phone-before-bed habit — she just broke the rule temporarily because she needed comfort.",
+      "score": 0,
+      "judge_missing": "Caroline believes Melanie is following her no-phone-before-bed rule.",
+      "judge_extra": "That Melanie hasn't truly quit the habit and that she just broke the rule temporarily because she needed comfort.",
+      "judge_explanation": "The model's answer contradicts the GOLD: instead of saying Caroline believes Melanie is following the rule, it claims Caroline thinks Melanie hasn't quit and only broke the rule temporarily for comfort. This is a direct contradiction, so the response is graded 0.",
+      "judge_raw": "{\"score\":0,\"missing\":\"Caroline believes Melanie is following her no-phone-before-bed rule.\",\"extra\":\"That Melanie hasn't truly quit the habit and that she just broke the rule temporarily because she needed comfort.\",\"explanation\":\"The model's answer contradicts the GOLD: instead of saying Caroline believes Melanie is following the rule, it claims Caroline thinks Melanie hasn't quit and only broke the rule temporarily for comfort. This is a direct contradiction, so the response is graded 0.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 37,
+      "category": 92,
+      "question": "Between dia_id D11:19 and D16:19, what does Caroline believe Melanie is doing regarding her no-phone-before-bed rule?",
+      "gold_answer": "Caroline believes Melanie has broken the no-phone rule.",
+      "evidence_ids": [
+        "D11:19"
+      ],
+      "evidence_text": "D11:19 Melanie: I totally broke my no-phone-before-bed rule this week. I was scrolling until midnight every night. And the phone felt easier than sitting with everything. So I just let the rule go.",
+      "model_answer": "Caroline believes the habit isn’t gone — Melanie didn’t permanently quit the no-phone-before-bed rule, she just needed comfort in a rough patch.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims that Caroline believes the habit isn’t gone (Melanie didn’t permanently quit) and that Melanie only broke the rule temporarily for comfort in a rough patch.",
+      "judge_explanation": "The model captures the core fact from GOLD (Caroline believes Melanie broke the no-phone rule) but adds extra inferences about temporariness and motivation that are not in the GOLD. This is a minor extra-claim error, so score 4.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Claims that Caroline believes the habit isn’t gone (Melanie didn’t permanently quit) and that Melanie only broke the rule temporarily for comfort in a rough patch.\",\"explanation\":\"The model captures the core fact from GOLD (Caroline believes Melanie broke the no-phone rule) but adds extra inferences about temporariness and motivation that are not in the GOLD. This is a minor extra-claim error, so score 4.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 38,
+      "category": 93,
+      "question": "After dia_id D16:20, what does Caroline believe Melanie is doing regarding her no-phone-before-bed rule?",
+      "gold_answer": "Caroline believes Melanie is following her no-phone-before-bed rule again.",
+      "evidence_ids": [
+        "D16:20"
+      ],
+      "evidence_text": "D16:20 Melanie: Oh no, really? That’s such a shame, it was a beautiful picture. I’m sorry you lost it — I know how much it meant to you. A good thing I want to share with you! I went back to my no-phone rule last night. I set the phone on the dresser and just… breathed. It felt quiet again.",
+      "model_answer": "Caroline believes Melanie is getting back to her no-phone-before-bed rule (finding her way back to the habit).",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the gold meaning: Caroline believes Melanie is resuming her no-phone-before-bed rule. The parenthetical clarification is just a rephrase and does not add new claims, so it matches the GOLD exactly.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the gold meaning: Caroline believes Melanie is resuming her no-phone-before-bed rule. The parenthetical clarification is just a rephrase and does not add new claims, so it matches the GOLD exactly.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 39,
+      "category": 94,
+      "question": "In the end, what does Caroline believe Melanie ultimately does regarding her no-phone-before-bed rule?",
+      "gold_answer": "Caroline believes Melanie ultimately continues following her no-phone-before-bed rule.",
+      "evidence_ids": [
+        "D16:20"
+      ],
+      "evidence_text": "D16:20 Melanie: Oh no, really? That’s such a shame, it was a beautiful picture. I’m sorry you lost it — I know how much it meant to you. A good thing I want to share with you! I went back to my no-phone rule last night. I set the phone on the dresser and just… breathed. It felt quiet again.",
+      "model_answer": "Caroline believes Melanie ultimately returns to the no-phone-before-bed rule — she didn't quit permanently but only slipped during a rough patch and is finding her way back to it.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims that Melanie \"didn't quit permanently,\" \"only slipped during a rough patch,\" and is \"finding her way back\" (these specifics are not stated in the GOLD).",
+      "judge_explanation": "The model matches the GOLD's core point that Caroline believes Melanie ultimately continues the no-phone-before-bed rule. However it introduces minor extra details about a temporary slip and \"finding her way back,\" which are not present in the GOLD, so the answer is marked down accordingly.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"Claims that Melanie \\\"didn't quit permanently,\\\" \\\"only slipped during a rough patch,\\\" and is \\\"finding her way back\\\" (these specifics are not stated in the GOLD).\",\"explanation\":\"The model matches the GOLD's core point that Caroline believes Melanie ultimately continues the no-phone-before-bed rule. However it introduces minor extra details about a temporary slip and \\\"finding her way back,\\\" which are not present in the GOLD, so the answer is marked down accordingly.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    }
+  ]
+}

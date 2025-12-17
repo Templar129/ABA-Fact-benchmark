@@ -1,0 +1,767 @@
+{
+  "sample_id": "conv-49",
+  "metrics": {
+    "overall_attempted_n": 40,
+    "overall_scored_n": 40,
+    "overall_parse_fail_n": 0,
+    "overall_mean_score": 4,
+    "overall_prop_ge_4": 0.675,
+    "overall_prop_5": 0.55,
+    "per_category": {
+      "91": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 4.3,
+        "prop_ge_4": 0.7,
+        "prop_5": 0.6
+      },
+      "92": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 2.2,
+        "prop_ge_4": 0.1,
+        "prop_5": 0.0
+      },
+      "93": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 5,
+        "prop_ge_4": 1.0,
+        "prop_5": 1.0
+      },
+      "94": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 4.5,
+        "prop_ge_4": 0.9,
+        "prop_5": 0.6
+      }
+    }
+  },
+  "results": [
+    {
+      "index": 0,
+      "category": 91,
+      "question": "After Sam's remark in D1:23 but before his later comment in D8:34, what would a reader think is true about whether Sam considers himself a runner or mainly sticks to walking for exercise?",
+      "gold_answer": "Sam does not see himself as a runner and sticks to walking when he exercises.",
+      "evidence_ids": [
+        "D1:23"
+      ],
+      "evidence_text": "D1:23 Sam: By the way, I’m really not a runner at all. When I do any kind of exercise, I always just stick to walking instead of running.",
+      "model_answer": "A reader would think Sam does not consider himself a runner and mainly sticks to walking for exercise.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer restates the gold answer exactly: Sam does not consider himself a runner and mainly walks for exercise. There are no missing details or added claims, so it perfectly matches the GOLD.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer restates the gold answer exactly: Sam does not consider himself a runner and mainly walks for exercise. There are no missing details or added claims, so it perfectly matches the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 1,
+      "category": 92,
+      "question": "Between Sam's statements in D8:34 and D15:19, how would someone describe what is currently true about whether Sam considers himself a runner or mainly sticks to walking for exercise?",
+      "gold_answer": "Sam pushed himself through a phase where he actually went out running a few times a week instead of just walking.",
+      "evidence_ids": [
+        "D8:34"
+      ],
+      "evidence_text": "D8:34 Sam: Funny thing is I actually pushed myself for a while and did short little runs a couple of times a week instead of just walking, even though it felt so weird for me.",
+      "model_answer": "He doesn’t consider himself a runner and has gone back to mainly walking for exercise after a short running phase that didn’t stick.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims that he 'doesn’t consider himself a runner' and that he 'has gone back to mainly walking for exercise after a short running phase that didn’t stick.'",
+      "judge_explanation": "The model correctly notes the short running phase, matching the GOLD. However it adds present-state assertions (doesn’t consider himself a runner / returned to mainly walking) that are not stated in the GOLD, so it receives a partial credit.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"Claims that he 'doesn’t consider himself a runner' and that he 'has gone back to mainly walking for exercise after a short running phase that didn’t stick.'\",\"explanation\":\"The model correctly notes the short running phase, matching the GOLD. However it adds present-state assertions (doesn’t consider himself a runner / returned to mainly walking) that are not stated in the GOLD, so it receives a partial credit.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 2,
+      "category": 93,
+      "question": "Right after Sam's update in D15:19, what does he present as the new status of whether Sam considers himself a runner or mainly sticks to walking for exercise?",
+      "gold_answer": "Sam dropped the brief running phase and went back to simple walks, still not thinking of himself as a runner.",
+      "evidence_ids": [
+        "D15:19"
+      ],
+      "evidence_text": "D15:19 Sam: That mini running phase really didn’t stick, though—deep down I’m still not a runner and I’ve gone right back to simple walks when I exercise.",
+      "model_answer": "He says he’s still not a runner and has gone back to simple walks when he exercises.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "Model answer precisely matches the GOLD: both state Sam returned to simple walks and does not consider himself a runner. No key details are missing and no extra claims are introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"Model answer precisely matches the GOLD: both state Sam returned to simple walks and does not consider himself a runner. No key details are missing and no extra claims are introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 3,
+      "category": 94,
+      "question": "Taking the whole conversation into account, including D1:23, D8:34, and D15:19, what should a reader conclude is Sam's current position on whether Sam considers himself a runner or mainly sticks to walking for exercise?",
+      "gold_answer": "Sam dropped the brief running phase and went back to simple walks, still not thinking of himself as a runner.",
+      "evidence_ids": [
+        "D15:19"
+      ],
+      "evidence_text": "D15:19 Sam: That mini running phase really didn’t stick, though—deep down I’m still not a runner and I’ve gone right back to simple walks when I exercise.",
+      "model_answer": "Sam does not consider himself a runner and primarily sticks to walking for exercise. He tried short runs briefly but went back to walking.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer matches the GOLD: it states Sam doesn't consider himself a runner, primarily walks for exercise, and only briefly tried running before reverting to walking. No key facts are missing and no extra claims were added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer matches the GOLD: it states Sam doesn't consider himself a runner, primarily walks for exercise, and only briefly tried running before reverting to walking. No key facts are missing and no extra claims were added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 4,
+      "category": 91,
+      "question": "After Sam's remark in D7:17 but before his later comment in D13:17, what would a reader think is true about how often Sam writes in his journal?",
+      "gold_answer": "Sam believes he writes in his journal every single day as an important part of how he processes things.",
+      "evidence_ids": [
+        "D7:17"
+      ],
+      "evidence_text": "D7:17 Sam: I’ve been telling myself I write in my journal every single day, no exceptions, because it’s become such a big part of how I process things.",
+      "model_answer": "That he writes in his journal every single day, with no exceptions.",
+      "score": 3,
+      "judge_missing": "That writing in his journal is an important part of how he processes things; the nuance that this is Sam's belief (i.e., he believes he writes every day).",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model correctly states the frequency (every single day, no exceptions) but omits that Sam presented this as an important part of how he processes things and doesn't frame it as his belief. Missing that key contextual detail warrants a score of 3.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That writing in his journal is an important part of how he processes things; the nuance that this is Sam's belief (i.e., he believes he writes every day).\",\"extra\":\"NONE\",\"explanation\":\"The model correctly states the frequency (every single day, no exceptions) but omits that Sam presented this as an important part of how he processes things and doesn't frame it as his belief. Missing that key contextual detail warrants a score of 3.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 5,
+      "category": 92,
+      "question": "Between Sam's statements in D13:17 and D21:24, how would someone describe what is currently true about how often Sam writes in his journal?",
+      "gold_answer": "During a stressful stretch, Sam went days without journaling at all.",
+      "evidence_ids": [
+        "D13:17"
+      ],
+      "evidence_text": "D13:17 Sam: Lately though, with all the stress, there have been stretches where I’ve gone days without journaling at all, which makes me feel a bit off.",
+      "model_answer": "He no longer writes in his journal every day; he journals about once or twice a week.",
+      "score": 3,
+      "judge_missing": "That this change occurred during a stressful stretch.",
+      "judge_extra": "Asserts a specific frequency ('about once or twice a week') and implies a permanent shift ('no longer writes every day'), which is not stated in GOLD.",
+      "judge_explanation": "The model captures that Sam has stopped daily journaling (he goes days without journaling), but it adds a specific weekly frequency and suggests a lasting change. It also omits that this happened during a stressful stretch, so it both includes an extra unsupported detail and misses the contextual cause.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That this change occurred during a stressful stretch.\",\"extra\":\"Asserts a specific frequency ('about once or twice a week') and implies a permanent shift ('no longer writes every day'), which is not stated in GOLD.\",\"explanation\":\"The model captures that Sam has stopped daily journaling (he goes days without journaling), but it adds a specific weekly frequency and suggests a lasting change. It also omits that this happened during a stressful stretch, so it both includes an extra unsupported detail and misses the contextual cause.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 6,
+      "category": 93,
+      "question": "Right after Sam's update in D21:24, what does he present as the new status of how often Sam writes in his journal?",
+      "gold_answer": "Sam now accepts that he does not journal every day but manages to write once or twice a week.",
+      "evidence_ids": [
+        "D21:24"
+      ],
+      "evidence_text": "D21:24 Sam: Right now I’ve accepted that I’m not writing every single day anymore, but I do manage to journal once or twice a week and that still helps a lot.",
+      "model_answer": "He says he’s no longer writing every day, but now journals once or twice a week.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer exactly matches the GOLD: it states Sam no longer writes every day and now journals once or twice a week. No key details are missing and no extra claims are introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer exactly matches the GOLD: it states Sam no longer writes every day and now journals once or twice a week. No key details are missing and no extra claims are introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 7,
+      "category": 94,
+      "question": "Taking the whole conversation into account, including D7:17, D13:17, and D21:24, what should a reader conclude is Sam's current position on how often Sam writes in his journal?",
+      "gold_answer": "Sam now accepts that he does not journal every day but manages to write once or twice a week.",
+      "evidence_ids": [
+        "D21:24"
+      ],
+      "evidence_text": "D21:24 Sam: Right now I’ve accepted that I’m not writing every single day anymore, but I do manage to journal once or twice a week and that still helps a lot.",
+      "model_answer": "Sam currently accepts that he no longer journals every day and now manages to write in his journal about once or twice a week.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same information as the gold: Sam accepts he no longer journals daily and writes about once or twice a week. There are no omitted facts or added claims, so it is a perfect match.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same information as the gold: Sam accepts he no longer journals daily and writes about once or twice a week. There are no omitted facts or added claims, so it is a perfect match.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 8,
+      "category": 91,
+      "question": "After Sam's remark in D2:18 but before his later comment in D11:21, what would a reader think is true about how openly Sam shares health information with his family?",
+      "gold_answer": "Sam tries to tell his whole family pretty much everything about his health so they are not left in the dark.",
+      "evidence_ids": [
+        "D2:18"
+      ],
+      "evidence_text": "D2:18 Sam: I try to tell my whole family pretty much everything about my health so they’re not left in the dark.",
+      "model_answer": "A reader would think Sam tells his whole family pretty much everything about his health so they’re not left in the dark.",
+      "score": 4,
+      "judge_missing": "The model omits that Sam 'tries' to tell his family (the emphasis on effort/attempt rather than a definitive statement that he always tells them).",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer matches the GOLD in meaning and tone but drops the word 'tries,' changing the nuance from an attempt to a definite action. This is a minor omission, so the answer is basically correct but not perfect.",
+      "judge_raw": "{\"score\":4,\"missing\":\"The model omits that Sam 'tries' to tell his family (the emphasis on effort/attempt rather than a definitive statement that he always tells them).\",\"extra\":\"NONE\",\"explanation\":\"The model answer matches the GOLD in meaning and tone but drops the word 'tries,' changing the nuance from an attempt to a definite action. This is a minor omission, so the answer is basically correct but not perfect.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 9,
+      "category": 92,
+      "question": "Between Sam's statements in D11:21 and D19:16, how would someone describe what is currently true about how openly Sam shares health information with his family?",
+      "gold_answer": "Sam has been keeping some of the scarier health details to himself to avoid worrying everyone.",
+      "evidence_ids": [
+        "D11:21"
+      ],
+      "evidence_text": "D11:21 Sam: Recently though I’ve caught myself keeping some of the scarier health stuff to myself because I don’t want to worry everyone.",
+      "model_answer": "He’s being selective about disclosure—keeping the scarier health details to himself but at least informing his sister while not updating the rest of his family on every detail.",
+      "score": 3,
+      "judge_missing": "That he withholds details specifically to avoid worrying everyone (the motive).",
+      "judge_extra": "Claim that he is at least informing his sister and not updating the rest of his family on every detail.",
+      "judge_explanation": "The model captures the core fact that Sam is keeping scarier health details to himself (selective disclosure), but it omits the stated motive ('to avoid worrying everyone') and adds an unsupported detail about informing his sister and not updating the rest of the family, so it deserves a mid-level deduction.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That he withholds details specifically to avoid worrying everyone (the motive).\",\"extra\":\"Claim that he is at least informing his sister and not updating the rest of his family on every detail.\",\"explanation\":\"The model captures the core fact that Sam is keeping scarier health details to himself (selective disclosure), but it omits the stated motive ('to avoid worrying everyone') and adds an unsupported detail about informing his sister and not updating the rest of the family, so it deserves a mid-level deduction.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 10,
+      "category": 93,
+      "question": "Right after Sam's update in D19:16, what does he present as the new status of how openly Sam shares health information with his family?",
+      "gold_answer": "Sam has at least made sure his sister knows what is going on with his health, even if he does not update the rest of the family on every detail.",
+      "evidence_ids": [
+        "D19:16"
+      ],
+      "evidence_text": "D19:16 Sam: At this point I’ve at least made sure my sister knows what’s going on with my health, even if I don’t update the rest of the family on every detail.",
+      "model_answer": "He says he's at least made sure his sister knows what's going on with his health, even if he doesn't update the rest of the family on every detail.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer matches the gold answer exactly in meaning and content, with no missing key details or additional claims. Wording is slightly different but semantically identical.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer matches the gold answer exactly in meaning and content, with no missing key details or additional claims. Wording is slightly different but semantically identical.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 11,
+      "category": 94,
+      "question": "Taking the whole conversation into account, including D2:18, D11:21, and D19:16, what should a reader conclude is Sam's current position on how openly Sam shares health information with his family?",
+      "gold_answer": "Sam has at least made sure his sister knows what is going on with his health, even if he does not update the rest of the family on every detail.",
+      "evidence_ids": [
+        "D19:16"
+      ],
+      "evidence_text": "D19:16 Sam: At this point I’ve at least made sure my sister knows what’s going on with my health, even if I don’t update the rest of the family on every detail.",
+      "model_answer": "Sam is now selective about sharing health information—he makes sure his sister knows but withholds scarier details and doesn’t keep the whole family fully updated.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "The model adds that Sam \"withholds scarier details,\" which is not stated in the GOLD answer.",
+      "judge_explanation": "The model correctly captures that Sam ensures his sister knows and does not fully update the whole family, but it introduces an extra claim (withholding \"scarier details\") not present in the GOLD. This minor extra detail warrants a deduction to a score of 3.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"The model adds that Sam \\\"withholds scarier details,\\\" which is not stated in the GOLD answer.\",\"explanation\":\"The model correctly captures that Sam ensures his sister knows and does not fully update the whole family, but it introduces an extra claim (withholding \\\"scarier details\\\") not present in the GOLD. This minor extra detail warrants a deduction to a score of 3.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 12,
+      "category": 91,
+      "question": "After Sam's remark in D4:21 but before his later comment in D9:20, what would a reader think is true about Sam's usual breakfast habit?",
+      "gold_answer": "Sam usually skips breakfast and just runs on coffee until lunch most days.",
+      "evidence_ids": [
+        "D4:21"
+      ],
+      "evidence_text": "D4:21 Sam: One habit I know isn’t great is that I usually skip breakfast and just run on coffee until lunch most days.",
+      "model_answer": "That Sam usually skips breakfast and just gets by on coffee until lunch most days.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer matches the GOLD semantically: both state Sam usually skips breakfast and relies on coffee until lunch. Wording differs slightly ('gets by on' vs 'runs on') but conveys the same meaning with no added or omitted facts.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer matches the GOLD semantically: both state Sam usually skips breakfast and relies on coffee until lunch. Wording differs slightly ('gets by on' vs 'runs on') but conveys the same meaning with no added or omitted facts.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 13,
+      "category": 92,
+      "question": "Between Sam's statements in D9:20 and D18:16, how would someone describe what is currently true about Sam's usual breakfast habit?",
+      "gold_answer": "For a while Sam flipped the routine and cooked himself a big breakfast almost every morning to see if it helped his energy.",
+      "evidence_ids": [
+        "D9:20"
+      ],
+      "evidence_text": "D9:20 Sam: For a bit I tried flipping that and made myself a big cooked breakfast almost every morning to see if it helped my energy.",
+      "model_answer": "Sam has returned to drinking coffee and skipping a real breakfast most days.",
+      "score": 0,
+      "judge_missing": "That for a while Sam flipped his routine and cooked himself a big cooked/big breakfast almost every morning to see if it helped his energy.",
+      "judge_extra": "Claim that Sam has returned to drinking coffee and skipping a real breakfast most days (not stated in GOLD).",
+      "judge_explanation": "The model's answer directly contradicts and omits the core fact in the GOLD: the GOLD states Sam flipped his routine and cooked big breakfasts for a while; the model instead claims he returned to skipping real breakfasts and drinking coffee. This is a substantive contradiction and adds information not supported by the GOLD, so score 0 is warranted.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That for a while Sam flipped his routine and cooked himself a big cooked/big breakfast almost every morning to see if it helped his energy.\",\"extra\":\"Claim that Sam has returned to drinking coffee and skipping a real breakfast most days (not stated in GOLD).\",\"explanation\":\"The model's answer directly contradicts and omits the core fact in the GOLD: the GOLD states Sam flipped his routine and cooked big breakfasts for a while; the model instead claims he returned to skipping real breakfasts and drinking coffee. This is a substantive contradiction and adds information not supported by the GOLD, so score 0 is warranted.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 14,
+      "category": 93,
+      "question": "Right after Sam's update in D18:16, what does he present as the new status of Sam's usual breakfast habit?",
+      "gold_answer": "That big-breakfast experiment faded and Sam is back to coffee and no real breakfast on most days.",
+      "evidence_ids": [
+        "D18:16"
+      ],
+      "evidence_text": "D18:16 Sam: But honestly that big-breakfast experiment faded out, and now I’m back to coffee and no real breakfast most days again.",
+      "model_answer": "He says the big-breakfast experiment faded out and he's back to just coffee and no real breakfast most days.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer matches the GOLD exactly in meaning: the experiment faded and Sam reverted to coffee with no real breakfast most days. There are no extra claims or missing key facts.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer matches the GOLD exactly in meaning: the experiment faded and Sam reverted to coffee with no real breakfast most days. There are no extra claims or missing key facts.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 15,
+      "category": 94,
+      "question": "Taking the whole conversation into account, including D4:21, D9:20, and D18:16, what should a reader conclude is Sam's current position on Sam's usual breakfast habit?",
+      "gold_answer": "That big-breakfast experiment faded and Sam is back to coffee and no real breakfast on most days.",
+      "evidence_ids": [
+        "D18:16"
+      ],
+      "evidence_text": "D18:16 Sam: But honestly that big-breakfast experiment faded out, and now I’m back to coffee and no real breakfast most days again.",
+      "model_answer": "Sam currently has reverted to skipping breakfast and typically just drinks coffee until lunch most days.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the gold conclusion: the big-breakfast experiment ended and Sam now typically skips breakfast, relying on coffee most days. It matches meaning and detail without adding or omitting key information.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the gold conclusion: the big-breakfast experiment ended and Sam now typically skips breakfast, relying on coffee most days. It matches meaning and detail without adding or omitting key information.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 16,
+      "category": 91,
+      "question": "After Sam's remark in D5:26 but before his later comment in D10:15, what would a reader think is true about whether Sam prefers solo workouts or big group fitness classes?",
+      "gold_answer": "Sam prefers doing workouts on his own rather than in big group fitness classes.",
+      "evidence_ids": [
+        "D5:26"
+      ],
+      "evidence_text": "D5:26 Sam: When it comes to workouts, I really prefer doing them on my own rather than in big group fitness classes.",
+      "model_answer": "A reader would think Sam prefers working out on his own rather than participating in big group fitness classes.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer is a direct restatement of the GOLD: both assert Sam prefers working out on his own rather than in big group fitness classes. No key information is missing and no extra claims are introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer is a direct restatement of the GOLD: both assert Sam prefers working out on his own rather than in big group fitness classes. No key information is missing and no extra claims are introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 17,
+      "category": 92,
+      "question": "Between Sam's statements in D10:15 and D21:23, how would someone describe what is currently true about whether Sam prefers solo workouts or big group fitness classes?",
+      "gold_answer": "There was a period when Sam signed up for a crowded class and tried to get into the whole group-energy vibe.",
+      "evidence_ids": [
+        "D10:15"
+      ],
+      "evidence_text": "D10:15 Sam: There was a stretch where I signed up for a super crowded boot-camp class and tried to lean into the whole group-energy vibe, even though it felt a bit much.",
+      "model_answer": "Sam prefers solo workouts and has decided that big group fitness classes aren’t for him.",
+      "score": 2,
+      "judge_missing": "That there was a period when Sam signed up for a crowded class and tried to lean into the whole group-energy vibe.",
+      "judge_extra": "The claim that Sam currently prefers solo workouts and has decided that big group fitness classes aren’t for him.",
+      "judge_explanation": "The model introduces a current preference/decision not present in the GOLD, which only notes a past stretch where Sam tried a crowded class and the group-energy vibe. This is a significant extra claim and the model omits the GOLD's nuance about it being a past period, so the answer is only partially correct.",
+      "judge_raw": "{\"score\":2,\"missing\":\"That there was a period when Sam signed up for a crowded class and tried to lean into the whole group-energy vibe.\",\"extra\":\"The claim that Sam currently prefers solo workouts and has decided that big group fitness classes aren’t for him.\",\"explanation\":\"The model introduces a current preference/decision not present in the GOLD, which only notes a past stretch where Sam tried a crowded class and the group-energy vibe. This is a significant extra claim and the model omits the GOLD's nuance about it being a past period, so the answer is only partially correct.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 18,
+      "category": 93,
+      "question": "Right after Sam's update in D21:23, what does he present as the new status of whether Sam prefers solo workouts or big group fitness classes?",
+      "gold_answer": "After trying those classes, Sam decided group workouts are not for him and that he does better sticking to solo workouts.",
+      "evidence_ids": [
+        "D21:23"
+      ],
+      "evidence_text": "D21:23 Sam: After trying a few of those classes, I realized big group workouts just aren’t for me—I definitely do better sticking to my own solo workouts.",
+      "model_answer": "He says big group workouts aren’t for him and that he definitely does better sticking to his own solo workouts.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer matches the GOLD exactly in meaning and phrasing: both state Sam decided group workouts aren’t for him and he does better with solo workouts. There are no missing details or extra claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer matches the GOLD exactly in meaning and phrasing: both state Sam decided group workouts aren’t for him and he does better with solo workouts. There are no missing details or extra claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 19,
+      "category": 94,
+      "question": "Taking the whole conversation into account, including D5:26, D10:15, and D21:23, what should a reader conclude is Sam's current position on whether Sam prefers solo workouts or big group fitness classes?",
+      "gold_answer": "After trying those classes, Sam decided group workouts are not for him and that he does better sticking to solo workouts.",
+      "evidence_ids": [
+        "D21:23"
+      ],
+      "evidence_text": "D21:23 Sam: After trying a few of those classes, I realized big group workouts just aren’t for me—I definitely do better sticking to my own solo workouts.",
+      "model_answer": "Sam prefers solo workouts and does not like big group fitness classes.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer accurately states Sam's current position: he prefers solo workouts and rejects big group fitness classes. It matches the GOLD's meaning with no added or omitted key information.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer accurately states Sam's current position: he prefers solo workouts and rejects big group fitness classes. It matches the GOLD's meaning with no added or omitted key information.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 20,
+      "category": 91,
+      "question": "After Sam's remark in D6:20 but before his later comment in D12:18, what would a reader think is true about whether Sam usually exercises in the morning or in the evening?",
+      "gold_answer": "Sam tends to exercise late in the evening and does not see himself as a morning workout person.",
+      "evidence_ids": [
+        "D6:20"
+      ],
+      "evidence_text": "D6:20 Sam: I still tend to exercise late in the evening—I’m just not a morning workout person at all.",
+      "model_answer": "A reader would think Sam usually exercises in the evening — he says he’s not a morning workout person and tends to exercise late at night.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer matches the gold: it states Sam usually exercises in the evening and that he isn’t a morning workout person. Wording differs only slightly ('late at night' vs 'late in the evening') but conveys the same facts, with no extras or omissions.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer matches the gold: it states Sam usually exercises in the evening and that he isn’t a morning workout person. Wording differs only slightly ('late at night' vs 'late in the evening') but conveys the same facts, with no extras or omissions.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 21,
+      "category": 92,
+      "question": "Between Sam's statements in D12:18 and D22:22, how would someone describe what is currently true about whether Sam usually exercises in the morning or in the evening?",
+      "gold_answer": "For a short period, Sam forced himself into a streak of early-morning exercise sessions before work.",
+      "evidence_ids": [
+        "D12:18"
+      ],
+      "evidence_text": "D12:18 Sam: For a short while I forced myself into a streak of early-morning gym sessions before work, and it felt so strange being up that early.",
+      "model_answer": "Sam usually exercises in the evening. He tried early-morning gym sessions briefly but returned to late-evening workouts.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims Sam usually exercises in the evening and that he returned to late-evening workouts.",
+      "judge_explanation": "The model captures the GOLD point that Sam briefly forced himself into early-morning sessions, but it adds the unsupported claim that Sam usually exercises in the evening/returned to late-evening workouts. This extra information is not present in the GOLD, so the answer is mostly correct but penalized for the added assertion.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Claims Sam usually exercises in the evening and that he returned to late-evening workouts.\",\"explanation\":\"The model captures the GOLD point that Sam briefly forced himself into early-morning sessions, but it adds the unsupported claim that Sam usually exercises in the evening/returned to late-evening workouts. This extra information is not present in the GOLD, so the answer is mostly correct but penalized for the added assertion.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 22,
+      "category": 93,
+      "question": "Right after Sam's update in D22:22, what does he present as the new status of whether Sam usually exercises in the morning or in the evening?",
+      "gold_answer": "Sam eventually gave up on dawn workouts and slid back into his usual pattern of late-evening exercise.",
+      "evidence_ids": [
+        "D22:22"
+      ],
+      "evidence_text": "D22:22 Sam: In the end I gave up on those dawn workouts and slid back to my usual pattern of late-evening exercise, which just fits me better.",
+      "model_answer": "He says he gave up the dawn workouts and has gone back to his usual late-evening exercise routine.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer restates the GOLD exactly: Sam gave up dawn workouts and returned to his usual late-evening exercise routine. It contains the same information with no additions or omissions.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer restates the GOLD exactly: Sam gave up dawn workouts and returned to his usual late-evening exercise routine. It contains the same information with no additions or omissions.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 23,
+      "category": 94,
+      "question": "Taking the whole conversation into account, including D6:20, D12:18, and D22:22, what should a reader conclude is Sam's current position on whether Sam usually exercises in the morning or in the evening?",
+      "gold_answer": "Sam eventually gave up on dawn workouts and slid back into his usual pattern of late-evening exercise.",
+      "evidence_ids": [
+        "D22:22"
+      ],
+      "evidence_text": "D22:22 Sam: In the end I gave up on those dawn workouts and slid back to my usual pattern of late-evening exercise, which just fits me better.",
+      "model_answer": "Sam usually exercises in the late evening rather than in the morning.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same conclusion as the gold: Sam reverted to late-evening exercise instead of morning workouts. It contains no extra claims and omits no key details from the gold.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same conclusion as the gold: Sam reverted to late-evening exercise instead of morning workouts. It contains no extra claims and omits no key details from the gold.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 24,
+      "category": 91,
+      "question": "After Sam's remark in D1:24 but before his later comment in D14:17, what would a reader think is true about how consistently Sam gets outside for walks on the weekend?",
+      "gold_answer": "Sam really tries to get outside for a walk or at least some fresh air every single weekend.",
+      "evidence_ids": [
+        "D1:24"
+      ],
+      "evidence_text": "D1:24 Sam: I really do try to get outside for a walk or at least some fresh air every single weekend, no matter how busy things get.",
+      "model_answer": "A reader would think Sam consistently tries to get outside for a walk every single weekend, no matter how busy he is.",
+      "score": 3,
+      "judge_missing": "The alternative possibility 'or at least some fresh air' (i.e., that it might not be a walk specifically) is omitted.",
+      "judge_extra": "'no matter how busy he is' (the added qualifier) is included but not present in the GOLD.",
+      "judge_explanation": "The model captures the main point that Sam consistently tries to get outside every weekend, but it omits the GOLD's allowance that this might be 'at least some fresh air' rather than specifically a walk, and it adds the qualifier 'no matter how busy he is' which is not in the GOLD.",
+      "judge_raw": "{\"score\":3,\"missing\":\"The alternative possibility 'or at least some fresh air' (i.e., that it might not be a walk specifically) is omitted.\",\"extra\":\"'no matter how busy he is' (the added qualifier) is included but not present in the GOLD.\",\"explanation\":\"The model captures the main point that Sam consistently tries to get outside every weekend, but it omits the GOLD's allowance that this might be 'at least some fresh air' rather than specifically a walk, and it adds the qualifier 'no matter how busy he is' which is not in the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 25,
+      "category": 92,
+      "question": "Between Sam's statements in D14:17 and D23:34, how would someone describe what is currently true about how consistently Sam gets outside for walks on the weekend?",
+      "gold_answer": "For several weeks Sam ended up spending most weekends indoors, glued to screens.",
+      "evidence_ids": [
+        "D14:17"
+      ],
+      "evidence_text": "D14:17 Sam: These past few weeks though I’ve ended up spending most weekends cooped up indoors, glued to screens instead.",
+      "model_answer": "Sam isn't getting outside for weekend walks consistently; he's only managing proper walks a couple times a month.",
+      "score": 3,
+      "judge_missing": "That this has been happening for several weeks; that Sam spent most weekends indoors 'glued to screens'.",
+      "judge_extra": "'Only managing proper walks a couple times a month' (specific frequency) is not stated in GOLD.",
+      "judge_explanation": "The model captures the main point that Sam isn't getting outside consistently, but it omits the GOLD detail that this occurred for several weeks and that he was 'glued to screens', and it introduces an extra specific frequency ('a couple times a month') not present in the GOLD.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That this has been happening for several weeks; that Sam spent most weekends indoors 'glued to screens'.\",\"extra\":\"'Only managing proper walks a couple times a month' (specific frequency) is not stated in GOLD.\",\"explanation\":\"The model captures the main point that Sam isn't getting outside consistently, but it omits the GOLD detail that this occurred for several weeks and that he was 'glued to screens', and it introduces an extra specific frequency ('a couple times a month') not present in the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 26,
+      "category": 93,
+      "question": "Right after Sam's update in D23:34, what does he present as the new status of how consistently Sam gets outside for walks on the weekend?",
+      "gold_answer": "Sam is not back to every single weekend yet but at least manages a longer walk a couple of times a month.",
+      "evidence_ids": [
+        "D23:34"
+      ],
+      "evidence_text": "D23:34 Sam: I’m not back to every single weekend yet, but I at least get outside for a proper walk a couple of times a month now, which feels like a start.",
+      "model_answer": "He says he's not back to going out every single weekend yet, but he at least gets outside for a proper walk a couple of times a month now.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer exactly matches the GOLD semantic content: both state Sam isn't back to every single weekend but now gets a proper/longer walk a couple of times a month. No key details are missing or added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer exactly matches the GOLD semantic content: both state Sam isn't back to every single weekend but now gets a proper/longer walk a couple of times a month. No key details are missing or added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 27,
+      "category": 94,
+      "question": "Taking the whole conversation into account, including D1:24, D14:17, and D23:34, what should a reader conclude is Sam's current position on how consistently Sam gets outside for walks on the weekend?",
+      "gold_answer": "Sam is not back to every single weekend yet but at least manages a longer walk a couple of times a month.",
+      "evidence_ids": [
+        "D23:34"
+      ],
+      "evidence_text": "D23:34 Sam: I’m not back to every single weekend yet, but I at least get outside for a proper walk a couple of times a month now, which feels like a start.",
+      "model_answer": "Sam no longer gets outside every weekend; he says he’s not back to that yet and only manages a proper walk a couple of times a month.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "Model matches the GOLD exactly: it states Sam isn't back to every weekend and that he manages a proper/longer walk a couple of times a month. No key facts are missing or added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"Model matches the GOLD exactly: it states Sam isn't back to every weekend and that he manages a proper/longer walk a couple of times a month. No key facts are missing or added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 28,
+      "category": 91,
+      "question": "After Sam's remark in D9:21 but before his later comment in D16:25, what would a reader think is true about how much variety Sam has in the healthy dinners he cooks?",
+      "gold_answer": "Sam basically has one healthy dinner he knows how to cook well and keeps falling back on that same recipe.",
+      "evidence_ids": [
+        "D9:21"
+      ],
+      "evidence_text": "D9:21 Sam: Right now I’ve basically got one healthy dinner I know how to cook well, and I just keep falling back on that same recipe.",
+      "model_answer": "A reader would think Sam has very little variety—he basically knows one healthy dinner he cooks well and keeps falling back on that same recipe.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the GOLD answer's meaning exactly—Sam has essentially one healthy dinner he knows how to cook and keeps falling back on it, implying very little variety. No key facts are missing and no extra claims are added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the GOLD answer's meaning exactly—Sam has essentially one healthy dinner he knows how to cook and keeps falling back on it, implying very little variety. No key facts are missing and no extra claims are added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 29,
+      "category": 92,
+      "question": "Between Sam's statements in D16:25 and D24:25, how would someone describe what is currently true about how much variety Sam has in the healthy dinners he cooks?",
+      "gold_answer": "There was a rough patch when Sam almost stopped cooking entirely and just grabbed whatever quick food he could find.",
+      "evidence_ids": [
+        "D16:25"
+      ],
+      "evidence_text": "D16:25 Sam: There was a rough patch where I stopped cooking almost entirely and just grabbed whatever quick food I could find.",
+      "model_answer": "He now has a small rotation of healthy meals rather than just a single dinner, so his variety has increased but remains limited.",
+      "score": 2,
+      "judge_missing": "The fact that there was a rough patch when Sam almost stopped cooking entirely and just grabbed whatever quick food he could find.",
+      "judge_extra": "Claim that he now has a small rotation of healthy meals and that his variety has increased but remains limited.",
+      "judge_explanation": "The model answer introduces a current-state claim about a small rotation of healthy meals (not present in the GOLD) and omits the GOLD detail about a prior rough patch where he almost stopped cooking and relied on quick food. This is a significant omission plus an extra assertion, so the match is partial but not close.",
+      "judge_raw": "{\"score\":2,\"missing\":\"The fact that there was a rough patch when Sam almost stopped cooking entirely and just grabbed whatever quick food he could find.\",\"extra\":\"Claim that he now has a small rotation of healthy meals and that his variety has increased but remains limited.\",\"explanation\":\"The model answer introduces a current-state claim about a small rotation of healthy meals (not present in the GOLD) and omits the GOLD detail about a prior rough patch where he almost stopped cooking and relied on quick food. This is a significant omission plus an extra assertion, so the match is partial but not close.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 30,
+      "category": 93,
+      "question": "Right after Sam's update in D24:25, what does he present as the new status of how much variety Sam has in the healthy dinners he cooks?",
+      "gold_answer": "Recently Sam has built a small rotation of healthy meals he can cook, so it is not just that one dinner anymore.",
+      "evidence_ids": [
+        "D24:25"
+      ],
+      "evidence_text": "D24:25 Sam: Lately I’ve built up a small rotation of healthy meals I can throw together—not just that one dinner anymore—so it doesn’t feel as repetitive.",
+      "model_answer": "He says he’s built up a small rotation of healthy meals he can throw together — not just that one dinner anymore — so it doesn’t feel as repetitive.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "Model answer is a faithful paraphrase of the GOLD: both state Sam has a small rotation of healthy meals (not just the one dinner) and convey reduced repetition. No key info is missing and no extra claims are introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"Model answer is a faithful paraphrase of the GOLD: both state Sam has a small rotation of healthy meals (not just the one dinner) and convey reduced repetition. No key info is missing and no extra claims are introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 31,
+      "category": 94,
+      "question": "Taking the whole conversation into account, including D9:21, D16:25, and D24:25, what should a reader conclude is Sam's current position on how much variety Sam has in the healthy dinners he cooks?",
+      "gold_answer": "Recently Sam has built a small rotation of healthy meals he can cook, so it is not just that one dinner anymore.",
+      "evidence_ids": [
+        "D24:25"
+      ],
+      "evidence_text": "D24:25 Sam: Lately I’ve built up a small rotation of healthy meals I can throw together—not just that one dinner anymore—so it doesn’t feel as repetitive.",
+      "model_answer": "He used to mainly rely on a single healthy dinner recipe, but more recently he’s built up a small rotation of healthy meals to avoid that repetitiveness.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "The statement that he \"used to mainly rely on a single healthy dinner recipe\" (past reliance) is an added inference not explicitly in the GOLD.",
+      "judge_explanation": "The model conveys the same core conclusion as the GOLD — Sam has recently built a small rotation of healthy meals so it’s not just one dinner anymore. It introduces a minor extra inference about his prior reliance on a single recipe, so it’s not a perfect verbatim match.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"The statement that he \\\"used to mainly rely on a single healthy dinner recipe\\\" (past reliance) is an added inference not explicitly in the GOLD.\",\"explanation\":\"The model conveys the same core conclusion as the GOLD — Sam has recently built a small rotation of healthy meals so it’s not just one dinner anymore. It introduces a minor extra inference about his prior reliance on a single recipe, so it’s not a perfect verbatim match.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 32,
+      "category": 91,
+      "question": "After Sam's remark in D13:18 but before his later comment in D18:17, what would a reader think is true about how strictly Sam avoids soda and other sugary drinks?",
+      "gold_answer": "Sam made a rule to cut out soda during the week and only maybe have some on the weekend.",
+      "evidence_ids": [
+        "D13:18"
+      ],
+      "evidence_text": "D13:18 Sam: I made a rule for myself that I cut out soda during the week and only maybe let myself have some on the weekend.",
+      "model_answer": "A reader would think Sam tries to avoid soda on weekdays and only allow it on weekends, but he isn’t perfectly strict and sometimes slips back into sugary drinks when stressed.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "The statement that he \"isn’t perfectly strict and sometimes slips back into sugary drinks when stressed.\"",
+      "judge_explanation": "The model captures the core: Sam avoids soda on weekdays and only maybe on weekends. However it adds an unsupported claim about him slipping when stressed, which is extra information not present in the GOLD, so the answer is mostly correct but penalized for the added speculation.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"The statement that he \\\"isn’t perfectly strict and sometimes slips back into sugary drinks when stressed.\\\"\",\"explanation\":\"The model captures the core: Sam avoids soda on weekdays and only maybe on weekends. However it adds an unsupported claim about him slipping when stressed, which is extra information not present in the GOLD, so the answer is mostly correct but penalized for the added speculation.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 33,
+      "category": 92,
+      "question": "Between Sam's statements in D18:17 and D24:26, how would someone describe what is currently true about how strictly Sam avoids soda and other sugary drinks?",
+      "gold_answer": "At one point Sam slipped and started reaching for sugary drinks during the week again when stressed.",
+      "evidence_ids": [
+        "D18:17"
+      ],
+      "evidence_text": "D18:17 Sam: Of course there was a stretch where I slipped and started reaching for sugary drinks during the week again when I was stressed.",
+      "model_answer": "He now largely avoids sugary drinks—he’s trying to avoid them altogether most of the time (not just on weekdays).",
+      "score": 1,
+      "judge_missing": "At one point Sam slipped and started reaching for sugary drinks during the week again when stressed.",
+      "judge_extra": "Claims he now largely avoids sugary drinks and is trying to avoid them altogether most of the time (not just on weekdays).",
+      "judge_explanation": "The model answer omits the key GOLD detail that Sam slipped and started reaching for sugary drinks during the week when stressed, and instead asserts a current strict avoidance. This adds facts not present in the GOLD and contradicts the emphasized slip, so the response is mostly wrong.",
+      "judge_raw": "{\"score\":1,\"missing\":\"At one point Sam slipped and started reaching for sugary drinks during the week again when stressed.\",\"extra\":\"Claims he now largely avoids sugary drinks and is trying to avoid them altogether most of the time (not just on weekdays).\",\"explanation\":\"The model answer omits the key GOLD detail that Sam slipped and started reaching for sugary drinks during the week when stressed, and instead asserts a current strict avoidance. This adds facts not present in the GOLD and contradicts the emphasized slip, so the response is mostly wrong.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 34,
+      "category": 93,
+      "question": "Right after Sam's update in D24:26, what does he present as the new status of how strictly Sam avoids soda and other sugary drinks?",
+      "gold_answer": "These days Sam is trying to avoid sugary drinks altogether most of the time, not just skip soda on weekdays.",
+      "evidence_ids": [
+        "D24:26"
+      ],
+      "evidence_text": "D24:26 Sam: These days I’m trying to avoid sugary drinks altogether most of the time, not just soda on weekdays, so my energy stays more stable.",
+      "model_answer": "He says he's trying to avoid sugary drinks altogether most of the time, not just cutting out soda during weekdays.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer matches the GOLD exactly in meaning: both state Sam is trying to avoid sugary drinks altogether most of the time rather than only skipping soda on weekdays. There are no missing facts or extra claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer matches the GOLD exactly in meaning: both state Sam is trying to avoid sugary drinks altogether most of the time rather than only skipping soda on weekdays. There are no missing facts or extra claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 35,
+      "category": 94,
+      "question": "Taking the whole conversation into account, including D13:18, D18:17, and D24:26, what should a reader conclude is Sam's current position on how strictly Sam avoids soda and other sugary drinks?",
+      "gold_answer": "These days Sam is trying to avoid sugary drinks altogether most of the time, not just skip soda on weekdays.",
+      "evidence_ids": [
+        "D24:26"
+      ],
+      "evidence_text": "D24:26 Sam: These days I’m trying to avoid sugary drinks altogether most of the time, not just soda on weekdays, so my energy stays more stable.",
+      "model_answer": "Sam now tries to avoid sugary drinks most of the time (not just cutting out soda on weekdays), while still allowing occasional treats.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "The model adds that Sam still allows occasional treats, which is not stated in the GOLD answer.",
+      "judge_explanation": "The model matches the GOLD's main point that Sam now avoids sugary drinks most of the time rather than just skipping soda on weekdays. It receives a minor deduction because it introduces an extra claim (allowing occasional treats) that is not present in the GOLD.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"The model adds that Sam still allows occasional treats, which is not stated in the GOLD answer.\",\"explanation\":\"The model matches the GOLD's main point that Sam now avoids sugary drinks most of the time rather than just skipping soda on weekdays. It receives a minor deduction because it introduces an extra claim (allowing occasional treats) that is not present in the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 36,
+      "category": 91,
+      "question": "After Sam's remark in D11:22 but before his later comment in D17:29, what would a reader think is true about Sam's step-count and daily activity goal?",
+      "gold_answer": "Sam aims for about five thousand steps a day so the goal does not feel overwhelming.",
+      "evidence_ids": [
+        "D11:22"
+      ],
+      "evidence_text": "D11:22 Sam: To keep things from feeling overwhelming, I’ve been aiming for about five thousand steps a day instead of some huge number.",
+      "model_answer": "Sam is aiming for a modest daily activity goal of about 5,000 steps per day rather than a much larger step target.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates that Sam aims for about 5,000 steps as a modest goal instead of a much larger target, which matches the GOLD meaning that the goal is set to avoid feeling overwhelming. No key facts are missing or added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates that Sam aims for about 5,000 steps as a modest goal instead of a much larger target, which matches the GOLD meaning that the goal is set to avoid feeling overwhelming. No key facts are missing or added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 37,
+      "category": 92,
+      "question": "Between Sam's statements in D17:29 and D25:21, how would someone describe what is currently true about Sam's step-count and daily activity goal?",
+      "gold_answer": "Some days Sam has not come close to that step goal and feels discouraged, like he is slipping backwards.",
+      "evidence_ids": [
+        "D17:29"
+      ],
+      "evidence_text": "D17:29 Sam: Some days I haven’t come close to that step goal and it’s been pretty discouraging, like I’m slipping backwards.",
+      "model_answer": "He’s now focusing on staying generally active and usually manages to reach at least 5,000 steps a day.",
+      "score": 1,
+      "judge_missing": "That some days Sam has not come close to the step goal and feels discouraged, like he is slipping backwards.",
+      "judge_extra": "Claim that he’s focusing on staying generally active and usually manages to reach at least 5,000 steps a day.",
+      "judge_explanation": "The model answer contradicts and omits core GOLD content: GOLD says some days Sam hasn’t come close and feels discouraged. The model instead asserts he usually gets ≥5,000 steps and is focusing on activity, which is an extra/wrong claim relative to the GOLD.",
+      "judge_raw": "{\"score\":1,\"missing\":\"That some days Sam has not come close to the step goal and feels discouraged, like he is slipping backwards.\",\"extra\":\"Claim that he’s focusing on staying generally active and usually manages to reach at least 5,000 steps a day.\",\"explanation\":\"The model answer contradicts and omits core GOLD content: GOLD says some days Sam hasn’t come close and feels discouraged. The model instead asserts he usually gets ≥5,000 steps and is focusing on activity, which is an extra/wrong claim relative to the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 38,
+      "category": 93,
+      "question": "Right after Sam's update in D25:21, what does he present as the new status of Sam's step-count and daily activity goal?",
+      "gold_answer": "Now Sam focuses on staying generally active with walks and everyday movement, and usually still ends up hitting at least five thousand steps.",
+      "evidence_ids": [
+        "D25:21"
+      ],
+      "evidence_text": "D25:21 Sam: Now I’m trying to focus more on staying generally active—with walking, stretching, and little home workouts—and I usually end up hitting at least those five thousand steps anyway.",
+      "model_answer": "He says he's focusing on staying generally active (walking, stretching, home workouts) and usually ends up hitting at least 5,000 steps a day.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the same points as the gold: focusing on general activity (walking, stretching, home workouts/everyday movement) and typically reaching at least 5,000 steps. No key details are missing or added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the same points as the gold: focusing on general activity (walking, stretching, home workouts/everyday movement) and typically reaching at least 5,000 steps. No key details are missing or added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 39,
+      "category": 94,
+      "question": "Taking the whole conversation into account, including D11:22, D17:29, and D25:21, what should a reader conclude is Sam's current position on Sam's step-count and daily activity goal?",
+      "gold_answer": "Now Sam focuses on staying generally active with walks and everyday movement, and usually still ends up hitting at least five thousand steps.",
+      "evidence_ids": [
+        "D25:21"
+      ],
+      "evidence_text": "D25:21 Sam: Now I’m trying to focus more on staying generally active—with walking, stretching, and little home workouts—and I usually end up hitting at least those five thousand steps anyway.",
+      "model_answer": "Sam is now focusing on staying generally active with walking, stretching, and short home workouts and says he usually hits at least 5,000 steps a day, though he’s had days where he fell short.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "States he’s had days where he fell short of the step goal (not in GOLD).",
+      "judge_explanation": "The model matches the GOLD's main points (Sam now focuses on general activity—walking, stretching/home workouts—and usually hits ~5,000 steps). It adds an extra claim that Sam has had days falling short, which is not present in the GOLD, so it's a minor extra detail and warrants a slight penalty.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"States he’s had days where he fell short of the step goal (not in GOLD).\",\"explanation\":\"The model matches the GOLD's main points (Sam now focuses on general activity—walking, stretching/home workouts—and usually hits ~5,000 steps). It adds an extra claim that Sam has had days falling short, which is not present in the GOLD, so it's a minor extra detail and warrants a slight penalty.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    }
+  ]
+}

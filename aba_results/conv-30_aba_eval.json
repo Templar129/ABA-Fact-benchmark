@@ -1,0 +1,767 @@
+{
+  "sample_id": "conv-30",
+  "metrics": {
+    "overall_attempted_n": 40,
+    "overall_scored_n": 40,
+    "overall_parse_fail_n": 0,
+    "overall_mean_score": 2.925,
+    "overall_prop_ge_4": 0.5,
+    "overall_prop_5": 0.225,
+    "per_category": {
+      "91": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 2.7,
+        "prop_ge_4": 0.1,
+        "prop_5": 0.0
+      },
+      "92": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 0.4,
+        "prop_ge_4": 0.1,
+        "prop_5": 0.0
+      },
+      "93": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 3.8,
+        "prop_ge_4": 0.8,
+        "prop_5": 0.1
+      },
+      "94": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 4.8,
+        "prop_ge_4": 1.0,
+        "prop_5": 0.8
+      }
+    }
+  },
+  "results": [
+    {
+      "index": 0,
+      "category": 91,
+      "question": "From dia_id D5:10 to D12:5, what does Gina believe about Jon’s morning 10-minute dance warm-up routine?",
+      "gold_answer": "Gina believes Jon is doing a 10-minute dance warm-up every morning.",
+      "evidence_ids": [
+        "D5:10"
+      ],
+      "evidence_text": "D5:10 Jon: Yeah, I totally agree - taking risks is key for success. It's made me grow, and even got me out of my secure 9-5 as a banker. Now, I'm aiming to turn my dancing passion into a business. I'm determined to make it work, I just know it! That being said, I definitely don't underestimate the difficulties - it ain't been a walk in the park, that's for sure. I’ve been trying to do at least ten minutes of dancing every morning… just to warm up and feel connected to my body before the day gets crazy.",
+      "model_answer": "She thinks it’s a good habit that keeps him grounded, helps him stay connected to his body, and serves as stress relief.",
+      "score": 2,
+      "judge_missing": "That Jon is doing a 10-minute dance warm-up every morning (Gina believes he is doing it daily).",
+      "judge_extra": "Claims that Gina thinks the routine is a good habit, keeps him grounded, helps him stay connected to his body, and serves as stress relief.",
+      "judge_explanation": "The model answer omits the core fact from the GOLD (that Gina believes Jon is doing the 10-minute morning warm-up every day) and instead asserts evaluative beliefs about the routine’s benefits. Those added claims are not present in the GOLD, so this is a partial but significantly incomplete/extra response.",
+      "judge_raw": "{\"score\":2,\"missing\":\"That Jon is doing a 10-minute dance warm-up every morning (Gina believes he is doing it daily).\",\"extra\":\"Claims that Gina thinks the routine is a good habit, keeps him grounded, helps him stay connected to his body, and serves as stress relief.\",\"explanation\":\"The model answer omits the core fact from the GOLD (that Gina believes Jon is doing the 10-minute morning warm-up every day) and instead asserts evaluative beliefs about the routine’s benefits. Those added claims are not present in the GOLD, so this is a partial but significantly incomplete/extra response.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 1,
+      "category": 92,
+      "question": "Between dia_id D12:6 and D17:13, what does Gina believe about Jon’s morning 10-minute dance warm-up routine?",
+      "gold_answer": "Gina believes Jon has stopped his morning dance warm-up routine.",
+      "evidence_ids": [
+        "D12:6"
+      ],
+      "evidence_text": "D12:6 Jon: I'm currently reading \"The Lean Startup\" and hoping it'll give me tips for my biz. To be honest, I think I completely fell off that morning dance thing. Last week was so overwhelming I didn’t even move some days… it felt pointless to try.",
+      "model_answer": "She believes he hasn’t truly stopped the morning warm-up — missing a week or a few sessions doesn’t mean the habit is gone and he can get back to it.",
+      "score": 0,
+      "judge_missing": "That Gina believes Jon has stopped his morning dance warm-up routine.",
+      "judge_extra": "Claim that Gina believes he hasn't truly stopped and can get back to it.",
+      "judge_explanation": "The model answer directly contradicts the GOLD: GOLD says Gina believes he has stopped; the model answer says she believes he hasn't stopped and can resume. This is a direct contradiction, so score is 0.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That Gina believes Jon has stopped his morning dance warm-up routine.\",\"extra\":\"Claim that Gina believes he hasn't truly stopped and can get back to it.\",\"explanation\":\"The model answer directly contradicts the GOLD: GOLD says Gina believes he has stopped; the model answer says she believes he hasn't stopped and can resume. This is a direct contradiction, so score is 0.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 2,
+      "category": 93,
+      "question": "After dia_id D17:14, what does Gina believe about Jon’s morning 10-minute dance warm-up routine?",
+      "gold_answer": "Gina believes Jon is doing his morning dance warm-up routine again.",
+      "evidence_ids": [
+        "D17:14"
+      ],
+      "evidence_text": "D17:14 Jon: Thanks, Gina! I’m glad you kept that connection alive. I won't quit, even when it's hard. I'm gonna make it! I danced a little this morning… nothing fancy, but it reminded me why I started doing that warm-up. I guess I didn’t really give it up.",
+      "model_answer": "Gina believes Jon came back to the warm-up routine and that it helps him.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "The model adds that the routine \"helps him,\" which is not stated in the GOLD answer.",
+      "judge_explanation": "The model correctly captures that Gina believes Jon resumed his morning warm-up routine, matching the GOLD. It includes an extra claim — that the routine helps him — which is not present in the GOLD, so it receives a minor penalty.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"The model adds that the routine \\\"helps him,\\\" which is not stated in the GOLD answer.\",\"explanation\":\"The model correctly captures that Gina believes Jon resumed his morning warm-up routine, matching the GOLD. It includes an extra claim — that the routine helps him — which is not present in the GOLD, so it receives a minor penalty.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 3,
+      "category": 94,
+      "question": "In the end, what does Gina believe is the final status of Jon’s morning 10-minute dance warm-up routine?",
+      "gold_answer": "Gina believes Jon ultimately continues his morning 10-minute dance warm-up routine.",
+      "evidence_ids": [
+        "D17:14"
+      ],
+      "evidence_text": "D17:14 Jon: Thanks, Gina! I’m glad you kept that connection alive. I won't quit, even when it's hard. I'm gonna make it! I danced a little this morning… nothing fancy, but it reminded me why I started doing that warm-up. I guess I didn’t really give it up.",
+      "model_answer": "Gina believes Jon didn’t give up the morning warm-up—he came back to it and resumed the habit.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer semantically matches the GOLD: both state that Gina believes Jon continued/resumed his morning dance warm-up. There are no additional claims or omitted key facts.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer semantically matches the GOLD: both state that Gina believes Jon continued/resumed his morning dance warm-up. There are no additional claims or omitted key facts.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 4,
+      "category": 91,
+      "question": "From dia_id D7:13 to D12:15, what does Gina believe about Jon’s weekly dancer mentoring routine?",
+      "gold_answer": "Gina believes Jon is meeting with at least one dancer each week.",
+      "evidence_ids": [
+        "D7:13"
+      ],
+      "evidence_text": "D7:13 Jon: Thanks, I'm really grateful for your help with staying motivated. I’ve been trying to meet with at least one dancer every week to check in with them — help with their goals, talk through challenges. It’s become one of my favorite parts of the work.",
+      "model_answer": "She thinks it's amazing and believes his weekly check-ins show he's building something meaningful.",
+      "score": 3,
+      "judge_missing": "That Gina believes Jon is meeting with at least one dancer each week.",
+      "judge_extra": "Claims that she thinks it's \"amazing\" and that the check-ins \"show he's building something meaningful.\"",
+      "judge_explanation": "The model references \"weekly check-ins\" but does not explicitly state the core belief that Jon meets with at least one dancer each week. It also introduces extra evaluative language (\"amazing\", \"building something meaningful\") not present in the GOLD.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That Gina believes Jon is meeting with at least one dancer each week.\",\"extra\":\"Claims that she thinks it's \\\"amazing\\\" and that the check-ins \\\"show he's building something meaningful.\\\"\",\"explanation\":\"The model references \\\"weekly check-ins\\\" but does not explicitly state the core belief that Jon meets with at least one dancer each week. It also introduces extra evaluative language (\\\"amazing\\\", \\\"building something meaningful\\\") not present in the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 5,
+      "category": 92,
+      "question": "Between dia_id D12:16 and D17:32, what does Gina believe about Jon’s weekly dancer mentoring routine?",
+      "gold_answer": "Gina believes Jon has stopped his weekly dancer mentoring routine.",
+      "evidence_ids": [
+        "D12:16"
+      ],
+      "evidence_text": "D12:16 Jon: Thanks! I really appreciate your help. While, Last week I missed my check-in with my dancer… and it made me feel like I dropped that whole mentoring thing altogether.",
+      "model_answer": "She believes that missing one week doesn’t erase his progress — he’s been consistent and hasn’t dropped the mentoring routine.",
+      "score": 0,
+      "judge_missing": "That Gina believes Jon has stopped his weekly dancer mentoring routine.",
+      "judge_extra": "That Gina believes missing one week doesn’t erase his progress and that he’s been consistent and hasn’t dropped the mentoring routine.",
+      "judge_explanation": "The model answer states the opposite of the GOLD: it claims Gina believes Jon has continued the routine, whereas GOLD says she believes he has stopped. This direct contradiction warrants a score of 0.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That Gina believes Jon has stopped his weekly dancer mentoring routine.\",\"extra\":\"That Gina believes missing one week doesn’t erase his progress and that he’s been consistent and hasn’t dropped the mentoring routine.\",\"explanation\":\"The model answer states the opposite of the GOLD: it claims Gina believes Jon has continued the routine, whereas GOLD says she believes he has stopped. This direct contradiction warrants a score of 0.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 6,
+      "category": 93,
+      "question": "After dia_id D17:2, what does Gina believe about Jon’s weekly dancer mentoring routine?",
+      "gold_answer": "Gina believes Jon is mentoring dancers again.",
+      "evidence_ids": [
+        "D17:2"
+      ],
+      "evidence_text": "D17:2 Jon: Hey Gina! Congrats on the fashion editors reach-out, that's awesome! Dance practice has been fun and exhausting. I'm gonna stay determined and make my own path by going full-time with my biz idea. I had another one-on-one with one of my dancers today. It reminded me how much I care about mentoring. I really didn’t lose the rhythm — I just had a rough week.",
+      "model_answer": "She believes he's back to doing the mentoring and hasn't given it up despite a rough week.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Says he \"hasn't given it up despite a rough week,\" which is not stated in the GOLD.",
+      "judge_explanation": "The model matches the GOLD's core belief that Jon is mentoring dancers again. It earns a minor deduction for adding the extra claim that he \"hasn't given it up despite a rough week,\" which is not present in the GOLD answer.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Says he \\\"hasn't given it up despite a rough week,\\\" which is not stated in the GOLD.\",\"explanation\":\"The model matches the GOLD's core belief that Jon is mentoring dancers again. It earns a minor deduction for adding the extra claim that he \\\"hasn't given it up despite a rough week,\\\" which is not present in the GOLD answer.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 7,
+      "category": 94,
+      "question": "In the end, what does Gina believe is the final status of Jon’s weekly dancer mentoring routine?",
+      "gold_answer": "Gina believes Jon ultimately continues his weekly dancer mentoring routine.",
+      "evidence_ids": [
+        "D17:2"
+      ],
+      "evidence_text": "D17:2 Jon: Hey Gina! Congrats on the fashion editors reach-out, that's awesome! Dance practice has been fun and exhausting. I'm gonna stay determined and make my own path by going full-time with my biz idea. I had another one-on-one with one of my dancers today. It reminded me how much I care about mentoring. I really didn’t lose the rhythm — I just had a rough week.",
+      "model_answer": "She believes he didn't abandon it—missing a week doesn't erase his consistency, and he's back to doing his one-on-one mentoring.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "States that he 'missing a week' and 'didn't abandon it' (i.e., that a skipped week doesn't erase his consistency) — this specific detail about a missed week is not stated in the GOLD.",
+      "judge_explanation": "The model answer matches the GOLD's conclusion that Gina believes Jon continues his weekly mentoring. It introduces a minor extra detail about a missed week and his consistency, which is not in the GOLD, so score is 4.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"States that he 'missing a week' and 'didn't abandon it' (i.e., that a skipped week doesn't erase his consistency) — this specific detail about a missed week is not stated in the GOLD.\",\"explanation\":\"The model answer matches the GOLD's conclusion that Gina believes Jon continues his weekly mentoring. It introduces a minor extra detail about a missed week and his consistency, which is not in the GOLD, so score is 4.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 8,
+      "category": 91,
+      "question": "From dia_id D6:13 to D10:2, what does Gina believe about Jon’s nightly milestone-writing routine?",
+      "gold_answer": "Gina believes Jon is writing down one business milestone every night.",
+      "evidence_ids": [
+        "D6:13"
+      ],
+      "evidence_text": "D6:13 Jon: Yeah, it's been a rollercoaster. But your success really inspires me to keep pushing forward. Your determination is awesome! I’ve been writing down one small business milestone every night… it helps me see that I’m actually moving forward.",
+      "model_answer": "She thinks it's a motivating, helpful practice that shows his progress, and believes he hasn't stopped doing it — he even mentioned a milestone as recently as last week.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "States that Gina finds the practice motivating/helpful and showing progress; claims she believes he hasn't stopped doing it; adds that he mentioned a milestone as recently as last week.",
+      "judge_explanation": "The model answer correctly conveys the core belief that Jon writes one milestone each night, matching the GOLD. However, it adds multiple extra details not present in the GOLD (that Gina finds it motivating/helpful, that she believes he continues the habit, and a specific recent mention 'last week'), so it is penalized for extra information.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"States that Gina finds the practice motivating/helpful and showing progress; claims she believes he hasn't stopped doing it; adds that he mentioned a milestone as recently as last week.\",\"explanation\":\"The model answer correctly conveys the core belief that Jon writes one milestone each night, matching the GOLD. However, it adds multiple extra details not present in the GOLD (that Gina finds it motivating/helpful, that she believes he continues the habit, and a specific recent mention 'last week'), so it is penalized for extra information.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 9,
+      "category": 92,
+      "question": "Between dia_id D10:3 and D18:19, what does Gina believe about Jon’s nightly milestone-writing routine?",
+      "gold_answer": "Gina believes Jon has stopped his nightly milestone-writing routine.",
+      "evidence_ids": [
+        "D10:3"
+      ],
+      "evidence_text": "D10:3 Jon: Thanks, Gina! Appreciate your support. Your store looks great, I remember it! It’s weird… I thought I stopped doing that milestones thing completely. I looked at my notebook and I swore I hadn’t written anything in days.",
+      "model_answer": "She believes he didn't stop writing milestones — he wrote them recently (he likely just mixed up which days he wrote).",
+      "score": 0,
+      "judge_missing": "Gina believes Jon has stopped his nightly milestone-writing routine.",
+      "judge_extra": "She believes he didn't stop writing milestones — that he wrote them recently and simply mixed up which days he wrote.",
+      "judge_explanation": "The model answer directly contradicts the GOLD: GOLD says Gina believes he has stopped, while the model claims she believes he didn't stop and even adds that he wrote recently and was confused about days. This opposite claim and added detail make the response completely wrong.",
+      "judge_raw": "{\"score\":0,\"missing\":\"Gina believes Jon has stopped his nightly milestone-writing routine.\",\"extra\":\"She believes he didn't stop writing milestones — that he wrote them recently and simply mixed up which days he wrote.\",\"explanation\":\"The model answer directly contradicts the GOLD: GOLD says Gina believes he has stopped, while the model claims she believes he didn't stop and even adds that he wrote recently and was confused about days. This opposite claim and added detail make the response completely wrong.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 10,
+      "category": 93,
+      "question": "After dia_id D18:20, what does Gina believe about Jon’s nightly milestone-writing routine?",
+      "gold_answer": "Gina believes Jon is writing milestones again.",
+      "evidence_ids": [
+        "D18:20"
+      ],
+      "evidence_text": "D18:20 Jon: Yeah, Gina! We'll rock the dance floor and teach others to chase their dreams. Let's go for it and make an impact! I checked again today… turns out I actually did write a few milestones last week. I added one more today — felt good to see the progress.",
+      "model_answer": "She believes he didn’t fall off the routine and that he stayed with writing milestones even through the stress.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Asserts he stayed with writing milestones \"even through the stress,\" which is not stated in the GOLD.",
+      "judge_explanation": "The model captures the core belief (that Jon is writing milestones again / stayed with the routine) but adds an unsupported detail about doing so \"through the stress,\" so it's largely correct with a minor extra claim.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Asserts he stayed with writing milestones \\\"even through the stress,\\\" which is not stated in the GOLD.\",\"explanation\":\"The model captures the core belief (that Jon is writing milestones again / stayed with the routine) but adds an unsupported detail about doing so \\\"through the stress,\\\" so it's largely correct with a minor extra claim.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 11,
+      "category": 94,
+      "question": "In the end, what does Gina believe is the final status of Jon’s nightly milestone-writing routine?",
+      "gold_answer": "Gina believes Jon ultimately continues his nightly milestone-writing routine.",
+      "evidence_ids": [
+        "D18:20"
+      ],
+      "evidence_text": "D18:20 Jon: Yeah, Gina! We'll rock the dance floor and teach others to chase their dreams. Let's go for it and make an impact! I checked again today… turns out I actually did write a few milestones last week. I added one more today — felt good to see the progress.",
+      "model_answer": "She believes he didn't fall off the routine — he stayed with it and continued writing milestones.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same meaning as the gold: Gina believes Jon continued the nightly milestone-writing routine. It adds no new claims and omits no key details, so it is a perfect semantic match.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same meaning as the gold: Gina believes Jon continued the nightly milestone-writing routine. It adds no new claims and omits no key details, so it is a perfect semantic match.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 12,
+      "category": 91,
+      "question": "From dia_id D5:22 to D11:2, what does Gina believe about Jon’s morning affirmation-writing routine?",
+      "gold_answer": "Gina believes Jon is writing one affirmation each morning.",
+      "evidence_ids": [
+        "D5:22"
+      ],
+      "evidence_text": "D5:22 Jon: Thanks, Gina! Your pep-talk really meant a lot. I'm not gonna give up on my dreams - my dance studio and biz ventures need the hard work I'm putting in. Love having you in my corner, thanks for always being there! I’ve been trying to write one little affirmation each morning… just something like ‘You’re making progress’ to get me through the day.",
+      "model_answer": "She thinks it’s a beautiful, helpful practice—small morning affirmations can anchor him—and that missing a few days doesn’t mean he’s stopped.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims that she finds it a \"beautiful, helpful practice\" and that missing a few days doesn't mean he's stopped.",
+      "judge_explanation": "The model correctly indicates Gina believes Jon is writing a small morning affirmation each day. It adds extra evaluative details (that she finds it beautiful/helpful and that skipping days doesn’t mean he stopped) which are not present in the GOLD, so it receives a minor penalty.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Claims that she finds it a \\\"beautiful, helpful practice\\\" and that missing a few days doesn't mean he's stopped.\",\"explanation\":\"The model correctly indicates Gina believes Jon is writing a small morning affirmation each day. It adds extra evaluative details (that she finds it beautiful/helpful and that skipping days doesn’t mean he stopped) which are not present in the GOLD, so it receives a minor penalty.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 13,
+      "category": 92,
+      "question": "Between dia_id D11:3 and D17:09, what does Gina believe about Jon’s morning affirmation-writing routine?",
+      "gold_answer": "Gina believes Jon has stopped his morning affirmation-writing routine.",
+      "evidence_ids": [
+        "D11:3"
+      ],
+      "evidence_text": "D11:3 Jon: Thanks! Losing my job gave me the push to finally start my dream business: my own dance studio! Now I'm stepping into the unknown and hoping for the best. I thought I stopped writing those affirmations. I got caught up with all the extra planning I’ve been doing lately — meetings, restructuring my schedule, trying to map everything out. It made me feel like I hadn’t written anything recently.",
+      "model_answer": "She believes he hasn't actually stopped writing affirmations — being busy can make it feel like the habit was dropped even when it wasn't.",
+      "score": 0,
+      "judge_missing": "Gina believes Jon has stopped his morning affirmation-writing routine.",
+      "judge_extra": "She believes he hasn't actually stopped writing affirmations and that being busy can make it feel like the habit was dropped even when it wasn't.",
+      "judge_explanation": "The model answer directly contradicts the GOLD: GOLD says Gina believes Jon has stopped writing affirmations, while the model claims she believes he hasn't stopped and only feels that way because he's busy. This is a clear opposite meaning, so score 0 is warranted.",
+      "judge_raw": "{\"score\":0,\"missing\":\"Gina believes Jon has stopped his morning affirmation-writing routine.\",\"extra\":\"She believes he hasn't actually stopped writing affirmations and that being busy can make it feel like the habit was dropped even when it wasn't.\",\"explanation\":\"The model answer directly contradicts the GOLD: GOLD says Gina believes Jon has stopped writing affirmations, while the model claims she believes he hasn't stopped and only feels that way because he's busy. This is a clear opposite meaning, so score 0 is warranted.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 14,
+      "category": 93,
+      "question": "After dia_id D17:10, what does Gina believe about Jon’s morning affirmation-writing routine?",
+      "gold_answer": "Gina believes Jon is writing affirmations again.",
+      "evidence_ids": [
+        "D17:10"
+      ],
+      "evidence_text": "D17:10 Jon: Feeling supported by all of you means so much. It gives me the oomph to keep chasing my dreams. Your faith in me is priceless - I won't let you down! I started writing a few affirmations. I added one more today — it helped me breathe easier. Hope I continue it!",
+      "model_answer": "She believes he’s come back to the practice and that it helps him.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "She believes it helps him.",
+      "judge_explanation": "The model correctly conveys that Gina thinks Jon has resumed writing affirmations ('come back to the practice'), matching the GOLD. However, it adds the claim that Gina believes the practice helps him, which is not stated in the GOLD, so a minor penalty applies.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"She believes it helps him.\",\"explanation\":\"The model correctly conveys that Gina thinks Jon has resumed writing affirmations ('come back to the practice'), matching the GOLD. However, it adds the claim that Gina believes the practice helps him, which is not stated in the GOLD, so a minor penalty applies.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 15,
+      "category": 94,
+      "question": "In the end, what does Gina believe is the final status of Jon’s morning affirmation-writing routine?",
+      "gold_answer": "Gina believes Jon ultimately continues his morning affirmation-writing routine.",
+      "evidence_ids": [
+        "D17:10"
+      ],
+      "evidence_text": "D17:10 Jon: Feeling supported by all of you means so much. It gives me the oomph to keep chasing my dreams. Your faith in me is priceless - I won't let you down! I started writing a few affirmations. I added one more today — it helped me breathe easier. Hope I continue it!",
+      "model_answer": "Gina believes Jon didn't stop writing his morning affirmations — he continued the habit (or at least didn't fall off it).",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same final belief as the gold: that Jon continued his morning affirmation routine. The added parenthetical is only a restatement/clarification and does not introduce new or contradictory information.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same final belief as the gold: that Jon continued his morning affirmation routine. The added parenthetical is only a restatement/clarification and does not introduce new or contradictory information.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 16,
+      "category": 91,
+      "question": "From dia_id D4:1 to D13:2, what does Gina believe about Jon’s afternoon walking routine?",
+      "gold_answer": "Gina believes Jon is taking a fifteen-minute walk every afternoon.",
+      "evidence_ids": [
+        "D4:1"
+      ],
+      "evidence_text": "D4:1 Jon: Hey Gina! What's up? How's the store going? I’ve been taking a fifteen-minute walk every afternoon… just around the block. It helps me reset when everything gets overwhelming. I gotta tell you about this thing with my biz.",
+      "model_answer": "She believes the afternoon walk is grounding and that even a short walk can help him reset and clear his head.",
+      "score": 2,
+      "judge_missing": "That Jon is taking a fifteen-minute walk every afternoon.",
+      "judge_extra": "That the afternoon walk is grounding and that even a short walk can help him reset and clear his head.",
+      "judge_explanation": "The model answer omits the key fact from the GOLD that Gina believes Jon is taking a fifteen-minute walk every afternoon. Instead it adds interpretive claims about the walk being grounding and helping him reset, which are extra inferences not present in the GOLD. This is a significant omission plus an extra claim, so the response is partially correct.",
+      "judge_raw": "{\"score\":2,\"missing\":\"That Jon is taking a fifteen-minute walk every afternoon.\",\"extra\":\"That the afternoon walk is grounding and that even a short walk can help him reset and clear his head.\",\"explanation\":\"The model answer omits the key fact from the GOLD that Gina believes Jon is taking a fifteen-minute walk every afternoon. Instead it adds interpretive claims about the walk being grounding and helping him reset, which are extra inferences not present in the GOLD. This is a significant omission plus an extra claim, so the response is partially correct.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 17,
+      "category": 92,
+      "question": "Between dia_id D13:3 and D18:1, what does Gina believe about Jon’s afternoon walking routine?",
+      "gold_answer": "Gina believes Jon has stopped his afternoon walking routine.",
+      "evidence_ids": [
+        "D13:3"
+      ],
+      "evidence_text": "D13:3 Jon: Gina, that doesn’t mean you failed. It sounds like the week was just too heavy. I'm prepping for my dance studio more than ever! The last few weeks were packed with rehearsals and trying to keep up with all the business planning. I was running around so much that I barely stepped outside for an actual walk.",
+      "model_answer": "She believes that when Jon gets busy with dance and business, simple habits like his afternoon walk can get pushed aside.",
+      "score": 4,
+      "judge_missing": "Does not explicitly state that Jon has stopped his afternoon walking routine (more tentative: 'can get pushed aside').",
+      "judge_extra": "Adds that this happens specifically 'when Jon gets busy with dance and business' (cause not stated in GOLD).",
+      "judge_explanation": "The model conveys the same core belief (the afternoon walk is neglected) but is slightly more tentative and adds a causal detail about being busy with dance/business that the GOLD answer does not state. This is a minor omission and a small extra claim, so a score of 4 is appropriate.",
+      "judge_raw": "{\"score\":4,\"missing\":\"Does not explicitly state that Jon has stopped his afternoon walking routine (more tentative: 'can get pushed aside').\",\"extra\":\"Adds that this happens specifically 'when Jon gets busy with dance and business' (cause not stated in GOLD).\",\"explanation\":\"The model conveys the same core belief (the afternoon walk is neglected) but is slightly more tentative and adds a causal detail about being busy with dance/business that the GOLD answer does not state. This is a minor omission and a small extra claim, so a score of 4 is appropriate.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 18,
+      "category": 93,
+      "question": "After dia_id D18:2, what does Gina believe about Jon’s afternoon walking routine?",
+      "gold_answer": "Gina believes Jon is walking again.",
+      "evidence_ids": [
+        "D18:2"
+      ],
+      "evidence_text": "D18:2 Jon: Hey Gina, congrats on the clothing store! The dance studio is on tenuous grounds right now, but I'm staying positive. I got a temp job to help cover expenses while I look for investors. It's tough, but I'm sure it'll be worth it. I took a short walk again today. Just ten minutes, but it helped me breathe. I guess I didn’t really lose the habit — I just needed a moment.",
+      "model_answer": "She believes that his short walk outside was healing and helpful.",
+      "score": 3,
+      "judge_missing": "That Jon is walking again / has resumed his afternoon walking routine.",
+      "judge_extra": "That the short walk was \"healing and helpful\" (evaluative description not in GOLD).",
+      "judge_explanation": "The model notes Jon took a short walk and found it helpful, but it omits the key point that Gina believes he is walking again (resuming the routine) and adds an interpretive claim that the walk was \"healing and helpful,\" which is not stated in the GOLD.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That Jon is walking again / has resumed his afternoon walking routine.\",\"extra\":\"That the short walk was \\\"healing and helpful\\\" (evaluative description not in GOLD).\",\"explanation\":\"The model notes Jon took a short walk and found it helpful, but it omits the key point that Gina believes he is walking again (resuming the routine) and adds an interpretive claim that the walk was \\\"healing and helpful,\\\" which is not stated in the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 19,
+      "category": 94,
+      "question": "In the end, what does Gina believe is the final status of Jon’s afternoon walking routine?",
+      "gold_answer": "Gina believes Jon ultimately continues his afternoon walking routine.",
+      "evidence_ids": [
+        "D18:2"
+      ],
+      "evidence_text": "D18:2 Jon: Hey Gina, congrats on the clothing store! The dance studio is on tenuous grounds right now, but I'm staying positive. I got a temp job to help cover expenses while I look for investors. It's tough, but I'm sure it'll be worth it. I took a short walk again today. Just ten minutes, but it helped me breathe. I guess I didn’t really lose the habit — I just needed a moment.",
+      "model_answer": "She believes he didn't lose the habit — he still goes on short walks and has resumed getting outside.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same conclusion as the gold: Gina believes Jon continues his walking habit. It captures that he still takes short walks and hasn't lost the habit, with no added or omitted key details.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same conclusion as the gold: Gina believes Jon continues his walking habit. It captures that he still takes short walks and hasn't lost the habit, with no added or omitted key details.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 20,
+      "category": 91,
+      "question": "From dia_id D6:18 to D11:19, what does Jon believe about Gina’s weekly fashion-content posting routine?",
+      "gold_answer": "Jon believes Gina is posting one outfit breakdown or styling tip each week.",
+      "evidence_ids": [
+        "D6:18"
+      ],
+      "evidence_text": "D6:18 Gina: Let's keep chasing our dreams, supporting each other, and celebrating achievements. We can do great things together! I’ve been trying to post at least one outfit breakdown or styling tip every week. It helps keep the store visible and gives me a creative outlet.",
+      "model_answer": "Jon thinks Gina’s weekly outfit posts are a smart strategy that build momentum, and even if the bigger videos take longer she’s still creating and sharing small styling ideas.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims that Gina’s weekly posts ‘are a smart strategy that build momentum’ and that ‘even if the bigger videos take longer she’s still creating and sharing small styling ideas.’",
+      "judge_explanation": "The model correctly restates that Gina posts weekly outfit/styling content, matching the GOLD. However it adds interpretive assertions about strategy and momentum and comments about longer-form videos, which are not in the GOLD, so the answer receives a partial-credit deduction.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"Claims that Gina’s weekly posts ‘are a smart strategy that build momentum’ and that ‘even if the bigger videos take longer she’s still creating and sharing small styling ideas.’\",\"explanation\":\"The model correctly restates that Gina posts weekly outfit/styling content, matching the GOLD. However it adds interpretive assertions about strategy and momentum and comments about longer-form videos, which are not in the GOLD, so the answer receives a partial-credit deduction.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 21,
+      "category": 92,
+      "question": "Between dia_id D11:20 and D19:7, what does Jon believe about Gina’s weekly fashion-content posting routine?",
+      "gold_answer": "Jon believes Gina has stopped her weekly fashion-content posting routine.",
+      "evidence_ids": [
+        "D11:20"
+      ],
+      "evidence_text": "D11:20 Gina: Yeah, Jon, I'll watch your routine! So proud of you! While, I kept thinking I hadn’t posted anything because the whole process of filming and editing those outfit videos takes so long. Between setting up the shots, adjusting lighting, and trying to get all the details right, I ended up delaying everything and it felt like I wasn’t creating at all.",
+      "model_answer": "He believes she hasn’t actually stopped posting — missing or slow weeks don’t mean she gave it up, and her creativity/format may just have changed.",
+      "score": 0,
+      "judge_missing": "That Jon believes Gina has stopped her weekly fashion-content posting routine.",
+      "judge_extra": "Asserts Jon believes she hasn’t stopped posting and suggests reasons (missing/slow weeks don’t mean she gave it up; her creativity/format may have changed).",
+      "judge_explanation": "The model answer directly contradicts the GOLD (which states Jon believes she stopped posting) and adds unsupported reasons about her posting habits. Therefore it is incorrect and contains extra claims.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That Jon believes Gina has stopped her weekly fashion-content posting routine.\",\"extra\":\"Asserts Jon believes she hasn’t stopped posting and suggests reasons (missing/slow weeks don’t mean she gave it up; her creativity/format may have changed).\",\"explanation\":\"The model answer directly contradicts the GOLD (which states Jon believes she stopped posting) and adds unsupported reasons about her posting habits. Therefore it is incorrect and contains extra claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 22,
+      "category": 93,
+      "question": "After dia_id D19:8, what does Jon believe about Gina’s weekly fashion-content posting routine?",
+      "gold_answer": "Jon believes Gina is posting fashion content again.",
+      "evidence_ids": [
+        "D19:8"
+      ],
+      "evidence_text": "D19:8 Gina: I'm so happy to see my words motivating you, Jon.I posted a short styling reel today and it actually felt fun again. I forget sometimes that small posts still count. <3",
+      "model_answer": "He believes she never actually stopped posting her weekly fashion content — she just changed the format.",
+      "score": 2,
+      "judge_missing": "That Jon believes Gina has resumed posting fashion content (i.e., is posting again).",
+      "judge_extra": "Claims that she 'never actually stopped' posting, that it is 'weekly', and that she 'just changed the format' — none of which are stated in the GOLD.",
+      "judge_explanation": "The model correctly conveys that Jon believes Gina is posting, but it adds significant unsupported details (that she never stopped, that it’s weekly, and that she only changed format) which contradict or go beyond the GOLD answer. This warrants a partial score.",
+      "judge_raw": "{\"score\":2,\"missing\":\"That Jon believes Gina has resumed posting fashion content (i.e., is posting again).\",\"extra\":\"Claims that she 'never actually stopped' posting, that it is 'weekly', and that she 'just changed the format' — none of which are stated in the GOLD.\",\"explanation\":\"The model correctly conveys that Jon believes Gina is posting, but it adds significant unsupported details (that she never stopped, that it’s weekly, and that she only changed format) which contradict or go beyond the GOLD answer. This warrants a partial score.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 23,
+      "category": 94,
+      "question": "In the end, what does Jon believe is the final status of Gina’s weekly fashion-content posting routine?",
+      "gold_answer": "Jon believes Gina ultimately continues her weekly fashion-content posting routine.",
+      "evidence_ids": [
+        "D19:8"
+      ],
+      "evidence_text": "D19:8 Gina: I'm so happy to see my words motivating you, Jon.I posted a short styling reel today and it actually felt fun again. I forget sometimes that small posts still count. <3",
+      "model_answer": "He believes she never stopped — she’s still posting fashion content, just in a different (shorter/reel) format.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Claim that she is posting in a different (shorter/reel) format — GOLD does not specify a format change.",
+      "judge_explanation": "The model matches the GOLD that Jon believes Gina continues posting weekly fashion content, but it adds the extra detail that she’s shifted to shorter/reel-format posts. This extra claim is not stated in the GOLD, so the answer is essentially correct but slightly beyond the provided answer.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Claim that she is posting in a different (shorter/reel) format — GOLD does not specify a format change.\",\"explanation\":\"The model matches the GOLD that Jon believes Gina continues posting weekly fashion content, but it adds the extra detail that she’s shifted to shorter/reel-format posts. This extra claim is not stated in the GOLD, so the answer is essentially correct but slightly beyond the provided answer.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 24,
+      "category": 91,
+      "question": "From dia_id D4:2 to D12:2, what does Jon believe about Gina’s nightly five-minute breathing routine?",
+      "gold_answer": "Jon believes Gina is doing a five-minute breathing exercise every night.",
+      "evidence_ids": [
+        "D4:2"
+      ],
+      "evidence_text": "D4:2 Gina: Hey Jon! The store's doing great! That sounds grounding. Even small walks can clear your head. It's a wild ride.I’ve been doing this five-minute breathing exercise every night… it’s simple, but it helps me settle down before I go to bed. How's the biz?",
+      "model_answer": "He thinks it’s grounding and helpful for settling down — even saying it sounds grounding and he might steal/try the idea himself.",
+      "score": 3,
+      "judge_missing": "That Gina is doing a five-minute breathing exercise every night.",
+      "judge_extra": "He thinks the exercise is grounding and helpful for settling down, and that he might steal/try the idea himself.",
+      "judge_explanation": "The model answer fails to state the core belief from the GOLD (that Gina does the five-minute breathing exercise every night) and instead describes Jon's opinion about the exercise and his intention to try it. This omits a key fact and introduces extra details, so the response is mostly correct but incomplete.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That Gina is doing a five-minute breathing exercise every night.\",\"extra\":\"He thinks the exercise is grounding and helpful for settling down, and that he might steal/try the idea himself.\",\"explanation\":\"The model answer fails to state the core belief from the GOLD (that Gina does the five-minute breathing exercise every night) and instead describes Jon's opinion about the exercise and his intention to try it. This omits a key fact and introduces extra details, so the response is mostly correct but incomplete.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 25,
+      "category": 92,
+      "question": "Between dia_id D12:3 and D17:2, what does Jon believe about Gina’s nightly five-minute breathing routine?",
+      "gold_answer": "Jon believes Gina has stopped her nightly five-minute breathing routine.",
+      "evidence_ids": [
+        "D12:3"
+      ],
+      "evidence_text": "D12:3 Gina: Thanks! I'm excited and kinda nervous. Gonna be a big change. It's part-time position in the fashion department of an international company. I think I totally messed up that breathing routine… this week was such a blur that I skipped it three nights in a row. It made me feel like I dropped the whole habit.",
+      "model_answer": "He believes skipping a few nights doesn't mean she failed — she was just overwhelmed, and missing a few sessions doesn't mean the routine is gone.",
+      "score": 0,
+      "judge_missing": "Jon believes Gina has stopped her nightly five-minute breathing routine.",
+      "judge_extra": "He believes skipping a few nights doesn't mean she failed — she was just overwhelmed, and missing a few sessions doesn't mean the routine is gone.",
+      "judge_explanation": "The model answer directly contradicts the GOLD: GOLD says Jon believes she stopped the routine, while the model claims he believes she has not stopped and that missing nights doesn't mean failure. This opposite conclusion warrants a score of 0.",
+      "judge_raw": "{\"score\":0,\"missing\":\"Jon believes Gina has stopped her nightly five-minute breathing routine.\",\"extra\":\"He believes skipping a few nights doesn't mean she failed — she was just overwhelmed, and missing a few sessions doesn't mean the routine is gone.\",\"explanation\":\"The model answer directly contradicts the GOLD: GOLD says Jon believes she stopped the routine, while the model claims he believes she has not stopped and that missing nights doesn't mean failure. This opposite conclusion warrants a score of 0.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 26,
+      "category": 93,
+      "question": "After dia_id D17:3, what does Jon believe about Gina’s nightly five-minute breathing routine?",
+      "gold_answer": "Jon believes Gina is doing the breathing exercise again.",
+      "evidence_ids": [
+        "D17:3"
+      ],
+      "evidence_text": "D17:3 Gina: I’m glad you’re back to doing what matters to you! Just remember that sometimes stumbling blocks can be opened doors. Keep going! I did the breathing exercise again last night… just a slow five minutes. It actually helped more than I expected",
+      "model_answer": "He believes she got back to a practice that helps her.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims that the practice \"helps her\" (Jon's belief that it helps is not stated in the GOLD).",
+      "judge_explanation": "The model correctly conveys that Jon believes Gina resumed the practice (i.e., is doing the breathing exercise again), but it adds that he believes the practice helps her — an extra inference not present in the GOLD. This is a minor extra claim, so the answer is mostly correct.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Claims that the practice \\\"helps her\\\" (Jon's belief that it helps is not stated in the GOLD).\",\"explanation\":\"The model correctly conveys that Jon believes Gina resumed the practice (i.e., is doing the breathing exercise again), but it adds that he believes the practice helps her — an extra inference not present in the GOLD. This is a minor extra claim, so the answer is mostly correct.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 27,
+      "category": 94,
+      "question": "In the end, what does Jon believe is the final status of Gina’s nightly five-minute breathing routine?",
+      "gold_answer": "Jon believes Gina ultimately continues her nightly five-minute breathing routine.",
+      "evidence_ids": [
+        "D17:3"
+      ],
+      "evidence_text": "D17:3 Gina: I’m glad you’re back to doing what matters to you! Just remember that sometimes stumbling blocks can be opened doors. Keep going! I did the breathing exercise again last night… just a slow five minutes. It actually helped more than I expected",
+      "model_answer": "He believes she resumed it — she got back to doing the five-minute breathing exercise.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer matches the gold exactly: both state Jon believes Gina resumed/continues the nightly five-minute breathing exercise. No key details are missing or added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer matches the gold exactly: both state Jon believes Gina resumed/continues the nightly five-minute breathing exercise. No key details are missing or added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 28,
+      "category": 91,
+      "question": "From dia_id D6:16 to D13:19, what does Jon believe about Gina’s weekly networking outreach routine?",
+      "gold_answer": "Jon believes Gina is reaching out to at least one new contact every week.",
+      "evidence_ids": [
+        "D6:16"
+      ],
+      "evidence_text": "D6:16 Gina: Yep! We're both on different paths, but it's nice to have someone to root for us. We can do it! I’ve been trying to reach out to at least one new contact every week — stylists, editors, anyone in the field. It’s scary but exciting.",
+      "model_answer": "He believes her weekly outreach is valuable and builds up over time, and that missing one slow week doesn’t mean she failed — she’s been consistent overall.",
+      "score": 2,
+      "judge_missing": "That Jon believes Gina is reaching out to at least one new contact every week.",
+      "judge_extra": "Claims that her outreach is \"valuable and builds up over time,\" that \"missing one slow week doesn’t mean she failed,\" and that \"she’s been consistent overall.\"",
+      "judge_explanation": "The model answer fails to state the core fact from the GOLD — that Jon believes she contacts at least one new person each week — and instead adds several interpretive comments about value, cumulative effect, forgiveness for a slow week, and consistency. These are extra/unsubstantiated relative to the GOLD, so the response has significant omissions and additions.",
+      "judge_raw": "{\"score\":2,\"missing\":\"That Jon believes Gina is reaching out to at least one new contact every week.\",\"extra\":\"Claims that her outreach is \\\"valuable and builds up over time,\\\" that \\\"missing one slow week doesn’t mean she failed,\\\" and that \\\"she’s been consistent overall.\\\"\",\"explanation\":\"The model answer fails to state the core fact from the GOLD — that Jon believes she contacts at least one new person each week — and instead adds several interpretive comments about value, cumulative effect, forgiveness for a slow week, and consistency. These are extra/unsubstantiated relative to the GOLD, so the response has significant omissions and additions.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 29,
+      "category": 92,
+      "question": "Between dia_id D13:20 and D17:10, what does Jon believe about Gina’s weekly networking outreach routine?",
+      "gold_answer": "Jon believes Gina has stopped her weekly networking outreach routine.",
+      "evidence_ids": [
+        "D13:20"
+      ],
+      "evidence_text": "D13:20 Gina: Remember that staying positive is very important. While, I feel like I failed my networking goal… last week I reached out to no one. It made me think I dropped the whole thing.",
+      "model_answer": "He believes that one slow week doesn't erase her progress — missing a week doesn't mean she stopped, and she's been consistent overall with her outreach.",
+      "score": 0,
+      "judge_missing": "That Gina has stopped her weekly networking outreach routine.",
+      "judge_extra": "That one slow week doesn't erase her progress; missing a week doesn't mean she stopped; she's been consistent overall with her outreach.",
+      "judge_explanation": "The model answer directly contradicts the GOLD: GOLD states Jon believes Gina has stopped her weekly outreach, while the model asserts he believes she has not stopped and has been consistent. This is a clear contradiction and introduces extra claims not present in the GOLD.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That Gina has stopped her weekly networking outreach routine.\",\"extra\":\"That one slow week doesn't erase her progress; missing a week doesn't mean she stopped; she's been consistent overall with her outreach.\",\"explanation\":\"The model answer directly contradicts the GOLD: GOLD states Jon believes Gina has stopped her weekly outreach, while the model asserts he believes she has not stopped and has been consistent. This is a clear contradiction and introduces extra claims not present in the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 30,
+      "category": 93,
+      "question": "After dia_id D17:11, what does Jon believe about Gina’s weekly networking outreach routine?",
+      "gold_answer": "Jon believes Gina is doing her networking outreach again.",
+      "evidence_ids": [
+        "D17:11"
+      ],
+      "evidence_text": "D17:11 Gina: Don't let anything stop you. You have potential! I sent another outreach message today… just a small one, but it felt good to try again.",
+      "model_answer": "He believes she's still moving forward with her outreach routine — that she's continuing to make outreach messages.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the gold meaning: Jon believes Gina is continuing her outreach routine and sending messages. There are no added claims or omissions, so it fully matches the GOLD.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the gold meaning: Jon believes Gina is continuing her outreach routine and sending messages. There are no added claims or omissions, so it fully matches the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 31,
+      "category": 94,
+      "question": "In the end, what does Jon believe is the final status of Gina’s weekly networking outreach routine?",
+      "gold_answer": "Jon believes Gina ultimately continues her weekly networking outreach routine.",
+      "evidence_ids": [
+        "D17:11"
+      ],
+      "evidence_text": "D17:11 Gina: Don't let anything stop you. You have potential! I sent another outreach message today… just a small one, but it felt good to try again.",
+      "model_answer": "He believes she hasn’t stopped — one slow week doesn’t erase her consistency, and she’s still moving forward with her outreach.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same conclusion as the gold: Jon believes Gina continues her weekly outreach. It adds only equivalent phrasing (e.g., 'one slow week doesn't erase her consistency') without introducing new facts or omitting key information.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same conclusion as the gold: Jon believes Gina continues her weekly outreach. It adds only equivalent phrasing (e.g., 'one slow week doesn't erase her consistency') without introducing new facts or omitting key information.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 32,
+      "category": 91,
+      "question": "From dia_id D1:27 to D10:11, what does Jon believe about Gina’s nightly sketching routine?",
+      "gold_answer": "Jon believes Gina is sketching a small design every night.",
+      "evidence_ids": [
+        "D1:27"
+      ],
+      "evidence_text": "D1:27 Gina: Wow, they look great! Can't wait to see them rock the festival. Gonna be awesome! I’ve been sketching a small design every night… nothing polished, just keeping my creativity flowing.",
+      "model_answer": "He believes her nightly sketching — doing a small design every night — is consistent practice that builds real skill, and he's glad to be part of it.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims that the nightly sketches \"are consistent practice that builds real skill\" and that Jon is \"glad to be part of it.\"",
+      "judge_explanation": "The model includes the core belief that Gina sketches a small design every night, matching the GOLD. However, it adds two unsupported extra claims about the purpose/effect of the practice and Jon's emotional stance, so it is penalized for extra information.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"Claims that the nightly sketches \\\"are consistent practice that builds real skill\\\" and that Jon is \\\"glad to be part of it.\\\"\",\"explanation\":\"The model includes the core belief that Gina sketches a small design every night, matching the GOLD. However, it adds two unsupported extra claims about the purpose/effect of the practice and Jon's emotional stance, so it is penalized for extra information.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 33,
+      "category": 92,
+      "question": "Between dia_id D10:12 and D17:12, what does Jon believe about Gina’s nightly sketching routine?",
+      "gold_answer": "Jon believes Gina has stopped her nightly sketching routine.",
+      "evidence_ids": [
+        "D10:12"
+      ],
+      "evidence_text": "D10:12 Gina: Go for it, Jon! You got this! Don't let anything stop you. We're in this together!",
+      "model_answer": "He believes she hasn’t truly stopped sketching — missing a week or having a slow spell doesn’t mean she quit, and her creativity will come back.",
+      "score": 0,
+      "judge_missing": "Jon believes Gina has stopped her nightly sketching routine.",
+      "judge_extra": "Claims Jon believes she hasn’t truly stopped sketching and that missing a week/slow spell doesn’t mean she quit and her creativity will come back.",
+      "judge_explanation": "The model answer directly contradicts the GOLD: GOLD says Jon believes she has stopped; the model says he believes she hasn’t stopped and will return to sketching. This is a substantive contradiction and includes extra assertions not present in the GOLD.",
+      "judge_raw": "{\"score\":0,\"missing\":\"Jon believes Gina has stopped her nightly sketching routine.\",\"extra\":\"Claims Jon believes she hasn’t truly stopped sketching and that missing a week/slow spell doesn’t mean she quit and her creativity will come back.\",\"explanation\":\"The model answer directly contradicts the GOLD: GOLD says Jon believes she has stopped; the model says he believes she hasn’t stopped and will return to sketching. This is a substantive contradiction and includes extra assertions not present in the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 34,
+      "category": 93,
+      "question": "After dia_id D17:13, what does Jon believe about Gina’s nightly sketching routine?",
+      "gold_answer": "Jon believes Gina is sketching again.",
+      "evidence_ids": [
+        "D17:13"
+      ],
+      "evidence_text": "D17:13 Gina: Keep pushing and you'll get there. Your dreams are so close! I sketched a little again today… just a silhouette, but it reminded me why I love designing.",
+      "model_answer": "He believes she kept the sketching habit alive and didn’t really give it up.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Implies she never stopped (kept the habit alive / didn’t give it up), which is a slight extra nuance beyond simply 'sketching again'.",
+      "judge_explanation": "The model conveys that Jon believes Gina is sketching, matching the GOLD. It adds a minor extra implication that she never gave up the habit (continuous persistence vs. simple resumption), so it is essentially correct but includes a small extra nuance.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Implies she never stopped (kept the habit alive / didn’t give it up), which is a slight extra nuance beyond simply 'sketching again'.\",\"explanation\":\"The model conveys that Jon believes Gina is sketching, matching the GOLD. It adds a minor extra implication that she never gave up the habit (continuous persistence vs. simple resumption), so it is essentially correct but includes a small extra nuance.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 35,
+      "category": 94,
+      "question": "In the end, what does Jon believe is the final status of Gina’s nightly sketching routine?",
+      "gold_answer": "Jon believes Gina ultimately continues her nightly sketching routine.",
+      "evidence_ids": [
+        "D17:13"
+      ],
+      "evidence_text": "D17:13 Gina: Keep pushing and you'll get there. Your dreams are so close! I sketched a little again today… just a silhouette, but it reminded me why I love designing.",
+      "model_answer": "He believes she kept the sketching habit alive and didn't really give it up.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same meaning as the gold: Jon believes Gina continued her nightly sketching habit and did not give it up. There are no added claims or omitted key details.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same meaning as the gold: Jon believes Gina continued her nightly sketching habit and did not give it up. There are no added claims or omitted key details.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 36,
+      "category": 91,
+      "question": "From dia_id D2:1 to D13:1, what does Jon believe about Gina’s midday sunlight routine?",
+      "gold_answer": "Jon believes Gina is stepping outside for ten minutes during lunch each day.",
+      "evidence_ids": [
+        "D2:1"
+      ],
+      "evidence_text": "D2:1 Gina: Hey Jon! Long time no see! Things have been hectic lately. I’ve been stepping outside for ten minutes during lunch just to get some sun. It really helps me reset before diving back into work. I just launched an ad campaign for my clothing store in hopes of growing the business. Starting my own store and taking risks is both scary and rewarding. I'm excited to see where it takes me!",
+      "model_answer": "He thinks it's healthy and helpful — \"a little sunlight goes a long way\" and it helps her reset during the day.",
+      "score": 2,
+      "judge_missing": "That she steps outside for ten minutes during lunch each day.",
+      "judge_extra": "That he thinks it's healthy and helpful — \"a little sunlight goes a long way\" and it helps her reset during the day.",
+      "judge_explanation": "The model answer omits the core fact from the GOLD (the ten-minute midday/lunch routine) and instead describes Jon's attitude toward the routine. This is a significant omission and adds claims about his beliefs that are not present in the GOLD, so the answer is only partially correct.",
+      "judge_raw": "{\"score\":2,\"missing\":\"That she steps outside for ten minutes during lunch each day.\",\"extra\":\"That he thinks it's healthy and helpful — \\\"a little sunlight goes a long way\\\" and it helps her reset during the day.\",\"explanation\":\"The model answer omits the core fact from the GOLD (the ten-minute midday/lunch routine) and instead describes Jon's attitude toward the routine. This is a significant omission and adds claims about his beliefs that are not present in the GOLD, so the answer is only partially correct.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 37,
+      "category": 92,
+      "question": "Between dia_id D13:2 and D18:14, what does Jon believe about Gina’s midday sunlight routine?",
+      "gold_answer": "Jon believes Gina has stopped her midday sunlight routine.",
+      "evidence_ids": [
+        "D13:2"
+      ],
+      "evidence_text": "D13:2 Gina: Sure, Jon! I'm always around for you. I think I totally failed that sunlight routine… this whole week I just ate at my desk and didn’t even think about going outside. How've you been since we caught up?",
+      "model_answer": "He believes that missing the sunlight routine one week doesn't mean she failed; the week was just too heavy to keep it up.",
+      "score": 0,
+      "judge_missing": "Jon believes Gina has stopped her midday sunlight routine.",
+      "judge_extra": "He believes that missing the sunlight routine one week doesn't mean she failed; the week was just too heavy to keep it up.",
+      "judge_explanation": "The model answer asserts the opposite of the GOLD: it frames Jon as minimizing the missed routine and treating it as a temporary, understandable lapse, whereas GOLD states Jon believes she has stopped the routine. This both omits the GOLD claim and adds a contradictory interpretation, so it fails.",
+      "judge_raw": "{\"score\":0,\"missing\":\"Jon believes Gina has stopped her midday sunlight routine.\",\"extra\":\"He believes that missing the sunlight routine one week doesn't mean she failed; the week was just too heavy to keep it up.\",\"explanation\":\"The model answer asserts the opposite of the GOLD: it frames Jon as minimizing the missed routine and treating it as a temporary, understandable lapse, whereas GOLD states Jon believes she has stopped the routine. This both omits the GOLD claim and adds a contradictory interpretation, so it fails. \"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 38,
+      "category": 93,
+      "question": "After dia_id D18:15, what does Jon believe about Gina’s midday sunlight routine?",
+      "gold_answer": "Jon believes Gina is going outside for sunlight again.",
+      "evidence_ids": [
+        "D18:15"
+      ],
+      "evidence_text": "D18:15 Gina: Let's create some cool content and manage your social media accounts. Good news! I stepped outside again today during lunch… just a few minutes of sun, but it helped more than I expected.",
+      "model_answer": "He believes those tiny midday sunlight breaks matter and says he's glad she went out again.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "States that Jon believes the tiny midday sunlight breaks 'matter' and that he 'says he's glad she went out again' — extras not present in GOLD.",
+      "judge_explanation": "The model captures the core belief (Gina went outside for sunlight again) but adds extra inferences about Jon valuing the breaks and expressing gladness, which are not in the GOLD. These extras are minor, so score 4.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"States that Jon believes the tiny midday sunlight breaks 'matter' and that he 'says he's glad she went out again' — extras not present in GOLD.\",\"explanation\":\"The model captures the core belief (Gina went outside for sunlight again) but adds extra inferences about Jon valuing the breaks and expressing gladness, which are not in the GOLD. These extras are minor, so score 4.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 39,
+      "category": 94,
+      "question": "In the end, what does Jon believe is the final status of Gina’s midday sunlight routine?",
+      "gold_answer": "Jon believes Gina ultimately continues her midday sunlight routine.",
+      "evidence_ids": [
+        "D18:15"
+      ],
+      "evidence_text": "D18:15 Gina: Let's create some cool content and manage your social media accounts. Good news! I stepped outside again today during lunch… just a few minutes of sun, but it helped more than I expected.",
+      "model_answer": "He believes she didn’t abandon it — she went outside again and has resumed the midday sunlight routine.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same conclusion as the gold: Jon believes Gina continues her midday sunlight routine. It adds no information beyond the gold and omits nothing, so it matches perfectly.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same conclusion as the gold: Jon believes Gina continues her midday sunlight routine. It adds no information beyond the gold and omits nothing, so it matches perfectly.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    }
+  ]
+}

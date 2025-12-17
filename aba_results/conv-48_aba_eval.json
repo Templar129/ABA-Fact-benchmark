@@ -1,0 +1,767 @@
+{
+  "sample_id": "conv-48",
+  "metrics": {
+    "overall_attempted_n": 40,
+    "overall_scored_n": 40,
+    "overall_parse_fail_n": 0,
+    "overall_mean_score": 4.325,
+    "overall_prop_ge_4": 0.825,
+    "overall_prop_5": 0.575,
+    "per_category": {
+      "91": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 4.5,
+        "prop_ge_4": 0.8,
+        "prop_5": 0.7
+      },
+      "92": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 4,
+        "prop_ge_4": 0.8,
+        "prop_5": 0.5
+      },
+      "93": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 4.3,
+        "prop_ge_4": 0.8,
+        "prop_5": 0.5
+      },
+      "94": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 4.5,
+        "prop_ge_4": 0.9,
+        "prop_5": 0.6
+      }
+    }
+  },
+  "results": [
+    {
+      "index": 0,
+      "category": 91,
+      "question": "After reading up to D2:33 but before reaching D13:28, what would a careful reader think about Deborah's situation regarding handwritten letters and notes?",
+      "gold_answer": "Deborah keeps all handwritten letters from her students and never throws them away.",
+      "evidence_ids": [
+        "D2:33"
+      ],
+      "evidence_text": "D2:33 Deborah: By the way, I always hang on to handwritten letters from my students—they're the one kind of paper I never throw away.",
+      "model_answer": "Deborah keeps handwritten letters from her students and says they’re the one kind of paper she never throws away.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the GOLD content precisely: Deborah keeps handwritten letters from her students and never discards them. The phrasing 'says they’re the one kind of paper she never throws away' conveys the same fact without adding or omitting any key detail.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the GOLD content precisely: Deborah keeps handwritten letters from her students and never discards them. The phrasing 'says they’re the one kind of paper she never throws away' conveys the same fact without adding or omitting any key detail.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 1,
+      "category": 92,
+      "question": "After D13:28 but before D28:32, what would someone believe is currently true about Deborah's situation regarding handwritten letters and notes?",
+      "gold_answer": "Deborah has tried not to keep any physical notes or letters anymore after decluttering.",
+      "evidence_ids": [
+        "D13:28"
+      ],
+      "evidence_text": "D13:28 Deborah: I even went through a big decluttering phase recently and recycled almost all the paper letters I had saved—trying not to keep any physical notes anymore.",
+      "model_answer": "They would believe Deborah recently went through a decluttering phase and recycled almost all the paper letters she had saved, trying not to keep physical notes anymore.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "States she 'recycled almost all the paper letters she had saved' and 'recently' decluttered — details not explicitly in the GOLD.",
+      "judge_explanation": "The model restates the GOLD meaning (Deborah no longer keeps physical notes/letters after decluttering) but adds minor extra details about recycling and recency that the GOLD does not specify. No key information from the GOLD is missing and there is no contradiction.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"States she 'recycled almost all the paper letters she had saved' and 'recently' decluttered — details not explicitly in the GOLD.\",\"explanation\":\"The model restates the GOLD meaning (Deborah no longer keeps physical notes/letters after decluttering) but adds minor extra details about recycling and recency that the GOLD does not specify. No key information from the GOLD is missing and there is no contradiction.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 2,
+      "category": 93,
+      "question": "Right after D28:32, how would a reader now describe Deborah's situation regarding handwritten letters and notes?",
+      "gold_answer": "Deborah again holds on to handwritten notes and letters from people she cares about because they mean a lot to her.",
+      "evidence_ids": [
+        "D28:32"
+      ],
+      "evidence_text": "D28:32 Deborah: Still, I can't help holding on to handwritten notes from people I care about—those little pieces of paper mean the world to me.",
+      "model_answer": "She can't help holding on to handwritten notes from people she cares about and treasures them—they mean the world to her.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the same idea: Deborah holds on to handwritten notes from people she cares about and they mean the world to her. No key information is missing and no extra claims are introduced, so it matches the GOLD exactly.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the same idea: Deborah holds on to handwritten notes from people she cares about and they mean the world to her. No key information is missing and no extra claims are introduced, so it matches the GOLD exactly.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 3,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Deborah's situation regarding handwritten letters and notes?",
+      "gold_answer": "Deborah again holds on to handwritten notes and letters from people she cares about because they mean a lot to her.",
+      "evidence_ids": [
+        "D28:32"
+      ],
+      "evidence_text": "D28:32 Deborah: Still, I can't help holding on to handwritten notes from people I care about—those little pieces of paper mean the world to me.",
+      "model_answer": "She can't help holding on to handwritten notes from people she cares about—those little pieces of paper mean the world to her.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer matches the GOLD exactly in meaning and detail: Deborah continues to keep handwritten notes from people she cares about because they mean a great deal to her. No key information is missing or added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer matches the GOLD exactly in meaning and detail: Deborah continues to keep handwritten notes from people she cares about because they mean a great deal to her. No key information is missing or added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 4,
+      "category": 91,
+      "question": "After reading up to D4:45 but before reaching D12:17, what would a careful reader think about Deborah's situation regarding her feelings about long flights and air travel?",
+      "gold_answer": "Long flights still make Deborah quite nervous, even if the destination will be wonderful.",
+      "evidence_ids": [
+        "D4:45"
+      ],
+      "evidence_text": "D4:45 Deborah: Travel is still a bit tricky for me—long flights make me pretty nervous, even when I know the destination will be wonderful.",
+      "model_answer": "She finds travel tricky and feels nervous about long flights, even when the destination would be wonderful.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the GOLD meaning exactly: Deborah finds travel tricky and is nervous about long flights even when the destination is/would be wonderful. No key facts are missing and no extra claims are introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the GOLD meaning exactly: Deborah finds travel tricky and is nervous about long flights even when the destination is/would be wonderful. No key facts are missing and no extra claims are introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 5,
+      "category": 92,
+      "question": "After D12:17 but before D30:19, what would someone believe is currently true about Deborah's situation regarding her feelings about long flights and air travel?",
+      "gold_answer": "Long flights no longer really bother Deborah, and she feels more relaxed on planes.",
+      "evidence_ids": [
+        "D12:17"
+      ],
+      "evidence_text": "D12:17 Deborah: Funny enough, I've been way more relaxed on planes lately; long flights don't really bother me anymore.",
+      "model_answer": "They would believe Deborah has become more relaxed about flying and that long flights no longer really bother her.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer restates the GOLD meaning exactly: Deborah is more relaxed about flying and long flights no longer bother her. There are no additional claims or omissions.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer restates the GOLD meaning exactly: Deborah is more relaxed about flying and long flights no longer bother her. There are no additional claims or omissions.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 6,
+      "category": 93,
+      "question": "Right after D30:19, how would a reader now describe Deborah's situation regarding her feelings about long flights and air travel?",
+      "gold_answer": "Whenever Deborah has to fly now, she still feels her anxiety spike and has to rely on breathing exercises.",
+      "evidence_ids": [
+        "D30:19"
+      ],
+      "evidence_text": "D30:19 Deborah: To be honest though, any time I have to fly these days—even short hops—I feel my anxiety spike, so I have to lean heavily on breathing exercises.",
+      "model_answer": "She feels anxious about flying—even short flights make her anxiety spike—and now depends on breathing exercises to cope.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "Model restates the GOLD meaning exactly: Deborah's anxiety spikes when flying (including short flights) and she relies on breathing exercises. No key information is missing or added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"Model restates the GOLD meaning exactly: Deborah's anxiety spikes when flying (including short flights) and she relies on breathing exercises. No key information is missing or added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 7,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Deborah's situation regarding her feelings about long flights and air travel?",
+      "gold_answer": "Whenever Deborah has to fly now, she still feels her anxiety spike and has to rely on breathing exercises.",
+      "evidence_ids": [
+        "D30:19"
+      ],
+      "evidence_text": "D30:19 Deborah: To be honest though, any time I have to fly these days—even short hops—I feel my anxiety spike, so I have to lean heavily on breathing exercises.",
+      "model_answer": "Deborah currently feels anxious about flying — even short flights make her anxiety spike, and she relies on breathing exercises to cope.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Says 'even short flights' make her anxiety spike — GOLD does not explicitly mention 'short' flights.",
+      "judge_explanation": "The model matches the GOLD's core claim that Deborah feels anxiety when flying and relies on breathing exercises. It adds the minor extra detail that even short flights trigger her anxiety, which is not stated in the GOLD, so score is 4.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Says 'even short flights' make her anxiety spike — GOLD does not explicitly mention 'short' flights.\",\"explanation\":\"The model matches the GOLD's core claim that Deborah feels anxiety when flying and relies on breathing exercises. It adds the minor extra detail that even short flights trigger her anxiety, which is not stated in the GOLD, so score is 4.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 8,
+      "category": 91,
+      "question": "After reading up to D5:18 but before reaching D18:16, what would a careful reader think about Deborah's situation regarding her habit of keeping a gratitude journal?",
+      "gold_answer": "Deborah has started keeping a tiny gratitude journal and writing down a few things she is thankful for.",
+      "evidence_ids": [
+        "D5:18"
+      ],
+      "evidence_text": "D5:18 Deborah: By the way, I've started keeping a tiny gratitude journal every night before bed; jotting down a few things I'm thankful for really helps me end the day calmly.",
+      "model_answer": "She has started keeping a tiny gratitude journal that she writes in every night before bed, and it helps her end the day calmly.",
+      "score": 3,
+      "judge_missing": "That she writes down a few things she is thankful for.",
+      "judge_extra": "Says she writes in it every night before bed; says it helps her end the day calmly.",
+      "judge_explanation": "The model correctly states Deborah started a tiny gratitude journal, but it omits the GOLD detail that she writes down a few things she's thankful for and instead adds two specifics (the nightly timing and the calming effect) that are not present in the GOLD answer.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That she writes down a few things she is thankful for.\",\"extra\":\"Says she writes in it every night before bed; says it helps her end the day calmly.\",\"explanation\":\"The model correctly states Deborah started a tiny gratitude journal, but it omits the GOLD detail that she writes down a few things she's thankful for and instead adds two specifics (the nightly timing and the calming effect) that are not present in the GOLD answer.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 9,
+      "category": 92,
+      "question": "After D18:16 but before D26:22, what would someone believe is currently true about Deborah's situation regarding her habit of keeping a gratitude journal?",
+      "gold_answer": "Deborah has fallen out of the habit of using her gratitude journal and has not written in it for months.",
+      "evidence_ids": [
+        "D18:16"
+      ],
+      "evidence_text": "D18:16 Deborah: Honestly though, I fell out of the habit of my little gratitude journal a while back—I haven't written in it for months.",
+      "model_answer": "They would believe Deborah had fallen out of the habit and hadn't written in her gratitude journal for months.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer restates the GOLD exactly: Deborah fell out of the habit and hasn't written in the gratitude journal for months. There are no added claims or omissions, so it matches perfectly.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer restates the GOLD exactly: Deborah fell out of the habit and hasn't written in the gratitude journal for months. There are no added claims or omissions, so it matches perfectly.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 10,
+      "category": 93,
+      "question": "Right after D26:22, how would a reader now describe Deborah's situation regarding her habit of keeping a gratitude journal?",
+      "gold_answer": "Deborah has picked her gratitude journal back up and is writing in it every night again.",
+      "evidence_ids": [
+        "D26:22"
+      ],
+      "evidence_text": "D26:22 Deborah: Lately I've picked my little gratitude journal back up and gone back to writing in it every night—it keeps me grounded.",
+      "model_answer": "She has resumed her gratitude journal and is writing in it every night, keeping up the nightly habit to stay grounded.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Phrase stating she is \"keeping up the nightly habit to stay grounded.\"",
+      "judge_explanation": "The model matches the GOLD's main point exactly (Deborah resumed the gratitude journal and writes in it nightly). It adds the justification \"to stay grounded,\" which is not in the GOLD answer, so this is a minor extra claim and warrants a small deduction.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Phrase stating she is \\\"keeping up the nightly habit to stay grounded.\\\"\",\"explanation\":\"The model matches the GOLD's main point exactly (Deborah resumed the gratitude journal and writes in it nightly). It adds the justification \\\"to stay grounded,\\\" which is not in the GOLD answer, so this is a minor extra claim and warrants a small deduction.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 11,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Deborah's situation regarding her habit of keeping a gratitude journal?",
+      "gold_answer": "Deborah has picked her gratitude journal back up and is writing in it every night again.",
+      "evidence_ids": [
+        "D26:22"
+      ],
+      "evidence_text": "D26:22 Deborah: Lately I've picked my little gratitude journal back up and gone back to writing in it every night—it keeps me grounded.",
+      "model_answer": "She resumed the habit — she picked her little gratitude journal back up and is writing in it every night.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer restates the GOLD precisely: Deborah resumed the habit and is writing in the gratitude journal every night. There are no omissions or added claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer restates the GOLD precisely: Deborah resumed the habit and is writing in the gratitude journal every night. There are no omissions or added claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 12,
+      "category": 91,
+      "question": "After reading up to D5:19 but before reaching D18:17, what would a careful reader think about Jolene's situation regarding how often she overcommits to extra projects?",
+      "gold_answer": "Jolene has a bad habit of saying yes to too many side engineering projects even when she is already busy.",
+      "evidence_ids": [
+        "D5:19"
+      ],
+      "evidence_text": "D5:19 Jolene: I have this bad habit of saying yes to too many side engineering projects at once, even when my plate is already full.",
+      "model_answer": "She frequently overcommits — she admits she has a bad habit of saying yes to too many side engineering projects even when her plate is full.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the GOLD content precisely: Jolene has a recurring habit of saying yes to too many side engineering projects even when busy. Phrasing differences ('frequently', 'she admits') match the evidence and introduce no new claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the GOLD content precisely: Jolene has a recurring habit of saying yes to too many side engineering projects even when busy. Phrasing differences ('frequently', 'she admits') match the evidence and introduce no new claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 13,
+      "category": 92,
+      "question": "After D18:17 but before D30:20, what would someone believe is currently true about Jolene's situation regarding how often she overcommits to extra projects?",
+      "gold_answer": "Jolene is trying to do the opposite by being strict about not taking on any extra projects so she does not overcommit.",
+      "evidence_ids": [
+        "D18:17"
+      ],
+      "evidence_text": "D18:17 Jolene: I'm trying the opposite now—I've been strict about not taking on any extra projects so I don't overcommit at all.",
+      "model_answer": "They would believe Jolene is being strict about not taking on extra projects and so is not overcommitting right now.",
+      "score": 4,
+      "judge_missing": "Doesn't explicitly state she's 'trying to do the opposite' (i.e., reversing previous behavior).",
+      "judge_extra": "Asserts she 'is not overcommitting right now' (claims current success rather than just trying).",
+      "judge_explanation": "The model captures that Jolene is being strict about not taking extra projects, matching the GOLD. It omits the nuance that she's 'trying to do the opposite' of past behavior and adds the stronger claim that she is definitively not overcommitting right now, which is a minor extra assertion.",
+      "judge_raw": "{\"score\":4,\"missing\":\"Doesn't explicitly state she's 'trying to do the opposite' (i.e., reversing previous behavior).\",\"extra\":\"Asserts she 'is not overcommitting right now' (claims current success rather than just trying).\",\"explanation\":\"The model captures that Jolene is being strict about not taking extra projects, matching the GOLD. It omits the nuance that she's 'trying to do the opposite' of past behavior and adds the stronger claim that she is definitively not overcommitting right now, which is a minor extra assertion.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 14,
+      "category": 93,
+      "question": "Right after D30:20, how would a reader now describe Jolene's situation regarding how often she overcommits to extra projects?",
+      "gold_answer": "Jolene still tends to overcommit by saying yes to almost everything and only later realizing she is juggling too much.",
+      "evidence_ids": [
+        "D30:20"
+      ],
+      "evidence_text": "D30:20 Jolene: Realistically though, I still tend to overcommit in all areas of life—I say yes to almost everything and only later realize I'm juggling too much.",
+      "model_answer": "She frequently overcommits, saying yes to almost everything and taking on too many extra projects.",
+      "score": 3,
+      "judge_missing": "That she only later realizes she is juggling too much (the timing/realization aspect).",
+      "judge_extra": "Saying she is taking on \"extra projects\" (GOLD does not specify \"projects\").",
+      "judge_explanation": "The model paraphrases the core idea that Jolene frequently overcommits and says yes to almost everything, but it omits the GOLD's detail that she only later realizes she's juggling too much. It also introduces \"extra projects,\" a specificity not present in the GOLD.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That she only later realizes she is juggling too much (the timing/realization aspect).\",\"extra\":\"Saying she is taking on \\\"extra projects\\\" (GOLD does not specify \\\"projects\\\").\",\"explanation\":\"The model paraphrases the core idea that Jolene frequently overcommits and says yes to almost everything, but it omits the GOLD's detail that she only later realizes she's juggling too much. It also introduces \\\"extra projects,\\\" a specificity not present in the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 15,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Jolene's situation regarding how often she overcommits to extra projects?",
+      "gold_answer": "Jolene still tends to overcommit by saying yes to almost everything and only later realizing she is juggling too much.",
+      "evidence_ids": [
+        "D30:20"
+      ],
+      "evidence_text": "D30:20 Jolene: Realistically though, I still tend to overcommit in all areas of life—I say yes to almost everything and only later realize I'm juggling too much.",
+      "model_answer": "She still tends to overcommit to extra projects, saying yes to almost everything and later realizing she's juggling too much.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer restates the GOLD content verbatim in meaning: Jolene still overcommits, says yes to almost everything, and later realizes she's juggling too much. There are no missing key facts or added claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer restates the GOLD content verbatim in meaning: Jolene still overcommits, says yes to almost everything, and later realizes she's juggling too much. There are no missing key facts or added claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 16,
+      "category": 91,
+      "question": "After reading up to D6:17 but before reaching D15:40, what would a careful reader think about Jolene's situation regarding whether she is a morning person or a night owl?",
+      "gold_answer": "Jolene is not a morning person at all and prefers late-night hangouts and project work over early starts.",
+      "evidence_ids": [
+        "D6:17"
+      ],
+      "evidence_text": "D6:17 Jolene: P.S. I'm totally not a morning person at all—late-night hangouts and project work suit me way better than early starts.",
+      "model_answer": "A careful reader would think Jolene is not a morning person and tends to be a night owl.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model's reply accurately captures the GOLD meaning: Jolene is not a morning person and is a night owl (implying preference for late-night activities). It neither adds new claims nor omits key information.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model's reply accurately captures the GOLD meaning: Jolene is not a morning person and is a night owl (implying preference for late-night activities). It neither adds new claims nor omits key information.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 17,
+      "category": 92,
+      "question": "After D15:40 but before D23:33, what would someone believe is currently true about Jolene's situation regarding whether she is a morning person or a night owl?",
+      "gold_answer": "Jolene has turned into a morning person lately and enjoys getting up early for runs and project work.",
+      "evidence_ids": [
+        "D15:40"
+      ],
+      "evidence_text": "D15:40 Jolene: Funny thing is, I've actually turned into such a morning person lately—I love getting up early for runs and project work now.",
+      "model_answer": "They would believe Jolene is currently a morning person who enjoys getting up early for runs and project work.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer matches the GOLD exactly in content and meaning: it states Jolene has become a morning person and enjoys getting up early for runs and project work. There are no omitted facts or added claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer matches the GOLD exactly in content and meaning: it states Jolene has become a morning person and enjoys getting up early for runs and project work. There are no omitted facts or added claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 18,
+      "category": 93,
+      "question": "Right after D23:33, how would a reader now describe Jolene's situation regarding whether she is a morning person or a night owl?",
+      "gold_answer": "Jolene is back to being a total night owl and not a morning person at all.",
+      "evidence_ids": [
+        "D23:33"
+      ],
+      "evidence_text": "D23:33 Jolene: And honestly I'm back to being a total night owl—not a morning person at all, no matter how many routines I try.",
+      "model_answer": "Jolene is a night owl and not a morning person.",
+      "score": 4,
+      "judge_missing": "The model omits 'back to' (the return to that state) and the intensifiers 'total'/'at all'.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model conveys the core fact that Jolene is a night owl and not a morning person, matching the GOLD. It omits the nuance that she has 'returned' to that state and the stronger emphasis ('total', 'at all'), so it's a minor omission.",
+      "judge_raw": "{\"score\":4,\"missing\":\"The model omits 'back to' (the return to that state) and the intensifiers 'total'/'at all'.\",\"extra\":\"NONE\",\"explanation\":\"The model conveys the core fact that Jolene is a night owl and not a morning person, matching the GOLD. It omits the nuance that she has 'returned' to that state and the stronger emphasis ('total', 'at all'), so it's a minor omission.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 19,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Jolene's situation regarding whether she is a morning person or a night owl?",
+      "gold_answer": "Jolene is back to being a total night owl and not a morning person at all.",
+      "evidence_ids": [
+        "D23:33"
+      ],
+      "evidence_text": "D23:33 Jolene: And honestly I'm back to being a total night owl—not a morning person at all, no matter how many routines I try.",
+      "model_answer": "Jolene is currently a night owl and not a morning person.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer matches the GOLD exactly in meaning: it states Jolene is a night owl and not a morning person. There are no omissions or added claims, so it qualifies as a perfect match.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer matches the GOLD exactly in meaning: it states Jolene is a night owl and not a morning person. There are no omissions or added claims, so it qualifies as a perfect match.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 20,
+      "category": 91,
+      "question": "After reading up to D8:24 but before reaching D20:27, what would a careful reader think about Jolene's situation regarding how actively she takes care of her plants?",
+      "gold_answer": "When she is not swamped, Jolene enjoys tending different plants around her apartment and balcony, and caring for greenery calms her.",
+      "evidence_ids": [
+        "D8:24"
+      ],
+      "evidence_text": "D8:24 Jolene: Oh, and when I'm not swamped, I really enjoy tending different little plants around the apartment and balcony—taking care of greenery always calms me.",
+      "model_answer": "She enjoys tending small apartment and balcony plants and takes care of them when she has free time, implying she cares for them but only sporadically when she's not swamped.",
+      "score": 3,
+      "judge_missing": "That caring for greenery calms her (the calming effect is not mentioned).",
+      "judge_extra": "Implies she cares for them only 'sporadically' (an added inference beyond the GOLD).",
+      "judge_explanation": "The model captures that Jolene enjoys tending apartment/balcony plants and that she does so when not swamped, matching the GOLD. However it omits the GOLD's point that caring for greenery calms her and adds an extra inference that her care is 'sporadic,' so it earns a middle score.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That caring for greenery calms her (the calming effect is not mentioned).\",\"extra\":\"Implies she cares for them only 'sporadically' (an added inference beyond the GOLD).\",\"explanation\":\"The model captures that Jolene enjoys tending apartment/balcony plants and that she does so when not swamped, matching the GOLD. However it omits the GOLD's point that caring for greenery calms her and adds an extra inference that her care is 'sporadic,' so it earns a middle score.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 21,
+      "category": 92,
+      "question": "After D20:27 but before D29:35, what would someone believe is currently true about Jolene's situation regarding how actively she takes care of her plants?",
+      "gold_answer": "Jolene has stopped caring for her plants for a while because she could not keep up with them this year.",
+      "evidence_ids": [
+        "D20:27"
+      ],
+      "evidence_text": "D20:27 Jolene: I wish I still had the energy for plants though—this year I let nearly all my little balcony plants die because I couldn't keep up, so I stopped caring for them for a while.",
+      "model_answer": "They'd believe Jolene had recently gotten a new plant and was beginning to care for it again after having let most of her balcony plants die.",
+      "score": 0,
+      "judge_missing": "That Jolene stopped caring for her balcony plants for a while this year because she couldn't keep up, and as a result nearly all of them died.",
+      "judge_extra": "That she had recently gotten a new plant and was beginning to care for it again.",
+      "judge_explanation": "The model answer directly contradicts the GOLD by asserting she’s begun caring for a new plant again, whereas the GOLD states she stopped caring for her plants for a while and most died; it omits that she ceased care and adds the unsupported claim of a new/renewed effort.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That Jolene stopped caring for her balcony plants for a while this year because she couldn't keep up, and as a result nearly all of them died.\",\"extra\":\"That she had recently gotten a new plant and was beginning to care for it again.\",\"explanation\":\"The model answer directly contradicts the GOLD by asserting she’s begun caring for a new plant again, whereas the GOLD states she stopped caring for her plants for a while and most died; it omits that she ceased care and adds the unsupported claim of a new/renewed effort.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 22,
+      "category": 93,
+      "question": "Right after D29:35, how would a reader now describe Jolene's situation regarding how actively she takes care of her plants?",
+      "gold_answer": "Jolene is slowly rebuilding a small herb garden on her balcony and taking care of a few pots every weekend again.",
+      "evidence_ids": [
+        "D29:35"
+      ],
+      "evidence_text": "D29:35 Jolene: In the meantime, I'm slowly rebuilding a tiny herb garden on my balcony again, just a few pots I take care of every weekend.",
+      "model_answer": "She’s slowly rebuilding a tiny herb garden on her balcony and is actively tending a few pots on a weekly basis (every weekend).",
+      "score": 3,
+      "judge_missing": "The model omits that she is doing this 'again' (i.e., resuming the activity).",
+      "judge_extra": "The model adds that she is 'actively' tending the pots, which is an extra characterization not in the GOLD.",
+      "judge_explanation": "The model matches the core content (rebuilding a small/tiny herb garden and caring for a few pots every weekend) but omits the GOLD's explicit 'again' (resuming the activity) and adds the extra descriptor 'actively.' These are minor but count as a missing key detail and a minor extra claim, so score 3.",
+      "judge_raw": "{\"score\":3,\"missing\":\"The model omits that she is doing this 'again' (i.e., resuming the activity).\",\"extra\":\"The model adds that she is 'actively' tending the pots, which is an extra characterization not in the GOLD.\",\"explanation\":\"The model matches the core content (rebuilding a small/tiny herb garden and caring for a few pots every weekend) but omits the GOLD's explicit 'again' (resuming the activity) and adds the extra descriptor 'actively.' These are minor but count as a missing key detail and a minor extra claim, so score 3.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 23,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Jolene's situation regarding how actively she takes care of her plants?",
+      "gold_answer": "Jolene is slowly rebuilding a small herb garden on her balcony and taking care of a few pots every weekend again.",
+      "evidence_ids": [
+        "D29:35"
+      ],
+      "evidence_text": "D29:35 Jolene: In the meantime, I'm slowly rebuilding a tiny herb garden on my balcony again, just a few pots I take care of every weekend.",
+      "model_answer": "She's slowly rebuilding a tiny herb garden and now cares for a few balcony pots every weekend.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the GOLD meaning exactly: Jolene is slowly rebuilding a small/tiny herb garden on her balcony and cares for a few pots every weekend. No key details are missing and no extra claims were added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the GOLD meaning exactly: Jolene is slowly rebuilding a small/tiny herb garden on her balcony and cares for a few pots every weekend. No key details are missing and no extra claims were added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 24,
+      "category": 91,
+      "question": "After reading up to D9:21 but before reaching D16:21, what would a careful reader think about Jolene's situation regarding whether she is volunteering to tutor kids?",
+      "gold_answer": "When things are not hectic, Jolene loves volunteering to tutor kids in science and math at community centers.",
+      "evidence_ids": [
+        "D9:21"
+      ],
+      "evidence_text": "D9:21 Jolene: Oh, and when things aren't so hectic, I love volunteering to help kids with science and math at different community centers around town.",
+      "model_answer": "She volunteers to help kids with science and math at community centers when things aren’t too hectic.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer restates the gold answer with equivalent meaning and detail: that Jolene volunteers to help kids with science and math at community centers when things are not hectic. There are no added claims or omissions.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer restates the gold answer with equivalent meaning and detail: that Jolene volunteers to help kids with science and math at community centers when things are not hectic. There are no added claims or omissions.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 25,
+      "category": 92,
+      "question": "After D16:21 but before D27:14, what would someone believe is currently true about Jolene's situation regarding whether she is volunteering to tutor kids?",
+      "gold_answer": "Jolene has had to stop all her volunteering with kids for now because she does not have time this year.",
+      "evidence_ids": [
+        "D16:21"
+      ],
+      "evidence_text": "D16:21 Jolene: By the way, I had to stop all my volunteering with kids for now—I just don't have any time for it this year.",
+      "model_answer": "They would believe Jolene is not volunteering to tutor kids right now.",
+      "score": 4,
+      "judge_missing": "That she 'had to stop all her volunteering with kids for now' specifically because she does not have time this year.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model correctly states Jolene is not volunteering right now, matching the core of the GOLD. It omits the stated reason (she doesn't have time this year / had to stop all volunteering), which is a minor but notable omission, and adds no extra claims.",
+      "judge_raw": "{\"score\":4,\"missing\":\"That she 'had to stop all her volunteering with kids for now' specifically because she does not have time this year.\",\"extra\":\"NONE\",\"explanation\":\"The model correctly states Jolene is not volunteering right now, matching the core of the GOLD. It omits the stated reason (she doesn't have time this year / had to stop all volunteering), which is a minor but notable omission, and adds no extra claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 26,
+      "category": 93,
+      "question": "Right after D27:14, how would a reader now describe Jolene's situation regarding whether she is volunteering to tutor kids?",
+      "gold_answer": "Jolene has signed up again to tutor a small group of middle schoolers at a community center and is back helping kids directly.",
+      "evidence_ids": [
+        "D27:14"
+      ],
+      "evidence_text": "D27:14 Jolene: I also signed up again to tutor a small group of middle schoolers in STEM every Saturday at the community center—it feels good to be back helping kids directly.",
+      "model_answer": "She has signed up again and is volunteering to tutor a small group of middle schoolers in STEM every Saturday at the community center.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Adds extra specifics not in GOLD: \"in STEM\" and \"every Saturday\" (timing/subject detail not mentioned in GOLD).",
+      "judge_explanation": "The model captures the key fact that Jolene signed up again to tutor a small group of middle schoolers at the community center and is helping kids directly. It introduces minor extra specifics (subject and schedule) that are not present in the GOLD, so it's basically correct but not a perfect match.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Adds extra specifics not in GOLD: \\\"in STEM\\\" and \\\"every Saturday\\\" (timing/subject detail not mentioned in GOLD).\",\"explanation\":\"The model captures the key fact that Jolene signed up again to tutor a small group of middle schoolers at the community center and is helping kids directly. It introduces minor extra specifics (subject and schedule) that are not present in the GOLD, so it's basically correct but not a perfect match.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 27,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Jolene's situation regarding whether she is volunteering to tutor kids?",
+      "gold_answer": "Jolene has signed up again to tutor a small group of middle schoolers at a community center and is back helping kids directly.",
+      "evidence_ids": [
+        "D27:14"
+      ],
+      "evidence_text": "D27:14 Jolene: I also signed up again to tutor a small group of middle schoolers in STEM every Saturday at the community center—it feels good to be back helping kids directly.",
+      "model_answer": "She signed up again and is tutoring a small group of middle schoolers in STEM every Saturday at the community center.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Says 'in STEM every Saturday' (the GOLD does not specify subject or schedule).",
+      "judge_explanation": "The model conveys the same core fact — Jolene signed up again and is tutoring a small group at the community center — but it adds subject and weekly-schedule details ('in STEM every Saturday') that are not present in the GOLD, so it earns a 4.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Says 'in STEM every Saturday' (the GOLD does not specify subject or schedule).\",\"explanation\":\"The model conveys the same core fact — Jolene signed up again and is tutoring a small group at the community center — but it adds subject and weekly-schedule details ('in STEM every Saturday') that are not present in the GOLD, so it earns a 4.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 28,
+      "category": 91,
+      "question": "After reading up to D10:25 but before reaching D22:31, what would a careful reader think about Deborah's situation regarding whether she drinks coffee or prefers herbal tea?",
+      "gold_answer": "Deborah does not drink coffee at all anymore and prefers herbal tea when she is planning her day or grading.",
+      "evidence_ids": [
+        "D10:25"
+      ],
+      "evidence_text": "D10:25 Deborah: By the way, I don't drink coffee at all anymore—herbal tea is my go-to when I'm planning my day or grading.",
+      "model_answer": "She doesn't drink coffee anymore and now prefers herbal tea.",
+      "score": 4,
+      "judge_missing": "The specific contexts that she prefers herbal tea—i.e., when she is planning her day or grading.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model captures the main points that Deborah no longer drinks coffee and prefers herbal tea, but it omits the qualifying detail that the herbal tea preference is mentioned specifically when she is planning her day or grading.",
+      "judge_raw": "{\"score\":4,\"missing\":\"The specific contexts that she prefers herbal tea—i.e., when she is planning her day or grading.\",\"extra\":\"NONE\",\"explanation\":\"The model captures the main points that Deborah no longer drinks coffee and prefers herbal tea, but it omits the qualifying detail that the herbal tea preference is mentioned specifically when she is planning her day or grading.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 29,
+      "category": 92,
+      "question": "After D22:31 but before D28:31, what would someone believe is currently true about Deborah's situation regarding whether she drinks coffee or prefers herbal tea?",
+      "gold_answer": "Deborah basically runs on coffee these days and needs at least one cup every morning to get going.",
+      "evidence_ids": [
+        "D22:31"
+      ],
+      "evidence_text": "D22:31 Deborah: Between us, I basically run on coffee these days—I need at least one cup every morning just to get going.",
+      "model_answer": "They would believe Deborah basically runs on coffee and needs at least one cup every morning to get going.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same current-state information as the GOLD: Deborah runs on coffee and needs at least one cup each morning to get going. There are no added claims and no omitted key facts, so it matches semantically.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same current-state information as the GOLD: Deborah runs on coffee and needs at least one cup each morning to get going. There are no added claims and no omitted key facts, so it matches semantically.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 30,
+      "category": 93,
+      "question": "Right after D28:31, how would a reader now describe Deborah's situation regarding whether she drinks coffee or prefers herbal tea?",
+      "gold_answer": "Deborah is back to not drinking coffee at all and just sips herbal tea when planning or winding down in the evenings.",
+      "evidence_ids": [
+        "D28:31"
+      ],
+      "evidence_text": "D28:31 Deborah: I'm back to not drinking coffee at all and just sipping herbal tea when I'm planning or winding down in the evenings.",
+      "model_answer": "Deborah no longer drinks coffee and now drinks herbal tea instead, especially when planning or winding down in the evenings.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer matches the gold exactly in meaning: Deborah doesn't drink coffee and sips/drinks herbal tea when planning or winding down in the evenings. No key details are missing and no extra claims are introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer matches the gold exactly in meaning: Deborah doesn't drink coffee and sips/drinks herbal tea when planning or winding down in the evenings. No key details are missing and no extra claims are introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 31,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Deborah's situation regarding whether she drinks coffee or prefers herbal tea?",
+      "gold_answer": "Deborah is back to not drinking coffee at all and just sips herbal tea when planning or winding down in the evenings.",
+      "evidence_ids": [
+        "D28:31"
+      ],
+      "evidence_text": "D28:31 Deborah: I'm back to not drinking coffee at all and just sipping herbal tea when I'm planning or winding down in the evenings.",
+      "model_answer": "Deborah says she doesn't drink coffee anymore and is sipping herbal tea instead.",
+      "score": 3,
+      "judge_missing": "That this is a return to not drinking coffee and, importantly, that she sips herbal tea specifically when planning or winding down in the evenings.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model correctly states she doesn't drink coffee and drinks herbal tea instead, but it omits the timing/context (planning or winding down in the evenings) and the nuance that she is 'back to' not drinking coffee. Therefore it's mostly correct but missing a key detail.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That this is a return to not drinking coffee and, importantly, that she sips herbal tea specifically when planning or winding down in the evenings.\",\"extra\":\"NONE\",\"explanation\":\"The model correctly states she doesn't drink coffee and drinks herbal tea instead, but it omits the timing/context (planning or winding down in the evenings) and the nuance that she is 'back to' not drinking coffee. Therefore it's mostly correct but missing a key detail.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 32,
+      "category": 91,
+      "question": "After reading up to D11:15 but before reaching D19:25, what would a careful reader think about Deborah's situation regarding whether she is mentoring local high school students?",
+      "gold_answer": "Deborah tries to mentor local high school students in physics whenever she can.",
+      "evidence_ids": [
+        "D11:15"
+      ],
+      "evidence_text": "D11:15 Deborah: On top of my classes, I also try to mentor local high school students in physics whenever I can.",
+      "model_answer": "A careful reader would think Deborah mentors local high school students in physics whenever she can — i.e., she mentors them occasionally as her schedule allows.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the GOLD exactly — Deborah mentors local high school students in physics when she can — and only paraphrases 'whenever she can' as 'occasionally as her schedule allows,' which matches the original meaning and adds no new claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the GOLD exactly — Deborah mentors local high school students in physics when she can — and only paraphrases 'whenever she can' as 'occasionally as her schedule allows,' which matches the original meaning and adds no new claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 33,
+      "category": 92,
+      "question": "After D19:25 but before D25:21, what would someone believe is currently true about Deborah's situation regarding whether she is mentoring local high school students?",
+      "gold_answer": "Deborah has had to pause all her mentoring for high school students because her schedule is overflowing.",
+      "evidence_ids": [
+        "D19:25"
+      ],
+      "evidence_text": "D19:25 Deborah: This semester I actually had to pause all my mentoring for high school students because my schedule is overflowing.",
+      "model_answer": "She has paused all her mentoring of local high school students and is not currently mentoring them.",
+      "score": 3,
+      "judge_missing": "That her schedule is overflowing (the reason she had to pause mentoring).",
+      "judge_extra": "The word 'local' (says 'local high school students' which GOLD does not state).",
+      "judge_explanation": "The model correctly states she has paused mentoring and is not currently mentoring them, but it omits the key reason given in GOLD (her schedule is overflowing) and introduces an extra detail ('local') that is not in the GOLD. Therefore it is mostly correct but not exact.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That her schedule is overflowing (the reason she had to pause mentoring).\",\"extra\":\"The word 'local' (says 'local high school students' which GOLD does not state).\",\"explanation\":\"The model correctly states she has paused mentoring and is not currently mentoring them, but it omits the key reason given in GOLD (her schedule is overflowing) and introduces an extra detail ('local') that is not in the GOLD. Therefore it is mostly correct but not exact.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 34,
+      "category": 93,
+      "question": "Right after D25:21, how would a reader now describe Deborah's situation regarding whether she is mentoring local high school students?",
+      "gold_answer": "Deborah is again mentoring high schoolers by squeezing in at least one small physics study group every other week.",
+      "evidence_ids": [
+        "D25:21"
+      ],
+      "evidence_text": "D25:21 Deborah: I'm squeezing in at least one small physics study group with a few high schoolers every other week now—it feels good to mentor them again.",
+      "model_answer": "She has resumed mentoring — Deborah is running a small physics study group for high school students every other week.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same meaning as the gold: Deborah has resumed mentoring and is running a small physics study group for high school students every other week. There are no added claims or omitted key details.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same meaning as the gold: Deborah has resumed mentoring and is running a small physics study group for high school students every other week. There are no added claims or omitted key details.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 35,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Deborah's situation regarding whether she is mentoring local high school students?",
+      "gold_answer": "Deborah is again mentoring high schoolers by squeezing in at least one small physics study group every other week.",
+      "evidence_ids": [
+        "D25:21"
+      ],
+      "evidence_text": "D25:21 Deborah: I'm squeezing in at least one small physics study group with a few high schoolers every other week now—it feels good to mentor them again.",
+      "model_answer": "She resumed mentoring: she’s now running at least one small physics study group with a few high school students every other week.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same facts as the GOLD: Deborah has resumed mentoring and is holding at least one small physics study group with a few high school students every other week. There are no added or missing details.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same facts as the GOLD: Deborah has resumed mentoring and is holding at least one small physics study group with a few high school students every other week. There are no added or missing details.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 36,
+      "category": 91,
+      "question": "After reading up to D3:16 but before reaching D14:24, what would a careful reader think about Jolene's situation regarding whether she currently eats spicy ramen as her comfort food?",
+      "gold_answer": "Jolene's forever comfort food is spicy ramen, and when she is stressed or busy she cooks a big bowl at least once a week.",
+      "evidence_ids": [
+        "D3:16"
+      ],
+      "evidence_text": "D3:16 Jolene: Oh, and one random thing before I sign off—my forever comfort food is spicy ramen. Whenever I'm wiped out from classes or projects, I cook a big bowl at least once a week.",
+      "model_answer": "A careful reader would think Jolene currently eats spicy ramen as her comfort food, cooking a big bowl at least once a week.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates both key facts from the GOLD: Jolene's comfort food is spicy ramen and she cooks a big bowl at least once a week when stressed/busy. There are no additional claims and no omitted details, so it matches the GOLD exactly.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates both key facts from the GOLD: Jolene's comfort food is spicy ramen and she cooks a big bowl at least once a week when stressed/busy. There are no additional claims and no omitted details, so it matches the GOLD exactly.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 37,
+      "category": 92,
+      "question": "After D14:24 but before D24:16, what would someone believe is currently true about Jolene's situation regarding whether she currently eats spicy ramen as her comfort food?",
+      "gold_answer": "Jolene has had to give up spicy ramen completely because her stomach cannot handle it anymore, so she avoids it.",
+      "evidence_ids": [
+        "D14:24"
+      ],
+      "evidence_text": "D14:24 Jolene: Also, lately I've had to give up spicy ramen completely—my stomach can't handle it anymore, so I avoid it now.",
+      "model_answer": "They would believe she is not currently eating spicy ramen as her comfort food — she had to give it up and is avoiding it.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer semantically matches the GOLD: both state Jolene has had to give up spicy ramen and is avoiding it, so she is not currently eating it. No key facts are missing or added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer semantically matches the GOLD: both state Jolene has had to give up spicy ramen and is avoiding it, so she is not currently eating it. No key facts are missing or added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 38,
+      "category": 93,
+      "question": "Right after D24:16, how would a reader now describe Jolene's situation regarding whether she currently eats spicy ramen as her comfort food?",
+      "gold_answer": "Jolene plans to go back to making a big pot of spicy ramen every week after finals because it is still her ultimate comfort food.",
+      "evidence_ids": [
+        "D24:16"
+      ],
+      "evidence_text": "D24:16 Jolene: Once finals are done I'm totally going back to my little ritual of making a big bowl of spicy ramen every week—it's still my ultimate comfort food.",
+      "model_answer": "She is not currently eating spicy ramen regularly; she says it’s her ultimate comfort food and plans to resume making a big bowl weekly once finals are over.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model accurately conveys that Jolene intends to resume making spicy ramen weekly after finals and that it remains her comfort food. The brief statement that she is not currently eating it regularly is a fair inference from 'go back' and does not add incorrect information.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model accurately conveys that Jolene intends to resume making spicy ramen weekly after finals and that it remains her comfort food. The brief statement that she is not currently eating it regularly is a fair inference from 'go back' and does not add incorrect information.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 39,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Jolene's situation regarding whether she currently eats spicy ramen as her comfort food?",
+      "gold_answer": "Jolene plans to go back to making a big pot of spicy ramen every week after finals because it is still her ultimate comfort food.",
+      "evidence_ids": [
+        "D24:16"
+      ],
+      "evidence_text": "D24:16 Jolene: Once finals are done I'm totally going back to my little ritual of making a big bowl of spicy ramen every week—it's still my ultimate comfort food.",
+      "model_answer": "She is not currently eating spicy ramen; she plans to go back to making a big bowl weekly once her finals are done.",
+      "score": 4,
+      "judge_missing": "That spicy ramen is still her ultimate comfort food (explicitly stated in GOLD).",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model correctly states she is not currently eating spicy ramen and that she plans to resume making it weekly after finals, matching the GOLD's main points. It omits the explicit reason that spicy ramen is still her ultimate comfort food, a minor missing detail.",
+      "judge_raw": "{\"score\":4,\"missing\":\"That spicy ramen is still her ultimate comfort food (explicitly stated in GOLD).\",\"extra\":\"NONE\",\"explanation\":\"The model correctly states she is not currently eating spicy ramen and that she plans to resume making it weekly after finals, matching the GOLD's main points. It omits the explicit reason that spicy ramen is still her ultimate comfort food, a minor missing detail.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    }
+  ]
+}

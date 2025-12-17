@@ -1,0 +1,787 @@
+{
+  "sample_id": "conv-44",
+  "metrics": {
+    "overall_attempted_n": 40,
+    "overall_scored_n": 40,
+    "overall_parse_fail_n": 0,
+    "overall_mean_score": 4.4,
+    "overall_prop_ge_4": 0.825,
+    "overall_prop_5": 0.675,
+    "per_category": {
+      "91": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 4.7,
+        "prop_ge_4": 0.9,
+        "prop_5": 0.8
+      },
+      "92": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 3.7,
+        "prop_ge_4": 0.6,
+        "prop_5": 0.5
+      },
+      "93": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 4.6,
+        "prop_ge_4": 0.9,
+        "prop_5": 0.7
+      },
+      "94": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 4.6,
+        "prop_ge_4": 0.9,
+        "prop_5": 0.7
+      }
+    }
+  },
+  "results": [
+    {
+      "index": 0,
+      "category": 91,
+      "question": "Considering the conversation up to just after D2:27 but before D9:28, what would you say about Andrew’s situation regarding sunday long run routine?",
+      "gold_answer": "Andrew has a routine of going for a long run every Sunday morning before doing anything else.",
+      "evidence_ids": [
+        "D2:27"
+      ],
+      "evidence_text": "D2:27 Andrew: By the way, I’ve gotten into a routine of going for a long run every Sunday morning before doing anything else. It really clears my head for the week.",
+      "model_answer": "He's gotten into a routine of going for a long run every Sunday morning before doing anything else, which he says clears his head for the week.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "States that Andrew says the run \"clears his head for the week,\" which is not included in the GOLD answer.",
+      "judge_explanation": "The model restates the GOLD answer accurately but adds the additional detail that the run \"clears his head for the week.\" That extra information (though supported by the evidence) is not in the GOLD, so the response is otherwise correct but penalized one point for the extra claim.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"States that Andrew says the run \\\"clears his head for the week,\\\" which is not included in the GOLD answer.\",\"explanation\":\"The model restates the GOLD answer accurately but adds the additional detail that the run \\\"clears his head for the week.\\\" That extra information (though supported by the evidence) is not in the GOLD, so the response is otherwise correct but penalized one point for the extra claim.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 1,
+      "category": 92,
+      "question": "After reading through D9:28 but before D18:23, how would you describe Andrew’s status regarding sunday long run routine at that point in the conversation?",
+      "gold_answer": "Andrew has let his Sunday long-run habit slip and hasn’t gone on one in quite a while.",
+      "evidence_ids": [
+        "D9:28"
+      ],
+      "evidence_text": "D9:28 Andrew: With how busy things have been lately, I actually let that Sunday long‑run habit slip and haven’t gone in quite a while.",
+      "model_answer": "He had let his Sunday long‑run habit slip and hadn't been doing it for quite a while.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer restates the GOLD meaning exactly: Andrew let his Sunday long‑run habit slip and hasn't done one in quite a while. There are no missing details or added claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer restates the GOLD meaning exactly: Andrew let his Sunday long‑run habit slip and hasn't done one in quite a while. There are no missing details or added claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 2,
+      "category": 93,
+      "question": "Right after D18:23, what is the updated status of Andrew’s sunday long run routine?",
+      "gold_answer": "Andrew is back to doing a long run every Sunday morning again.",
+      "evidence_ids": [
+        "D18:23"
+      ],
+      "evidence_text": "D18:23 Andrew: I finally got my act together again and I’m back to doing a long run every Sunday morning. It feels good to have that routine back.",
+      "model_answer": "He’s back to doing a long run every Sunday morning — his Sunday long‑run routine has been restored.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer states the same fact as the gold: Andrew is back to doing a long run every Sunday morning. It adds no extra claims and omits no key information, so it perfectly matches the GOLD.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer states the same fact as the gold: Andrew is back to doing a long run every Sunday morning. It adds no extra claims and omits no key information, so it perfectly matches the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 3,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Andrew’s sunday long run routine?",
+      "gold_answer": "Andrew is back to doing a long run every Sunday morning again.",
+      "evidence_ids": [
+        "D2:27",
+        "D9:28",
+        "D18:23"
+      ],
+      "evidence_text": "D2:27 Andrew: By the way, I’ve gotten into a routine of going for a long run every Sunday morning before doing anything else. It really clears my head for the week.\nD9:28 Andrew: With how busy things have been lately, I actually let that Sunday long‑run habit slip and haven’t gone in quite a while.\nD18:23 Andrew: I finally got my act together again and I’m back to doing a long run every Sunday morning. It feels good to have that routine back.",
+      "model_answer": "Andrew is back to doing a long run every Sunday morning as part of his routine.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same fact as the gold: Andrew has resumed his Sunday long run routine. The added phrase \"as part of his routine\" is a restatement, not an extra factual claim, so it matches the gold exactly.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same fact as the gold: Andrew has resumed his Sunday long run routine. The added phrase \\\"as part of his routine\\\" is a restatement, not an extra factual claim, so it matches the gold exactly.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 4,
+      "category": 91,
+      "question": "Considering the conversation up to just after D3:32 but before D11:39, what would you say about Andrew’s situation regarding monthly volunteering at the animal shelter?",
+      "gold_answer": "Andrew and his girlfriend committed to volunteering at the animal shelter once a month.",
+      "evidence_ids": [
+        "D3:32"
+      ],
+      "evidence_text": "D3:32 Andrew: My girlfriend and I also signed up to volunteer at the animal shelter once a month. It felt like a nice concrete commitment we could keep.",
+      "model_answer": "He and his girlfriend signed up to volunteer at the animal shelter once a month.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer precisely matches the GOLD: both state that Andrew and his girlfriend signed up/committed to volunteer at the animal shelter once a month. There are no missing details or added claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer precisely matches the GOLD: both state that Andrew and his girlfriend signed up/committed to volunteer at the animal shelter once a month. There are no missing details or added claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 5,
+      "category": 92,
+      "question": "After reading through D11:39 but before D21:19, how would you describe Andrew’s status regarding monthly volunteering at the animal shelter at that point in the conversation?",
+      "gold_answer": "Andrew and his girlfriend let their monthly volunteering at the animal shelter slide and stopped going for a while.",
+      "evidence_ids": [
+        "D11:39"
+      ],
+      "evidence_text": "D11:39 Andrew: For a bit there, we actually stopped showing up to the shelter shifts and let that monthly volunteering slide, which I felt pretty bad about.",
+      "model_answer": "He had let the monthly volunteering lapse for a while but had since resumed volunteering at the shelter, though the original monthly commitment had not yet been fully reinstated.",
+      "score": 2,
+      "judge_missing": "That his girlfriend also let their monthly volunteering slide and they stopped going for a while.",
+      "judge_extra": "Claims that he had since resumed volunteering and that the original monthly commitment had not yet been fully reinstated.",
+      "judge_explanation": "The model correctly states Andrew let the monthly volunteering lapse, but it omits that his girlfriend did so too (a key detail in the GOLD). It also adds unsupported claims that he had resumed volunteering and that the commitment was only partially reinstated, which are not present in the GOLD. These are significant omissions/extras, so the answer is only partially correct.",
+      "judge_raw": "{\"score\":2,\"missing\":\"That his girlfriend also let their monthly volunteering slide and they stopped going for a while.\",\"extra\":\"Claims that he had since resumed volunteering and that the original monthly commitment had not yet been fully reinstated.\",\"explanation\":\"The model correctly states Andrew let the monthly volunteering lapse, but it omits that his girlfriend did so too (a key detail in the GOLD). It also adds unsupported claims that he had resumed volunteering and that the commitment was only partially reinstated, which are not present in the GOLD. These are significant omissions/extras, so the answer is only partially correct.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 6,
+      "category": 93,
+      "question": "Right after D21:19, what is the updated status of Andrew’s monthly volunteering at the animal shelter?",
+      "gold_answer": "Andrew and his girlfriend are back to volunteering at the animal shelter once a month like they originally promised.",
+      "evidence_ids": [
+        "D21:19"
+      ],
+      "evidence_text": "D21:19 Andrew: We talked it through and now we’re back to our plan of volunteering at the shelter once a month like we originally promised ourselves.",
+      "model_answer": "He's back to volunteering at the animal shelter once a month, as they resumed their original plan.",
+      "score": 4,
+      "judge_missing": "Explicit mention that it’s Andrew and his girlfriend (the partner) who are volunteering together once a month.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model correctly states they resumed monthly volunteering at the animal shelter and that they returned to their original plan. It omits the explicit mention that the other person is Andrew’s girlfriend (only uses 'they'), so it is a minor omission but otherwise matches the GOLD.",
+      "judge_raw": "{\"score\":4,\"missing\":\"Explicit mention that it’s Andrew and his girlfriend (the partner) who are volunteering together once a month.\",\"extra\":\"NONE\",\"explanation\":\"The model correctly states they resumed monthly volunteering at the animal shelter and that they returned to their original plan. It omits the explicit mention that the other person is Andrew’s girlfriend (only uses 'they'), so it is a minor omission but otherwise matches the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 7,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Andrew’s monthly volunteering at the animal shelter?",
+      "gold_answer": "Andrew and his girlfriend are back to volunteering at the animal shelter once a month like they originally promised.",
+      "evidence_ids": [
+        "D3:32",
+        "D11:39",
+        "D21:19"
+      ],
+      "evidence_text": "D3:32 Andrew: My girlfriend and I also signed up to volunteer at the animal shelter once a month. It felt like a nice concrete commitment we could keep.\nD11:39 Andrew: For a bit there, we actually stopped showing up to the shelter shifts and let that monthly volunteering slide, which I felt pretty bad about.\nD21:19 Andrew: We talked it through and now we’re back to our plan of volunteering at the shelter once a month like we originally promised ourselves.",
+      "model_answer": "He and his girlfriend are back to their plan of volunteering at the animal shelter once a month.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer restates the GOLD exactly: Andrew and his girlfriend have resumed monthly volunteering at the animal shelter. It contains no additional claims and omits no key details from the GOLD.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer restates the GOLD exactly: Andrew and his girlfriend have resumed monthly volunteering at the animal shelter. It contains no additional claims and omits no key details from the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 8,
+      "category": 91,
+      "question": "Considering the conversation up to just after D4:31 but before D10:30, what would you say about Andrew’s situation regarding cooking dinner at home instead of eating out?",
+      "gold_answer": "Andrew is trying to be healthier and save money by cooking dinner at home most nights instead of eating out.",
+      "evidence_ids": [
+        "D4:31"
+      ],
+      "evidence_text": "D4:31 Andrew: Lately I’ve been trying to be healthier and save money, so most nights I cook dinner at home instead of eating out.",
+      "model_answer": "He's been trying to cook dinner at home most nights to be healthier and save money.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same facts as the gold: Andrew is trying to be healthier and save money by cooking dinner at home most nights. There are no missing details or additional claims, so it matches perfectly.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same facts as the gold: Andrew is trying to be healthier and save money by cooking dinner at home most nights. There are no missing details or additional claims, so it matches perfectly.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 9,
+      "category": 92,
+      "question": "After reading through D10:30 but before D19:31, how would you describe Andrew’s status regarding cooking dinner at home instead of eating out at that point in the conversation?",
+      "gold_answer": "Andrew slipped back into ordering takeout almost every night, undoing that cook-at-home habit.",
+      "evidence_ids": [
+        "D10:30"
+      ],
+      "evidence_text": "D10:30 Andrew: Then work got hectic and I slipped into ordering takeout almost every night, totally undoing that cook‑at‑home habit for a while.",
+      "model_answer": "He had slipped back into ordering takeout almost every night, undoing his cook‑at‑home habit.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the GOLD content verbatim in meaning: Andrew had returned to ordering takeout almost every night, undoing his cook-at-home habit. No key details are missing and no extra information is introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the GOLD content verbatim in meaning: Andrew had returned to ordering takeout almost every night, undoing his cook-at-home habit. No key details are missing and no extra information is introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 10,
+      "category": 93,
+      "question": "Right after D19:31, what is the updated status of Andrew’s cooking dinner at home instead of eating out?",
+      "gold_answer": "Andrew has reset things and is back to cooking dinner at home most nights again.",
+      "evidence_ids": [
+        "D19:31"
+      ],
+      "evidence_text": "D19:31 Andrew: I’ve managed to reset things and now I’m back to cooking dinner at home most nights again, which feels a lot better.",
+      "model_answer": "He’s back to cooking dinner at home most nights again.",
+      "score": 4,
+      "judge_missing": "The statement that Andrew 'has reset things' (i.e., he reset things prior to returning to cooking) is omitted.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer correctly states that he is back to cooking dinner at home most nights, matching the core update. It omits the detail that Andrew 'has reset things,' a minor but explicit part of the GOLD answer, and makes no additional claims.",
+      "judge_raw": "{\"score\":4,\"missing\":\"The statement that Andrew 'has reset things' (i.e., he reset things prior to returning to cooking) is omitted.\",\"extra\":\"NONE\",\"explanation\":\"The model answer correctly states that he is back to cooking dinner at home most nights, matching the core update. It omits the detail that Andrew 'has reset things,' a minor but explicit part of the GOLD answer, and makes no additional claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 11,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Andrew’s cooking dinner at home instead of eating out?",
+      "gold_answer": "Andrew has reset things and is back to cooking dinner at home most nights again.",
+      "evidence_ids": [
+        "D4:31",
+        "D10:30",
+        "D19:31"
+      ],
+      "evidence_text": "D4:31 Andrew: Lately I’ve been trying to be healthier and save money, so most nights I cook dinner at home instead of eating out.\nD10:30 Andrew: Then work got hectic and I slipped into ordering takeout almost every night, totally undoing that cook‑at‑home habit for a while.\nD19:31 Andrew: I’ve managed to reset things and now I’m back to cooking dinner at home most nights again, which feels a lot better.",
+      "model_answer": "He’s mostly back to cooking dinner at home most nights again, but now allows himself to eat out occasionally with friends.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "Claim that he \"allows himself to eat out occasionally with friends.\"",
+      "judge_explanation": "The model captures the main point that Andrew is back to cooking most nights, matching the GOLD. However it adds an unsupported extra detail about occasionally eating out with friends, which is not present in the GOLD or evidence, so the response is penalized accordingly.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"Claim that he \\\"allows himself to eat out occasionally with friends.\\\"\",\"explanation\":\"The model captures the main point that Andrew is back to cooking most nights, matching the GOLD. However it adds an unsupported extra detail about occasionally eating out with friends, which is not present in the GOLD or evidence, so the response is penalized accordingly.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 12,
+      "category": 91,
+      "question": "Considering the conversation up to just after D5:23 but before D12:18, what would you say about Andrew’s situation regarding walking toby twice a day?",
+      "gold_answer": "Andrew protects a routine of walking Toby twice a day, once in the morning and once in the evening, no matter how busy he is.",
+      "evidence_ids": [
+        "D5:23"
+      ],
+      "evidence_text": "D5:23 Andrew: One routine I really try to protect is walking Toby twice a day, once in the morning and once in the evening, no matter how busy I am.",
+      "model_answer": "He’s committed to walking Toby twice a day and tries to protect that routine—morning and evening—no matter how busy he is.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the same facts: Andrew is committed to/protects the routine of walking Toby twice daily, morning and evening, regardless of how busy he is. Wording differences are negligible and convey the same meaning, with no added or omitted information.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the same facts: Andrew is committed to/protects the routine of walking Toby twice daily, morning and evening, regardless of how busy he is. Wording differences are negligible and convey the same meaning, with no added or omitted information.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 13,
+      "category": 92,
+      "question": "After reading through D12:18 but before D20:41, how would you describe Andrew’s status regarding walking toby twice a day at that point in the conversation?",
+      "gold_answer": "Andrew went through a stretch where Toby only got one proper walk a day instead of the two he had promised himself.",
+      "evidence_ids": [
+        "D12:18"
+      ],
+      "evidence_text": "D12:18 Andrew: There was a stretch when I was so wiped after work that some days Toby only got one proper walk instead of the two I promised myself.",
+      "model_answer": "He was not consistently walking Toby twice a day — there were stretches when Toby only got one walk or Andrew missed walks altogether.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "Asserts Andrew \"missed walks altogether,\" which is not stated in the GOLD answer.",
+      "judge_explanation": "The model correctly captures that Andrew was not consistently walking Toby twice daily and that there were stretches with only one walk, matching the GOLD. It includes an extra claim that Andrew sometimes missed walks entirely, which is not in the GOLD, so the answer is rated 3.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"Asserts Andrew \\\"missed walks altogether,\\\" which is not stated in the GOLD answer.\",\"explanation\":\"The model correctly captures that Andrew was not consistently walking Toby twice daily and that there were stretches with only one walk, matching the GOLD. It includes an extra claim that Andrew sometimes missed walks entirely, which is not in the GOLD, so the answer is rated 3.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 14,
+      "category": 93,
+      "question": "Right after D20:41, what is the updated status of Andrew’s walking toby twice a day?",
+      "gold_answer": "Andrew adjusted his schedule so Toby is back to getting two walks a day again, morning and night.",
+      "evidence_ids": [
+        "D20:41"
+      ],
+      "evidence_text": "D20:41 Andrew: I’ve adjusted my schedule a bit, and now I’m back to giving Toby two walks a day again – morning and night, like I always wanted.",
+      "model_answer": "He’s back to giving Toby two walks a day — morning and night.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same updated status as the gold: Andrew is back to giving Toby two walks a day, morning and night. It contains no extra claims and omits no key information relevant to the question.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same updated status as the gold: Andrew is back to giving Toby two walks a day, morning and night. It contains no extra claims and omits no key information relevant to the question.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 15,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Andrew’s walking toby twice a day?",
+      "gold_answer": "Andrew adjusted his schedule so Toby is back to getting two walks a day again, morning and night.",
+      "evidence_ids": [
+        "D5:23",
+        "D12:18",
+        "D20:41"
+      ],
+      "evidence_text": "D5:23 Andrew: One routine I really try to protect is walking Toby twice a day, once in the morning and once in the evening, no matter how busy I am.\nD12:18 Andrew: There was a stretch when I was so wiped after work that some days Toby only got one proper walk instead of the two I promised myself.\nD20:41 Andrew: I’ve adjusted my schedule a bit, and now I’m back to giving Toby two walks a day again – morning and night, like I always wanted.",
+      "model_answer": "He's back to giving Toby two walks a day — morning and night.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer exactly matches the GOLD: it states Andrew adjusted his schedule and is back to giving Toby two walks a day, morning and night. No key details are missing and no extra claims are introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer exactly matches the GOLD: it states Andrew adjusted his schedule and is back to giving Toby two walks a day, morning and night. No key details are missing and no extra claims are introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 16,
+      "category": 91,
+      "question": "Considering the conversation up to just after D6:17 but before D13:17, what would you say about Andrew’s situation regarding working from home versus commuting to the office?",
+      "gold_answer": "Andrew basically always works from home, which he finds super convenient and good for taking dog breaks with Toby.",
+      "evidence_ids": [
+        "D6:17"
+      ],
+      "evidence_text": "D6:17 Andrew: These days I basically always work from home – it’s super convenient and lets me sneak in dog breaks with Toby.",
+      "model_answer": "Andrew is basically working from home most of the time, which lets him take dog breaks with Toby instead of commuting to the office.",
+      "score": 3,
+      "judge_missing": "That Andrew finds working from home \"super convenient\" (the explicit comment about convenience).",
+      "judge_extra": "Saying this lets him take dog breaks \"instead of commuting to the office\" (the explicit contrast to commuting is not stated in the GOLD).",
+      "judge_explanation": "The model captures the main point that Andrew mainly works from home and takes dog breaks with Toby, but it omits the GOLD's explicit remark that he finds it \"super convenient\" and introduces the extra phrasing about avoiding commuting to the office.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That Andrew finds working from home \\\"super convenient\\\" (the explicit comment about convenience).\",\"extra\":\"Saying this lets him take dog breaks \\\"instead of commuting to the office\\\" (the explicit contrast to commuting is not stated in the GOLD).\",\"explanation\":\"The model captures the main point that Andrew mainly works from home and takes dog breaks with Toby, but it omits the GOLD's explicit remark that he finds it \\\"super convenient\\\" and introduces the extra phrasing about avoiding commuting to the office.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 17,
+      "category": 92,
+      "question": "After reading through D13:17 but before D22:14, how would you describe Andrew’s status regarding working from home versus commuting to the office at that point in the conversation?",
+      "gold_answer": "For a while Andrew was commuting into the office most days instead of working from home like he said he would.",
+      "evidence_ids": [
+        "D13:17"
+      ],
+      "evidence_text": "D13:17 Andrew: Ironically, the past few months I’ve been commuting into the office most days instead of staying home like I said I would.",
+      "model_answer": "He had been commuting into the office most days instead of working from home.",
+      "score": 4,
+      "judge_missing": "The phrases \"for a while\" (explicit duration) and \"like he said he would\" (that he had claimed he would work from home).",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model conveys the same core fact — Andrew was commuting into the office most days instead of working from home — but omits the explicit duration \"for a while\" and the note that this contradicted his earlier statement that he would work from home, so it's a minor omission.",
+      "judge_raw": "{\"score\":4,\"missing\":\"The phrases \\\"for a while\\\" (explicit duration) and \\\"like he said he would\\\" (that he had claimed he would work from home).\",\"extra\":\"NONE\",\"explanation\":\"The model conveys the same core fact — Andrew was commuting into the office most days instead of working from home — but omits the explicit duration \\\"for a while\\\" and the note that this contradicted his earlier statement that he would work from home, so it's a minor omission.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 18,
+      "category": 93,
+      "question": "Right after D22:14, what is the updated status of Andrew’s working from home versus commuting to the office?",
+      "gold_answer": "Andrew has found a compromise where he still goes into the office a lot but keeps Fridays as his work-from-home day every week.",
+      "evidence_ids": [
+        "D22:14"
+      ],
+      "evidence_text": "D22:14 Andrew: At least I carved out a compromise now: I still go in a lot, but I keep Fridays as my work‑from‑home day every week.",
+      "model_answer": "He still goes into the office most days, but he now keeps Fridays as his weekly work‑from‑home day.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the GOLD content accurately: Andrew still goes into the office frequently and keeps Fridays as his weekly work‑from‑home day. Wording differs slightly ('a lot' vs 'most days') but meaning is equivalent.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the GOLD content accurately: Andrew still goes into the office frequently and keeps Fridays as his weekly work‑from‑home day. Wording differs slightly ('a lot' vs 'most days') but meaning is equivalent.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 19,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Andrew’s working from home versus commuting to the office?",
+      "gold_answer": "Andrew has found a compromise where he still goes into the office a lot but keeps Fridays as his work-from-home day every week.",
+      "evidence_ids": [
+        "D6:17",
+        "D13:17",
+        "D22:14"
+      ],
+      "evidence_text": "D6:17 Andrew: These days I basically always work from home – it’s super convenient and lets me sneak in dog breaks with Toby.\nD13:17 Andrew: Ironically, the past few months I’ve been commuting into the office most days instead of staying home like I said I would.\nD22:14 Andrew: At least I carved out a compromise now: I still go in a lot, but I keep Fridays as my work‑from‑home day every week.",
+      "model_answer": "He commutes into the office most weekdays (often walking to work when the weather cooperates), while keeping Fridays as his regular work‑from‑home day.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "The model's claim that he often walks to work when the weather cooperates (not present in GOLD).",
+      "judge_explanation": "The model correctly states Andrew goes into the office most weekdays and keeps Fridays as WFH, matching the GOLD. It includes a minor extra detail about walking to work that is not supported by the GOLD/EVIDENCE, so score is 4.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"The model's claim that he often walks to work when the weather cooperates (not present in GOLD).\",\"explanation\":\"The model correctly states Andrew goes into the office most weekdays and keeps Fridays as WFH, matching the GOLD. It includes a minor extra detail about walking to work that is not supported by the GOLD/EVIDENCE, so score is 4.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 20,
+      "category": 91,
+      "question": "Considering the conversation up to just after D7:14 but before D14:28, what would you say about Andrew’s situation regarding taking toby everywhere on weekends?",
+      "gold_answer": "On weekends Andrew pretty much takes Toby with him everywhere he goes; Toby is like his little shadow on Saturdays and Sundays.",
+      "evidence_ids": [
+        "D7:14"
+      ],
+      "evidence_text": "D7:14 Andrew: On weekends I pretty much take Toby with me everywhere I go – he’s like my little shadow on Saturdays and Sundays.",
+      "model_answer": "He pretty much takes Toby with him everywhere on weekends — Toby is like his little shadow on Saturdays and Sundays.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer is a direct restatement of the GOLD: it conveys the same facts (Andrew takes Toby everywhere on weekends; Toby is like his little shadow) with no omissions or additions.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer is a direct restatement of the GOLD: it conveys the same facts (Andrew takes Toby everywhere on weekends; Toby is like his little shadow) with no omissions or additions.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 21,
+      "category": 92,
+      "question": "After reading through D14:28 but before D23:29, how would you describe Andrew’s status regarding taking toby everywhere on weekends at that point in the conversation?",
+      "gold_answer": "There were a few weekends where Andrew left Toby at home for some outings, which felt strange after saying he takes him everywhere.",
+      "evidence_ids": [
+        "D14:28"
+      ],
+      "evidence_text": "D14:28 Andrew: The funny thing is, the last few weekends I actually had to leave Toby at home for a couple of outings, which felt strange after saying I take him everywhere.",
+      "model_answer": "He’d begun leaving Toby at home for some weekend outings and was no longer taking him everywhere.",
+      "score": 3,
+      "judge_missing": "That Andrew found it felt strange after having said he takes Toby everywhere (the emotional reaction).",
+      "judge_extra": "Implies he was no longer taking Toby everywhere (an absolute statement beyond 'a few weekends').",
+      "judge_explanation": "The model correctly notes Andrew left Toby at home for some weekend outings, but it omits the detail that this felt strange given his prior claim and adds the stronger claim that he was no longer taking Toby everywhere, which goes beyond the GOLD.",
+      "judge_raw": "{\"score\":3,\"missing\":\"That Andrew found it felt strange after having said he takes Toby everywhere (the emotional reaction).\",\"extra\":\"Implies he was no longer taking Toby everywhere (an absolute statement beyond 'a few weekends').\",\"explanation\":\"The model correctly notes Andrew left Toby at home for some weekend outings, but it omits the detail that this felt strange given his prior claim and adds the stronger claim that he was no longer taking Toby everywhere, which goes beyond the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 22,
+      "category": 93,
+      "question": "Right after D23:29, what is the updated status of Andrew’s taking toby everywhere on weekends?",
+      "gold_answer": "Now Andrew mainly brings Toby along whenever he knows the place is dog‑friendly instead of literally everywhere like he used to say.",
+      "evidence_ids": [
+        "D23:29"
+      ],
+      "evidence_text": "D23:29 Andrew: Now I mainly bring Toby along whenever I know the place is dog‑friendly, instead of literally everywhere like I used to say.",
+      "model_answer": "He now mainly brings Toby along only when the place is dog‑friendly, rather than taking him literally everywhere as he used to.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer is a direct restatement of the GOLD: both say Andrew now brings Toby mainly when places are dog‑friendly rather than everywhere. There are no added claims or missing key details.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer is a direct restatement of the GOLD: both say Andrew now brings Toby mainly when places are dog‑friendly rather than everywhere. There are no added claims or missing key details.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 23,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Andrew’s taking toby everywhere on weekends?",
+      "gold_answer": "Now Andrew mainly brings Toby along whenever he knows the place is dog‑friendly instead of literally everywhere like he used to say.",
+      "evidence_ids": [
+        "D7:14",
+        "D14:28",
+        "D23:29"
+      ],
+      "evidence_text": "D7:14 Andrew: On weekends I pretty much take Toby with me everywhere I go – he’s like my little shadow on Saturdays and Sundays.\nD14:28 Andrew: The funny thing is, the last few weekends I actually had to leave Toby at home for a couple of outings, which felt strange after saying I take him everywhere.\nD23:29 Andrew: Now I mainly bring Toby along whenever I know the place is dog‑friendly, instead of literally everywhere like I used to say.",
+      "model_answer": "He no longer takes Toby literally everywhere on weekends; he mainly brings Toby along only when the place is dog‑friendly.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer matches the GOLD semantically: both state Andrew no longer takes Toby literally everywhere on weekends and now brings him mainly when the place is dog‑friendly. There are no added or omitted key facts.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer matches the GOLD semantically: both state Andrew no longer takes Toby literally everywhere on weekends and now brings him mainly when the place is dog‑friendly. There are no added or omitted key facts.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 24,
+      "category": 91,
+      "question": "Considering the conversation up to just after D8:29 but before D15:20, what would you say about Andrew’s situation regarding cutting back on eating out to save money?",
+      "gold_answer": "To save money Andrew told himself he basically never eats out anymore and just sticks to home‑cooked meals.",
+      "evidence_ids": [
+        "D8:29"
+      ],
+      "evidence_text": "D8:29 Andrew: To save money I told myself I basically never eat out anymore and just stick to home‑cooked meals.",
+      "model_answer": "He's resolved to stop eating out and stick to home-cooked meals to save money.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the gold content accurately: Andrew resolved to stop/basically never eat out and stick to home-cooked meals to save money. No key facts are missing and no extra claims introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the gold content accurately: Andrew resolved to stop/basically never eat out and stick to home-cooked meals to save money. No key facts are missing and no extra claims introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 25,
+      "category": 92,
+      "question": "After reading through D15:20 but before D24:23, how would you describe Andrew’s status regarding cutting back on eating out to save money at that point in the conversation?",
+      "gold_answer": "There was a period where Andrew went right back to grabbing food out all the time and completely ignored that plan.",
+      "evidence_ids": [
+        "D15:20"
+      ],
+      "evidence_text": "D15:20 Andrew: Of course, there was a period where I went right back to grabbing food out all the time and completely ignored that plan.",
+      "model_answer": "He had managed to reset and was back to cooking dinner at home most nights, thus cutting back on eating out.",
+      "score": 0,
+      "judge_missing": "That there was a period where Andrew went right back to grabbing food out all the time and completely ignored the plan to cut back on eating out.",
+      "judge_extra": "Claim that he had managed to reset and was back to cooking dinner at home most nights (implying he cut back on eating out).",
+      "judge_explanation": "The model answer directly contradicts the GOLD by stating Andrew was back to cooking at home and cutting back, whereas the GOLD says he reverted to grabbing food out all the time and ignored the plan. This is a complete contradiction and introduces an extra claim not present in the GOLD, so the score is 0.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That there was a period where Andrew went right back to grabbing food out all the time and completely ignored the plan to cut back on eating out.\",\"extra\":\"Claim that he had managed to reset and was back to cooking dinner at home most nights (implying he cut back on eating out).\",\"explanation\":\"The model answer directly contradicts the GOLD by stating Andrew was back to cooking at home and cutting back, whereas the GOLD says he reverted to grabbing food out all the time and ignored the plan. This is a complete contradiction and introduces an extra claim not present in the GOLD, so the score is 0.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 26,
+      "category": 93,
+      "question": "Right after D24:23, what is the updated status of Andrew’s cutting back on eating out to save money?",
+      "gold_answer": "Now Andrew is more realistic and only lets himself eat out once in a while with friends instead of cutting it out entirely.",
+      "evidence_ids": [
+        "D24:23"
+      ],
+      "evidence_text": "D24:23 Andrew: Now I’m a bit more realistic and only let myself eat out once in a while with friends instead of cutting it out entirely.",
+      "model_answer": "He’s relaxed the strict rule and now only lets himself eat out once in a while with friends instead of cutting it out entirely.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model conveys the same meaning as the gold: Andrew relaxed his previous restriction and now only eats out occasionally with friends. There are no omitted facts or added claims.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model conveys the same meaning as the gold: Andrew relaxed his previous restriction and now only eats out occasionally with friends. There are no omitted facts or added claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 27,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Andrew’s cutting back on eating out to save money?",
+      "gold_answer": "Now Andrew is more realistic and only lets himself eat out once in a while with friends instead of cutting it out entirely.",
+      "evidence_ids": [
+        "D8:29",
+        "D15:20",
+        "D24:23"
+      ],
+      "evidence_text": "D8:29 Andrew: To save money I told myself I basically never eat out anymore and just stick to home‑cooked meals.\nD15:20 Andrew: Of course, there was a period where I went right back to grabbing food out all the time and completely ignored that plan.\nD24:23 Andrew: Now I’m a bit more realistic and only let myself eat out once in a while with friends instead of cutting it out entirely.",
+      "model_answer": "He now lets himself eat out once in a while with friends instead of cutting eating out out entirely.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same meaning as the GOLD: Andrew now allows himself to eat out occasionally with friends rather than eliminating it entirely. There are no added claims or missing key facts; the minor typo does not change the meaning.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same meaning as the GOLD: Andrew now allows himself to eat out occasionally with friends rather than eliminating it entirely. There are no added claims or missing key facts; the minor typo does not change the meaning.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 28,
+      "category": 91,
+      "question": "Considering the conversation up to just after D9:29 but before D16:20, what would you say about Andrew’s situation regarding journaling habit?",
+      "gold_answer": "Andrew started a little habit of journaling for a few minutes at night before bed to dump his thoughts.",
+      "evidence_ids": [
+        "D9:29"
+      ],
+      "evidence_text": "D9:29 Andrew: I started this little habit of journaling for a few minutes at night before bed to dump my thoughts.",
+      "model_answer": "Andrew has started a journaling habit, doing a few minutes at night before bed to dump his thoughts.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the gold exactly: Andrew started a short nightly journaling habit to dump his thoughts. There are no omissions or added claims, matching the GOLD semantically and factually.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the gold exactly: Andrew started a short nightly journaling habit to dump his thoughts. There are no omissions or added claims, matching the GOLD semantically and factually.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 29,
+      "category": 92,
+      "question": "After reading through D16:20 but before D25:17, how would you describe Andrew’s status regarding journaling habit at that point in the conversation?",
+      "gold_answer": "When things got chaotic Andrew completely dropped the journaling and went weeks without writing anything down.",
+      "evidence_ids": [
+        "D16:20"
+      ],
+      "evidence_text": "D16:20 Andrew: When things got chaotic I completely dropped the journaling and went weeks without writing anything down.",
+      "model_answer": "He had stopped journaling — he’d dropped the habit and gone weeks without writing anything down.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer restates the GOLD precisely: Andrew stopped journaling, dropped the habit, and went weeks without writing. No key details are missing and no extra claims are introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer restates the GOLD precisely: Andrew stopped journaling, dropped the habit, and went weeks without writing. No key details are missing and no extra claims are introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 30,
+      "category": 93,
+      "question": "Right after D25:17, what is the updated status of Andrew’s journaling habit?",
+      "gold_answer": "Andrew has picked journaling back up and even expanded it, trying to write every day now, sometimes at night and sometimes in the morning.",
+      "evidence_ids": [
+        "D25:17"
+      ],
+      "evidence_text": "D25:17 Andrew: Lately I’ve picked it back up and even expanded it – I try to journal every day now, sometimes at night and sometimes in the morning too.",
+      "model_answer": "He’s picked journaling back up and now tries to journal every day, sometimes at night and sometimes in the morning.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer accurately and completely matches the GOLD: it states Andrew picked journaling back up, expanded it, and now tries to journal every day, sometimes at night and sometimes in the morning. No key details are omitted and no extra information is introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer accurately and completely matches the GOLD: it states Andrew picked journaling back up, expanded it, and now tries to journal every day, sometimes at night and sometimes in the morning. No key details are omitted and no extra information is introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 31,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Andrew’s journaling habit?",
+      "gold_answer": "Andrew has picked journaling back up and even expanded it, trying to write every day now, sometimes at night and sometimes in the morning.",
+      "evidence_ids": [
+        "D9:29",
+        "D16:20",
+        "D25:17"
+      ],
+      "evidence_text": "D9:29 Andrew: I started this little habit of journaling for a few minutes at night before bed to dump my thoughts.\nD16:20 Andrew: When things got chaotic I completely dropped the journaling and went weeks without writing anything down.\nD25:17 Andrew: Lately I’ve picked it back up and even expanded it – I try to journal every day now, sometimes at night and sometimes in the morning too.",
+      "model_answer": "He picked journaling back up and now tries to journal every day, sometimes in the morning and sometimes at night.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer matches the GOLD exactly in meaning: Andrew resumed journaling, expanded it, and now tries to journal daily, sometimes morning and sometimes night. No key details are missing or added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer matches the GOLD exactly in meaning: Andrew resumed journaling, expanded it, and now tries to journal daily, sometimes morning and sometimes night. No key details are missing or added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 32,
+      "category": 91,
+      "question": "Considering the conversation up to just after D10:31 but before D17:22, what would you say about Andrew’s situation regarding meditation habit?",
+      "gold_answer": "Andrew dipped his toe into meditation by doing a short ten‑minute session on Sunday evenings to reset for the week.",
+      "evidence_ids": [
+        "D10:31"
+      ],
+      "evidence_text": "D10:31 Andrew: I dipped my toe into meditation by doing a short ten‑minute session on Sunday evenings to reset for the week.",
+      "model_answer": "He'd just started meditating, doing a short ten‑minute session on Sunday evenings to reset for the week.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer conveys the same facts as the GOLD: Andrew began meditating (dipped his toe / just started) and did a short ten‑minute Sunday evening session to reset for the week. No key details are missing and no extra claims are introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer conveys the same facts as the GOLD: Andrew began meditating (dipped his toe / just started) and did a short ten‑minute Sunday evening session to reset for the week. No key details are missing and no extra claims are introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 33,
+      "category": 92,
+      "question": "After reading through D17:22 but before D26:48, how would you describe Andrew’s status regarding meditation habit at that point in the conversation?",
+      "gold_answer": "Andrew fell off the wagon completely and stopped meditating at all for a while.",
+      "evidence_ids": [
+        "D17:22"
+      ],
+      "evidence_text": "D17:22 Andrew: Then I fell off the wagon completely and stopped meditating at all for a while.",
+      "model_answer": "He had fallen off the wagon and stopped meditating entirely for a while.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer exactly restates the GOLD: Andrew fell off the wagon and stopped meditating entirely for a period. No key facts are missing and no extra claims are introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer exactly restates the GOLD: Andrew fell off the wagon and stopped meditating entirely for a period. No key facts are missing and no extra claims are introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 34,
+      "category": 93,
+      "question": "Right after D26:48, what is the updated status of Andrew’s meditation habit?",
+      "gold_answer": "Andrew has gotten back into meditation and is aiming higher now, trying to fit in a few minutes every day, not just on Sundays.",
+      "evidence_ids": [
+        "D26:48"
+      ],
+      "evidence_text": "D26:48 Andrew: I’ve gotten back into it and I’m aiming higher now – I try to get at least a few minutes of meditation in every day, not just on Sundays.",
+      "model_answer": "He’s gotten back into meditation and now tries to do at least a few minutes every day, not just on Sundays.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer matches the GOLD exactly in meaning and detail: Andrew has resumed meditation and now tries for a few minutes daily rather than only on Sundays. No facts are missing or added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer matches the GOLD exactly in meaning and detail: Andrew has resumed meditation and now tries for a few minutes daily rather than only on Sundays. No facts are missing or added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 35,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Andrew’s meditation habit?",
+      "gold_answer": "Andrew has gotten back into meditation and is aiming higher now, trying to fit in a few minutes every day, not just on Sundays.",
+      "evidence_ids": [
+        "D10:31",
+        "D17:22",
+        "D26:48"
+      ],
+      "evidence_text": "D10:31 Andrew: I dipped my toe into meditation by doing a short ten‑minute session on Sunday evenings to reset for the week.\nD17:22 Andrew: Then I fell off the wagon completely and stopped meditating at all for a while.\nD26:48 Andrew: I’ve gotten back into it and I’m aiming higher now – I try to get at least a few minutes of meditation in every day, not just on Sundays.",
+      "model_answer": "He's gotten back into meditation and now aims to do at least a few minutes every day (not just on Sundays).",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer exactly matches the GOLD: it states Andrew has gotten back into meditation and now aims for a few minutes every day rather than just Sundays. There are no extra claims or missing key details.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer exactly matches the GOLD: it states Andrew has gotten back into meditation and now aims for a few minutes every day rather than just Sundays. There are no extra claims or missing key details.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 36,
+      "category": 91,
+      "question": "Considering the conversation up to just after D11:40 but before D18:24, what would you say about Andrew’s situation regarding walking to work versus taking transit?",
+      "gold_answer": "To move a bit more Andrew started walking to the office on Mondays instead of taking the bus.",
+      "evidence_ids": [
+        "D11:40"
+      ],
+      "evidence_text": "D11:40 Andrew: To move a bit more, I started walking to the office on Mondays instead of taking the bus.",
+      "model_answer": "He started walking to the office on Mondays instead of taking the bus.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model restates the GOLD fact exactly (Andrew started walking to the office on Mondays instead of taking the bus) with no additions or omissions. Pronoun use ('He') clearly refers to Andrew, so there is full semantic match.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model restates the GOLD fact exactly (Andrew started walking to the office on Mondays instead of taking the bus) with no additions or omissions. Pronoun use ('He') clearly refers to Andrew, so there is full semantic match.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 37,
+      "category": 92,
+      "question": "After reading through D18:24 but before D27:19, how would you describe Andrew’s status regarding walking to work versus taking transit at that point in the conversation?",
+      "gold_answer": "Then there was a stretch where Andrew was too tired and stopped walking in altogether, taking transit every day again.",
+      "evidence_ids": [
+        "D18:24"
+      ],
+      "evidence_text": "D18:24 Andrew: Then there was a stretch where I was too tired and just stopped walking in altogether, taking transit every day again.",
+      "model_answer": "He had stopped walking to work and was taking transit to the office every day again.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer matches the GOLD exactly: it states Andrew stopped walking and was taking transit every day again. No key details are missing and no extra claims are introduced.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer matches the GOLD exactly: it states Andrew stopped walking and was taking transit every day again. No key details are missing and no extra claims are introduced.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 38,
+      "category": 93,
+      "question": "Right after D27:19, what is the updated status of Andrew’s walking to work versus taking transit?",
+      "gold_answer": "Recently Andrew has pushed himself again and now tries to walk to work on most weekdays whenever the weather cooperates.",
+      "evidence_ids": [
+        "D27:19"
+      ],
+      "evidence_text": "D27:19 Andrew: Recently I’ve pushed myself again and now I try to walk to work on most weekdays whenever the weather cooperates.",
+      "model_answer": "He now tries to walk to work on most weekdays whenever the weather cooperates, rather than taking transit.",
+      "score": 3,
+      "judge_missing": "NONE",
+      "judge_extra": "Adds the claim that he is walking to work \"rather than taking transit,\" which is not stated in the GOLD.",
+      "judge_explanation": "The model captures the core update that Andrew now tries to walk to work most weekdays when weather allows, matching the GOLD. However it introduces an extra comparison ('rather than taking transit') that is not present in the GOLD, so it is penalized accordingly.",
+      "judge_raw": "{\"score\":3,\"missing\":\"NONE\",\"extra\":\"Adds the claim that he is walking to work \\\"rather than taking transit,\\\" which is not stated in the GOLD.\",\"explanation\":\"The model captures the core update that Andrew now tries to walk to work most weekdays when weather allows, matching the GOLD. However it introduces an extra comparison ('rather than taking transit') that is not present in the GOLD, so it is penalized accordingly.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 39,
+      "category": 94,
+      "question": "After reading the entire conversation, what is the current status of Andrew’s walking to work versus taking transit?",
+      "gold_answer": "Recently Andrew has pushed himself again and now tries to walk to work on most weekdays whenever the weather cooperates.",
+      "evidence_ids": [
+        "D11:40",
+        "D18:24",
+        "D27:19"
+      ],
+      "evidence_text": "D11:40 Andrew: To move a bit more, I started walking to the office on Mondays instead of taking the bus.\nD18:24 Andrew: Then there was a stretch where I was too tired and just stopped walking in altogether, taking transit every day again.\nD27:19 Andrew: Recently I’ve pushed myself again and now I try to walk to work on most weekdays whenever the weather cooperates.",
+      "model_answer": "He now tries to walk to work on most weekdays whenever the weather cooperates, rather than taking transit every day.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "\"rather than taking transit every day.\"",
+      "judge_explanation": "The model answer matches the GOLD's current-status statement almost exactly (tries to walk on most weekdays when weather cooperates). It adds a minor extra clause contrasting this with taking transit every day, which is not in the GOLD—hence a small deduction.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"\\\"rather than taking transit every day.\\\"\",\"explanation\":\"The model answer matches the GOLD's current-status statement almost exactly (tries to walk on most weekdays when weather cooperates). It adds a minor extra clause contrasting this with taking transit every day, which is not in the GOLD—hence a small deduction.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    }
+  ]
+}

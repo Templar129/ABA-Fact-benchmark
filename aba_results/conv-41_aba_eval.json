@@ -1,0 +1,767 @@
+{
+  "sample_id": "conv-41",
+  "metrics": {
+    "overall_attempted_n": 40,
+    "overall_scored_n": 40,
+    "overall_parse_fail_n": 0,
+    "overall_mean_score": 0.55,
+    "overall_prop_ge_4": 0.1,
+    "overall_prop_5": 0.025,
+    "per_category": {
+      "91": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 0.5,
+        "prop_ge_4": 0.0,
+        "prop_5": 0.0
+      },
+      "92": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 0,
+        "prop_ge_4": 0.0,
+        "prop_5": 0.0
+      },
+      "93": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 0,
+        "prop_ge_4": 0.0,
+        "prop_5": 0.0
+      },
+      "94": {
+        "attempted_n": 10,
+        "scored_n": 10,
+        "parse_fail_n": 0,
+        "mean_score": 1.7,
+        "prop_ge_4": 0.4,
+        "prop_5": 0.1
+      }
+    }
+  },
+  "results": [
+    {
+      "index": 0,
+      "category": 91,
+      "question": "Between D5:17 and D12:23, what does Maria believe about John’s nightly education-writing habit?",
+      "gold_answer": "Maria believes John is writing a short post about education every evening.",
+      "evidence_ids": [
+        "D5:17"
+      ],
+      "evidence_text": "D5:17 John: All this has got me so fired up that I’ve started writing a short post about education every evening—just a few paragraphs to get my thoughts down and keep the momentum going.",
+      "model_answer": "She believes his writing/blogging is making a difference — his posts are having an effect.",
+      "score": 1,
+      "judge_missing": "Maria believes John is writing a short post about education every evening.",
+      "judge_extra": "She believes his writing/blogging is making a difference — his posts are having an effect.",
+      "judge_explanation": "The model answer omits the key fact that Maria believes John is writing a short post about education every evening and instead asserts a different claim (that his posts are making a difference). There is only a small overlap (mention of 'posts'), so the response is mostly incorrect and adds an unsupported extra claim.",
+      "judge_raw": "{\"score\":1,\"missing\":\"Maria believes John is writing a short post about education every evening.\",\"extra\":\"She believes his writing/blogging is making a difference — his posts are having an effect.\",\"explanation\":\"The model answer omits the key fact that Maria believes John is writing a short post about education every evening and instead asserts a different claim (that his posts are making a difference). There is only a small overlap (mention of 'posts'), so the response is mostly incorrect and adds an unsupported extra claim.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 1,
+      "category": 92,
+      "question": "Between D12:24 and D22:21, what does Maria believe about John’s writing habit?",
+      "gold_answer": "Maria believes John has completely stopped writing his policy and education posts.",
+      "evidence_ids": [
+        "D12:24"
+      ],
+      "evidence_text": "D12:24 John: Honestly, there were a couple of weeks there where I felt like I’d completely stopped writing about policy and education. Between events and meetings, it just felt like that habit disappeared.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "Maria believes John has completely stopped writing his policy and education posts.",
+      "judge_extra": "The model claims it cannot tell from the conversation.",
+      "judge_explanation": "The model answer directly contradicts the GOLD: GOLD states Maria believes John stopped writing his policy and education posts, while the model says it cannot tell. This omission and contradiction justify the lowest score.",
+      "judge_raw": "{\"score\":0,\"missing\":\"Maria believes John has completely stopped writing his policy and education posts.\",\"extra\":\"The model claims it cannot tell from the conversation.\",\"explanation\":\"The model answer directly contradicts the GOLD: GOLD states Maria believes John stopped writing his policy and education posts, while the model says it cannot tell. This omission and contradiction justify the lowest score.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 2,
+      "category": 93,
+      "question": "After D22:22, what does Maria believe about John’s writing habit?",
+      "gold_answer": "Maria believes John had not truly stopped and simply missed a few days.",
+      "evidence_ids": [
+        "D22:22"
+      ],
+      "evidence_text": "D22:22 John: I sat down last night and wrote another piece about school funding, and when I flipped back through my notebook I realized I hadn’t actually stopped—I’d just missed a few days when things were intense.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "That John had not truly stopped writing and had simply missed a few days.",
+      "judge_extra": "Statement that it cannot be determined from the conversation.",
+      "judge_explanation": "The model answer contradicts the GOLD: GOLD states Maria believes John hadn’t truly stopped and had missed a few days, while the model says it cannot be determined. This directly conflicts with the key information, so score 0 is warranted.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That John had not truly stopped writing and had simply missed a few days.\",\"extra\":\"Statement that it cannot be determined from the conversation.\",\"explanation\":\"The model answer contradicts the GOLD: GOLD states Maria believes John hadn’t truly stopped and had missed a few days, while the model says it cannot be determined. This directly conflicts with the key information, so score 0 is warranted.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 3,
+      "category": 94,
+      "question": "In the end, what does Maria believe about John’s writing routine?",
+      "gold_answer": "Maria believes John ultimately continues his nightly writing habit.",
+      "evidence_ids": [
+        "D22:22"
+      ],
+      "evidence_text": "D22:22 John: I sat down last night and wrote another piece about school funding, and when I flipped back through my notebook I realized I hadn’t actually stopped—I’d just missed a few days when things were intense.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "Maria believes John ultimately continues his nightly writing habit.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer contradicts the GOLD: the evidence shows Maria concludes John hadn’t stopped writing and continues his nightly habit, but the model states she cannot tell. This directly omits the key fact and is therefore scored 0.",
+      "judge_raw": "{\"score\":0,\"missing\":\"Maria believes John ultimately continues his nightly writing habit.\",\"extra\":\"NONE\",\"explanation\":\"The model answer contradicts the GOLD: the evidence shows Maria concludes John hadn’t stopped writing and continues his nightly habit, but the model states she cannot tell. This directly omits the key fact and is therefore scored 0.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 4,
+      "category": 91,
+      "question": "Between D8:27 and D13:37, what does John believe about Maria’s shelter journaling habit?",
+      "gold_answer": "John believes Maria writes a few reflective lines in her notebook each night after her shelter shifts.",
+      "evidence_ids": [
+        "D8:27"
+      ],
+      "evidence_text": "D8:27 Maria: Lately after my shifts at the shelter, I’ve been jotting a few lines in a little notebook before bed—just to process what happened and remind myself of the good moments.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "That John believes Maria writes a few reflective lines in her notebook each night after her shelter shifts.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer states uncertainty ('I cannot tell'), which contradicts the gold answer asserting John believes Maria journals a few reflective lines each night after shelter shifts. This is a direct mismatch, so the response is rated 0.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That John believes Maria writes a few reflective lines in her notebook each night after her shelter shifts.\",\"extra\":\"NONE\",\"explanation\":\"The model answer states uncertainty ('I cannot tell'), which contradicts the gold answer asserting John believes Maria journals a few reflective lines each night after shelter shifts. This is a direct mismatch, so the response is rated 0.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 5,
+      "category": 92,
+      "question": "Between D13:38 and D23:14, what does John believe about Maria’s journaling?",
+      "gold_answer": "John believes Maria has completely stopped journaling due to exhaustion.",
+      "evidence_ids": [
+        "D13:38"
+      ],
+      "evidence_text": "D13:38 Maria: With everything going on, I really thought I’d totally stopped writing in that notebook. This past week I felt so drained that it seemed like I hadn’t put anything on paper for ages.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "John believes Maria has completely stopped journaling due to exhaustion.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer claims the belief cannot be determined, which contradicts the GOLD: John clearly believes Maria stopped journaling because she felt drained. This is a direct contradiction, so the response is scored 0.",
+      "judge_raw": "{\"score\":0,\"missing\":\"John believes Maria has completely stopped journaling due to exhaustion.\",\"extra\":\"NONE\",\"explanation\":\"The model answer claims the belief cannot be determined, which contradicts the GOLD: John clearly believes Maria stopped journaling because she felt drained. This is a direct contradiction, so the response is scored 0.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 6,
+      "category": 93,
+      "question": "After D23:15, what does John believe about Maria’s journaling habit?",
+      "gold_answer": "John believes Maria did not abandon the habit and had continued writing more often than she realized.",
+      "evidence_ids": [
+        "D23:15"
+      ],
+      "evidence_text": "D23:15 Maria: I looked back through the notebook today and there were more entries than I remembered, and I added a new one after my walk—it made me realize I didn’t abandon the habit, I was just overwhelmed.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "That John believes Maria did not abandon the habit and had continued writing more often than she realized.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer claims the information cannot be determined, which contradicts the GOLD that states John's belief explicitly. It omits the key fact about John's belief that Maria continued journaling more often than she realized, so the response is incorrect.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That John believes Maria did not abandon the habit and had continued writing more often than she realized.\",\"extra\":\"NONE\",\"explanation\":\"The model answer claims the information cannot be determined, which contradicts the GOLD that states John's belief explicitly. It omits the key fact about John's belief that Maria continued journaling more often than she realized, so the response is incorrect.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 7,
+      "category": 94,
+      "question": "In the end, what does John believe about Maria’s journaling routine?",
+      "gold_answer": "John believes Maria ultimately continues her journaling practice.",
+      "evidence_ids": [
+        "D23:15"
+      ],
+      "evidence_text": "D23:15 Maria: I looked back through the notebook today and there were more entries than I remembered, and I added a new one after my walk—it made me realize I didn’t abandon the habit, I was just overwhelmed.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "John believes Maria ultimately continues her journaling practice.",
+      "judge_extra": "States that it cannot be determined from the conversation.",
+      "judge_explanation": "The model answer contradicts the GOLD: the correct conclusion is that John believes Maria continues journaling, but the model claims uncertainty. It omits the key belief and introduces an extra claim that the conversation does not allow determining this.",
+      "judge_raw": "{\"score\":0,\"missing\":\"John believes Maria ultimately continues her journaling practice.\",\"extra\":\"States that it cannot be determined from the conversation.\",\"explanation\":\"The model answer contradicts the GOLD: the correct conclusion is that John believes Maria continues journaling, but the model claims uncertainty. It omits the key belief and introduces an extra claim that the conversation does not allow determining this.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 8,
+      "category": 91,
+      "question": "Between D4:27 and D20:18, what does Maria believe about John’s afternoon walk routine?",
+      "gold_answer": "Maria believes John takes a short walk most afternoons.",
+      "evidence_ids": [
+        "D4:27"
+      ],
+      "evidence_text": "D4:27 John: One thing that’s been helping is taking a quick walk around the block most afternoons—fifteen minutes to get some air and clear my head before diving back into everything.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "That Maria believes John takes a short (quick) walk most afternoons.",
+      "judge_extra": "The model's claim that the conversation does not allow determining Maria's belief (\"I cannot tell from the conversation\").",
+      "judge_explanation": "The model answer contradicts the GOLD: GOLD states Maria believes John takes a short walk most afternoons, while the model says this cannot be determined. This is a direct contradiction, so the response is graded as completely wrong.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That Maria believes John takes a short (quick) walk most afternoons.\",\"extra\":\"The model's claim that the conversation does not allow determining Maria's belief (\\\"I cannot tell from the conversation\\\").\",\"explanation\":\"The model answer contradicts the GOLD: GOLD states Maria believes John takes a short walk most afternoons, while the model says this cannot be determined. This is a direct contradiction, so the response is graded as completely wrong.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 9,
+      "category": 92,
+      "question": "Between D20:19 and D28:19, what does Maria believe about John’s walking routine?",
+      "gold_answer": "Maria believes John has completely dropped the walking habit.",
+      "evidence_ids": [
+        "D20:19"
+      ],
+      "evidence_text": "D20:19 John: The last couple of weeks were such a blur that I felt like I completely dropped that little afternoon walk routine—just running from one thing to the next with no break.",
+      "model_answer": "She believes he takes regular walks (about once a week) that help him disconnect and find peace, often watching sunsets.",
+      "score": 0,
+      "judge_missing": "That John has completely dropped the walking habit.",
+      "judge_extra": "Claims he takes regular walks (about once a week), that they help him disconnect and find peace, and that he often watches sunsets.",
+      "judge_explanation": "The model answer directly contradicts the GOLD by asserting John still walks regularly, whereas GOLD states Maria believes he has completely dropped the habit. It also adds unsupported specifics (frequency, purpose, watching sunsets).",
+      "judge_raw": "{\"score\":0,\"missing\":\"That John has completely dropped the walking habit.\",\"extra\":\"Claims he takes regular walks (about once a week), that they help him disconnect and find peace, and that he often watches sunsets.\",\"explanation\":\"The model answer directly contradicts the GOLD by asserting John still walks regularly, whereas GOLD states Maria believes he has completely dropped the habit. It also adds unsupported specifics (frequency, purpose, watching sunsets).\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 10,
+      "category": 93,
+      "question": "After D28:20, what does Maria believe about John’s walking habit?",
+      "gold_answer": "Maria believes John has returned to the habit and never fully lost it.",
+      "evidence_ids": [
+        "D28:20"
+      ],
+      "evidence_text": "D28:20 John: I managed to sneak in a short loop around the block today, and it reminded me that I didn’t actually lose that habit—I just needed a moment to reset and pick it back up.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "That Maria believes John has returned to the habit and never fully lost it.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer states the belief cannot be determined, which directly contradicts the GOLD answer that Maria believes John has returned to the walking habit and never fully lost it. Therefore the response is incorrect.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That Maria believes John has returned to the habit and never fully lost it.\",\"extra\":\"NONE\",\"explanation\":\"The model answer states the belief cannot be determined, which directly contradicts the GOLD answer that Maria believes John has returned to the walking habit and never fully lost it. Therefore the response is incorrect.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 11,
+      "category": 94,
+      "question": "In the end, what does Maria believe about John’s walking routine?",
+      "gold_answer": "Maria believes John ultimately continues his afternoon walking routine.",
+      "evidence_ids": [
+        "D28:20"
+      ],
+      "evidence_text": "D28:20 John: I managed to sneak in a short loop around the block today, and it reminded me that I didn’t actually lose that habit—I just needed a moment to reset and pick it back up.",
+      "model_answer": "She believes he still keeps up the walking habit — it helps him disconnect and find peace (he hadn’t truly abandoned it).",
+      "score": 4,
+      "judge_missing": "That it is specifically his afternoon walking routine.",
+      "judge_extra": "That the walk \"helps him disconnect and find peace.\"",
+      "judge_explanation": "The model correctly states Maria believes John still keeps up the walking habit and hadn’t abandoned it, matching the GOLD. It omits the detail that this is his afternoon routine and adds an unmentioned claim about the walk providing peace/disconnection, so it is mostly correct with minor extra/omission.",
+      "judge_raw": "{\"score\":4,\"missing\":\"That it is specifically his afternoon walking routine.\",\"extra\":\"That the walk \\\"helps him disconnect and find peace.\\\"\",\"explanation\":\"The model correctly states Maria believes John still keeps up the walking habit and hadn’t abandoned it, matching the GOLD. It omits the detail that this is his afternoon routine and adds an unmentioned claim about the walk providing peace/disconnection, so it is mostly correct with minor extra/omission.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 12,
+      "category": 91,
+      "question": "Between D19:27 and D21:29, what does John believe about Maria’s stretching routine?",
+      "gold_answer": "John believes Maria regularly stretches before bed to relax her body.",
+      "evidence_ids": [
+        "D19:27"
+      ],
+      "evidence_text": "D19:27 Maria: On days I go to the gym, I’ve been doing a little stretching routine before bed—nothing fancy, just enough to help my body unwind so I don’t wake up stiff and sore.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "John believes Maria regularly stretches before bed to relax her body.",
+      "judge_extra": "The model's claim 'I cannot tell from the conversation.'",
+      "judge_explanation": "The model's answer contradicts the GOLD by stating uncertainty, whereas the GOLD specifies John's belief that Maria regularly stretches before bed to relax her body. This is a direct contradiction, so the response is graded as completely wrong.",
+      "judge_raw": "{\"score\":0,\"missing\":\"John believes Maria regularly stretches before bed to relax her body.\",\"extra\":\"The model's claim 'I cannot tell from the conversation.'\",\"explanation\":\"The model's answer contradicts the GOLD by stating uncertainty, whereas the GOLD specifies John's belief that Maria regularly stretches before bed to relax her body. This is a direct contradiction, so the response is graded as completely wrong.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 13,
+      "category": 92,
+      "question": "Between D21:30 and D25:20, what does John believe about Maria’s stretching?",
+      "gold_answer": "John believes Maria stopped stretching.",
+      "evidence_ids": [
+        "D21:30"
+      ],
+      "evidence_text": "D21:30 Maria: After the accident and helping my cousin move, it felt like my whole body-care routine went out the window—I kept telling myself I wasn’t stretching at all anymore.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "John believes Maria stopped stretching.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer asserts uncertainty ('I cannot tell'), which directly contradicts the GOLD stating John believes Maria stopped stretching. It omits the key fact from the GOLD; there are no extra claims.",
+      "judge_raw": "{\"score\":0,\"missing\":\"John believes Maria stopped stretching.\",\"extra\":\"NONE\",\"explanation\":\"The model answer asserts uncertainty ('I cannot tell'), which directly contradicts the GOLD stating John believes Maria stopped stretching. It omits the key fact from the GOLD; there are no extra claims.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 14,
+      "category": 93,
+      "question": "After D25:21, what does John believe about Maria’s stretching routine?",
+      "gold_answer": "John believes Maria has resumed her stretching habit.",
+      "evidence_ids": [
+        "D25:21"
+      ],
+      "evidence_text": "D25:21 Maria: Last night I did a short stretch before bed again, and it felt like coming back to myself—it reminded me I hadn’t really given up on taking care of my body, I was just trying to survive a rough patch.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "John believes Maria has resumed her stretching habit.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer states uncertainty ('I cannot tell'), which contradicts the gold answer that John believes Maria has resumed stretching. This is a direct contradiction, so the response is judged completely wrong.",
+      "judge_raw": "{\"score\":0,\"missing\":\"John believes Maria has resumed her stretching habit.\",\"extra\":\"NONE\",\"explanation\":\"The model answer states uncertainty ('I cannot tell'), which contradicts the gold answer that John believes Maria has resumed stretching. This is a direct contradiction, so the response is judged completely wrong.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 15,
+      "category": 94,
+      "question": "In the end, what does John believe about Maria’s stretching habit?",
+      "gold_answer": "John believes Maria ultimately continues her bedtime stretching routine.",
+      "evidence_ids": [
+        "D25:21"
+      ],
+      "evidence_text": "D25:21 Maria: Last night I did a short stretch before bed again, and it felt like coming back to myself—it reminded me I hadn’t really given up on taking care of my body, I was just trying to survive a rough patch.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "John believes Maria ultimately continues her bedtime stretching routine.",
+      "judge_extra": "The model answer claims the conversation does not allow determining this (says 'I cannot tell from the conversation').",
+      "judge_explanation": "The model contradicts the GOLD: the GOLD states John believes she continues the bedtime stretching routine, but the model asserts it cannot be determined. This omits the key fact from the GOLD and introduces a contrary claim, so the response is scored 0.",
+      "judge_raw": "{\"score\":0,\"missing\":\"John believes Maria ultimately continues her bedtime stretching routine.\",\"extra\":\"The model answer claims the conversation does not allow determining this (says 'I cannot tell from the conversation').\",\"explanation\":\"The model contradicts the GOLD: the GOLD states John believes she continues the bedtime stretching routine, but the model asserts it cannot be determined. This omits the key fact from the GOLD and introduces a contrary claim, so the response is scored 0.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 16,
+      "category": 91,
+      "question": "Between D23:16 and D30:23, what does Maria believe about John’s rebuild-notebook habit?",
+      "gold_answer": "Maria believes John consistently takes notes and sketches ideas.",
+      "evidence_ids": [
+        "D23:16"
+      ],
+      "evidence_text": "D23:16 John: Ever since the flood hit West County, I’ve been keeping a small notebook where I jot down ideas and sketches for ways we could help the neighborhood recover.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "That Maria believes John consistently takes notes and sketches ideas (i.e., he keeps a rebuild-notebook and jots ideas/sketches).",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer states uncertainty ('I cannot tell'), which directly contradicts the GOLD that Maria believes John consistently takes notes and sketches ideas. It omits the key fact from the GOLD, so it is scored as completely wrong.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That Maria believes John consistently takes notes and sketches ideas (i.e., he keeps a rebuild-notebook and jots ideas/sketches).\",\"extra\":\"NONE\",\"explanation\":\"The model answer states uncertainty ('I cannot tell'), which directly contradicts the GOLD that Maria believes John consistently takes notes and sketches ideas. It omits the key fact from the GOLD, so it is scored as completely wrong.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 17,
+      "category": 92,
+      "question": "Between D30:24 and D31:23, what does Maria believe about John’s notebook writing?",
+      "gold_answer": "Maria believes John abandoned the notebook entirely after not writing in it for a week.",
+      "evidence_ids": [
+        "D30:24"
+      ],
+      "evidence_text": "D30:24 John: Last week I didn’t write anything in that notebook, and for a moment I felt like I’d abandoned the whole thing—like I wasn’t really showing up for the community anymore.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "Maria believes John abandoned the notebook entirely after not writing in it for a week.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer says the belief cannot be determined, which directly contradicts the GOLD stating Maria believes he abandoned the notebook after a week of not writing. This is a complete mismatch with the key fact, so the score is 0.",
+      "judge_raw": "{\"score\":0,\"missing\":\"Maria believes John abandoned the notebook entirely after not writing in it for a week.\",\"extra\":\"NONE\",\"explanation\":\"The model answer says the belief cannot be determined, which directly contradicts the GOLD stating Maria believes he abandoned the notebook after a week of not writing. This is a complete mismatch with the key fact, so the score is 0.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 18,
+      "category": 93,
+      "question": "After D31:24, what does Maria believe about John’s notebook routine?",
+      "gold_answer": "Maria believes John never truly abandoned the habit and continued writing more than he remembered.",
+      "evidence_ids": [
+        "D31:24"
+      ],
+      "evidence_text": "D31:24 John: Today I scribbled a few new ideas in there and noticed pages from last week I’d forgotten I filled—it made me realize the notebook and the work are still very much alive.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "Maria believes John never truly abandoned the habit and continued writing more than he remembered.",
+      "judge_extra": "The model claims it cannot tell from the conversation.",
+      "judge_explanation": "The model's response contradicts the GOLD answer by asserting uncertainty, whereas the GOLD states Maria clearly believes John continued the habit and wrote more than he recalled. This is a direct mismatch with the key information.",
+      "judge_raw": "{\"score\":0,\"missing\":\"Maria believes John never truly abandoned the habit and continued writing more than he remembered.\",\"extra\":\"The model claims it cannot tell from the conversation.\",\"explanation\":\"The model's response contradicts the GOLD answer by asserting uncertainty, whereas the GOLD states Maria clearly believes John continued the habit and wrote more than he recalled. This is a direct mismatch with the key information.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 19,
+      "category": 94,
+      "question": "In the end, what does Maria believe about John’s notebook practice?",
+      "gold_answer": "Maria believes John ultimately maintains his notebook-writing routine.",
+      "evidence_ids": [
+        "D31:24"
+      ],
+      "evidence_text": "D31:24 John: Today I scribbled a few new ideas in there and noticed pages from last week I’d forgotten I filled—it made me realize the notebook and the work are still very much alive.",
+      "model_answer": "She believes he hasn’t abandoned the notebook practice — it’s still alive and he just missed a few days when things were intense or overwhelming.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "Claims that he 'just missed a few days when things were intense or overwhelming' (reason for gaps) — not stated in GOLD.",
+      "judge_explanation": "The model matches the GOLD's core point that Maria believes John keeps up the notebook practice. It adds a minor extra detail about him missing a few days due to being overwhelmed, which is not in the GOLD, so the answer is largely correct but includes an unsupported extra claim.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"Claims that he 'just missed a few days when things were intense or overwhelming' (reason for gaps) — not stated in GOLD.\",\"explanation\":\"The model matches the GOLD's core point that Maria believes John keeps up the notebook practice. It adds a minor extra detail about him missing a few days due to being overwhelmed, which is not in the GOLD, so the answer is largely correct but includes an unsupported extra claim.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 20,
+      "category": 91,
+      "question": "Between D3:18 and D15:19, what does John believe about Maria’s weekly-calling routine?",
+      "gold_answer": "John believes Maria calls her mother every Sunday to stay close emotionally.",
+      "evidence_ids": [
+        "D3:18"
+      ],
+      "evidence_text": "D3:18 Maria: I’ve been calling my mom every Sunday evening, even if it’s just a quick chat—it keeps us grounded and close, especially with everything going on.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "That John believes Maria calls her mother every Sunday to stay emotionally close.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer denies that this can be determined, which directly contradicts the GOLD answer stating John believes Maria calls every Sunday to stay close emotionally. Therefore it is completely wrong.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That John believes Maria calls her mother every Sunday to stay emotionally close.\",\"extra\":\"NONE\",\"explanation\":\"The model answer denies that this can be determined, which directly contradicts the GOLD answer stating John believes Maria calls every Sunday to stay close emotionally. Therefore it is completely wrong.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 21,
+      "category": 92,
+      "question": "Between D15:20 and D26:17, what does John believe about Maria’s calling habit?",
+      "gold_answer": "John believes Maria feels she is falling behind because she missed a call.",
+      "evidence_ids": [
+        "D15:20"
+      ],
+      "evidence_text": "D15:20 Maria: I missed our call last Sunday and it made me feel like I was falling behind on keeping in touch, like I was letting our connection slip.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "That John believes Maria feels she is falling behind because she missed a call.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer denies any determinable belief, which directly contradicts the GOLD stating John believes Maria feels she is falling behind due to missing a call. This is a complete misinformation relative to the GOLD, so score 0 is warranted.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That John believes Maria feels she is falling behind because she missed a call.\",\"extra\":\"NONE\",\"explanation\":\"The model answer denies any determinable belief, which directly contradicts the GOLD stating John believes Maria feels she is falling behind due to missing a call. This is a complete misinformation relative to the GOLD, so score 0 is warranted.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 22,
+      "category": 93,
+      "question": "After D26:18, what does John believe about Maria’s calling routine?",
+      "gold_answer": "John believes Maria’s weekly calling habit remains intact despite occasional misses.",
+      "evidence_ids": [
+        "D26:18"
+      ],
+      "evidence_text": "D26:18 Maria: We had a quick call again this weekend and it felt so normal and warm—it reminded me that one missed Sunday doesn’t erase how close we are.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "John believes Maria’s weekly calling habit remains intact despite occasional misses.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer contradicts the GOLD by saying the belief cannot be determined, whereas the GOLD explicitly states John believes her weekly calling habit remains intact despite occasional misses. This is a direct contradiction, so the response is scored 0.",
+      "judge_raw": "{\"score\":0,\"missing\":\"John believes Maria’s weekly calling habit remains intact despite occasional misses.\",\"extra\":\"NONE\",\"explanation\":\"The model answer contradicts the GOLD by saying the belief cannot be determined, whereas the GOLD explicitly states John believes her weekly calling habit remains intact despite occasional misses. This is a direct contradiction, so the response is scored 0.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 23,
+      "category": 94,
+      "question": "In the end, what does John believe about Maria’s calling habit?",
+      "gold_answer": "John believes Maria continues her weekly calls to her mother.",
+      "evidence_ids": [
+        "D26:18"
+      ],
+      "evidence_text": "D26:18 Maria: We had a quick call again this weekend and it felt so normal and warm—it reminded me that one missed Sunday doesn’t erase how close we are.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "John believes Maria continues her weekly calls to her mother.",
+      "judge_extra": "The model states 'I cannot tell from the conversation.'",
+      "judge_explanation": "The model's answer directly contradicts the GOLD answer. GOLD asserts John believes Maria continues weekly calls; the model claims uncertainty, so it omits the key fact and introduces an opposing claim.",
+      "judge_raw": "{\"score\":0,\"missing\":\"John believes Maria continues her weekly calls to her mother.\",\"extra\":\"The model states 'I cannot tell from the conversation.'\",\"explanation\":\"The model's answer directly contradicts the GOLD answer. GOLD asserts John believes Maria continues weekly calls; the model claims uncertainty, so it omits the key fact and introduces an opposing claim.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 24,
+      "category": 91,
+      "question": "Between D7:18 and D18:23, what does Maria believe about John’s family game-night routine?",
+      "gold_answer": "Maria believes John regularly hosts a Sunday board-game night with his kids.",
+      "evidence_ids": [
+        "D7:18"
+      ],
+      "evidence_text": "D7:18 John: We’ve started doing a little board game night on Sundays with the kids—it’s become one of my favorite ways to end the week together.",
+      "model_answer": "",
+      "score": 0,
+      "judge_missing": "That John regularly hosts a Sunday board-game night with his kids (i.e., a regular Sunday board-game night involving his children).",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer is empty and provides none of the key information from the GOLD: it fails to state that Maria believes John hosts a regular Sunday board-game night with his kids. Therefore it receives the lowest score.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That John regularly hosts a Sunday board-game night with his kids (i.e., a regular Sunday board-game night involving his children).\",\"extra\":\"NONE\",\"explanation\":\"The model answer is empty and provides none of the key information from the GOLD: it fails to state that Maria believes John hosts a regular Sunday board-game night with his kids. Therefore it receives the lowest score.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 25,
+      "category": 92,
+      "question": "Between D18:24 and D27:16, what does Maria believe about this routine?",
+      "gold_answer": "Maria believes John has dropped the routine completely.",
+      "evidence_ids": [
+        "D18:24"
+      ],
+      "evidence_text": "D18:24 John: A stretch of busy weekends made me feel like I’d totally dropped our family game night—we kept postponing it, and I worried the tradition was gone.",
+      "model_answer": "She believes that missing a single occurrence doesn’t mean the routine is gone — one missed Sunday/week doesn’t erase how close they are or the tradition.",
+      "score": 0,
+      "judge_missing": "That Maria believes John has dropped the routine completely.",
+      "judge_extra": "That Maria believes a single missed occurrence doesn’t mean the routine is gone / one missed Sunday/week doesn’t erase their closeness or the tradition.",
+      "judge_explanation": "The model answer directly contradicts the GOLD: GOLD states Maria believes the routine was dropped completely, while the model says she believes a missed occurrence doesn’t mean the routine is gone. This is a direct contradiction and includes extra claims not present in the GOLD, so score 0 is warranted.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That Maria believes John has dropped the routine completely.\",\"extra\":\"That Maria believes a single missed occurrence doesn’t mean the routine is gone / one missed Sunday/week doesn’t erase their closeness or the tradition.\",\"explanation\":\"The model answer directly contradicts the GOLD: GOLD states Maria believes the routine was dropped completely, while the model says she believes a missed occurrence doesn’t mean the routine is gone. This is a direct contradiction and includes extra claims not present in the GOLD, so score 0 is warranted.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 26,
+      "category": 93,
+      "question": "After D27:17, what does Maria believe about John’s game-night habit?",
+      "gold_answer": "Maria believes the tradition is still intact and continues even after missed weeks.",
+      "evidence_ids": [
+        "D27:17"
+      ],
+      "evidence_text": "D27:17 John: We finally sat down and played again last night, and the kids were so excited—it was a good reminder that the tradition is still there, even if we miss a week sometimes.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "That Maria believes the tradition is still intact and continues even after missed weeks.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer states uncertainty ('I cannot tell'), which contradicts the GOLD that Maria believes the tradition is still intact and continues despite missed weeks. It omits the key belief asserted in the GOLD, so it receives a score of 0.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That Maria believes the tradition is still intact and continues even after missed weeks.\",\"extra\":\"NONE\",\"explanation\":\"The model answer states uncertainty ('I cannot tell'), which contradicts the GOLD that Maria believes the tradition is still intact and continues despite missed weeks. It omits the key belief asserted in the GOLD, so it receives a score of 0.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 27,
+      "category": 94,
+      "question": "In the end, what does Maria believe about John’s game-night routine?",
+      "gold_answer": "Maria believes John ultimately continues the family game-night tradition.",
+      "evidence_ids": [
+        "D27:17"
+      ],
+      "evidence_text": "D27:17 John: We finally sat down and played again last night, and the kids were so excited—it was a good reminder that the tradition is still there, even if we miss a week sometimes.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "That John ultimately continues the family game-night tradition (i.e., the tradition is still there and they played again).",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer contradicts the evidence and GOLD: the conversation explicitly says they 'played again last night' and 'the tradition is still there,' so Maria would believe the tradition continues. Saying 'I cannot tell' is incorrect, so the response receives score 0.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That John ultimately continues the family game-night tradition (i.e., the tradition is still there and they played again).\",\"extra\":\"NONE\",\"explanation\":\"The model answer contradicts the evidence and GOLD: the conversation explicitly says they 'played again last night' and 'the tradition is still there,' so Maria would believe the tradition continues. Saying 'I cannot tell' is incorrect, so the response receives score 0.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 28,
+      "category": 91,
+      "question": "Between D9:19 and D14:23, what does John believe about Maria’s snack-bringing routine?",
+      "gold_answer": "John believes Maria brings a homemade snack to the shelter kids once a week.",
+      "evidence_ids": [
+        "D9:19"
+      ],
+      "evidence_text": "D9:19 Maria: I’ve been trying to bring a little snack once a week for the kids at the shelter—nothing big, just something homemade to make the day feel a bit brighter.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "John believes Maria brings a homemade snack to the shelter kids once a week.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer says the information cannot be determined, which contradicts the evidence/GOLD that John believes Maria brings a homemade, weekly snack to the shelter kids. It omits the explicit belief stated in the GOLD.",
+      "judge_raw": "{\"score\":0,\"missing\":\"John believes Maria brings a homemade snack to the shelter kids once a week.\",\"extra\":\"NONE\",\"explanation\":\"The model answer says the information cannot be determined, which contradicts the evidence/GOLD that John believes Maria brings a homemade, weekly snack to the shelter kids. It omits the explicit belief stated in the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 29,
+      "category": 92,
+      "question": "Between D14:24 and D24:17, what does John believe about her snack routine?",
+      "gold_answer": "John believes Maria thinks she failed the routine because she didn’t bake anything during a hectic week.",
+      "evidence_ids": [
+        "D14:24"
+      ],
+      "evidence_text": "D14:24 Maria: This past week was so hectic that I didn’t bake anything, and it made me feel like I’d failed them somehow—like I’d dropped that small promise to show up with something special.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "John believes Maria thinks she failed the routine because she didn’t bake anything during a hectic week.",
+      "judge_extra": "Model claims the conversation does not reveal John's belief (saying 'I cannot tell from the conversation').",
+      "judge_explanation": "The model answer contradicts the GOLD by asserting the belief is indeterminate, whereas the GOLD specifies John's belief about Maria feeling she failed due to not baking during a hectic week. The model provides none of the key information from the GOLD.",
+      "judge_raw": "{\"score\":0,\"missing\":\"John believes Maria thinks she failed the routine because she didn’t bake anything during a hectic week.\",\"extra\":\"Model claims the conversation does not reveal John's belief (saying 'I cannot tell from the conversation').\",\"explanation\":\"The model answer contradicts the GOLD by asserting the belief is indeterminate, whereas the GOLD specifies John's belief about Maria feeling she failed due to not baking during a hectic week. The model provides none of the key information from the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 30,
+      "category": 93,
+      "question": "After D24:18, what does John believe about Maria’s snack routine?",
+      "gold_answer": "John believes Maria’s presence matters more than baking and the routine continues meaningfully.",
+      "evidence_ids": [
+        "D24:18"
+      ],
+      "evidence_text": "D24:18 Maria: Today I brought some simple store-bought cookies and sat with the kids while they ate, and it hit me that what matters most to them is that I’m there—not whether I baked everything from scratch.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "That John believes Maria’s presence matters more than baking and that the snack routine continues meaningfully.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer says the information cannot be determined, which directly contradicts the GOLD assertion that John believes Maria’s presence matters more than baking and that the routine continues meaningfully. It omits the key belief stated in the GOLD answer.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That John believes Maria’s presence matters more than baking and that the snack routine continues meaningfully.\",\"extra\":\"NONE\",\"explanation\":\"The model answer says the information cannot be determined, which directly contradicts the GOLD assertion that John believes Maria’s presence matters more than baking and that the routine continues meaningfully. It omits the key belief stated in the GOLD answer.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 31,
+      "category": 94,
+      "question": "In the end, what does John believe about Maria’s snack-bringing habit?",
+      "gold_answer": "John believes Maria ultimately continues supporting the kids each week.",
+      "evidence_ids": [
+        "D24:18"
+      ],
+      "evidence_text": "D24:18 Maria: Today I brought some simple store-bought cookies and sat with the kids while they ate, and it hit me that what matters most to them is that I’m there—not whether I baked everything from scratch.",
+      "model_answer": "He believes her bringing snacks once a week does make a positive difference for the kids and that being there matters more than whether the treats are homemade.",
+      "score": 4,
+      "judge_missing": "NONE",
+      "judge_extra": "States that \"being there matters more than whether the treats are homemade\" and that the snacks \"make a positive difference\" (the GOLD only notes she continues supporting the kids each week).",
+      "judge_explanation": "The model captures the key point that John believes Maria continues to support the kids weekly, but it adds a minor extra claim about presence vs. homemade treats and the snacks making a positive difference, which is not stated in the GOLD answer.",
+      "judge_raw": "{\"score\":4,\"missing\":\"NONE\",\"extra\":\"States that \\\"being there matters more than whether the treats are homemade\\\" and that the snacks \\\"make a positive difference\\\" (the GOLD only notes she continues supporting the kids each week).\",\"explanation\":\"The model captures the key point that John believes Maria continues to support the kids weekly, but it adds a minor extra claim about presence vs. homemade treats and the snacks making a positive difference, which is not stated in the GOLD answer.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 32,
+      "category": 91,
+      "question": "Between D5:17 and D12:23, what does Maria believe about John’s nightly education-writing habit?",
+      "gold_answer": "Maria believes John is writing a short post about education every evening.",
+      "evidence_ids": [
+        "D5:17"
+      ],
+      "evidence_text": "D5:17 John: All this has got me so fired up that I’ve started writing a short post about education every evening—just a few paragraphs to get my thoughts down and keep the momentum going.",
+      "model_answer": "She believes his nightly posts/blogging are making a difference and having an effect.",
+      "score": 2,
+      "judge_missing": "That John is writing a short post about education every evening (the nightly writing habit itself).",
+      "judge_extra": "That she believes his nightly posts/blogging are making a difference and having an effect.",
+      "judge_explanation": "The model answer does not state the core belief from the GOLD—that John is writing a short post about education every evening—and instead asserts an evaluative belief (that the posts are making a difference), which is not present in the GOLD. This is a significant omission plus an extra unsupported claim.",
+      "judge_raw": "{\"score\":2,\"missing\":\"That John is writing a short post about education every evening (the nightly writing habit itself).\",\"extra\":\"That she believes his nightly posts/blogging are making a difference and having an effect.\",\"explanation\":\"The model answer does not state the core belief from the GOLD—that John is writing a short post about education every evening—and instead asserts an evaluative belief (that the posts are making a difference), which is not present in the GOLD. This is a significant omission plus an extra unsupported claim.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 33,
+      "category": 92,
+      "question": "Between D12:24 and D22:21, what does Maria believe about John’s writing habit?",
+      "gold_answer": "Maria believes John has completely stopped writing his policy and education posts.",
+      "evidence_ids": [
+        "D12:24"
+      ],
+      "evidence_text": "D12:24 John: Honestly, there were a couple of weeks there where I felt like I’d completely stopped writing about policy and education. Between events and meetings, it just felt like that habit disappeared.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "Maria believes John has completely stopped writing his policy and education posts.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer contradicts the GOLD by saying the information can't be determined, whereas the GOLD states Maria believes John stopped writing those posts. The model omits this key fact entirely.",
+      "judge_raw": "{\"score\":0,\"missing\":\"Maria believes John has completely stopped writing his policy and education posts.\",\"extra\":\"NONE\",\"explanation\":\"The model answer contradicts the GOLD by saying the information can't be determined, whereas the GOLD states Maria believes John stopped writing those posts. The model omits this key fact entirely.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 34,
+      "category": 93,
+      "question": "After D22:22, what does Maria believe about John’s writing habit?",
+      "gold_answer": "Maria believes John had not truly stopped and simply missed a few days.",
+      "evidence_ids": [
+        "D22:22"
+      ],
+      "evidence_text": "D22:22 John: I sat down last night and wrote another piece about school funding, and when I flipped back through my notebook I realized I hadn’t actually stopped—I’d just missed a few days when things were intense.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "Maria believes John had not truly stopped writing and had simply missed a few days when things were intense.",
+      "judge_extra": "The model's claim: 'I cannot tell from the conversation.'",
+      "judge_explanation": "The model answer contradicts the clear evidence: John said he hadn’t actually stopped and had just missed a few days, so Maria would believe he hadn’t truly stopped. Saying 'I cannot tell' is incorrect and omits the key information from the GOLD.",
+      "judge_raw": "{\"score\":0,\"missing\":\"Maria believes John had not truly stopped writing and had simply missed a few days when things were intense.\",\"extra\":\"The model's claim: 'I cannot tell from the conversation.'\",\"explanation\":\"The model answer contradicts the clear evidence: John said he hadn’t actually stopped and had just missed a few days, so Maria would believe he hadn’t truly stopped. Saying 'I cannot tell' is incorrect and omits the key information from the GOLD.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 35,
+      "category": 94,
+      "question": "In the end, what does Maria believe about John’s writing routine?",
+      "gold_answer": "Maria believes John ultimately continues his nightly writing habit.",
+      "evidence_ids": [
+        "D22:22"
+      ],
+      "evidence_text": "D22:22 John: I sat down last night and wrote another piece about school funding, and when I flipped back through my notebook I realized I hadn’t actually stopped—I’d just missed a few days when things were intense.",
+      "model_answer": "She believes he hasn't actually stopped writing — the habit is still alive and he only missed a few days when things were intense.",
+      "score": 5,
+      "judge_missing": "NONE",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer restates the GOLD meaning precisely: Maria believes John didn’t stop his nightly writing habit and only missed a few intense days. No key details are missing and no extra claims are added.",
+      "judge_raw": "{\"score\":5,\"missing\":\"NONE\",\"extra\":\"NONE\",\"explanation\":\"The model answer restates the GOLD meaning precisely: Maria believes John didn’t stop his nightly writing habit and only missed a few intense days. No key details are missing and no extra claims are added.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 36,
+      "category": 91,
+      "question": "Between D8:27 and D13:37, what does John believe about Maria’s shelter journaling habit?",
+      "gold_answer": "John believes Maria writes a few reflective lines in her notebook each night after her shelter shifts.",
+      "evidence_ids": [
+        "D8:27"
+      ],
+      "evidence_text": "D8:27 Maria: Lately after my shifts at the shelter, I’ve been jotting a few lines in a little notebook before bed—just to process what happened and remind myself of the good moments.",
+      "model_answer": "He thinks it's a great way to delve into and process her feelings.",
+      "score": 2,
+      "judge_missing": "That Maria writes a few reflective lines in her notebook each night after her shelter shifts.",
+      "judge_extra": "He thinks it's a great way to delve into and process her feelings.",
+      "judge_explanation": "The model response gives John's evaluation of the habit rather than stating the belief about what Maria does. It omits the key factual content (she writes a few reflective lines each night after shelter shifts) and introduces an extra claim about his approval of the practice, so significant information is missing and extra.",
+      "judge_raw": "{\"score\":2,\"missing\":\"That Maria writes a few reflective lines in her notebook each night after her shelter shifts.\",\"extra\":\"He thinks it's a great way to delve into and process her feelings.\",\"explanation\":\"The model response gives John's evaluation of the habit rather than stating the belief about what Maria does. It omits the key factual content (she writes a few reflective lines each night after shelter shifts) and introduces an extra claim about his approval of the practice, so significant information is missing and extra.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 37,
+      "category": 92,
+      "question": "Between D13:38 and D23:14, what does John believe about Maria’s journaling?",
+      "gold_answer": "John believes Maria has completely stopped journaling due to exhaustion.",
+      "evidence_ids": [
+        "D13:38"
+      ],
+      "evidence_text": "D13:38 Maria: With everything going on, I really thought I’d totally stopped writing in that notebook. This past week I felt so drained that it seemed like I hadn’t put anything on paper for ages.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "That John believes Maria has completely stopped journaling due to exhaustion.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer contradicts the GOLD: GOLD states John believes Maria has completely stopped journaling because of exhaustion, while the model says this cannot be determined. This directly opposes the key fact, so score 0 is appropriate.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That John believes Maria has completely stopped journaling due to exhaustion.\",\"extra\":\"NONE\",\"explanation\":\"The model answer contradicts the GOLD: GOLD states John believes Maria has completely stopped journaling because of exhaustion, while the model says this cannot be determined. This directly opposes the key fact, so score 0 is appropriate.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 38,
+      "category": 93,
+      "question": "After D23:15, what does John believe about Maria’s journaling habit?",
+      "gold_answer": "John believes Maria did not abandon the habit and had continued writing more often than she realized.",
+      "evidence_ids": [
+        "D23:15"
+      ],
+      "evidence_text": "D23:15 Maria: I looked back through the notebook today and there were more entries than I remembered, and I added a new one after my walk—it made me realize I didn’t abandon the habit, I was just overwhelmed.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "That John believes Maria did not abandon the habit and had continued writing more often than she realized.",
+      "judge_extra": "NONE",
+      "judge_explanation": "The model answer states the information is indeterminate, which directly contradicts the GOLD that John believes Maria did not abandon journaling and had been writing more often than she realized. Because it omits and denies the key belief from the GOLD, the response receives a score of 0.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That John believes Maria did not abandon the habit and had continued writing more often than she realized.\",\"extra\":\"NONE\",\"explanation\":\"The model answer states the information is indeterminate, which directly contradicts the GOLD that John believes Maria did not abandon journaling and had been writing more often than she realized. Because it omits and denies the key belief from the GOLD, the response receives a score of 0.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    },
+    {
+      "index": 39,
+      "category": 94,
+      "question": "In the end, what does John believe about Maria’s journaling routine?",
+      "gold_answer": "John believes Maria ultimately continues her journaling practice.",
+      "evidence_ids": [
+        "D23:15"
+      ],
+      "evidence_text": "D23:15 Maria: I looked back through the notebook today and there were more entries than I remembered, and I added a new one after my walk—it made me realize I didn’t abandon the habit, I was just overwhelmed.",
+      "model_answer": "I cannot tell from the conversation.",
+      "score": 0,
+      "judge_missing": "That John believes Maria ultimately continues her journaling practice.",
+      "judge_extra": "Model asserts that John's belief cannot be determined from the conversation.",
+      "judge_explanation": "The GOLD states John believes Maria continues her journaling; the MODEL answers that this cannot be determined, directly contradicting and omitting the key fact from GOLD, so it receives a score of 0.",
+      "judge_raw": "{\"score\":0,\"missing\":\"That John believes Maria ultimately continues her journaling practice.\",\"extra\":\"Model asserts that John's belief cannot be determined from the conversation.\",\"explanation\":\"The GOLD states John believes Maria continues her journaling; the MODEL answers that this cannot be determined, directly contradicting and omitting the key fact from GOLD, so it receives a score of 0.\"}",
+      "judge_mode": "json_schema",
+      "judge_error": null
+    }
+  ]
+}
