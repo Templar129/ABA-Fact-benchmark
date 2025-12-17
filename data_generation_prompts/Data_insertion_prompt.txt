@@ -1,0 +1,191 @@
+You are given one raw JSON file that represents a long natural conversation between two speakers (e.g., Person1 and Person2).
+
+Your task is to:
+1. Insert exactly 10 high-quality ABA′ facts into the conversation
+2. Preserve the original JSON structure and ordering perfectly
+3. Return:
+   - a fully modified, valid JSON file with the ABA′ facts inserted
+   - a structured list describing the 10 inserted ABA′ facts
+
+This task is for dataset construction, not creative writing.
+Correctness, realism, and structural integrity are mandatory.
+
+------------------------------------------------------------
+PART 0 — JSON DATA STRUCTURE (CRITICAL)
+
+Before making any changes, you must inspect and understand the original JSON structure.
+
+0.1 Assumed Structure
+
+The JSON contains conversation samples. Each conversation contains a dialogue list.
+Each dialogue entry has:
+- a unique dia_id
+- a speaker field
+- a text field
+dia_id values represent strict temporal order from top to bottom.
+
+Example (illustrative only):
+
+{
+  "sample_id": "conv_XX",
+  "conversation": [
+    {
+      "dia_id": "D1:1",
+      "speaker": "Person1",
+      "text": "..."
+    }
+  ]
+}
+
+Your actual file may contain additional fields. Do NOT remove or rename them.
+
+------------------------------------------------------------
+0.2 Structural Invariants (ABSOLUTE REQUIREMENTS)
+
+- No existing dialogue entry may be deleted or modified
+- All inserted entries must follow the same schema
+- dia_id ordering must remain strictly increasing
+- No duplicated dia_id
+- No missing dia_id
+- No reordering of existing dialogue
+- No changes to sample_id or nesting
+
+If dia_id values are numeric or incremental, generate new dia_id values that:
+- fit the existing format exactly
+- preserve strict ordering
+
+If dia_id values are strings, follow the same naming logic.
+
+If the dia_id pattern cannot be inferred reliably, STOP and infer it first.
+
+------------------------------------------------------------
+PART 1 — WHAT ABA′ FACTS ARE
+
+An ABA′ fact is a structured contradiction pattern unfolding over time:
+
+A: Initial factual claim by Person1
+B: Later claim by Person1 that contradicts or revises A
+A′: Later claim by Person1 that returns to A (exactly or semantically)
+
+This is not repetition.
+It is a temporal belief inconsistency followed by recovery.
+
+------------------------------------------------------------
+PART 2 — REQUIRED STRUCTURE FOR EACH ABA′ FACT
+
+Each of the 10 ABA′ facts must satisfy ALL conditions.
+
+2.1 Sentence-Level Structure
+
+Each ABA′ fact must contain at least 6 new dialogue entries, forming 3 pairs:
+
+1. Person1 states A
+2. Person2 responds naturally
+3. Person1 states B
+4. Person2 responds naturally (different style)
+5. Person1 states A′
+6. Person2 responds naturally again (non-identical)
+
+------------------------------------------------------------
+2.2 Placement Constraints
+
+- The three pairs must not be adjacent
+- Each pair must be separated by unrelated dialogue
+- Temporal order must be A → B → A′
+- Insertions must respect dia_id ordering
+
+------------------------------------------------------------
+2.3 Speaker Constraints
+
+- Only Person1 introduces A, B, and A′
+- Person2 never states the fact
+- Person2 responses must vary (agreement, hesitation, curiosity, mild challenge)
+
+------------------------------------------------------------
+PART 3 — NATURALNESS AND CONTEXTUAL FIT
+
+Inserted dialogue must:
+- Sound like ordinary daily conversation
+- Be locally coherent with surrounding turns
+- Flow naturally before and after insertion
+- Avoid meta-language or synthetic tone
+
+The conversation should read as if the ABA′ facts were always present.
+
+------------------------------------------------------------
+PART 4 — FACT DESIGN CONSTRAINTS
+
+- All 10 ABA′ facts must be mutually distinct
+- Must not overlap with existing facts
+- Must not overlap with each other
+
+Avoid reusing:
+- same activity
+- same habit
+- same object
+- same domain
+
+Prefer diverse domains:
+- routines
+- preferences
+- ownership
+- scheduling
+- constraints
+- personal experiences
+
+Avoid dramatic events or implausible reversals.
+
+------------------------------------------------------------
+PART 5 — INSERTION RULES (STRICT)
+
+- Do NOT rewrite existing dialogue
+- Only insert new dialogue objects
+- Preserve original ordering
+- Every inserted object must:
+  - follow the original schema
+  - include a valid dia_id
+
+------------------------------------------------------------
+PART 6 — REQUIRED OUTPUT FORMAT
+
+6.1 Output 1 — Modified JSON
+
+- Output the entire modified JSON
+- Must be valid and complete
+- Directly downloadable
+- No explanations inside JSON
+
+------------------------------------------------------------
+6.2 Output 2 — ABA′ Fact Index
+
+After the JSON, provide a structured list.
+
+For each fact (Fact1–Fact10), include:
+- Fact ID
+- A statement (verbatim)
+- B statement (verbatim)
+- A′ statement (verbatim)
+- dia_id for A, B, and A′
+
+Example:
+
+Fact 4:
+A  (dia_id: D1:18): "..."
+B  (dia_id: D1:41): "..."
+A′ (dia_id: D1:67): "..."
+
+------------------------------------------------------------
+PART 7 — QUALITY PRIORITY
+
+If you must choose between speed and correctness, always choose correctness.
+
+This dataset is intended for long-term memory consistency evaluation.
+
+------------------------------------------------------------
+Begin by:
+1. Reading the full JSON
+2. Understanding dia_id progression
+3. Planning insert locations
+4. Performing insertions
+5. Verifying structure
+6. Outputting results

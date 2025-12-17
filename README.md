@@ -82,23 +82,71 @@ The output directory will contain per-file results as well as aggregated statist
 
 ---
 
-## Fact Insertion and QA Generation (Work in Progress)
+## Data Preparation: ABA Fact Insertion and QA Generation
 
-This repository also includes scripts for:
+### Raw Data
 
-- Inserting **ABA-style facts** into long conversations
-- Generating **category-specific QA pairs** (e.g., categories 91–94)
-- Injecting generated QA pairs back into LoCoMo-format JSON files
+We include the **raw LoCoMo JSON conversation files** (extracted directly from the original LoCoMo repository) in:
 
-These scripts are currently **under active development**. Existing, runnable components are included in the repository, and this section will be updated as the pipeline is finalized.
+```
+raw_data/
+```
+
+These files serve as the starting point for ABA-fact insertion and QA generation.
+
+---
+
+### Step 1: ABA′ Fact Insertion (Manual, ChatGPT-Based)
+
+To insert new ABA′ facts into a LoCoMo conversation file:
+
+1. Open a ChatGPT interface.
+2. Upload **one JSON file** from the `raw_data/` folder that you want to modify.
+3. Navigate to:
+   ```
+   data_generation_prompts/Data_insertion_prompt.txt
+   ```
+4. Copy **the entire prompt** from this file and paste it into the ChatGPT input window.
+5. Send the message.
+
+ChatGPT may ask follow-up questions (e.g., choosing between Option A or Option B).  
+Simply follow the instructions provided.
+
+After completion, ChatGPT will provide:
+- A **modified JSON file** with inserted ABA′ facts
+- A **separate list of inserted facts**
+
+Download both outputs.
+
+---
+
+### Step 2: QA Generation and Insertion
+
+1. In the **same ChatGPT conversation**, upload:
+   - The modified JSON file
+   - The corresponding list of inserted facts
+2. Navigate to:
+   ```
+   data_generation_prompts/QA_insertion_prompt.txt
+   ```
+3. Copy **the entire prompt** and paste it into the ChatGPT input window.
+4. Send the message.
+
+ChatGPT will return a **final downloadable JSON file** containing:
+- The original conversation
+- Inserted ABA′ facts
+- Automatically generated and inserted QA pairs (categories 91–94)
+
+This final JSON file is ready for evaluation.
 
 ---
 
 ## Project Scope and Notes
 
-- This work focuses on **long-context reasoning**, **recency bias**, and **temporal fact tracking** in LLMs.
-- The ABA setting introduces structured fact transitions (A → B → A′) across conversation timelines.
-- Evaluation is fully automated using LLM-based grading.
+- Focuses on **long-context reasoning**, **recency bias**, and **temporal fact tracking**
+- Introduces structured fact transitions (A → B → A′)
+- Fact insertion and QA generation are performed via controlled, prompt-driven ChatGPT interactions
+- Evaluation is fully automated using LLM-based grading
 
 ---
 

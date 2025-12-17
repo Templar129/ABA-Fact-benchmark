@@ -1,0 +1,116 @@
+You will be given:
+1. A modified JSON conversation file (already contains inserted ABA′ dialogue turns with valid dia_id order).
+2. A Fact Index listing 10 ABA′ facts, each with:
+   - A statement + dia_id
+   - B statement + dia_id
+   - A′ statement + dia_id
+
+Your task:
+1. Generate exactly 40 QA pairs total (4 per fact × 10 facts) in categories 91, 92, 93, 94.
+2. Insert these QA pairs into the JSON file’s QA section following the existing JSON schema.
+3. Return:
+   - Output 1: the updated JSON file (valid, complete, directly downloadable)
+   - Output 2: a separate list of the 40 QAs you added.
+
+This is dataset construction. Quality, correctness, and schema integrity are mandatory.
+
+------------------------------------------------------------
+PART 0 — JSON STRUCTURE AND INSERTION TARGET (CRITICAL)
+
+Before writing any QA:
+- Inspect the JSON to locate the QA field (e.g., qa, qas, questions).
+- Identify the exact schema of a QA item (keys, required fields).
+
+You MUST:
+- Preserve the exact QA schema.
+- Not rename fields.
+- Not delete or modify existing QAs.
+- Only append or insert new QA entries in the correct location.
+- Not modify dialogue turns, dia_id ordering, sample_id, or nesting.
+
+------------------------------------------------------------
+PART 1 — CATEGORY DEFINITIONS (91–94)
+
+Each ABA′ fact has three timepoints:
+A_id < B_id < Aprime_id
+
+Category 91:
+Question targets the time between A and B.
+Answer corresponds to A (or paraphrase).
+
+Category 92:
+Question targets the time between B and A′.
+Answer corresponds to B (or paraphrase).
+
+Category 93:
+Question targets the time after A′.
+Answer corresponds to A′ (or paraphrase).
+
+Category 94:
+Question targets the entire dialogue.
+Answer corresponds to the final state A′.
+
+------------------------------------------------------------
+PART 2 — QUESTION WRITING RULES
+
+- Do NOT quote A/B/A′ in the question.
+- Do NOT tip the answer.
+- Questions must anchor the timepoint using dia_id or dia_id ranges.
+- Questions must be short, direct, and unambiguous.
+- Do not introduce new facts, entities, or explanations.
+
+------------------------------------------------------------
+PART 3 — ANSWER RULES
+
+- Answers may be verbatim A/B/A′ or a faithful paraphrase.
+- Answers must not add new information.
+- Answers must match the correct temporal state.
+
+------------------------------------------------------------
+PART 4 — QA COUNT (STRICT)
+
+- Exactly 40 QA pairs total.
+- Exactly 4 QAs per fact:
+  - one 91
+  - one 92
+  - one 93
+  - one 94
+
+No more, no less.
+
+------------------------------------------------------------
+PART 5 — QA METADATA
+
+Each QA must include:
+- category (91/92/93/94)
+- question
+- answer
+- linkage metadata:
+  - fact_id (Fact1–Fact10 or equivalent)
+  - dia_id anchors used
+
+If an evidence field exists, store dia_id anchors there.
+
+------------------------------------------------------------
+PART 6 — OUTPUT FORMAT
+
+Output 1:
+- Full updated JSON
+- Valid and complete
+- Directly downloadable
+
+Output 2:
+- Structured list of all 40 added QAs
+- Include: fact_id, category, dia_id anchors, question, answer
+
+------------------------------------------------------------
+PART 7 — PROCESS REQUIREMENT
+
+1. Parse fact list and extract A_id, B_id, Aprime_id.
+2. Generate Cat 91–94 QAs for each fact.
+3. Insert all QAs into the JSON following schema.
+4. Validate QA count and JSON validity.
+
+------------------------------------------------------------
+This prompt is for long-term memory consistency benchmarking.
+Prioritize correctness over speed.
